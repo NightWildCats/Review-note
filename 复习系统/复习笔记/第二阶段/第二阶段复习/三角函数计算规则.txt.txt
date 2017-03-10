@@ -1,0 +1,7 @@
+  JS中常用的三角函数计算
+
+  弧度 = 角度/180 * Math.PI
+
+  临边 = Math.cos((角度)/180 * Math.PI) * 斜边
+
+  对边 = Math.sin((角度)/180 * Math.PI) * 斜边

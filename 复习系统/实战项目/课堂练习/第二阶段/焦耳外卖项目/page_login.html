@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login登录页面</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="keywords" content="Java培训、Android培训、HTML5培训"/>
+    <meta name="description" content="尚硅谷-老学员一致推荐，有口皆碑的Java培训、Android培训、HTML5培训"/>
+    <!--网站图标  link:favicon -->
+    <link href="img/icon_list.png" rel="shortcut icon" type="image/x-icon"/>
+    <!--推荐使用ico格式的网站图标-->
+    <link href="img/icon_mouse_32.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/page_login.css">
+    <script type="text/javascript" src="js/page_login.js"></script>
+    <style type="text/css"></style>
+</head>
+<body>
+
+    <header>
+        登录
+    </header>
+
+    <form action="page_index.html" id="form1">
+        <div class="form-group">
+            <label for="userNo">手机号</label>
+            <input type="text" name="userNo" id="userNo" placeholder="请输入账号" maxlength="11">
+            <span id="errMsg">您输入的手机格式不合法</span>
+        </div>
+        <div class="form-group">
+            <label for="psw">验证码</label>
+            <input type="password" name="psw" id="psw" placeholder="请输入密码">
+            <span id="identCode">获取验证码</span>
+        </div>
+
+        <!--<button type="submit"></button>-->
+        <!--<div class="btn-warpper"></div>-->
+            <input type="button" id="btnSubmit" value="提交">
+    </form>
+
+
+<script type="text/javascript">
+</script>
+</body>
+</html>

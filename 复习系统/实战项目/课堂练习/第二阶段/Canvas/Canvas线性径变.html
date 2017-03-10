@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钟表画布</title>
+    <style type="text/css">
+
+        canvas {
+            display: block;
+            border: 1px solid red;
+            margin: 0 auto;
+            /*color: white;*/
+        }
+
+    </style>
+</head>
+<body>
+
+    <canvas width="800" height="500">
+        您的浏览器不支持
+    </canvas>
+
+</body>
+    <script type="text/javascript">
+
+        /**
+         * 创建渐变Canvas的过程
+         *
+         * ① 创建一个Canvas 画布标签 设置宽高属性 width / height (不需带单位。默认是像素)
+         * ② 通过js获取Canvas对象 设置画布 “2d” 上下文对象
+         * ③ 设置一个渐变区域
+         * ④ 为渐变的区域设置渐变颜色
+         * ⑤ 创建一个承载渐变的画布区域（例如矩形）来承载渐变的区域
+         * ⑥ 实现渐变效果
+         *
+         */
+
+
+        //创建Canvas对象和 “2d” 上下文
+        var  canvas = document.querySelector("canvas");
+        var  cxt = canvas.getContext("2d");
+
+        //设置中心点的新位置
+        cxt.translate(100,100);
+        //创建一个线性渐变
+        var coler = cxt.createLinearGradient(0,100,200,100);
+        //渐变的颜色
+        coler.addColorStop(0,"red");
+        coler.addColorStop(.3,"yellow");
+        coler.addColorStop(.5,"blue");
+        coler.addColorStop(.7,"white");
+        coler.addColorStop(1,"red");
+
+        //创建 一个填充的渐变区域
+        cxt.fillStyle = coler;
+        cxt.fillRect(0,0,200,100);
+
+
+    </script>
+
+</html>

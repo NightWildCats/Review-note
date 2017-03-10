@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        子元素：div>ul>li <br>
+        相邻元素：div+p+bq<br>
+        层级提升：div+div>p>span+em^^^bq<br>
+        相乘: ul>li*5<br>
+        分组: (）div>(header>ul>li*2>a)+footer>p<br>
+        ID and CLASS<br>
+        div#header+div.page+div#footer.class1.class2.class3<br>
+        自定义属性<br>
+        td[title="Hello world!" colspan=3]<br>
+        条目顺序号：$<br>
+        条目顺序号：ul>li.item$*5， ul>li.item$$$*5<br>
+        改变条目计数起始值和方向<br>
+        ul>li.item$@-*5 ，ul>li.item$@3*5 ， ul>li.item$@-3*5<br>
+        文本: a{Click me}<br>
+        <hr>
+        <!--子元素：div>ul>li-->
+        <!--相邻元素：div+p+bq<br>-->
+        <!--层级提升：div+div>p>span+em^^^bq<br>-->
+        <!--相乘: ul>li*5<br>-->
+        <!--分组: (）div>(header>ul>li*2>a)+footer>p-->
+        <!--ID and CLASS-->
+        <!--div#header+div.page+div#footer.class1.class2.class3-->
+        <!--td[title="Hello world!" colspan=3]-->
+        <!--(ul>li.item$*5)+ul>li.item$$$*5-->
+    </div>
+</body>
+</html>

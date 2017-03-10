@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>垂直水平居中</title>
+		<style type="text/css">
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#wap {
+				width: 200px;
+				height: 200px;
+				margin:  0 auto;
+				border: 1px solid red;
+				/*开启定位*/
+				position: relative;
+			}
+			#test {
+				position: absolute;
+				border: 1px solid blue;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				/*transform: translate3d(-50%,-50%,0);*/
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				margin: auto;
+				line-height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wap">
+			<div id="test">
+				<h4>居中</h4>
+			</div>
+		</div>
+	</body>
+</html>

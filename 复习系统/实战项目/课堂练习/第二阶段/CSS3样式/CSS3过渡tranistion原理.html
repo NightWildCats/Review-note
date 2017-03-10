@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3过渡transition原理</title>
+    <style type="text/css">
+        .box {
+            width: 100px;
+            height:100px;
+            background-color: red;
+        }
+      /*
+            CSS3 过渡- transition
+                    浏览器默认会把所有的改变样式过渡 all（全部过渡）
+                  如果只要过渡某一个特定的样式的时候。就需要进行显示强制过渡 -》进行transition设置
+
+                    transition-duration 过渡的时间 期值只能为正值
+                    如果过渡的时间具有多个，而且过渡的属性也有多个，会把过渡的时间合成一组，与过渡的属性去
+                    进行一组一组的匹配对应。
+
+                    过渡延时时间 transition-delay
+                        延时执行的时间可以为负值
+                            当延时时间为负值的时候，会使  真正过渡的时间-延时时间=实际过渡的时间
+
+                过渡简写：
+                    transition:过渡样式 过渡时间 过渡方式 延迟时间，过渡样式 过渡时间 过渡方式 延迟时间；
+                注意：在同一属性过渡中 如果后面的过渡时间和延迟时间大于之前的 就会执行后面的、
+
+             注意：如果使过渡的开始和结束都具有过渡效果 应当把过渡设置在不是在元素的伪类元素上
+
+      */
+        .box:hover {
+            transition-property: visibility ,width;
+            width: 200px;
+            transition-duration: 3s;
+            visibility: hidden;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+
+</body>
+    <script type="text/javascript">
+
+    </script>
+</html>

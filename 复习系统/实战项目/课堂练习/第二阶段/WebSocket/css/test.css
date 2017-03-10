@@ -1,0 +1,34 @@
+body {
+  background-color: #f0f0f0;
+}
+.btn-lg {
+  width: 140px;
+  height: 52px;
+  border-radius: 5px;
+  border: 1px solid #666;
+  background-color: #5cb85c;
+}
+.btn-sm {
+  width: 100px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #666;
+  background-color: #5cb85c;
+}
+.btn {
+  width: 120px;
+  height: 42px;
+  border-radius: 5px;
+  border: 1px solid #666;
+  background-color: #5cb85c;
+  /*
+  .btn-2(140px);
+  .btn-2(140px, 52px);
+  */
+}
+header nav {
+  font-size: 18px;
+}
+header p {
+  line-height: 1.4;
+}

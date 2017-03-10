@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_DOM对象与jQuery对象之间的转换</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <input type="text" value="请输入你的用户名" id="username">
+    <script>
+        /*
+            TODO DOM对象
+            TODO * 通过DOM提供的API(方法或属性)获取的元素
+         */
+        /*
+            TODO JQUERY对象
+            TODO * 通过对DOM对象的封装，得到JQUERY对象
+         */
+        var $username = $('#username');
+//        console.log($username[0].value);
+        /*
+            TODO 将JQUERY对象转换成DOM对象
+            TODO * JQUERY对象是类数组的对象
+            TODO   * DOM对象 = JQUERY对象[索引值]
+            TODO * JQUERY提供了get(index)方法
+         */
+//        console.log($username.get(0).value+"1");
+        /*
+            TODO 将DOM对象转换成JQUERY对象
+            TODO JQUERY对象 = $(DOM对象);
+         */
+        var username = document.getElementById('username');
+        var $username = jQuery(username);
+        console.log($username.val());
+    </script>
+</body>
+</html>

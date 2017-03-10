@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景渐变</title>
+    <style type="text/css">
+
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        /*<!--线性渐变 linear-gradient()-->*/
+        /*设置渐变的方向 to left/top/bottom/right 或者是旋转角度 deg 原点在下边 顺时针旋转  */
+        .box {
+            background-image: linear-gradient(
+                to right, red,yellow,blue
+            )
+        }
+        /*设置渐变的角度*/
+        .box {
+            background-image: linear-gradient(
+                 45deg, red,yellow,blue
+            )
+        }
+        /*设置渐变的范围*/
+        .box {
+            background-image: linear-gradient(
+                    to right, red 50px,yellow 50px, yellow 100px, blue
+            );
+       }
+        /*重复渐变*/
+        .box {
+            background-image:repeating-linear-gradient(
+                    rgba(255, 0, 0, .3) 0
+                    , rgba(255, 0, 0, .3) 20px
+                    , rgba(255, 255, 0, .3)  20px
+                    , rgba(255, 255, 0, .3)  40px
+
+            ), repeating-linear-gradient( to left,
+                    rgba(255, 0, 0, .3) 0
+                    , rgba(255, 0, 0, .3) 20px
+                    , rgba(255, 255, 0, .3)  20px
+                    , rgba(255, 255, 0, .3)  40px
+        );
+        }
+        /*重复渐变+倾斜*/
+        .box {
+            background-image:repeating-linear-gradient( 45deg,
+                    rgba(255, 0, 0, .3) 0
+                    , rgba(255, 0, 0, .3) 20px
+                    , rgba(255, 255, 0, .3)  20px
+                    , rgba(255, 255, 0, .3)  40px
+
+            ), repeating-linear-gradient( -45deg,
+                    rgba(255, 0, 0, .3) 0
+                    , rgba(255, 0, 0, .3) 20px
+                    , rgba(255, 255, 0, .3)  20px
+                    , rgba(255, 255, 0, .3)  40px
+            );
+        }
+
+        /*<!--径向渐变 radial-gradient()-->*/
+        /*
+                circle - 圆形的渐变效果
+                ellipse - 椭圆的渐变效果（默认值）
+                注意：书写方式 ： 渐变形状 渐变半径（椭圆有两个X/Y，为数值和百分比） at  渐变中心点（以元素左上角开始计算，接收关键字和百分比以及数值）
+        */
+        .box {
+            background-image:radial-gradient(
+                    circle , red , blue
+            );
+        }
+        /*控制圆形渐变的半径 以及中心点 中心点的位置以元素的左上角计算*/
+        /*
+            圆形的半径设置-为数值
+        */
+        .box {
+            background-image:radial-gradient(
+                circle 50px  at center, red , blue
+            );
+        }
+        /*设置椭圆渐变*/
+        /*
+             椭圆的半径设置支持百分比和数值设置
+        */
+        .box {
+            background-image:radial-gradient(
+                    ellipse 100% 50% at center, red , blue
+            );
+        }
+        /*
+            重复径向渐变的使用 - 制作图标按钮
+            注意：写对函数
+        */
+        .box {
+            background-image:repeating-radial-gradient(
+                    circle 5px at center, red 0,red 10px,blue 10px,blue 20px
+            );
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

@@ -1,0 +1,22 @@
+使用模板;注意引用：
+    <script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+    <script src="My97DatePicker/calendar.js"></script>
+
+在input控件中调用 <input class="Wdate" type="text" onClick="WdatePicker()">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+    <script src="My97DatePicker/calendar.js"></script>
+</head>
+<body>
+<input class="Wdate" type="text" onClick="WdatePicker()">
+
+
+<script type="text/javascript">
+</script>
+</body>
+</html>

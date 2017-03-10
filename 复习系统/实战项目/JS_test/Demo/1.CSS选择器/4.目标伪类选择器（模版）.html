@@ -1,0 +1,108 @@
+<!-- 尚硅谷 HTML5 2016年-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>尚硅谷HTML5</title>
+    <style type="text/css">
+        html, body, nav{ margin: 0; padding: 0; height: 100% }
+        nav{ position: fixed; top: 0; left: 0; bottom: 0; width: 20%; background-color: #f0f0f0; }
+        article{ float: right; width: 80%;}
+
+
+    </style>
+</head>
+<body>
+<nav>
+    <ol>
+        <li><a href="">概述</a></li>
+        <li><a href="">布局</a></li>
+        <li><a href="">Flexbox</a></li>
+        <li><a href="">生成工具</a></li>
+        <li><a href="">特性</a></li>
+        <li><a href="">背景</a></li>
+    </ol>
+</nav>
+<article>
+    <h1 id="home">CSS3</h1>
+    <p>CSS即层叠样式表（Cascading StyleSheet）。 在网页制作时采用层叠样式表技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制。 只要对相应的代码做一些简单的修改，就可以改变同一页面的不同部分，或者页数不同的网页的外观和格式。CSS3是CSS技术的升级版本，CSS3语言开发是朝着模块化发展的。以前的规范作为一个模块实在是太庞大而且比较复杂，所以，把它分解为一些小的模块，更多新的模块也被加入进来。这些模块包括： 盒子模型、列表模块、超链接方式 、语言模块 、背景和边框 、文字特效 、多栏布局等。</p>
+    <section>
+        <h1 id="section01">布局</h1>
+        <pre style="">-
+            CSS3-Gird布局格式
+            CSS3-Gird布局格式(2张)
+            Grid布局图中[1]  蓝色的线不会出现在实际的网页中。
+            Grid布局应用很广泛，最简单的例子就是内容的分栏显示。
+            对于右边这个布局复杂的三栏网页来说，如果使用CSS3Grid布局的话，我们只需这样写：
+            body{columns:3;column-gap:0.5in;}
+            img{float:pagetopright;width:3gr;}
+            其中，body部分声明页面为3栏，栏间距为0.5英寸；img中float属性指明图片浮动位置为页面的右上角，而宽度为3个栏宽。只需这样两行CSS，就可以实现这个复杂布局。</pre>
+    </section>
+    <section>
+        <h1 id="section02">Flexbox</h1>
+        <pre>
+            Flexbox(伸缩布局盒) 是 CSS3 中一个新的布局模式，为了现代网络中更为
+            flexbox
+            flexbox
+            复杂的网页需求而设计。
+            Flexbox 由 伸缩容器 和 伸缩项目 组成。通过设置元素的 display 属性为 flex 或 inline-flex 可以得到一个伸缩容器。设置为 flex 的容器被渲染为一个块级元素，而设置为 inline-flex 的容器则渲染为一个行内元素。
+            Flexbox通常能让我们更好的操作他的子元素布局，例如：
+            如果元素容器没有足够的空间，我们无需计算每个元素的宽度，就可以设置他们在同一行；
+            可以快速让他们布局在一列；
+            可以方便让他们对齐容器的左、右、中间等；
+            无需修改结构就可以改变他们的显示顺序；
+            如果元素容器设置百分比和视窗大小改变，不用担心未指定元素的确切宽度而破坏布局，因为容器中的每个子元素都可以自动分配容器的宽度或高度的比例。[2]
+        </pre>
+    </section>
+    <section>
+        <h1 id="section03">生成工具</h1>
+        <pre>
+            CSS3 Maker
+            CSS3(图4)
+            CSS3(图4)
+            这款工具非常强大，可在线演示渐变、阴影、旋转、动画等非常多的效果，并生成对应效果的代码，
+            CSS3 Generator
+            非常不错的各种 CSS3 代码生成器，支持圆角、渐变、旋转和阴影等众多特性，带预览效果。
+            CSS3 Please
+            帅且酷的一款 CSS3 工具，可即时在线修改代码并预览效果，还有详细的浏览器兼容情况。
+
+
+        </pre>
+    </section>
+    <section>
+        <h1 id="section04">特性</h1>
+        <pre>
+            1、圆角表格，对应属性：border-radius。
+            CSS3圆角表格
+            CSS3圆角表格
+            圆角表格，对应属性：border-radius。
+            2、以往对网页上的文字加特效只能用filter这个属性，这次CSS3中专门制订了一个加文字特效的属性，而且不止加阴影这种效果。对应属性：font-effect。
+            3、丰富了对链接下划线的样式，以往的下划线都是直线，这次可不一样了，有波浪线、点线、虚线等等，更可对下划线的颜色和位置进行任意改变。（还有对应顶线和中横线的样式，效果与下划线类似）对应属性：text-underline-style，text-underline-color，text-underline-mode，text-underline-position。
+            4、在文字下点几个点或打个圈以示重点，CSS3也开始加入了这项功能，这应该在某些特定网页上很有用。对应属性：font-emphasize-style和font-emphasize-position。
+
+        </pre>
+    </section>
+    <section>
+        <h1 id="section05">背景</h1>
+        <pre>
+        background-origin:决定了背景在盒模型中的初始位置，提供了3个值，border, padding和content
+        border:控制背景起始于左上角的边框
+        CSS3背景
+        CSS3背景
+        padding:控制背景起始于左上角的留白
+        content:控制背景起始于左上角的内容background-clip:决定边框是否覆盖住背景（默认是不覆盖），提供了两个值，border和padding
+        border:会覆盖住背景
+        padding:不会覆盖背景
+        background-size:可以指定背景大小，以象素或百分比显示。当指定为百分比时，大小会由所在区域的宽度、高度，以及background-origin的位置决定
+        multiple backgrounds:多重背景图像，可以把不同背景图像只放到一个块元素里。
+        </pre>
+    </section>
+</article>
+<script type="text/javascript">
+    //添加脚本
+</script>
+</body>
+</html>

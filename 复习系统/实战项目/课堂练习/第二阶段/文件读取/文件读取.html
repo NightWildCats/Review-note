@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+        .box {
+
+        }
+    </style>
+</head>
+<body>
+
+<!--
+选取多个文件 multiple="multiple"
+-->
+
+<input type="file" name="file" id="file" multiple="multiple">
+<div id="imgs">
+    <!--图片显示-->
+</div>
+
+<script type="text/javascript">
+    var imgsDom = document.querySelector("#imgs");
+    var fileDom = document.querySelector("#file");
+    fileDom.onchange = function (ev) {
+
+        var files = ev.target.files;
+//        循环遍历
+        var len = files.length;
+        for (var i = 0; i < len; i++) {
+//            文件对象
+            var fileObj = files[i];
+            let fileR = new  FileReader();
+            fileR.readAsDataURL(fileObj);
+            fileR.addEventListener("load",function () {
+               let img = new Image();
+               img.src = fileR.result;
+               imgsDom.appendChild(img);
+            });
+//            showImg(fileObj);
+        }
+
+    };
+
+    //    显示图片
+    function showImg(fileObj) {
+        var fileReader = new FileReader();
+        fileReader.readAsDataURL(fileObj);
+        fileReader.onload = function () {
+//                动态创建img
+            var imgDom = document.createElement("img");
+            imgDom.src = fileReader.result;
+
+            imgsDom.appendChild(imgDom);
+        }
+    }
+
+</script>
+</body>
+</html>

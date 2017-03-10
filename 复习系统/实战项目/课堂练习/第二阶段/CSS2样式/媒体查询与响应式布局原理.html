@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应式布局原理</title>
+    <style type="text/css">
+        .box {
+            width: 1000px;
+            height: 200px;
+            margin: 10px auto;
+            background: red;
+            border: 1px solid blue;
+        }
+        /*
+            通过 @media 来实现实现媒体查询 检测屏幕的大小
+                screen 来查询屏幕的大小
+                print  查询打印机
+
+            注意：在响应式布局中 把需要变化的样式放在@media中
+            可以设置多个 根据判断条件可以实现多重响应式布局
+            （1）多媒体响应式布局的@madia 选择器在没有使用@madia之前的时候，会进行样式覆盖，然后不生效
+                解决办法 是在样式属性后面加上 !important 来进行强制装换
+        */
+        @media screen and (max-width:800px) {
+            .box {
+                width: 400px;
+                height: 400px;
+                background: lawngreen;
+            }
+        }
+        /*当屏幕宽度小于600px时候执行    可以多个条件合写*/
+        @media screen and (max-width:600px) and (min-width: 500px){
+            .box {
+                width: 200px;
+                height: 200px;
+                background: yellowgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+
+    </div>
+
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2D变换 transtorm - scale</title>
+    <style type="text/css">
+        body {
+            transform-origin:10px,10px;
+        }
+        .box {
+            width:100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box:hover {
+
+        }
+    </style>
+</head>
+<body>
+    <!--
+        2d 变换  transform:scale(n)
+        2D变换函数，缩放函数的特点
+            1.基于元素中心点缩放
+            2.元素的缩放不影响父元素的布局
+            3.元素的缩放不影响兄弟元素的位置
+                0<n<1  0-1之间缩小
+                n=1 无变换
+                n>1 放大
+            4.行内元素使用 scale 无效果
+            5.元素内部的块元素 也会同等比例的缩放
+    -->
+
+    <!--
+        变换的中心点：
+            transfrom-origin(x,y,z) 默认情况下是在元素的中心
+                x,y轴取值范围：可以是 left right top bottom
+                        也可以是 数值（px）
+                        或者是百分比（%）
+                z轴的取值只能是 数值（px）
+             当中心点不在元素内时 ，在进行缩放的时候会把中心点到元素最近的距离等比的缩放
+    -->
+    <!--
+        倾斜  skew()
+              位于X轴的倾斜
+
+              位于Y轴的倾斜
+
+    -->
+    <!--
+        位移 translate()
+            水平位移
+
+            垂直位移
+
+    -->
+    <!--
+        旋转 rotate()
+            旋转的单位是deg
+    -->
+
+    <div class="box">
+
+    </div>
+
+</body>
+<script type="text/javascript">
+
+
+</script>
+</html>

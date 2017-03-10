@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>32_模拟事件</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <button id="btn">点击我</button>
+    <div id="test"></div>
+
+    <script>
+        // TODO 为button按钮绑定click事件
+//        $('#btn').click(function(){
+//            $('#test').text('button按钮被点击了.')
+//        });
+//        // TODO 用于模拟用户触发该事件
+//        $('#btn').trigger('click');
+
+        var arr = ['hello','world'];
+        $('#btn').click(function(event,a,b){
+            $('#test').text(a+b);
+        }).trigger('click',['hello','world']);
+
+        (function(win){
+            var a = 'a';
+        })(window);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿
+                                    此方法为了兼容IE8以下浏览器 圆角与盒子阴影的问题
+
+
+1、CSS3PIE 官网
+    http://css3pie.com/
+
+2、CSS3PIE 让IE支持的CSS3的新特性（即CSS新的属性）
+    http://css3pie.com/documentation/supported-css3-features/
+
+
+    border-radius      ---   IE 6-8. IE 9
+    box-shadow         ---   IE 6-8. IE 9
+
+    border-image       ---   ？
+    Gradients          ---   ？
+    RGBA Color Values  ---   IE 9
+
+
+
+3、集成到WEB项目中，
+    3.1、在其官网下载压缩文件，解压缩，复制到项目指定目录
+    3.2、在选择器中引入即可。例如
+        behavior: url("HACK/PIE-1.0.0/PIE.htc");
+
+
+ 	/*引入htc文件，让IE678支持圆角特性*/
+            behavior: url("plugin/PIE.htc");
+
+
+<script type="text/javascript" src="plugin/PIE_IE678_uncompressed.js"></script>

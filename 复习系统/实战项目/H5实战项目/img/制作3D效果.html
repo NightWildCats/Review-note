@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>制作3D效果</title>
+		<style type="text/css">
+			.box {
+				width: 500px;
+				margin: 20px auto;
+				text-align: center;
+				/*设置旋转中心点*/
+				transform-origin: 0 50% ;
+				/*开启3d*/
+				transform-style: preserve-3d;
+				/*设置景深的中心点*/
+				perspective-origin:0 50%;
+				perspective: 2000px;
+				
+			}
+			img {
+				width: 500px;
+				height: 300px;
+				transition: 3s linear;
+			}
+			img:hover {
+				/*设置景深*/
+				transform: rotateY(60deg) rotateY(-360deg);
+			}
+			ul {
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="../../Demo/2.动画/transform/img/fuyuanhui2.jpg"/>
+		</div>
+		
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</body>
+</html>

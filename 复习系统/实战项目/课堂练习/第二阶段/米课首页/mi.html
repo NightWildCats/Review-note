@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>米课首页</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/mi.css">
+    <style type="text/css">
+        /*设置背景样式*/
+        .mi-navbar-brand {
+            background-color: #88C5E1;
+            padding: 12px 0;
+        }
+        .brand-lg  {
+            height:42px;
+        }
+        .form-secath {
+            width:100%;
+        }
+        /*设置右边字体的颜色*/
+        ul>li>a,label,.pswa {
+            color: #fff !important;
+        }
+        /*媒体查询*/
+        @media screen and (max-width: 768px) {
+            .navbar-form {
+                padding: 8px 15px;
+                margin-right: -15px;
+                margin-left: -15px;
+                margin-top: 0;
+                margin-bottom: 0;
+                border:none;
+            }
+        }
+        .con-body {
+            height: 412px;
+            background:url("img/homeImg.png") no-repeat;
+            margin-top: 75px;
+        }
+        .con-body-left {
+            text-align: center;
+            padding-top: 65px;
+        }
+        .con-body-right {
+            margin-top: 60px;
+        }
+        .nav-tabs > li > a:link {
+            background-color: transparent ;
+            border-color: transparent;
+        }
+        .nav-tabs > li > a:visited {
+            background-color: transparent !important;
+            border-color: transparent;
+            border-bottom:2px solid #fff;
+        }
+        .nav-tabs > li > a:hover  {
+            background-color: transparent !important;
+            border-color: transparent;
+            border-bottom:2px solid #fff;
+        }
+        .nav-tabs > li > a:active {
+            background-color: transparent !important;
+            border-color: transparent;
+            border-bottom:2px solid #fff;
+        }
+        .nav-tabs > li.active > a:focus {
+            background-color: transparent;
+            border-color: transparent;
+        }
+        .nav-tabs-denglu {
+             border-bottom: 1px solid transparent;
+        }
+        .denglu-btn {
+            background-color: #88C5E1;
+            border-bottom: 5px solid #88C5E1;
+        }
+        .denglu-btn:hover,.denglu-btn:active,.denglu-btn:visited  {
+            background-color: #88C5E1;
+            border-bottom: 5px solid #88C5E1;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 767px) {
+            .con-body-right {
+                margin-top: -50px;
+            }
+        }@media screen and (width: 768px) {
+            .con-body-right {
+                margin-top: 50px;
+            }
+        }
+        @media screen and (width: 769px) {
+            .con-body-right {
+                margin-top: 50px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        navbar 设置为导航条
+        navbar-defauit 设置导航条样式
+        navbar-fixed-top 设置导航条固定在顶部
+    -->
+    <div class="navbar navbar-default navbar-fixed-top mi-navbar-brand">
+        <!--
+            container-fluid 设置导航条为通条
+            row 设置栅格行
+            col-lg-3 设置所占栅格列
+        -->
+        <div class="container-fluid">
+            <div class="row">
+                <!--brand区域-左侧-->
+                <div class="col-brand col-md-3 col-sm-2 col-xs-2">
+                    <img src="img/Brand.png" alt="" class="brand-lg visible-lg visible-md" >
+                    <img src="img/Brand-M.png" alt="" class="brand-lg visible-sm" >
+                    <img src="img/Brand-S.png" alt="" class="brand-lg visible-xs" >
+                </div>
+                <!--收索区域-->
+                <div class="col-form col-md-6 col-sm-6 col-xs-7 ">
+                    <form action="" class="navbar-form">
+                        <label for="secath" class="sr-only">收索</label>
+                        <div class="input-group form-secath">
+                            <input type="text" class="form-control" id="secath">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default ">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--右边区域-->
+                <div class="col-nav col-md-3 col-sm-4 col-xs-3">
+                    <!--当空间不足时候进行隐藏-->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle"
+                                data-toggle="collapse"
+                                data-target="#Mynav">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!--空间足够的情况-->
+                    <div class="collapse navbar-collapse navbar-right" id="Mynav">
+                        <ul class="nav navbar-nav">
+                            <li><a href="">首页</a></li>
+                            <li><a href="">课程</a></li>
+                            <li><a href="">公告</a></li>
+                            <li><a href="">登录</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid con-body">
+        <div class="row">
+            <!--z左边-->
+            <div class="col-md-8 col-sm-8 con-body-left">
+                <img src="img/MiLogo.png" alt="" class=" hidden-xs" ><br>
+                <img src="img/miTitle.png" alt="" class=" hidden-xs">
+            </div>
+            <!--右边-->
+            <div class="col-md-3 col-sm-4 col-xs-12 con-body-right">
+                <ul class="nav nav-tabs nav-tabs-denglu" >
+                    <li><a href="#denglu" data-toggle="tab" >登录米课</a></li>
+                    <li><a href="#zhuce" data-toggle="tab" >注册加入米课</a></li>
+                </ul>
+                <br>
+                <div class="tab-content">
+                    <!--登录区域-->
+                    <div class="tab-pane active" id="denglu">
+                        <form action="">
+                            <!--用户名-->
+                            <div class="form-group">
+                                <label for="userNo" class="sr-only">用户名</label>
+                                <input type="text" placeholder="请输入用户名" id="userNo" class="form-control">
+                            </div>
+                            <!--密码-->
+                            <div class="form-group">
+                                <label for="psw" class="sr-only">密码</label>
+                                <input type="password" placeholder="请输入密码" id="psw" class="form-control">
+                            </div>
+                            <!--记住/忘记密码-->
+                            <div class="checkbox">
+                                <label for="check1">
+                                    <input type="checkbox" id="check1">记住密码
+                                </label>
+                                <a href="" class="pull-right pswa">忘记密码</a>
+                            </div>
+                            <!--登录按钮-->
+                            <button type="button" class="btn btn-default form-control denglu-btn">登 录</button>
+
+                        </form>
+                    </div>
+                    <!--注册区域-->
+                    <div class="tab-pane" id="zhuce">注册 加入米课</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.js"></script>
+</html>

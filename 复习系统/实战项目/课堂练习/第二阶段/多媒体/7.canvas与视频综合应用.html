@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+
+        canvas {
+            /*border: 1px solid red;*/
+            background: url("img/xuwei.jpg") no-repeat;
+            -webkit-background-size:100%;
+            background-size: 100%;
+        }
+        video{
+            position: absolute;
+            z-index: -1;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<video src="meida/xuwei_wuzhe.mp4" controls="controls" id="myVideo"></video>
+
+<canvas id="myCanvas" width="720" height="480">
+    你的浏览器不支持 Canvas
+</canvas>
+<button type="button" id="btnPlay">播放</button>
+<button type="button" id="btnPause">暂停</button>
+
+<script type="text/javascript">
+    var myCanvasDom = document.querySelector("#myCanvas");
+    var btnPlayDom = document.querySelector("#btnPlay");
+    var btnPauseDom = document.querySelector("#btnPause");
+    var myVideoDom = document.querySelector("#myVideo");
+    //    获取画笔：canvas  2d 上下文
+    var painting = myCanvasDom.getContext("2d");
+
+//    当前播放时间
+    var currentPlayTime = 0;
+    //    1.播放视频
+    btnPlayDom.onclick = function () {
+        myVideoDom.play();
+        editVieo();
+    };
+    var logo = new Image();
+    logo.src = "img/atguigu-logo.png";
+
+    function editVieo() {
+        painting.drawImage(myVideoDom, 0, 0);
+        //        动态在每一帧画面，添加文本或者图片
+        painting.drawImage(logo, 20, 20);
+        painting.font = "bold 20px 微软雅黑";
+        painting.fillStyle = "#fff";
+        painting.fillText("让天下没有难学的技术", 180, 60);
+//        播放第5秒显示，我爱你
+        if(currentPlayTime > 2){
+            painting.font = "bold 20px 微软雅黑";
+            painting.fillStyle = "#f00";
+            painting.fillText("我爱你！！！", offsetX, 160);
+        }
+        setTimeout(editVieo, 120);
+    }
+    //    获取当前播放的时长
+    myVideoDom.ontimeupdate = function (ev) {
+        var  currentTime = ev.target.currentTime;
+        currentPlayTime = currentTime;
+    };
+    //    暂停
+    btnPauseDom.onclick = function () {
+        myVideoDom.pause();
+    }
+
+
+</script>
+</body>
+</html>

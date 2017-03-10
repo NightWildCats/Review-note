@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>懒加载</title>
+    <style type="text/css">
+        .wrap {
+            width: 520px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+    <body>
+    <div class="wrap">
+        <img data-load-deg="img/1.jpg" data-num-last="0" src="img/3.jpg" alt="">
+        <img data-load-deg="img/2.jpg" data-num-last="0" src="img/3.jpg" alt="">
+        <img data-load-deg="img/3.jpg" data-num-last="0" src="img/3.jpg" alt="">
+        <img data-load-deg="img/4.jpg" data-num-last="0" src="img/3.jpg" alt="">
+        <img data-load-deg="img/5.jpg" data-num-last="0" src="img/3.jpg" alt="">
+    </div>
+    </body>
+<script type="text/javascript">
+
+        var wrapImg = document.querySelectorAll(".wrap img");
+        var numLastImg = document.querySelectorAll("[data-num-last]");
+        var scollHeight = window.innerHeight;
+        //判断如偏
+        window.onresize = function () {
+            //实现加载之后 就不在重新加载
+            if (numLastImg.dataset.numLast = "0") {
+                scollHeight = window.innerHeight;
+//                console.log(scollHeight);
+            }
+        };
+        
+        window.onscroll = function () {
+            for (var i= 0;i<wrapImg.length;i++) {
+                //判断图片是否已经加载
+                if ( wrapImg[i].dataset.numLast=="0") {
+                    let t = wrapImg[i].getBoundingClientRect();
+                    if (t.top < scollHeight ) {
+                        //实现懒加载
+                        wrapImg[i].src = wrapImg[i].dataset.loadDeg;
+                        wrapImg[i].dataset.numLast="1";
+                        console.log("OK...")
+                    }
+
+                }
+
+            }
+        };
+
+</script>
+</html>

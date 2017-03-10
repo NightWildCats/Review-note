@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+
+        .drop-div {
+            background-color: rgba(255, 0, 0, .5);
+            /*width: 100px;*/
+            height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .drag-box{
+            background-color: rgba(0, 0, 255, .5);
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+<!--drop & drag-->
+<!--释放区元素-->
+<div class="drop-div"></div>
+<!--被拖拽元素元素-->
+<!--开启被拖拽属性-->
+<div class="drag-box" draggable="true">
+    Hello
+</div>
+
+<script type="text/javascript">
+
+    var dropDivDom = document.querySelector(".drop-div");
+    var dragBoxDom = document.querySelector(".drag-box");
+
+
+    dragBoxDom.ondragstart = function (ev) {
+        console.log(" dragstart .....");
+    }
+
+
+    dropDivDom.ondragover = function (ev) {
+//        阻止浏览器默认行为：让一个被拖拽元素可以悬浮在自身上方
+        ev.preventDefault();
+    }
+
+    dropDivDom.ondrop = function (ev) {
+        ev.preventDefault();
+//        被拖拽元素 添加到 释放区元素
+
+        //dropDivDom.appendChild(dragBoxDom);
+
+//        克隆DOM
+        //var cloneDom = dragBoxDom.cloneNode();
+        //dropDivDom.appendChild(cloneDom);
+
+//        深度克隆DOM -- 元素及其内容子元素全部复制一份
+        var cloneDom = dragBoxDom.cloneNode(true);
+        dropDivDom.appendChild(cloneDom);
+
+    }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

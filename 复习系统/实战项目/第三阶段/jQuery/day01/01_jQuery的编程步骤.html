@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_jQuery的编程步骤</title>
+    <!-- 1 引入JQUERY文件-->
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <!-- 定义HTML页面元素 -->
+    <input type="text" value="请输入你的用户名" id="username">
+    <script>
+        /* TODO 利用DOM获取id为username元素，并且打印value属性值
+        // TODO DOM对象
+        var elem = document.getElementById('username');
+        console.log(elem.value);
+        */
+
+        // TODO 利用JQUERY获取id为username元素，并且打印value属性值
+        // TODO JQUERY对象
+        // TODO 通过JQUERY获取的元素，在其前面增加"$"
+        // TODO 2 通过JQUERY的选择器获取HTML页面元素
+        var $elem = $('#username');
+        // TODO 3 调用JQUERY的API方法或属性，完成需求
+        console.log($elem.val());
+    </script>
+</body>
+</html>

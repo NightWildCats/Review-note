@@ -1,0 +1,36 @@
+
+    FileReader (HTML5 api)
+
+
+    1.图片的读取
+            var fileReader = new FileReader();
+            fileReader.readAsDataURL(fileObj)
+            fileReader.onload = function(){
+                fileReader.result;//图片的src 该值作为 img src属性值
+            }
+
+    2.文本文件的读取
+
+            var fileReader = new FileReader();
+            fileReader.readAsText(fileObj,"文本原来的字符编码")
+            fileReader.onload = function(){
+                fileReader.result;//文本的内容
+            }
+
+    3.读取多个文件
+           <input type='file' multiple="multiple">
+
+           fileDom.onchange = function(ev){
+                //选中的所有文件对象
+                ev.target.files;
+
+           }
+
+           潜在的BUG。变量提升（作用于提升）---- 重点掌握
+              -- 作用于的概念 (全局作用域，函数作用域)
+              -- 当变量定义在for循环中，定义在for循环中的变量会被提升到作用域的顶部。
+
+              -- 主程序(for循环)执行的速度用于大于文件加载的速度。
+              -- 造成全局变量被最后一个文件对象替换，导致第一个文件对象加载后，无法通知主程序。也就无法显示第一张图片。
+
+              -- 解决办法：把文件读取（加载）得逻辑，封装一个方法(function)

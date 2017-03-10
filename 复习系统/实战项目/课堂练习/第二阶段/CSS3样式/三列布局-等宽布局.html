@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三列布局-三列等宽</title>
+    <style type="text/css">
+        html ， body {
+            height: 100%;
+        }
+        .wrap {
+            width:100%;
+            display: table;
+        }
+        .left , .conter , .right {
+            width: 33.3333333%;
+            display: table-cell;
+        }
+        .left {
+            background-color: #99ff99;
+        }
+        .conter {
+            background-color: #2F70D0;
+        }
+        .right {
+            background-color: #863E01;
+        }
+        .white-span {
+            width: 5px;
+        }
+        /*
+            制作多列等宽自适应布局
+
+            1.父元素  display:  table; width: 100%
+            2.布局元素（子元素 ） display: table-cell;
+            3.子元素之间的空隙，通过一个正常的div分割即可。
+            4.如果存在多行，需要在包裹一个 display: table-row（<tr>）
+        */
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="left">
+        left
+    </div>
+    <div class="white-span"></div>
+    <div class="conter">
+        conter <br>
+        conter
+    </div>
+    <div class="white-span"></div>
+    <div class="right">
+        right <br>
+        right <br>
+        right <br>
+    </div>
+</div>
+</body>
+</html>

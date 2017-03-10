@@ -1,0 +1,161 @@
+body {
+    min-width: 320px;
+    max-width: 640px;
+}
+header {
+    background-color: yellowgreen;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+}
+#header-wrap {
+    /*min-width: 320px;*/
+
+    margin: 0 auto;
+
+}
+#header-wrap-ul {
+
+}
+#header-wrap-ul li {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+}
+#header-wrap-ul li span {
+    color: #666;
+}
+
+#page,#gruop-shop ,#shop,#sign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px 15px;
+}
+#gruop-shop ,#shop,#sign,.footer-wrap {
+    background-color: #FFF;
+    height: 50px;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+#sign {
+    justify-content: center;
+
+}
+#page {
+    background-color: rgb(229, 131, 53);
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+#page img {
+    width: 28px;
+    height: 18px;
+}
+#page a {
+    color: #fff;
+}
+#header-wrap-input {
+    width: 60%;
+    height: 33px;
+    border: 1px solid transparent;
+    background: url("../img/search_shop.png") no-repeat;
+    background-position: -14px -6px;
+    -webkit-background-size: auto 48px;
+    background-size: auto 44px;
+}
+#header-wrap-input input {
+    width: 60%;
+    height: 28px;
+    text-indent: .5em;
+    margin-left: 38px;
+    outline: none;
+    border: none;
+}
+
+#gruop-shop img ,#shop img {
+    width: 30px;
+    height: 30px;
+}
+ .img1,.img2{
+    transform:rotate(180deg);
+}
+
+#header-wrap-ul li:nth-child(n):target {
+    z-index: 2;
+
+}
+
+
+
+/*S=footer部分样式*/
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 15px;
+}
+#page-div {
+    border: 1px solid transparent;
+}
+#gruop-shop-div {
+    border: 1px solid transparent;
+}
+#shop-div {
+    border: 1px solid transparent;
+}
+#sign-div {
+    border: 1px solid transparent;
+}
+.page-img,.gruop-shop-img,.shop-img,.sign-img {
+    border: 1px solid transparent;
+    width: 40px;
+    height: 40px;
+    background-image:url("../img/spr.png");
+    background-size: 40px auto;
+}
+
+.page-img {
+    background-position: 0px 40px;
+}.page-img1 {
+    background-position: 0px 78px;
+}
+
+.gruop-shop-img {
+    background-position: 1px 279px;
+}.gruop-shop-img1 {
+    background-position: 1px 320px;
+}
+.shop-img {
+    background-position: 0px 520px;
+}.shop-img1 {
+    background-position: 0px 560px;
+}
+.sign-img {
+    background-position: 0px 438px;
+}.sign-img1 {
+    background-position: 0px 480px;
+}
+.footer-wrap p {
+    text-align: center;
+    color: #999;
+}
+.pcolor {
+    color: #FF5722;
+}
+
+
+/*E=footer部分样式*/

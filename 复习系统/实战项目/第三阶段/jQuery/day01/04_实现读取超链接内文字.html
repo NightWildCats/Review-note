@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_实现读取超链接内文字</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <a>这是一个超链接</a>
+    <script>
+        //获取一个jQuery独享
+        var $test = $('a');
+        //jQuery输出文本信息
+        var get = $test.text();
+        console.log(get+"0");
+        //将jQuery对象装换成DOM对象
+        var set = $test.get(0).innerHTML;
+        console.log(set+"1");
+
+
+
+    </script>
+</body>
+</html>

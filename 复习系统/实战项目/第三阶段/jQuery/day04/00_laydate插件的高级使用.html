@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_laydate插件的高级使用</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script src="laydate/laydate.js"></script>
+</head>
+<body>
+    <input id="mydate" placeholder="请输入日期" class="laydate-icon">
+    <script>
+        /*$('#mydate').click(function(){
+            laydate();
+        })*/
+
+        /*var mydate = document.getElementById('mydate');
+        mydate.onclick = laydate;*/
+
+        /*
+            TODO laydate(options) - 日期插件的核心方法
+            TODO * options - Object类型
+            TODO   * elem - 表示指定的页面元素(#id)
+            TODO   * event - 指定触发的事件名称
+            TODO   * format - 设置日期的格式
+            TODO     * YYYY-MM-DD - 通用格式
+            TODO     * YYYY/MM/DD
+            TODO     * YYYY年MM月DD日
+         */
+        laydate({
+            elem : '#mydate',
+            event : 'focus',
+            istime : true,
+            format : 'YYYY年MM月DD日'
+        });
+
+        /*
+         {
+             elem: '#id', //需显示日期的元素选择器
+             event: 'click', //触发事件
+             format: 'YYYY-MM-DD hh:mm:ss', //日期格式
+             istime: false, //是否开启时间选择
+             isclear: true, //是否显示清空
+             istoday: true, //是否显示今天
+             issure: true, 是否显示确认
+             festival: true //是否显示节日
+             min: '1900-01-01 00:00:00', //最小日期
+             max: '2099-12-31 23:59:59', //最大日期
+             start: '2014-6-15 23:00:00',  //开始日期
+             fixed: false, //是否固定在可视区域
+             zIndex: 99999999, //css z-index
+             choose: function(dates){ //选择好日期的回调
+
+             }
+         }
+         */
+    </script>
+</body>
+</html>

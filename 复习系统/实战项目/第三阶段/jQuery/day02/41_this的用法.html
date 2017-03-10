@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this的用法</title>
+</head>
+<body>
+<input id="btn" type="button" value="this is username">
+<script>
+    // TODO this的第一种用法
+    var btn = document.getElementById('btn');
+    btn.onclick = function(){
+        /*
+            TODO this - 绑定click事件的目标元素
+            TODO event.target - 等同于this
+         */
+    }
+    // TODO this的第二种用法
+    // TODO 对象的构造函数（对象模版）
+    function Hero(){
+        this.name = 'zhangwuji';
+        this.sayMe = function(){
+            console.log('this is zhangwuji');
+        }
+    }
+    // TODO 创建对象
+    var hero = new Hero();
+    // TODO this的第三种用法
+    var a = 'a';
+    console.log(a);
+    console.log(window.a);
+    console.log(this.a);
+
+    // TODO 内部函数
+    function fn1(){
+        function n(){}
+    }
+</script>
+</body>
+</html>

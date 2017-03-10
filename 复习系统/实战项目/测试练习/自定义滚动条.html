@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义滚动条</title>
+		<style type="text/css">\
+			/*初始化页面*/
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			/*禁止滚动条*/
+			html , body {
+				height: 100%;
+				overflow: hidden;
+			}
+			#warp {
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 20px;
+				background-color: #B9F3FE;
+			}
+			#inner {
+				position: absolute;
+				width: 20px;
+				height: 40px;
+				background-color: pink;				
+			}
+			#centen {
+				background-color: pink;
+				width: 200px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function () {
+				//自定义插入内容
+				var centen = document.getElementById("centen");
+				var test="";
+				for (var i = 0 ; i < 300 ;i++) {
+					test +="test"+i+"<br />";
+				}
+				centen.innerHTML = test;
+				
+				//获取元素对象
+				var inner = document.getElementById("inner");
+				//鼠标按下是获取
+				inner.onmousedown = function (event) {
+					event = event || window.event;
+					//全局焦点获取
+					inner.setCapture && inner.setCapture();	
+					//获取元素初始位置
+					var csWzT =event.clientY - inner.offsetTop;				
+//					console.log(csWzT);
+					//鼠标移动事件
+					document.onmousemove = function (event) {
+						event = event || window.event;
+						//获取鼠标移动位置
+						var ydZbT = event.clientY - csWzT;
+						//固定滚动条最上最下的位置
+						if (ydZbT < 0) {
+							ydZbT = 0;
+						} else if (ydZbT > document.documentElement.clientHeight-inner.offsetHeight) {
+							ydZbT = document.documentElement.clientHeight-inner.offsetHeight
+						}
+						//求拖动的平均数
+						sell =ydZbT/document.documentElement.clientHeight-inner.offsetHeight;
+						inner.style.top = ydZbT +"px";
+						centen.style.height = document.documentElement.clientHeight/sell + "px";
+					};
+					//鼠标松开事件
+					document.onmouseup = function (event) {
+//						event = event || window.event;
+						document.onmousemove = document.onmouseup = null;
+						document.releaseCapture && document.releaseCapture();
+					};
+					return false;
+				};		
+				
+			};
+		</script>
+	</head>
+	<body>
+		<div id="warp">
+			<div id="inner"></div>
+		</div>
+		<div id="centen">
+			
+		</div>
+	</body>
+</html>

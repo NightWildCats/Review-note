@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#areaDiv {
+				border: 1px solid black;
+				width: 300px;
+				height: 50px;
+				margin-bottom: 10px;
+			}
+			
+			#showMsg {
+				border: 1px solid black;
+				width: 300px;
+				height: 20px;
+			}
+			
+			
+		</style>
+		<script type="text/javascript">
+			
+			window.onload = function () {
+				//获取到两个div对象
+				var areaDiv = document.getElementById("areaDiv");
+				var showMsg = document.getElementById("showMsg");
+				
+				//鼠标进入某一块区域事件 onmousemove
+				//event 指的是时候的鼠标触发事件和键盘相应事件的一个参数  还可以参考 window.event
+				areaDiv.onmousemove = function (event) {
+					
+//					判断浏览器是否具有event方法
+					event = event || window.event;
+					//获取坐标的值
+					var x = event.clientX;
+					var y = event.clientY;
+					
+					//把获取到的坐标值插入到showMsg对象的div中
+					showMsg.innerHTML = "x = "+ x +"，y = "+ y ;				
+				};
+
+			};
+			
+		</script>
+		
+	</head>
+	<body>
+		<div id="areaDiv"></div>
+		<div id="showMsg"></div>
+	</body>
+</html>

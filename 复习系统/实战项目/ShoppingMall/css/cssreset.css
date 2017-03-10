@@ -1,0 +1,58 @@
+@charset "utf-8";
+/*设置HTML默认的文字颜色和背景*/
+html {
+	color: #000;
+	background: #FFF;
+}
+
+/*页面CSS初始化--可以使用 *{ margin: 0;padding: 0}进行设置*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+	margin: 0;padding: 0;  /*设置内外边距都为0*/
+}
+/*设置表格边框以及间距*/
+table {
+	border-collapse: collapse; /*表格边框合并在一起*/
+	border-spacing: 0; /*设置边框与边框的距离，为px级别*/
+}
+
+em,strong,b,u,i {
+	font-style: normal; /*字体的样式：是否为斜体以及正常*/
+	/*normal: 正常
+     italic: 斜体
+     oblique: 斜体
+     inherit: 继承*/
+	font-weight: normal; /*字体的是否加粗显示：400为正常 700为加粗 建议使用400以及700*/
+}
+/*清除有序、无序列表的样式*/
+ol,ul {
+	list-style: none;
+}
+/*h标签*/
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+/*表单标签样式的初始化*/
+input,textarea,select {
+	font-family: inherit; /*设置字体的样式从父元素继承过来*/
+	font-size: inherit;  /*设置字体的大小从父元素继承过来*/
+	font-weight: inherit; /*设置字体的粗细从父元素继承过来*/
+	*font-size: 100%; /*设置字体的大小从body继承过来，兼容IE浏览器*/
+
+}
+/*设置图标的边框*/
+img {
+	border:0 none; /*设置为默认没有边框的， 设置属性值为：0 none 兼容性是最好的*/
+}
+/*设置超链接字体无下划线*/
+a {
+	text-decoration: none;
+}
+/*设置控件标签的边框-无边框*/
+input {
+	border: none;
+}
+a:hover {
+	font-weight: 700;
+	color: blue;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				/*开启相对定位*/
+				position: relative;
+				/*开启绝对定位*/
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			window.onload = function () {
+				//获取div对象
+				var box1 = document.getElementById("box1");
+				
+				//取消box1的冒泡事件
+				box1.onmousemove = function (event) {
+					event = event || window.event;
+					//取消冒泡事件，当鼠标在div对象框中的时候就不会移动div
+					event.cancelBubble = true;	
+				};
+				
+				//获取浏览器窗口的坐标
+				document.onmousemove = function (event) {
+					//判断浏览器中是否具有event方法
+					event = event || window.event;
+					
+					//判断浏览器的相对定位是相对于body还是相对于html进行的
+					//垂直方向的偏移量
+					var sy = document.documentElement.scrollTop || document.body.scrollTop;
+					//水平方向的偏移量
+					var sx = document.documentElement.scrollLeft || document.body.scrollLeft;
+					
+					//获取鼠标的坐标
+					var left = event.clientX + sx;
+					var top = event.clientY + sy;
+					//将获取的值赋值给box1对象的偏移量（首先要开启定位）
+					box1.style.top = top +"px";
+					box1.style.left = left +"px";
+				};	
+			};
+			
+		</script>
+		
+	</head>
+	<body style="height: 3000px; width: 3000px;">
+		
+		<div id="box1"></div>
+		
+	</body>
+</html>

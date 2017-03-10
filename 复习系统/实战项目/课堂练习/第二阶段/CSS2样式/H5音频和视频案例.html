@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5音频和视频案例</title>
+    <style type="text/css">
+        video {
+            width: 400px;
+            /*height: 300px;*/
+            border: 1px solid red;
+            display: inline-block;
+            background-color: yellow;
+        }
+        audio {
+            border: 1px solid blue;
+            width: 400px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!--可以对音频视频设置宽高 边框 背景等属性-->
+    <!--其中audio元素和video都是行内块元素-->
+
+    <!--音频-->
+
+    <!--<audio>元素支持三种音频格式文件: MP3, Wav, 和 Ogg-->
+    <!--controls 提供开始播放等按钮-->
+    <!--preload = “no“ 属性规定是否在页面加载后载入音频（预加载）。如果出现该属性，则音频在页面加载时进行加载，并预备播放。如果使用 "autoplay"，则忽略该属性。-->
+    <!--autoplay 音频自动加载播放-->
+    <!--muted 设置音频静音-->
+    <!--loop 重复播放-->
+    <!--上面的属性 都设置早audio标签中-->
+    <audio controls loop>
+       <source type="audio/mpeg" src="mus\刘嘉亮 - 美丽女人.mp3">
+    </audio>
+
+    <!--换行-->
+    <br>
+
+
+    <!--视频-->
+
+    <!--<video> 元素支持三种视频格式：MP4、WebM、Ogg-->
+    <!--poster 设置视频未开始播放时的起始图片-->
+    <!--controls 提供开始播放等按钮-->
+    <!--preload = “no“ 属性规定是否在页面加载后载入视频（预加载）。如果出现该属性，则视频在页面加载时进行加载，并预备播放。如果使用 "autoplay"，则忽略该属性。-->
+    <!--autoplay 视频自动加载播放-->
+    <!--muted 设置视频静音-->
+    <!--loop 重复播放-->
+    <!--上面的属性 都设置早video标签中-->
+    <video controls>
+        <source src="mus\刘嘉亮 - 美丽女人.mp3" type="video/mp4">
+    </video>
+</body>
+    <script type="text/javascript">
+
+    </script>
+</html>

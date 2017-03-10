@@ -1,0 +1,223 @@
+<!-- 尚硅谷 HTML5 2016年-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>尚硅谷HTML5</title>
+    <style type="text/css">
+        body{ background-color: #f9f9f9;  font-family: "微软雅黑";}
+        .title-txt{
+
+            color: #fff;
+            font-size: 18px;
+        }
+        img[src$='atguigu.png']{
+            width: 52px;
+            height: 52px;
+            vertical-align: middle;
+            margin: 5px 0 5px 8px;
+        }
+        img[src*='logo']{ margin: 8px; width: 42px;  height: 42px; vertical-align: middle}
+        .wrapper{ width: 640px; margin: 0 auto;
+            background-color: #fff;}
+        header{ background-color: #5bc0de; }
+        footer{
+            text-align: right;
+            background-color: #f0f0f0;
+            padding: 5px 0;
+        }
+        #msg{
+            width: 366px;
+            height: 32px;
+            line-height: 32px;
+            vertical-align: middle;
+            transform: translateY(-2px);
+            text-indent: 1em;
+            font-size: 15px;
+            font-family: "微软雅黑";
+        }
+        button{
+            height: 42px;
+            line-height: 42px;
+            width: 120px;
+            border: none;
+            background-color: #5bc0de;
+            font-size: 15px;
+            color: #fff;
+            margin-left: 5px;
+            border-radius: 3px;
+            font-family: "微软雅黑";
+        }
+        #btncClose{
+            background-color: #999;
+        }
+        #chatLog{
+            height: 420px;
+            overflow-y: auto;
+        }
+        li{
+            padding: 5px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .service, .custom{
+            font-size: 15px;
+            font-family: "微软雅黑";
+        }
+        .service:before{
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin: 3px;
+            width: 48px;
+            height: 48px;
+            background: url("img/icon_service.png") no-repeat;
+        }
+        .custom{
+            text-align: right;
+        }
+        .custom:before{
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin: 3px;
+            width: 48px;
+            height: 48px;
+            background: url("img/icon_custom.png") no-repeat;
+        }
+        .chat-txt{
+            display: inline-block;
+            vertical-align: middle;
+            height: 42px;
+            line-height: 42px;
+            border-radius: 3px;
+            margin-left: 8px;
+            background-color: #f0f0f0;
+            padding: 0 10px;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <img src="img/atguigu.png" alt="">
+        <span class="title-txt">尚硅谷机器人客服（教学版）</span>
+    </header>
+    <ul id="chatLog">
+
+    </ul>
+    <footer>
+        <input type="text" id="msg" placeholder="请输入信息...">
+        <button id="btnSend">发送</button><button id="btncClose">关闭</button>
+    </footer>
+</div>
+
+<script type="text/javascript">
+
+    var msgDOM = document.querySelector("#msg");
+    var btnSendDOM = document.querySelector("#btnSend");
+    var chatLogDOM = document.querySelector("#chatLog");
+    var btncCloseDom =  document.querySelector("#btncClose");
+
+    /**
+     * WebSocket 的过程
+     *
+     * ① 创建一个 WebSocket 对象
+     * ② 通过 WebSocket 对象的 onopen 事件来监听是否连接成功
+     * ③ 通过 send()方法 来向服务器发送信息
+     * ④ 通过 onmessage 事件来监听服务器返回的信息
+     *      注：服务器返回的信息存储在 ev.data 中
+     * ⑤ 通信完成之后可以调用 WebSocket对象的close()方法来关闭对话
+     *      注：关闭浏览器窗口可以通过 Window.close()方法来实现
+     *
+     */
+
+    //创建一个 WebSocket 地址和对象
+     var WebUrl = "ws://192.168.1.250:8080/html5/mywebsocket";
+     var ws = new  WebSocket(WebUrl);
+    //通过 websocket对象的 onopen 事件来监听是否连接成功
+    ws.onopen = function (ev) {
+        ws.send("open");
+
+        console.log("连接成功。。。")
+    };
+    // 连接不成功 通过error 来进行监听
+    ws.onerror = function (ev) {
+        showMsg("service","设置一个愉快的故事！");
+        showMsg("service","设置一个愉快的故事！但是不幸没有连接上。");
+//        if (msgDOM.value=="坏人") {
+//            ev.data="我是个好人，你才是个大坏蛋！";
+//            showMsg("service",ev.data);
+//        }
+        console.log("出错啦！！！")
+    };
+
+    //通过单击“发送”按钮来实现，信息的发送功能
+    btnSendDOM.onclick = function () {
+        //输入的内容不能为空
+        if (msgDOM.value != "") {
+            //首先要创建一个li标签和span标签来承载 聊天信息
+            showMsg("custom",msgDOM.value);
+            msgDOM.value = null;
+        } else {
+            msgDOM.placeholder = "输入的内容不能为空";
+        }
+        //实现最新消息在 在最下面窗口
+        chatLogDOM.scrollTop = chatLogDOM.scrollHeight;
+    };
+    //实现键盘回车键 发送信息
+    window.onkeydown = function (ev) {
+        if (msgDOM.value != "") {
+            if (ev.keyCode == 13) {
+                showMsg("custom",msgDOM.value);
+                msgDOM.value = null;
+            }
+            //实现最新消息在 在最下面窗口
+            chatLogDOM.scrollTop = chatLogDOM.scrollHeight;
+        } else {
+            msgDOM.placeholder = "输入的内容不能为空";
+        }
+    };
+
+    //监听 服务器返回的信息 ws.onmessage 来实现 服务器返回的数据都存储在 ev.data中
+    ws.onmessage = function (ev) {
+        showMsg("service",ev.data);
+    };
+
+    //实现关闭通信功能
+    btncCloseDom.onclick = function () {
+        //关闭websocket通信
+        ws.close();
+        //关闭浏览器页面
+        window.close();
+    };
+
+    //通过 ctrl+enter 实现消息的清除
+    window.addEventListener("keydown",function (ev) {
+        if (ev.ctrlKey && ev.keyCode == 13) {
+            let liDom = document.querySelectorAll("#chatLog li");
+            console.log(liDom);
+            //遍历ul所有的子节点 然后实现信息的删除功能
+            for (var i = 0; i < liDom.length; i++) {
+                chatLogDOM.removeChild(chatLogDOM.childNodes[i]);
+            }
+        }
+    });
+
+    //重复的代码实现封装
+    function showMsg(className,value) {
+        var li = document.createElement("li");
+        li.classList.add(className);
+        var span = document.createElement("span");
+        span.classList.add("chat-txt");
+        span.innerHTML = value;
+        li.appendChild(span);
+        chatLogDOM.appendChild(li);
+    }
+
+</script>
+</body>
+</html>

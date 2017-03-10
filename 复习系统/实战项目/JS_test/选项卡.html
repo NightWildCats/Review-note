@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选项卡</title>
+		<link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+		<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		.all {
+			width: 240px;
+			height:400px;
+			border: 1px solid #aaa;
+			margin: 50px auto;
+		}
+		.all ul {
+			float: left;
+		}
+		span {
+			display: block;
+			float: left;
+		    width: 78px;
+		    height: 30px;
+		    text-align: center;
+		    line-height: 30px;
+		    border: 1px solid red;
+		    margin: 0;
+		    background: white;
+		    /*color: white;*/
+		}
+		.all .tupian1, .all .junshi1 {
+			display: none;
+		}
+		.jinru{
+			border-bottom: none;
+			background: blue;
+			color: white;
+		}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//鼠标进入事件
+				$("span").mouseover(function(e){
+					//获取鼠标进入区域的索引值
+					var num=$(this).index();
+					//判断鼠标进入的区域的索引是否为0
+					if(num!=0){
+						//执行当进入索引为0的区域时，使Id为xinwen1的样式隐藏
+						$("#xinwen1").css("display","none");
+					}
+					
+					$(this).attr("class","jinru");
+					$(".all ul").eq(num).css("display","block");
+				});
+				//鼠标移除事件
+				$("span").mouseout(function(e){
+					//num 获取当前鼠标移入span的索引
+					var num=$(this).index();
+					//鼠标移除时默认显示当前的ul子项目（未完成）
+					if($(this).index()){
+						$(".all ul").eq(num).css("display","block");
+					}
+					$(this).attr("class","");		
+					$(".all ul").eq(num).css("display","none");
+				});
+			});
+		</script>
+	</head>
+	<body>
+			<div class="top1">
+				<a class="top_span">章节目录</a><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回首页</a> <br />
+			</div>
+		<div id="all" class="all">
+			<span id="xinwen" class="xinwen">新闻</span>
+			<span id="tupian" class="tupian">图片</span>
+			<span id="junshi" class="junshi">军事</span>
+			<div>
+			<ul class="xinwen1" id="xinwen1">
+				<li>新闻新闻新闻新闻</li>
+				<li>新闻新闻新闻新闻</li>
+				<li>新闻新闻新闻新闻</li>
+				<li>新闻新闻新闻新闻</li>
+				<li>新闻新闻新闻新闻</li>
+			</ul>
+			<ul class="tupian1">
+				<li>图片图片图片图片</li>
+				<li>图片图片图片图片</li>
+				<li>图片图片图片图片</li>
+				<li>图片图片图片图片</li>
+				<li>图片图片图片图片</li>
+			</ul>
+			<ul class="junshi1">
+				<li>军事军事军事军事</li>
+				<li>军事军事军事军事</li>
+				<li>军事军事军事军事</li>
+				<li>军事军事军事军事</li>
+				<li>军事军事军事军事</li>
+			</ul>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .wrap {
+            width: 500px;
+            height: 480px;
+            background-color: rgba(145,235,2,.5);
+            margin: 20px auto;
+            text-align: center;
+        }
+        .input {
+            /*display: flex;*/
+            /*justify-content: space-around;*/
+            /*align-items: center;*/
+            /*flex-wrap: wrap;*/
+        }
+        input {
+            display: inline-block;
+            margin: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <span>CO排放量计算</span>
+        <div class="input">
+            <label for="1">CO年排放量</label><input type="text" id="qco" placeholder="qCO"> <br/>
+            <label for="2">CO的车况系数</label><input type="text" id="fa" placeholder="fa"> <br/>
+            <label for="3">车密度系数</label><input type="text" id="fb" placeholder="fb"><br>
+            <label for="4">CO的海拔高度系数</label><input type="text" id="fd" placeholder="fd"><br>
+            <label for="5">CO的车型系数</label><input type="text" id="fh" placeholder="fh"><br>
+            <label for="6">CO的车速系数</label><input type="text" id="fm" placeholder="fm"><br>
+            <label for="7">CO的车型类别</label><input type="text" id="fiv" placeholder="fiv"><br>
+            <label for="8">车型的交通量</label><input type="text" id="n" placeholder="n"><br>
+            <label for="10">结果</label><input type="text" id="jg" placeholder="结果"><br>
+        </div>
+        <div class="btn">
+            <button type="button" id="btn">计算</button>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+
+    var numBer = 1/3.6/1000000;
+
+    var btnDom = document.querySelector('#btn');
+    console.log(btnDom);
+    var inDom1 = document.querySelector('#qco');
+    console.log(inDom1);
+    var inDom2 = document.querySelector('#fa');
+    var inDom3 = document.querySelector('#fb');
+    var inDom4 = document.querySelector('#fd');
+    var inDom5 = document.querySelector('#fh');
+    var inDom6 = document.querySelector('#fm');
+    var inDom7 = document.querySelector('#fiv');
+    var inDom8 = document.querySelector('#n');
+    var inDom10 = document.querySelector('#jg');
+
+    btnDom.onclick =function () {
+        var heji = numBer*parseFloat(inDom1.value)*parseFloat(inDom2.value)*parseFloat(inDom3.value)*parseFloat(inDom4.value)*parseFloat(inDom5.value)*parseFloat(inDom6.value)*parseFloat(inDom7.value)*parseFloat(inDom8.value);
+        inDom10.value = heji;
+    };
+
+
+
+</script>
+
+</html>

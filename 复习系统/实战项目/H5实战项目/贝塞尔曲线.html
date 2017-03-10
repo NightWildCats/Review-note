@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贝塞尔曲线</title>
+    <style type="text/css">
+            .box {
+                width: 20px;
+                height: 50px;
+                background-color: red;
+                transition: 5s cubic-bezier(0,1.35,1,-0.47);
+            }
+
+            .box2{
+                width:1000px;
+            }
+
+    </style>
+    <style type="text/css">
+
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+</head>
+<body>
+	<div class="top1">
+				<span class="top_span">章节目录</span><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回主页</a><br />
+	</div>
+        <div class="box"></div>
+
+
+</body>
+
+    <script type="text/javascript">
+        var obj = document.querySelector(".box");
+		//      控制元素的添加 删除 切换
+        obj.addEventListener("click",function () {
+        	//更改元素的属性
+        	obj.classList.add("box2");
+        	//删除某一个属性
+//      	obj.classList.remove("box2")
+//			进行样式的切换
+//			obj.classList.toggle("box2");
+
+        },false);
+
+    </script>
+</html>

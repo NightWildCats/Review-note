@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>第二阶段考试</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+        <!--S=顶部的框架-->
+        <header>
+            <div class="header-wrap">
+                <ul id="header-wrap-ul">
+                    <!--顶部首页-->
+                    <li id="page">
+                        <img src="img/logo_mi.png" alt="首页login">
+                        <div id="header-wrap-input">
+                            <input type="text" placeholder="请输入商品。。。">
+                        </div>
+                        <a href="#">登录</a>
+                    </li>
+                    <!--顶部商品分类-->
+                    <li id="gruop-shop">
+                        <img src="img/icon_back_n.png" alt="返回键">
+                        <span>商品分类</span>
+                        <img class="img1" src="img/icon_back_n.png" alt="收索键">
+                    </li>
+                    <!--顶部购物车-->
+                    <li id="shop">
+                        <img src="img/icon_back_n.png" alt="返回键">
+                        <span>购物车</span>
+                        <img class="img2" src="img/icon_back_n.png" alt="收索键">
+                    </li>
+                    <!--顶部注册-->
+                    <li id="sign">
+                        <span>登录/注册</span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!--E=顶部的框架-->
+
+        <!--S=框架底部-->
+        <footer>
+            <div class="footer-wrap">
+                    <!--底部首页-->
+                    <div id="page-div" >
+                        <a href="#page">
+                            <div class="page-img" ></div>
+                            <p class="p1">首页</p>
+                        </a>
+                    </div>
+                    <!--底部商品分类-->
+                    <div id="gruop-shop-div" >
+                        <a href="#gruop-shop">
+                        <div class="gruop-shop-img"></div>
+                        <p class="p2">分类</p>
+                        </a>
+                    </div>
+                    <!--底部购物车-->
+                    <div id="shop-div" >
+                        <a href="#shop">
+                        <div class="shop-img"></div>
+                        <p class="p3">购物车</p>
+                        </a>
+                    </div>
+                    <!--底部个人中心-->
+                    <div id="sign-div">
+                        <a href="#sign">
+                        <div class="sign-img"></div>
+                        <p class="p4">我的</p>
+                        </a>
+                    </div>
+            </div>
+        </footer>
+
+        <!--E=框架底部-->
+
+
+</body>
+<script type="text/javascript">
+    var pageDom = document.querySelector("#page");
+    pageDom.style.zIndex= 1 ;
+</script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

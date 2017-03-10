@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06_validation自定义验证方法</title>
+    <link rel="stylesheet" href="validation/css/screen.css">
+    <script src="jquery-1.12.4.js"></script>
+    <script src="validation/jquery.validate.js"></script>
+    <script src="validation/messages_zh.js"></script>
+    <style>
+        form.cmxform {
+            width: 50em;
+        }
+        em.error {
+            background:url("jqueryui/images/unchecked.gif") no-repeat 0px 0px;
+            padding-left: 16px;
+        }
+        em.success {
+            background:url("jqueryui/images/checked.gif") no-repeat 0px 0px;
+            padding-left: 16px;
+        }
+        form.cmxform label.error {
+            margin-left: auto;
+            width: 250px;
+        }
+        em.error {
+            color: black;
+        }
+        #warning {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1 id="banner"><a href="http://jqueryvalidation.org/">jQuery Validation Plugin</a> Demo</h1>
+<div id="main">
+    <form class="cmxform" id="texttests" method="get" action="foo.html">
+        <h2 id="summary"></h2>
+        <fieldset>
+            <legend>Example with custom methods and heavily customized error display</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="number">身份证号码：</label>
+                    </td>
+                    <td>
+                        <input id="number" name="number">
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+            <input class="submit" type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <h3 id="warning">Your form contains tons of errors! Please try again.</h3>
+</div>
+<script>
+    /*
+        TODO 验证身份证号码
+        TODO * 验证规则
+        TODO   * 长度为 15 位 - 全部都是数字
+        TODO   * 长度为 18 位 - 1. 全部都是数字;2. 以"x"结尾的
+     */
+    $.validator.addMethod("checkCard",function(value,element,params){
+        /*
+            TODO 验证规则的函数 function(value,element,params){}
+            TODO * value - 当前要验证的元素的value属性值
+            TODO * element - 当前要验证的元素
+         */
+        if(value.length == 15){
+            return /^[0-9]{15}$/.test(value);
+        }
+        if(value.length == 18){
+            return /^[0-9]{18}$/.test(value);
+        }
+    },'请输入正确的身份证号码（15-18位）'
+    );
+
+    $('.cmxform').validate({
+        rules : {
+            number : 'checkCard'
+        }
+    });
+</script>
+</body>
+</html>

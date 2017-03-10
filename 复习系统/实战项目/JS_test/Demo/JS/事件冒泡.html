@@ -1,0 +1,82 @@
+<!-- 尚硅谷 HTML5 2016年-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="Java培训、Android培训、HTML5培训"/>
+    <meta name="description" content="尚硅谷-老学员一致推荐，有口皆碑的Java培训、Android培训、HTML5培训"/>
+    <!--<link href="/H50623/img/logo.png" rel="shortcut icon" type="image/x-icon"/>-->
+    <!--<link rel="stylesheet" href="/H50623/css/reset.css">-->
+    <title>尚硅谷HTML5</title>
+    <style type="text/css">
+        .box {
+            background-color: #00CCFF;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box" class="box">
+        <span id="span">Hello</span>
+        <input type="text" name="userName" id="userName">
+    </div>
+
+<script type="text/javascript">
+    //添加脚本
+    var box = document.querySelector("#box");
+    var span = document.querySelector("#span");
+    var userName = document.querySelector("#userName");
+
+
+    /**
+    span.addEventListener("mouseover", function(){
+        console.log("事件：%s, 坐标(%d, %d),  事件目标：%o",event.type,  event.pageX, event.pageY, event.target);
+        console.log(event.which);
+    }, false)
+     */
+
+
+
+
+    document.body.addEventListener("click", function(event){
+
+        var targetObj = event.target;
+
+        switch(targetObj.id){
+            case 'box': {
+                alert("box");
+                break;
+            }
+            case 'span': {
+                alert("span");
+                break;
+            }
+        }
+
+
+        //console.log("事件类型：%s, 坐标(%d, %d),  产生事件节点的引用：%o， 当前捕获节点的引用：%o", event.type,  event.pageX, event.pageY, event.target, event.currentTarget);
+    },false);
+
+
+
+    document.body.addEventListener("keydown", function(event){
+        //isKeyDownEnter(event);
+    });
+    function isKeyDownEnter(event){
+        if(event.which === 13){
+            console.log("你按下了回车");
+        }
+    }
+
+
+</script>
+</body>
+</html>

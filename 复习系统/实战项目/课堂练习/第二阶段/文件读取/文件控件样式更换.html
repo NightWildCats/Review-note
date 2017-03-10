@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+
+        #file {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            background-color: #00f;
+
+            display: none;
+            /*position: absolute;*/
+            /*z-index: -999;*/
+        }
+    </style>
+</head>
+<body>
+
+<!--
+选取多个文件 multiple="multiple"
+-->
+
+<input type="file" name="file" id="file" multiple="multiple">
+<img src="img/Pictures_72px_1142177_easyicon.net.png" alt="" id="btnFileSeletor">
+<div id="imgs">
+    <!--图片显示-->
+</div>
+
+<script type="text/javascript">
+    var btnFileSeletorDom = document.querySelector("#btnFileSeletor");
+    var fileDom = document.querySelector("#file");
+    var imgsDom = document.querySelector("#imgs");
+
+    btnFileSeletorDom.onclick = function () {
+//        模拟用户单击了 input file
+        fileDom.click();
+    };
+    fileDom.onchange = function (ev) {
+        var files = ev.target.files;
+//        循环遍历
+        var len = files.length;
+        for (var i = 0; i < len; i++) {
+//            文件对象
+            var fileObj = files[i];
+            let fileR = new  FileReader();
+            fileR.readAsDataURL(fileObj);
+            fileR.addEventListener("load",function () {
+                let img = new Image();
+                img.src = fileR.result;
+                imgsDom.appendChild(img);
+            });
+        }
+
+    }
+</script>
+</body>
+</html>

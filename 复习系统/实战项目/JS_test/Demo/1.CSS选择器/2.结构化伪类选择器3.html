@@ -1,0 +1,51 @@
+<!-- 尚硅谷 HTML5 2016年-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>尚硅谷HTML5</title>
+    <style type="text/css">
+        ul{ list-style: none; margin: 0; padding: 0 }
+        ul:after{content: ""; display: table; clear: both}
+        li{ float: left; margin: 5px; font-size: 24px }
+
+        /*结构化伪类选择器：所用兄弟元素中类型相同的兄弟元素*/
+        p:only-of-type{ }
+
+        p:first-of-type{  }
+        p:last-of-type{  }
+
+        p:nth-of-type(n){  }
+        p:nth-last-of-type(n){  }
+
+    </style>
+</head>
+<body>
+
+<div class="structural-pseudo-classes">
+    <p>这里只有一个P元素</p>
+    <div>我是P的兄弟DIV</div>
+</div>
+<div class="structural-pseudo-classes">
+    <p>p - 1</p>
+    <span>这是一个SPAN</span>
+    <p>p - 2</p>
+    <a href="#">这是一个链接</a>
+    <p>p - 3</p>
+    <p>p - 4</p>
+    <p>p - 5</p>
+    <div>这是一个DIV 001</div>
+    <p>p - 6</p>
+    <p>p - 7</p>
+    <div>这是一个DIV 002</div>
+</div>
+
+
+<script type="text/javascript">
+    //添加脚本
+</script>
+</body>
+</html>

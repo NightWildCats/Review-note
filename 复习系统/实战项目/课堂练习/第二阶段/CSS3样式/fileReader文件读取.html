@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fileReader文件读取</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <!--indexOF() 检索字符串-->
+    <!--文件的读取 FileReader -->
+    <!--multiple="multiple" 可以选取多个文件 默认选择一个-->
+    <input type="file" multiple="multiple">
+    <input type="text">
+    <img src="" alt="">
+
+</body>
+<script type="text/javascript">
+    var fileR = document.querySelector('[type="file"]');
+    var test = document.querySelector('[type="text"]');
+    var img = document.querySelector("img");
+
+    // onchange 方法   files 属相 是一个数组 ，数组元素代表是选中的文件对象
+    fileR.onchange = function () {
+
+        var fileStr = new FileReader();
+        console.log("查看属性 %o",fileR.files);
+        //加载用户选中的图片URL
+        fileStr.readAsDataURL(fileR.files[0]);
+
+        // 加载文件的文本内容
+//        fileStr.readAsText(fileR.files[0]);
+
+        //加载完的方法 load
+        fileStr.addEventListener("load",function () {
+
+            //可以通过 new的方式创建 图片
+//            var img = new Image();
+
+            //指定图片的路径是选中的图片，然后页面显示
+            img.src=fileStr.result;
+
+            //显示文本
+//            test.value = fileStr.result;
+        },false);
+    };
+
+
+
+</script>
+</html>

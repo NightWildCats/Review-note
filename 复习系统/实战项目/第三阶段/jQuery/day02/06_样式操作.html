@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06_样式操作</title>
+    <script src="jquery-1.12.4.js"></script>
+    <style type="text/css">
+        .one{
+            width: 200px;
+            height: 140px;
+            margin: 40px;
+            background: red;
+            border: #000 1px solid;
+            float:left;
+            font-size: 17px;
+            font-family:Roman;
+        }
+
+        div,span{
+            width: 140px;
+            height: 140px;
+            margin: 20px;
+            background: #9999CC;
+            border: #000 1px solid;
+            float:left;
+            font-size: 17px;
+            font-family:Roman;
+        }
+
+        div.mini{
+            width: 30px;
+            height: 30px;
+            background: #CC66FF;
+            border: #000 1px solid;
+            font-size: 12px;
+            font-family:Roman;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="采用属性增加样式"  id="b1"/>
+    <input type="button" value=" addClass"  id="b2"/>
+    <input type="button" value="removeClass"  id="b3"/>
+    <input type="button" value=" 切换样式"  id="b4"/>
+    <input type="button" value=" hasClass"  id="b5"/>
+    <br>
+    <div id="mover">
+        动画
+    </div>
+    <br>
+    <span class="spanone">span</span>
+
+    <script>
+
+
+        // TODO 注意在使用class类样式的时候注意是否存在优先级问题，导致样式加载不生效
+
+
+        $('#b1').click(function(){
+            $('#mover').addClass('mini');
+        });
+        $('#b2').click(function(){
+            $('#mover').addClass('one');
+        });
+        $('#b3').click(function(){
+            // TODO 删除指定样式
+            //$('#mover').removeClass('one');
+            // TODO 删除所有样式
+            $('#mover').removeClass();
+        });
+        $('#b4').click(function(){
+            // TODO addClass()+removeClass()
+            $('#mover').toggleClass('one');
+        })
+        $('#b5').click(function(){
+            // TODO 用于判断指定元素是否含有指定样式
+            console.log($('#mover').hasClass('one'));
+        });
+
+        //$('#mover').css('background','blue');
+        //$('#mover').css('width','200').css('height','200').css('background','blue');
+        $('#mover').css({
+            'width' : 200,
+            'height' : 200
+        });
+    </script>
+</body>
+</html>

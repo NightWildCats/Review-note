@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>鼠标拖拽事件</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				position: absolute;
+			}
+			
+			#box2{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				/*开启定位并指定偏移量*/
+				position: absolute;
+				top: 200px;
+				left: 500px;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			function yidong(obj) {		
+			//对象的鼠标按下事件
+			obj.onmousedown = function (event) {				
+				event = event || window.event;				
+				//捕获鼠标按下事件
+				//如果浏览器没有该捕获事件就忽略
+				obj.setCapture && obj.setCapture();
+				//计算鼠标点击时候，obj对象与鼠标位置的相对偏移量offset
+				//水平偏移量
+				var ol = event.clientX - obj.offsetLeft;
+				//垂直偏移量
+				var ot = event.clientY - obj.offsetTop;				
+				//鼠标移动事件是在鼠标按下的时候触发，所以鼠标移动事件是在鼠标按下事件之内
+				//鼠标移动事件
+				document.onmousemove = function (event) {					
+					event = event || window.event;					
+					//获取鼠标的坐标
+					
+					var left = event.clientX - ol;
+					var top = event.clientY - ot;
+					//限定对象移动的范围
+					if(left < 100) {
+						left = 0;
+					} else if (left > document.documentElement.clientWidth -obj.offsetWidth){
+						left = document.documentElement.clientWidth -obj.offsetWidth;
+					}
+					if(top < 100) {
+						top = 0;
+					} else if (top > document.documentElement.clientHeight -obj.offsetHeight){
+						top = document.documentElement.clientHeight -obj.offsetHeight;
+					}
+					//将鼠标获取的坐标赋值给obj的偏移量
+					obj.style.left = left + "px";
+					obj.style.top = top + "px";					
+				};				
+				//鼠标离开事件---也要在鼠标按下之内
+				document.onmouseup = function () {
+				//释放鼠标移动事件
+				document.onmousemove = null;
+				//释放鼠标松开事件
+				document.onmouseup = null;				
+				//当鼠标松开的时候 释放捕获事件
+				obj.releaseCapture && obj.releaseCapture();
+				};
+			};
+			//阻止默认拖拽搜索,原理就是超链接页面跳转
+			return false;
+			}
+			window.onload = function () {
+				//获取box1对象
+				var box1 = document.getElementById("box1");
+				yidong(box1);
+				//将这鼠标移动事件封装成一个方法	
+				var box2 = document.getElementById("box2");
+				yidong(box2);
+			};
+			
+		</script>
+	</head>
+	<body>
+		<div id="box1"></div>
+		<div id="box2"></div>
+	</body>
+</html>

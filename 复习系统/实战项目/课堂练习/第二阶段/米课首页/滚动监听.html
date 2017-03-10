@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .box1 {
+            height: 500px;
+            width:200px;
+            background-color: yellow;
+        }.box2 {
+            height: 500px;
+            width:200px;
+            background-color: red;
+        }.box3 {
+            height: 500px;
+            width:200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target="#test">
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-example" id="test">
+            <ul class="nav nav-tabs nav-pills" >
+                <li><a href="#box1">item1</a></li>
+                <li><a href="#box2">item2</a></li>
+                <li><a href="#box3">item3</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="box1" id="box1" >test1</div>
+    <div class="box2" id="box2" >test2</div>
+    <div class="box3" id="box3" >test3</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

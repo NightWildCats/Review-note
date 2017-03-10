@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#u1{
+				background-color: #bfa;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			window.onload = function () {
+				var links = document.getElementById("u1");
+				var btn = document.getElementById("btn01");
+				var count = 1; 
+				btn.onclick = function () {	
+					var li = document.createElement("li");
+					li.innerHTML = '<a href="javascript:;" class="link">新超链接'+count+'</a>';	
+					u1.appendChild(li);
+					count++;
+				};				
+				//事件委派
+				u1.onclick = function (event) {					
+					event = event || window.event;					
+					//指向当前获取的目标
+					//className 
+					if (event.target.href != null) {
+//						alert( event.target);
+						//点击删除函数
+//						event.target.parentNode.parentNode.removeChild(event.target.parentNode);
+						//实现假删除，不影响页面的结构层次，把样式设置为display=none
+						event.target.parentNode.style.display = "none";
+					}	
+				};	
+			};
+			
+			
+		</script>
+	</head>
+	<body>
+			<button id="btn01">点我一下</button>
+		
+		<ul id="u1">
+			<li><a href="javascript:;" class="link">超链接一</a></li>
+			<li><a href="javascript:;" class="link">超链接二</a></li>
+			<li><a href="javascript:;" class="link">超链接三</a></li>
+			<li><a href="javascript:;" class="link">超链接四</a></li>
+		</ul>
+	</body>
+</html>

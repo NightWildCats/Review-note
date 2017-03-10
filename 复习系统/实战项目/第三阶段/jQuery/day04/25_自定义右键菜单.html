@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>32_自定义右键菜单</title>
+    <!-- 引入JQUERY及JQUERY UI的JS文件 -->
+    <script src="jquery-1.12.4.js"></script>
+    <script src="jqueryui/jquery-ui.js"></script>
+    <!-- 引入JQUERY UI的CSS文件 -->
+    <link rel="stylesheet" href="jqueryui/ui-darkness/jquery-ui.css">
+    <style>
+        body {
+            font-size: 62.5%;
+            font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+        }
+
+        .ui-menu {
+            width: 150px;
+        }
+
+        #menu {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<ul id="menu" style="display: none">
+    <li class="ui-state-disabled"><a href="#">Aberdeen</a></li>
+    <li><a href="#">Ada</a></li>
+    <li><a href="#">Adamsville</a></li>
+    <li><a href="#">Addyston</a></li>
+    <li>
+        <a href="#">Delphi</a>
+        <ul>
+            <li class="ui-state-disabled"><a href="#">Ada</a></li>
+            <li><a href="#">Saarland</a></li>
+            <li><a href="#">Salzburg</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Saarland</a></li>
+    <li>
+        <a href="#">Salzburg</a>
+        <ul>
+            <li>
+                <a href="#">Delphi</a>
+                <ul>
+                    <li><a href="#">Ada</a></li>
+                    <li><a href="#">Saarland</a></li>
+                    <li><a href="#">Salzburg</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Delphi</a>
+                <ul>
+                    <li><a href="#">Ada</a></li>
+                    <li><a href="#">Saarland</a></li>
+                    <li><a href="#">Salzburg</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Perch</a></li>
+        </ul>
+    </li>
+    <li class="ui-state-disabled"><a href="#">Amesville</a></li>
+</ul>
+<script>
+    $(document).contextmenu(function (event) {
+        event.preventDefault();
+    });
+    $(document).mousedown(function (event) {
+        if(event.button == 2){
+            $( "#menu").removeAttr("style").menu().position({
+                my: "left top",
+                at: "left top",
+                of : event,
+                collision: "fit"
+            });
+        }
+    });
+</script>
+</body>
+</html>

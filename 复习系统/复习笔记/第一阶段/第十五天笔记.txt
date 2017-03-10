@@ -1,0 +1,115 @@
+1.样式操作
+	- 读取和设置内联样式
+		- 读取
+			- 元素.style.样式名
+			- 例子：
+				box.style.width
+				box.style.height
+				box.style.backgroundColor
+			- 如果样式名中有-，则需要将-去掉并将样式名改成驼峰命名法
+
+		- 设置
+			- 元素.style.样式名 = 样式值
+			- 例子：
+				box.style.width = "10px";
+				box.style.height = 0;
+				box.style.backgroundColor = "yellow";
+				
+		- 注意：使用style设置和读取到的样式都是元素的内联样式，
+				不能读取到样式表中的样式，通过style设置样式往往会立即显示
+				但是如果样式中使用了!important，则style将不会生效。
+			
+	- 读取元素当前的样式
+		- 正常浏览器
+			getComputedStyle()
+				- 该方法需要两个参数：
+					1.要获取样式的对象
+					2.要获取的伪元素（一般不用，可以传null）
+				- 该方法会将一个对象作为返回值返回，该对象中封装了当前元素的当前样式
+				- 例子：
+					getComputedStyle(box , null).width
+					
+		- IE浏览器
+			currentStyle
+				- 通过它可以直接获取到元素当前的样式
+				- 例子：
+					box.currentStyle.width;
+					
+					
+		- 两种方式都不能兼容所有的浏览器，需要自定义一个函数来处理兼容问题
+			function getStyle(obj , name){
+				if(window.getComputedStyle){
+					return getComputedStyle(obj , null)[name];
+				}else{
+					return obj.currentStyle[name];
+				}
+			}
+			
+			
+	- 其他的样式相关的属性
+		clientWidth
+		clientHeight
+			- 获取当前元素的可见宽度和高度（包括内容区和内边距）
+			
+		offsetWidth
+		offsetHeight
+			- 获取当前元素的可见框的大小（包括内容区、内边距和边框）
+		
+		offsetParent
+			- 获取当前元素的定位父元素
+				- 定位元素指离元素最近的开启了定位的祖先元素，
+					如果所有的祖先元素都没有开启定位，则返回body
+		
+		offsetLeft
+		offsetTop
+			- 获取当前元素和其定位元素的水平和垂直偏移量
+		
+		scrollWidth
+		scrollHeight
+			- 获取当前元素滚动区域的宽度和高度
+		
+		scrollLeft
+		scrollTop
+			- 获取水平和垂直滚动条滚动的距离
+			
+		- 判断垂直滚动条是否滚动到底
+			scrollHeight - scrollTop = clientHeight
+			
+		- 判断水平滚动条是否滚动到底
+			scrollWidth - scrollLeft = clientWidth
+			
+2.事件
+	- 事件对象
+		- 解析器在调用事件的响应函数时，每次都会将一个事件对象作为参数传递进响应函数中
+			我们可以定义一个形参，来引用该事件对象
+		- 事件对象中封装了当前事件相关的信息，比如：鼠标的坐标，键盘的按键，鼠标的按键。。。。
+			我们如果需要获取事件的信息可以通过事件对象来获取
+		- 例子：
+			btn.onclick = function(event){
+				
+				event = event || window.event；
+				
+			};
+			
+			
+			btn.onclick = function(e){
+				
+				e = e || event;
+				
+			};
+			
+	- 事件的冒泡（Bubble）
+		- 事件冒泡指的就是事件的向上传导，当后的元素上的事件被触发时，会导致祖先元素上的同类型的事件也会触发
+			这个行为我们称为事件的冒泡。（标准规定，事件冒泡会一直冒泡到document对象。但是大部分浏览器都会一直冒到window）
+			
+		- 大部分情况下冒泡都是有用的，可以减少开发的代码，使开发简化，
+			但是有些情况我们不希望出现冒泡，此时我们就要取消冒泡。
+			
+		- 可以通过事件对象的cancelBubble属性来取消冒泡，
+			可以将该属性设置true，即可取消事件的冒泡
+			event.cancelBubble = true;
+					
+					
+					
+					
+					

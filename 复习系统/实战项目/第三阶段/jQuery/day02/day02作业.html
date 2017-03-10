@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>18_图片提示</title>
+    <!--   引入jQuery -->
+    <script src="jquery-1.12.4.js" type="text/javascript"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #fff;
+            font: 80% Arial, Helvetica, sans-serif;
+            color: #555;
+            line-height: 180%;
+        }
+
+        img {
+            border: none;
+        }
+
+        ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            display: inline;
+            margin-right: 10px;
+            border: 1px solid #AAAAAA;
+        }
+
+        /* tooltip */
+        /*为用来承载图片的div设置样式*/
+        #tooltip {
+            position: absolute;
+            border: 1px solid #ccc;
+            background: #333;
+            padding: 2px;
+            display: none;
+            color: #fff;
+            text-align: center;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+
+        /**
+         * 实现步骤分析：
+         * ① 鼠标移入 时显示 方法图片 （创建一个DOM节点来承载img图片）
+         * ② 鼠标在小图范围内移动时候，显示图片
+         * ③ 当鼠标移出时 删除创建的用来承载img图片的节点
+         *
+         */
+
+        $(function () {
+            $('a.tooltip').mousemove(function (ev) {
+                // TODO 创建一个div节点 用来承载 放大的img图片
+                var $div = $('<div id="tooltip"><img src='+ this.href +' alt=""><br />'+this.title +'</div>')
+                //TODO 把创建的节点插入 body中
+                $('body').append($div);
+                //TODO 位创建的对象设置偏移量
+                $('#tooltip').css({"top": (ev.pageY+10)+"px","left": (ev.pageX+10)+"px"}).show("fast");
+
+                //TODO 鼠标移出的时候关闭img图片DOM节点
+                $('a.tooltip').mouseout(function () {
+                    $('#tooltip').remove();
+                });
+            });
+        })
+    </script>
+
+</head>
+<body>
+<h3>有效果：</h3>
+<ul>
+    <li><a href="img/apple_1_bigger.jpg" class="tooltip" title="苹果 iPod">
+        <img src="img/apple_1.jpg" alt="苹果 iPod"/>
+    </a>
+    </li>
+    <li><a href="img/apple_2_bigger.jpg" class="tooltip" title="苹果 iPod nano">
+        <img src="img/apple_2.jpg" alt="苹果 iPod nano"/>
+    </a>
+    </li>
+    <li><a href="img/apple_3_bigger.jpg" class="tooltip" title="苹果 iPhone">
+        <img src="img/apple_3.jpg" alt="苹果 iPhone"/>
+    </a>
+    </li>
+    <li><a href="img/apple_4_bigger.jpg" class="tooltip" title="苹果 Mac">
+        <img src="img/apple_4.jpg" alt="苹果 Mac"/>
+    </a>
+    </li>
+</ul>
+
+
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+
+
+<h3>无效果：</h3>
+<ul>
+    <li><a href="img/apple_1_bigger.jpg" title="苹果 iPod"><img src="img/apple_1.jpg" alt="苹果 iPod"/></a></li>
+    <li><a href="img/apple_2_bigger.jpg" title="苹果 iPod nano"><img src="img/apple_2.jpg" alt="苹果 iPod nano"/></a>
+    </li>
+    <li><a href="img/apple_3_bigger.jpg" title="苹果 iPhone"><img src="img/apple_3.jpg" alt="苹果 iPhone"/></a></li>
+    <li><a href="img/apple_4_bigger.jpg" title="苹果 Mac"><img src="img/apple_4.jpg" alt="苹果 Mac"/></a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>mac停靠栏</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#warp {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+			}
+			#warp img {
+				/*float: left;*/
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="warp">
+			<img src="img/icon26.jpg"/>
+			<img src="img/icon27.jpg"/>
+			<img src="img/icon28.jpg"/>
+			<img src="img/icon29.jpg"/>
+			<img src="img/icon3.jpg"/>
+			<img src="img/icon30.jpg"/>
+			<img src="img/icon31.jpg"/>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var imgs = document.querySelectorAll("#warp img");
+		var r =150;
+		document.onmousemove = function (event) {
+			event = event || window.event;
+			for (var i = 0;i<imgs.length; i++) {
+				//获取鼠标与图片的距离
+				var a = imgs[i].offsetHeight/2 + imgs[i].getBoundingClientRect().top - event.clientY;
+				var b = imgs[i].offsetWidth/2 + imgs[i].getBoundingClientRect().left - event.clientX;
+				var c = Math.sqrt(a*a+b*b);
+				//计算鼠标距离图片的半径
+				if (c>r) {
+					c=r;
+				}
+				imgs[i].style.width = 100-(c*0.2)+"px";
+			}
+		};
+		
+	</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>递归求阶乘</title>
+		<script type="text/javascript">
+			//求任意数的阶乘
+			function jc (num) {
+//				判断取值是否为正整数
+				if (num) {
+					return num ==1 ?1 : num*jc(num-1)	;			
+				} else {
+					return 0;
+				}
+			}
+			
+		console.log(jc(3));	
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取视口的大小</title>
+</head>
+<body>
+	
+</body>
+	<!--注意没有指定根元素HTML-->
+	<script type="text/javascript">
+		var width = document.documentElement.clientWidth;
+		var heigth = document.documentElement.clientHeight;
+		console.log(width+";"+heigth); //clientW/H就是视口的打下
+		var h = document.documentElement.offsetHeight;
+		var w = document.documentElement.offsetWidth;
+		console.log(h+";"+w); //根元素的offset就是body
+	</script>
+</html>

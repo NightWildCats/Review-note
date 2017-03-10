@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>方法</title>
+		<script type="text/javascript">
+		
+			//this
+//			var name = "这是一个this";
+			//方法 
+			 var obj = { 
+			 			name : "唐僧",
+			 			age : 29,
+			 			sayName : function () {
+//							console.log("我是obj中的方法sayName")
+//							console.log("我是obj中的方法sayName的name="+this.name)
+							function test() {
+								console.log(this.name);
+							}
+							test();
+							return this.name;
+			 			}
+			 };
+			 //调用方法
+//			 obj.sayName();
+			 //调用返回值
+			 var obj2=obj.sayName();
+			 //输出获取到的返回值
+			 console.log(obj2);
+//			 test();
+			 
+		</script>
+		<link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+	</head>
+	<body>
+		<div class="top1">
+				<a class="top_span">章节目录</a><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回首页</a> <br />
+				<a class="top_span" href="javascript:">方法</a> <br />
+	    </div>
+	</body>
+</html>

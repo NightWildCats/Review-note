@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_validation自定义错误</title>
+    <link rel="stylesheet" href="validation/css/screen.css">
+    <script src="jquery-1.12.4.js"></script>
+    <script src="validation/jquery.validate.js"></script>
+    <script src="validation/messages_zh.js"></script>
+    <style>
+        form {
+            width: 500px;
+        }
+        form label {
+            width: 250px;
+        }
+        form label.error, form input.submit {
+            margin-left: 253px;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <form class="cmxform" id="commentForm" method="post" action="">
+        <fieldset>
+            <legend>Please enter your email address</legend>
+            <p>
+                <label for="cemail">E-Mail *</label>
+                <input type="text" id="cemail" name="email"><br>
+                密码：<input type="password" id="password" name="password"><br>
+                确认密码：<input type="password" id="password1" name="password1">
+            </p>
+
+            <p>
+                <input class="submit" type="submit" value="Submit">
+            </p>
+        </fieldset>
+    </form>
+</div>
+<script>
+    /*
+        TODO validate(options)
+        TODO * rules - 自定义的验证规则
+        TODO   {
+        TODO      key : value
+        TODO      * key - 指定要验证的表单元素的name属性值
+        TODO      * value - 指定使用的验证规则名称
+        TODO        * required - 表示必填项
+        TODO   }
+        TODO * messages - 自定义的错误提示
+        TODO   {
+        TODO      key : value
+        TODO      * key - 指定要验证的表单元素的name属性值
+        TODO      * value - 设置自定义的错误提示信息
+        TODO   }
+     */
+    $('#commentForm').validate({
+        rules : {
+            email : {
+                required : true,
+                email : true
+            },
+            password: "required",
+            password_again: {
+                equalTo: "#password"
+            }
+
+
+        },
+        messages : {
+            email : {
+                required : 'email不能为空',
+                email : 'email的格式不正确'
+            },
+            password : '两次密码不一样'
+        }
+    });
+</script>
+</body>
+</html>

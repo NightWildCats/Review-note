@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11_动态放大或缩小相册中的图片</title>
+    <script src="jquery-1.12.4.js"></script>
+    <style>
+        body {font-size:13px}
+        /*图片外框样式*/
+        .p_Lst {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 98px;
+            padding: 8px;
+            border: 1px solid #666;
+            margin: 10px 8px 20px 8px;
+        }
+        /*图片最近外框样式*/
+        .p_Img {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="p_Lst">
+        <img width="500" height="302" alt=""src="img/list_1.jpg" />
+    </div>
+    <div class="p_Lst">
+        <img width="478"height="271" alt=""src="img/list_2.jpg"/>
+    </div>
+    <div class="p_Lst">
+        <img width="269" height="365" alt=""src="img/list_3.jpg"/>
+    </div>
+    <div class="p_Lst">
+        <img width="420" height="280" alt=""src="img/list_4.jpg"/>
+    </div>
+
+    <script>
+        //带参数index遍历图片外框Div
+        $(".p_Lst").each(function(index) {
+            var $this = $(this); //获取每个外框Div
+            var $img = $this.find("img"); //查找其中的图片元素
+            var arrPic = {}; //定义一个空数组保存初始的长与宽
+            arrPic.imgw = $img.width();
+            arrPic.imgh = $img.height();
+            arrPic.orgw = $this.width();
+            arrPic.orgh = $this.height();
+            //将图片放入外框Div中
+            var $drag = $("<div class='p_Img'>").append($img).prependTo($this);
+            var flag = false;
+            //点击图片
+            $img.click(function(){
+                if(flag){
+                    scaleAnimate($this,{ //外框动画
+                        width: arrPic.orgw,
+                        height: arrPic.orgh,
+                        borderWidth: "1"
+                    }, 3000);
+                    scaleAnimate($drag,{ //加入图片后的Div框动画
+                        width: arrPic.orgw,
+                        height: arrPic.orgh
+                    }, 3000);
+                    flag = false;
+                }else{
+                    scaleAnimate($this,{ //外框动画
+                        width: arrPic.imgw,
+                        height: arrPic.imgh,
+                        borderWidth: "5"
+                    }, 3000);
+                    scaleAnimate($drag,{ //加入图片后的Div框动画
+                        width: arrPic.imgw,
+                        height: arrPic.imgh
+                    }, 3000);
+                    flag = true;
+                }
+            });
+        });
+        function scaleAnimate(Elem,options,duration){
+            Elem.animate(options,duration);
+        }
+    </script>
+</body>
+</html>

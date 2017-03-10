@@ -1,0 +1,49 @@
+table{
+    border: 1px solid #d0d0d0;
+    width: 100%;
+    margin: 1px auto;
+}
+td{
+    border: 1px solid #d0d0d0;
+}
+.label{
+    width: 9em;
+    padding: 8px;
+    color: rgba(0,0,0,.5);
+    text-align: right;
+}
+.td-title{
+    background-color: #f0f0f0;
+    padding: 8px;
+}
+table input{
+    outline: none;
+    border: none;
+    font-size: 1em;
+    margin-left: 1em;
+    width: 80%;
+    height: 100%;
+}
+
+.btn-wrapper{
+    padding: 8px 15px;
+    margin-top: 20px;
+}
+
+.btnSubmit{
+    background: red;
+    color: #fff;
+    display: block;
+    width: 100%;
+    background: rgb(235, 60, 60);
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.btn{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>26_加载时间对比</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<script>
+
+    // TODO 注意 ：在开始执行的时间和结束执行进行 “-” 操作时候，要防止“拼串”；
+
+
+    // TODO 获取开始时间
+    var statrTime = Date.now();
+
+    // TODO 通过 onload 的方式调用
+    window.onload = function () {
+        // TODO 获取结束时间
+        var endTime = Date.now();
+        console.log("onload :"+(endTime-statrTime));
+    };
+
+    // TODO 通过 ready 的方式调用
+    $(function () {
+        var endTime = Date.now();
+        console.log("ready :"+ (endTime-statrTime));
+    });
+
+
+</script>
+<body>
+<img src="img/demo.jpg" style="width:200px;height:200px;"/>
+</body>
+</html>

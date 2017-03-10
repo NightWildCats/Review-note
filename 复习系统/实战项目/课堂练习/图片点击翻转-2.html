@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#top {
+				width: 600px;
+				margin: 10px auto;
+				border: 1px solid red;
+				text-align: center;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			
+			window.onload = function () {
+				
+				//获取对象
+				var s = document.getElementById("s");
+				var x = document.getElementById("x");
+				var imgSrc = document.getElementsByTagName("img")[0];
+				var info = document.getElementById("info");
+				//创建一个存储图片位置的数组
+//				var imgArr = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg"];
+				//设置计数器
+				var index = 5;
+				//插入第几张的提示
+//				info.innerHTML = "总共有"+imgArr.length+"张，这是第"+(index+1)+"张";
+				
+				//上一张事件
+				s.onclick = function () {
+					for (var i = 0 ; i < 5 ;i++) {
+						
+						imgSrc.src = "img/"+i+".jpg";
+					}
+					
+					
+				};
+				//下一张事件
+				x.onclick = function () {
+					for (var i = 5 ; i > 0 ;i--) {
+						
+						imgSrc.src = "img/"+i+".jpg";
+					}
+				};
+			};
+			
+		</script>
+	</head>
+	<body>
+		<div id="top">
+			<p id="info"></p>
+			<img src="img/1.jpg" alt="错误图片" /><br />
+			<button id="s">上一张</button>
+			<button id="x">下一张</button>
+		</div>
+	</body>
+</html>
+

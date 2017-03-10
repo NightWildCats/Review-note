@@ -1,0 +1,80 @@
+<!-- 尚硅谷 HTML5 2016年-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="Java培训、Android培训、HTML5培训"/>
+    <meta name="description" content="尚硅谷-老学员一致推荐，有口皆碑的Java培训、Android培训、HTML5培训"/>
+    <link href="/H50623/img/logo.png" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="/H50623/css/reset.css">
+    <title>尚硅谷HTML5：伸缩盒模型，压缩率</title>
+    <style type="text/css">
+        /*伸缩元素总宽度500px*/
+        .wrapper{
+            width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+        /*
+        触发压缩的条件：
+            如果每个伸缩项目都设置固定宽度，并且伸缩项目的总宽度超过了伸缩元素的宽度，
+        就会触发压缩。
+
+        在本案例中，
+            伸缩元素总宽度：500px
+            每个盒子的宽度是200px，总计3个盒子，合计600px，现在需要压缩100px
+
+        */
+        .box {
+            height: 200px;
+            width: 200px;
+        }
+        .box1{ background-color: red; flex-shrink: 1; }
+        .box2{ background-color: blue; flex-shrink: 2; }
+        .box3{ background-color: green; flex-shrink: 2; }
+
+
+        /**
+        一、压缩因子
+        1 + 2 + 2 = 5;
+
+        二、压缩率
+        box1 = 1/5 = 0.2
+        box2 = 2/5 = 0.4
+        box3 = 2/5 = 0.4
+
+        三、实际压缩
+        box1 =  0.2*100 = 20px
+        box2 =  0.4*100 = 40px
+        box3 =  0.4*100 = 40px
+
+        四、实际宽度
+        box1 =  200px - 20px = 180px
+        box2 =  200px - 40px = 160px
+        box3 =  200px - 40px = 160px
+
+        */
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+
+<script type="text/javascript">
+    //添加脚本
+</script>
+</body>
+</html>

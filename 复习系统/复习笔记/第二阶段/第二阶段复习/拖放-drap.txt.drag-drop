@@ -1,0 +1,29 @@
+
+    一、让一个元素具备拖拽功能
+        设置元素的 draggable="true"
+        img a 不需要设置 draggable="true" 默认开启可拖拽，通过 draggable="false" 禁止被拖拽
+
+    二、被拖拽元素
+
+        ondragstart 元素开始被拖拽 （掌握）
+            -- 可是设置鼠标的样式
+            -- 通过事件代理（委托）监听实际被拖拽的元素（ev.target）
+
+        ondrag --- 被拖拽元素移动时触发
+        onend ---  拖拽事件结束时触发（松开鼠标）
+
+
+    三、释放区元素
+
+        ondragenter - 被拖拽元素 进入 释放区元素
+
+        ondragover 当被拖拽元素在释放区元素上方移动时（掌握）
+            -- ev.preventDefault();  //取消浏览器的默认行为：释放区元素上方可以有元素移动。
+        ondrop 当在释放区松开鼠标 （掌握）
+            -- 处理逻辑
+            -- 扩展知识点：深度克隆 dom.cloneNode(true)
+            -- 如果文件来自网页的外部
+                -- 文件存储在 ev.dataTransfer.files;
+                -- 需要时在该事件中设置 ev.preventDefault();
+
+       ondragleave - 被拖拽元素 离开 释放区元素

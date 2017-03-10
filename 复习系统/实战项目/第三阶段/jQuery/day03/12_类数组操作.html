@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12_类数组操作</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <input type="text" value="user1">
+    <input type="text" value="user2">
+    <input type="text" value="user3">
+    <input type="text" value="user4">
+    <input type="text" value="user5">
+    <script>
+
+        // TODO 通过 $.each() 全局函数 -> 遍历节点
+        // TODO 参数 ① 节点对象;   ② 回调函数 function(index，Element){ };
+        $('body').click(function () {
+            $.each($('input'),function (index,elem) {
+                console.log('索引='+index);
+                //结构化输出
+                console.log('内容=%o',elem);
+            });
+        });
+
+
+
+        // TODO 通过 $().each() 对象方法 -> 遍历节点
+        // TODO 参数 ① 节点对象;   ② 回调函数 function(index，Element){ };
+        $('body').click(function () {
+            $('input').each(function (index,elem) {
+                console.log('索引='+index);
+                //结构化输出
+                console.log('内容=%o',elem);
+            });
+        });
+    </script>
+</body>
+</html>

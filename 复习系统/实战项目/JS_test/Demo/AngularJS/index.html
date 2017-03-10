@@ -1,0 +1,52 @@
+<!-- 尚硅谷 HTML5 2016年-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="Java培训、Android培训、HTML5培训"/>
+    <meta name="description" content="尚硅谷-老学员一致推荐，有口皆碑的Java培训、Android培训、HTML5培训"/>
+    <!--<script type="text/javascript" src="angular.js-1.5.8/src/Angular.js"></script>-->
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <title>尚硅谷HTML5</title>
+    <style type="text/css">
+        .box {
+            background-color: #00CCFF;
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl" class="box">
+
+        名: <input type="text" ng-model="firstName"><br>
+        姓: <input type="text" ng-model="lastName"><br>
+        <br>
+        姓名: {{firstName + " " + lastName}}
+
+    </div>
+
+
+    <script>
+
+//        定义一个作用范围
+        var app = angular.module('myApp', []);
+
+//在作用范围中绑定一个方法
+        app.controller('myCtrl', function($scope) {
+            $scope.firstName= "John";
+            $scope.lastName= "Doe";
+        });
+    </script>
+
+</body>
+</html>

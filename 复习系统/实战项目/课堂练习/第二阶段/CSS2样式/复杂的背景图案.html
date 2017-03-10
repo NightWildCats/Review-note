@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复杂的背景图案</title>
+    <style type="text/css">
+            .box {
+                width: 500px;
+                height: 500px;
+                margin: 0 auto;
+                border: 1px solid black;
+            }
+        /*进行设置复杂的背脊图案样式*/
+            .box1 {
+                /*进行从左向右由50px红色过度区域的和200px像素粉色过渡区域的效果*/
+                background: linear-gradient(to right, red 50px, pink 200px);
+            }
+            /*由多组图案组成的背景软*/
+            .box {
+                /*通过设置背景图片的*/
+                background: red;
+                background-image:
+                /*通过设置多组渐变来实现网格效果*/
+                        linear-gradient(white 1px, transparent 0),
+                        linear-gradient(45deg, blue 1px, transparent 0),
+                        linear-gradient(90deg, yellow 1px, transparent 0),
+                        linear-gradient(135deg, green 1px, transparent 0);
+                background-size: 30px 30px;
+            }
+            /*图案重复出现*/
+            .box {
+                background: repeating-linear-gradient(
+                        to right,
+                        transparent,
+                        transparent 25px,
+                        black 25px,
+                        black 50px
+                );
+            }
+            /*设为圆形渐变图案*/
+            .box {
+                background: #655;
+                background-image: radial-gradient(red 30%, transparent 0),
+                radial-gradient(yellow 30%, transparent 0);
+                background-size: 30px 30px;
+                background-position: 0 0, 15px 15px;
+            }
+            /*设置网格棋盘图案*/
+            .box {
+                background: #eee;
+                background-image:
+                        linear-gradient(45deg, red 50%, transparent 0);
+                background-size: 30px 30px;
+            }
+        /*重复径向渐变*/
+            .box {
+                background: repeating-radial-gradient(
+                        circle,
+                        transparent,
+                        transparent 10px,
+                        black 10px,
+                        black 20px
+                );
+            }
+            /*背景方形网格效果*/
+            .box {
+                background: #eee;
+                background-image:
+                        linear-gradient(45deg,
+                        rgba(0,0,0,.25) 25%, transparent 0,
+                        transparent 75%, rgba(0,0,0,.25) 0),
+                        linear-gradient(45deg,
+                        rgba(0,0,0,.25) 25%, transparent 0,
+                        transparent 75%, rgba(0,0,0,.25) 0);
+                background-position: 0 0, 15px 15px;
+                background-size: 30px 30px;
+            }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+    <script type="text/javascript">
+
+    </script>
+</html>

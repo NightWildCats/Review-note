@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_validation插件案例</title>
+    <link rel="stylesheet" href="validation/css/screen.css">
+    <script src="jquery-1.12.4.js"></script>
+    <script src="validation/jquery.validate.js"></script>
+    <script src="validation/messages_zh.js"></script>
+</head>
+<body>
+<fieldset>
+    <legend>用户注册验证</legend>
+    <form id="myform" name="myform" action="#" method="post">
+        <table>
+            <tr>
+                <td>用户名:</td>
+                <td><input type="text" id="user" name="user"></td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td><input type="password" id="pwd" name="pwd"></td>
+            </tr>
+            <tr>
+                <td>确认密码:</td>
+                <td><input type="password" id="repwd" name="repwd"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" id="mail" name="mail"></td>
+            </tr>
+            <tr>
+                <td>手机号:</td>
+                <td><input type="text" id="phone" name="phone"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit"></td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+<script>
+
+    $('#myform').validate({
+        rules : {
+            user : {
+                required : true,
+                minlength : 6
+            },
+            pwd : {
+                required : true,
+                minlength : 6
+            },
+            repwd : {
+                required : true,
+                equalTo : '#pwd'
+            },
+            mail : {
+                required : true,
+                email : true
+            },
+            phone : 'phone'
+        },
+        messages : {
+            user : {
+                required : '用户名不能为空',
+                minlength : '用户名长度不能少于6'
+            },
+            pwd :{
+                required :'密码不能为空',
+                minlength : '密码的不能少于6位'
+            },
+            repwd : {
+                equalTo : '两次的密码不一致',
+                required : '确认密码不能为空'
+            },
+            mail : {
+                required : '电子邮件不能为空',
+                email : '正确的输入格式为：***@**.***'
+            }
+        }
+    });
+
+    //自定义 验证 
+    $.validator.addMethod("phone",function (value,element,param) {
+
+        if (value.length == 11){
+            return /^[0-9]{11}$/.test(value);
+        }
+//        else if (value.length > 11) {
+//            return param[0]='输入的号码小于11位';
+//        }else if (value.length < 11) {
+//            return param[1]='输入的号码大于11位';
+//        }
+
+
+    },'您输入的电话号码不正确,必须为11位');
+    
+</script>
+</body>
+</html>

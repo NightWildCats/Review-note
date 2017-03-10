@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<video src="meida/xuwei_wuzhe.mp4"
+       controls="controls"
+       poster="img/xuwei.jpg"
+
+>
+    你的浏览器不支持video
+</video>
+
+<button type="button" id="btnPlay">播放</button>
+<button type="button" id="btnPause">暂停</button>
+
+
+<script type="text/javascript">
+
+    var videoDom = document.querySelector("video")
+    var btnPlayDom = document.querySelector("#btnPlay")
+    var btnPause = document.querySelector("#btnPause")
+
+    btnPlayDom.onclick = function () {
+
+//    播放
+        videoDom.play();
+    };
+    btnPause.onclick = function () {
+
+//   暂停
+        videoDom.pause();
+    };
+
+//    播放过程中实时触发
+    videoDom.ontimeupdate = function (ev) {
+        console.log(ev.target.currentTime );
+        console.log(ev.target.duration );
+
+    }
+
+</script>
+</body>
+</html>

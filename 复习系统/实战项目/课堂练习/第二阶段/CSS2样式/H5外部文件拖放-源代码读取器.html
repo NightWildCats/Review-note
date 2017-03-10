@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>H5外部文件拖放至网页</title>
+        <style type="text/css">
+            body {
+                background-color: #d7f5ff;
+            }
+            .wrap  {
+                width: 1000px;
+                min-height:500px;
+                margin: 0 auto;
+                border: 1px solid red;
+            }
+            .wrap1 {
+                width: 970px;
+                min-height:200px;
+                border: 5px solid #60dda5;
+                white-space: pre;
+                padding: 20px;
+            }
+            img {
+                width: 100px;
+            }
+            span {
+                display: block;
+                text-align: center;
+                font-size: 28px;
+                font-family: "Lato", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <!--draggable="true"-->
+        <span>源代码读取器</span>
+            <div class="wrap" >
+                <!--<input type="textarea" class="wrap1" value="拖拽文件读取区域">-->
+                <div class="wrap1">代码读取区域</div>
+            </div>
+    </body>
+
+    <script type="text/javascript">
+
+        var wrap = document.querySelector(".wrap");
+        var wrap1 = document.querySelector(".wrap1");
+        wrap.addEventListener("dragover", function (ev) {
+            ev = ev||event;
+//            清除浏览器默认属性
+            ev.preventDefault();
+        },false);
+        wrap1.addEventListener("dragover", function (ev) {
+            ev = ev||event;
+//            清除浏览器默认属性
+            ev.preventDefault();
+        },false);
+        wrap.addEventListener("drop",function (ev) {
+            ev = ev||event;
+            //清除默认样式
+            ev.preventDefault();
+           var files =  ev.dataTransfer.files;
+            console.log("---%o",files);
+           //遍历拖拽到wrap对象的元素
+            for (var i = 0; i < files.length; i++) {
+                if (files[i].type.indexOf("image")>-1) {
+                    //创建一个局部的文件对象
+                    let fileR = new FileReader();
+                    //console.log("---%o",fileR);
+                    //调用文件选取的路径
+                    fileR.readAsDataURL(files[i]);
+                    //当文件加载时，在页面上创建文件
+                    fileR.addEventListener("load",function () {
+                        //创建一个局部为图片对象·
+                        let imgs = new Image();
+                        imgs.src = fileR.result;
+                        wrap.appendChild(imgs);
+                    },false);
+                }
+                //读取文件
+                //注意为什么拖到input上面不行，是应为 没有在input元素上开启 dtop 松开事件
+                if (files[i].type.indexOf("text")>-1) {
+                    let fileH = new  FileReader();
+                    fileH.readAsText(files[i]);
+                    fileH.addEventListener("load",function () {
+                        wrap1.innerText = fileH.result;
+                    },false);
+                }
+                //读取 office 文件 ---不成功
+                if(files[i].type.indexOf("application")>-1){
+                    let fileW = new  FileReader();
+                    fileW.readAsText(files[i]);
+                    fileW.addEventListener("load",function () {
+                        wrap1.innerText = fileW.result;
+                    },false);
+                }
+            }
+        },false);
+    </script>
+</html>

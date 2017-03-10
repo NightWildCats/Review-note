@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14_删除节点</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+    <ul>
+        <li title='苹果'>
+            苹果
+            <ul>
+                <li>轻狂</li>
+            </ul>
+        </li>
+        <li title='橘子'>橘子
+            <ul>
+                <li>少年</li>
+            </ul>
+        </li>
+        <li title='菠萝'>
+            菠萝
+            <ul>
+                <li>德巴</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        // TODO 节点的删除
+        /**
+         * 节点删除的方法：
+         *  ① empty() 会 删除所有的子节点 但是会保留自身的DOM结构
+         *  ② remove() 会删除自身以及所有的子节点
+         *  ③ detach() 效果等同于 remove() 但是不会清楚元素绑定的事件等
+         */
+        //TODO 实现 empty 删除
+        $('ul>li[title="橘子"]').empty();
+        //TODO 实现 remove 删除
+        $('ul>li[title="苹果"]').remove();
+        //TODO 实现 detach 删除
+        $('ul>li[title="菠萝"]').detach();
+    </script>
+</body>
+</html>

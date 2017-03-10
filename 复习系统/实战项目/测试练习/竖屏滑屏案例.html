@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no;"/>
+		<title>移动端划屏案例</title>
+		<style type="text/css">
+			/*清除默认样式*/
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			/*清除系统滚动条*/
+			html , body {
+				height: 100%;
+				overflow: hidden;
+			}
+			#warp {
+				height: 100%;
+			}
+			#content {
+				position: absolute;
+				width: 100%;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<!--滑屏区域-->
+		<div id="warp">
+			<!--滑屏元素-->
+			<div id="content">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+			
+			document.addEventListener("touchstart",function(event) {
+				//event = event || window.event;
+				//清除默认行为
+				event.preventDefault();	
+			});
+			
+			//滑屏区域
+			var warp = document.querySelector("#warp");
+			//滑屏元素
+			var content = document.querySelector("#content");
+			//向content对象中插入内容			
+			content.innerHTML = test();
+			
+			//定义一个自定义创建类容函数
+			function test () {
+				var tests = "";
+				for (var i = 0;i < 100 ; i++) {
+					tests += "测试文本内容"+i+"<br />";
+				}
+				return tests;
+			}			
+			//获取滑屏手指的位置
+			var startY = 0;
+			//元素一开始的位置
+			var elementY = 0;			
+			//手指进入触屏
+			warp.addEventListener("touchstart",function (event) {
+				//获取一个手指一开始的位置
+				var touch = event.changedTouches[0];
+				startY = touch.clientY;
+				//手指一开始的位置
+				elementY = content.offsetTop;
+			});
+			//手指离开触屏
+			warp.addEventListener("touchmove",function (event) {
+				//获取一个手指一开始的位置
+				var touch = event.changedTouches[0];
+				//获取移动之后的位置
+				var nowY = touch.clientY;
+				//手指移动的距离
+				var dis = nowY-startY;
+				//垂直偏移量
+				var top = elementY + dis
+				//判断内容区域是否滚动完
+				if (top > 0 ) {
+					top = 0;
+				}else if (top < document.documentElement.clientHeight - content.offsetHeight) {
+					top = document.documentElement.clientHeight - content.offsetHeight;
+				}				
+				//将垂直偏移量赋值给content对象的top.并且这是一个覆盖操作
+				content.style.top = top + "px";		
+			});			
+		</script>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13_左右选项移动操作</title>
+    <script src="jquery-1.12.4.js"></script>
+    <style>
+        select {
+            width: 100px;
+            height: 85px;
+        }
+
+        div {
+            display: inline-block;
+            width: 50px
+        }
+    </style>
+</head>
+<body>
+    <select id="first" size="5" multiple>
+        <option>Argentina</option>
+        <option>Brazil</option>
+        <option>Canada</option>
+        <option>Chile</option>
+        <option>China</option>
+        <option>Cuba</option>
+        <option>Denmark</option>
+        <option>Egypt</option>
+        <option>France</option>
+        <option>Greece</option>
+        <option>Spain</option>
+    </select>
+    <div>
+        <button id="add">&gt;</button>
+        <button id="add_all">&gt;&gt;</button>
+        <button id="remove">&lt;</button>
+        <button id="remove_all">&lt;&lt;</button>
+        <button id="croy">复制</button>
+        <button id="croy_all">全部复制</button>
+    </div>
+    <select id="second" size="5" multiple>
+    </select>
+
+    <script>
+       // TODO 获取事件源
+       /**
+        *
+        *  ① 通过 append() 方法 或者 appendTo() 实现 内部插入
+        *  ② 通过 before() 或 after() 实现外部插入
+        *
+        */
+        //TODO 实现单选或者多选添加
+       /**
+        *    :selected 代表已经被选中的元素
+        *    multiple 展开下拉列表  以及实现多选
+        */
+       $('#add').click(function () {
+           $('#second').append($('#first>option:selected'));
+       });
+        // TODO 实现 全部添加
+       $('#add_all').click(function () {
+           $('#second').append($('#first>option'));
+       });
+        // TODO 实现 单个或者多个删除
+       $('#remove').click(function () {
+           $('#first').append($('#second>option:selected'));
+
+       });
+        //TODO 实现 全部删除
+       $('#remove_all').click(function () {
+           $('#first').append($('#second>option'));
+
+       });
+        // TODO 实现选中复制
+       $('#croy').click(function () {
+//           $('#second').clone($('#first>option:selected'));
+           $('#second').append($('#first>option:selected').clone()) ;
+
+       });
+       // TODO 实现全部复制
+       $('#croy_all').click(function () {
+           $('#second').append($('#first>option').clone()) ;
+
+       });
+
+
+    </script>
+</body>
+</html>

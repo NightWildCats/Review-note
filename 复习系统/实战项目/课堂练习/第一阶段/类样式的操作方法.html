@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>类样式的操作方法</title>
+		<style type="text/css">
+			
+			.b1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+			
+			.b2{
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+			}	
+		</style>
+		<script type="text/javascript">
+			
+			window.onload = function () {
+				var b1= setClass ("btn01");
+				var b2 = setClass ('box1');
+				b1.onclick = function () {
+//					addClass(b2,'b2');
+//					toggleClass(b2,'b2');
+//					var b = b2.classList.toggle('b');
+//					console.log(b);
+				};
+				
+				/*				 ..
+				 * obj :获取的对象
+				 * */
+				//定义一个函数来获取HTML的对象
+				function setClass (obj) {
+					return obj = document.getElementById(obj);
+				}
+				
+				/*定义检查对象中是否有该类样式
+				 *参数一obj：获取的对象
+				 *参数二cn：类样式名
+				 * */
+				function hasClass (obj , cn) {
+					//创建正则来判断是否含有该样式
+					var reg = new RegExp("\\b"+cn+"\\b","g");
+					return reg.test(obj.className);
+				}
+				
+
+				/*向指定对象中插入样式
+				 *参数一obj：获取的对象
+				 *参数二cn：类样式名
+				 * */
+				function addClass (obj , cn) {
+					//创建正则来判断是否含有该样式
+					var reg = new RegExp("\\b"+cn+"\\b","g");
+					if (!hasClass (obj , cn)) {
+						obj.className += " "+cn; 
+					}
+				}
+				
+				/*定义删除类样式名
+				 *参数一obj：获取的对象
+				 *参数二cn：类样式名 
+				 * */
+				function removeClass (obj , cn) {
+					//创建正则来判断是否含有该样式
+					var reg = new RegExp("\\b"+cn+"\\b","g");
+					//检测是否有该样式，如果有则删除
+					if (hasClass (obj , cn)) {
+						obj.className = obj.className.replace(reg,"");
+					}
+				}
+				/*样式切换
+				 * 参数一obj：获取的对象
+				 * 参数二cn：类样式名 
+				 * */
+				function toggleClass (obj , cn) {
+					//如果有 则删除，没有则添加
+					if (hasClass (obj , cn)) {
+						removeClass (obj , cn);
+					}else {
+						addClass (obj , cn);
+					}
+				}
+			};
+			
+		</script>
+	</head>
+	<body>
+		<button id="btn01">点我一下</button>
+		<br /><br />
+		
+		<div id="box1" class="b1 b2 b3 b4"></div>
+	</body>
+</html>

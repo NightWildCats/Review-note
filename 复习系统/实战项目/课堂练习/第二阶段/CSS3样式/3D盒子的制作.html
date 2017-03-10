@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D盒子制作</title>
+    <style type="text/css">
+        .wrap {
+            width: 309px;
+            height: 309px;
+            margin: 150px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transform-origin: center center -104.5px;
+            animation: ainm 10s;
+
+        }
+        .box {
+            width: 309px;
+            height: 309px;
+            text-align: center;
+            line-height: 309px;
+            position: absolute;
+            font-size: 28px;
+
+        }
+        .box1{
+            background-color: rgba(0,0,255,.2);
+            top:-309px;
+            transform-origin: bottom;
+            transform:rotateX(90deg);
+            background:url("img/hj.jpg") no-repeat;
+
+        }
+        .box2{
+            background-color: rgba(0,255,0,.2);
+            left:309px;
+            transform-origin: left;
+            transform:rotateY(90deg);
+            background:url("img/hj.jpg") no-repeat;
+        }
+        .box3{
+            background-color: rgba(255,0,0,.2);
+            top:309px;
+            transform-origin: top;
+            transform:rotateX(-90deg);
+            background:url("img/hj.jpg") no-repeat;
+
+        }
+        .box4{
+            background-color: rgba(255,255,0,.2);
+            left: -309px;
+            transform-origin: right;
+            transform:rotateY(-90deg);
+            background:url("img/hj.jpg") no-repeat;
+        }
+        .box5{
+            background-color: rgba(0,255,255,.2) ;
+            transform: translateZ(-309px);
+            background:url("img/hj.jpg") no-repeat;
+        }
+        .box6{
+            background-color: rgba(255,0,255,.2);
+            background:url("img/hj.jpg") no-repeat;
+        }
+        .wrap .box img {
+            width: 100%;
+            height:100%;
+        }
+        @keyframes ainm {
+            form {
+                transform: rotateX(0deg) rotate(0deg) ;
+            }
+            to {
+                transform: rotateX(360deg) rotate(360deg) ;
+            }
+        }
+    </style>
+</head>
+    <body>
+        <div class="wrap">
+            <div class="box box1"><img src="img/img01.jpg" alt=""></div>
+            <div class="box box2"><img src="img/img01.jpg" alt=""></div>
+            <div class="box box3"><img src="img/img01.jpg" alt=""></div>
+            <div class="box box4"><img src="img/img01.jpg" alt=""></div>
+            <div class="box box5"><img src="img/img01.jpg" alt=""></div>
+            <div class="box box6"><img src="img/img01.jpg" alt=""></div>
+        </div>
+    </body>
+    <script type="text/javascript">
+//        var num =0 ;
+//        var wrap = document.querySelector(".wrap")
+//        setInterval(function () {
+//            wrap.style.transform = "rotateY(" + num + "deg) rotateX(" + num + "deg)";
+//            num++;
+//        },30);
+
+
+    </script>
+</html>

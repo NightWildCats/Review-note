@@ -1,0 +1,84 @@
+一、语义
+    1.语义的意义？
+        -- 程序开发人员
+        -- 浏览器
+        -- 搜索引擎
+
+    2.常用语义化的元素(标签)
+        -- <header>
+        -- <footer>
+        -- <nav>
+        -- <article>
+        -- <section>
+        -- <aside>
+
+        -- 语义化: 不要为了语义而语义，没有任何语义的区域就使用div即可！
+
+        -- 兼容IE8 html5shiv.js
+
+    3.语义化的表单
+
+        常用的属性
+            -- placeholder
+            -- autocomplete
+            -- autofocus
+            -- required
+            -- pattern
+            -- formaction
+            -- formnovalidate
+            -- list <datalist>
+
+            -- 自定义表单向错误提示 setCustomValidity()
+
+
+二、移动端布局
+
+    1.自适应页面与响应式页面
+        -- 自适应页面主体结构随着浏览器的调整无变换
+        -- 响应式页面主体结构随着浏览器的调整位置变换，或者隐藏。
+
+    2.多媒体选择器
+        @media screen and (媒体属性[Media features]) { }
+
+        注意： and 与 ( 之间必须有空格，否则不生效！！！
+
+    3.视口
+        3.1 布局视口
+            -- 不再与移动端浏览器相关联，完全是独立的。
+            -- 布局视口的宽度要比屏幕宽出很多
+            -- 由设备自己决定的设置为，通常为980px或1024px，也可能是其它值，
+            -- document.documentElement.clientWidth/clientHeight;
+            -- 多媒体选择器媒监听的是布局视口
+
+        3.2 可视视口
+            -- 用户正在看到的网站的区域，一般视觉视口和布局视口一致。
+            -- 可视视口的CSS像素的数量会随着用户缩放而改变
+            -- window.innerWidth/innerHeight
+
+        3.3 理想视口
+
+             <meta name="viewport" content="width=device-width,
+                initial-scale=1.0,
+                maximum-scale=1.0,
+                user-scalable=no">
+
+
+    4.手机横/舒屏
+            默认监控的是竖屏，也可单独为竖屏设置样式)
+            @media screen and ( orientation: portrait ) {}
+            @media screen and ( orientation: landscape ) {}
+
+    5.rem
+
+        2d的 scale(.2) 缩小
+
+
+
+
+
+
+
+
+
+
+

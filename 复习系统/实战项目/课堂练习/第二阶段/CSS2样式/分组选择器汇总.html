@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>结构化分组选择器汇总</title>
+        <style type="text/css">
+
+            div:nth-of-type(n) {
+                /*在同一层级中 寻找相同类型的元素，然后从新排序，n代表从新排序后的位置*/
+            }
+
+            div:nth-child(n){
+                /*在同一层级中 不论元素的类型， 从上往下寻找，n代表指定选中的元素刚好出现在同一层级的位置*/
+            }
+            /*一般应用在单选和多选框中 */
+            #test {
+                /* appearance  浏览器清除默认样式*/
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+
+                /*可以通过背景图片实现切换*/
+            }
+            #test:checked {
+                /*选中之后的样式*/
+
+            }
+
+            div[class="box"] {
+                /*元素选择器 [属性=属性值]   div[属性=属性值] 其中 ^ 表示获取开头值；  $ 表示结尾值 ~ 表示包含 */
+                /*[属性=属性值]*/
+            }
+            div[class^="box"] {
+                /*[属性^=属性值]*/
+            }
+            div[class$="box"] {
+                /*[属性$=属性值]*/
+            }
+            div[class~="box"]{
+                /*[属性~=属性值]*/
+            }
+
+            div:before {
+                /*
+                      ::before 在元素之前
+                      ::after 在元素之后
+                           W3C标准中 使用的是 :: 来进行伪类的使用 但是在IE8 使用的是 :
+                           为了兼容IE8 在实际开发中经常使用单冒号 :
+                   */
+            }
+            div:after {
+
+            }
+
+            /*
+                总结;分组选择器可以多个联合使用
+                伪元素特点：
+                        创建的伪元素都是行内元素
+                        添加的文本内容无法被选中
+                应用场景:
+                        可以用来请解决高度塌陷
+                        设置动态小图标
+
+                 伪类： 是指元素处于某种状态
+                        使用伪类是一般用 单冒号 :
+            */
+
+            /*
+            css 计数函数 counter(“变量”)
+                 （1）counter-increment: num; 设置一个变量
+                    通过伪类来进行调用
+                    CSS3计数函数 counter(“ counter-increment 属性值 ”)
+                    content: counter(num) " - "; 后面的 - 代表拼接字符串
+
+                  （2）如果存在多个ol/ul 嵌套，对 num 重置
+                    counter-reset: num;
+
+                    使用 content: counters( counter-increment 的值 , "分割符");
+                        content: counters(num, " - ") " 、 ";
+            */
+
+            /*五中伪元素*/
+            p::before {
+                /*IE8支持单冒号 :*/
+            }
+            P::after {
+                /*IE8支持单冒号 :*/
+            }
+            p::first-letter {
+                /*一行的首字母*/
+            }
+            p::first-line {
+                /*段落的第一行*/
+            }
+            p::selection {
+                /*
+                W3C 新增的属性
+                设置选中文字之后的样式 ，只能设置文字的颜色和背景
+                */
+            }
+
+            /*
+            多媒体选择器 @media
+                打印 print
+                screen 屏幕大小 需要判断条件 and (判断条件) ---可以多个判断条件
+                attr(属性)  获取对应的属性值 然后可以用content输出
+            */
+            @media print {
+                a:after {
+                    /*
+                        通过attr()方法来获取元素的属性值
+                    */
+                    content: "-" attr(href);
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+    <ol>
+        <li>itme1</li>
+        <li>itme2</li>
+        <li>itme3
+            <ol>
+                <li>test1</li>
+                <li>test2</li>
+                <li>test3</li>
+            </ol>
+        </li>
+        <li>itme4</li>
+        <li>itme5</li>
+    </ol>
+
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no;"/>
+		<title>移动端划屏案例</title>
+		<style type="text/css">
+			/*清除默认样式*/
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			/*清除系统滚动条*/
+			html , body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			
+			document.addEventListener("touchstart",function(event) {
+//				event = event || window.event;
+				//清除默认行为
+				event.preventDefault();
+				
+			});
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

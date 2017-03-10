@@ -1,0 +1,28 @@
+1、一个div,设置如下样式，当鼠标悬浮在.box请问你看到的过渡效果？（20分）
+    .box{ width: 100px;  height: 100px;  background-color: red; }
+     body:hover .box{
+            width: 200px;
+            height: 200px;
+            transition: height 2s 2s linear, all 3s -1.5s linear, background-color .5s linear;
+     }
+	 
+2、一个div.设置如下样式，当鼠标悬浮在.box请问你看到的过渡效果？（20分）
+    .box{ display: inline;  width: 100px;  height: 100px; background-color: red; }
+    body:hover{
+        transform: scale(.2);
+    }
+	
+３、请计算背景图左上角相对div元素左上角位置(20分)
+    .box {
+        padding: 10px; 
+		height: 100px;
+        border: 10px solid transparent;
+        background: url("img/item01.jpeg") no-repeat;
+        background-origin: content-box;
+        background-position: 0 -10px;
+    }
+	
+4、outline 和 border的区别？（20分）	
+
+
+5、请谈一谈“优雅降级”和渐进增强（20分）

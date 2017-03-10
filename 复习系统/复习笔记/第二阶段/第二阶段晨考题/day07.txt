@@ -1,0 +1,26 @@
+一、补全代码，让Hello在 IE7及其以下浏览器显示（10分）
+    <!--[if IE ]>
+     Hello
+    <![endif]-->
+
+二、标准盒模型和怪异盒模型的区别？（20分）
+
+
+三、给一个DIV元素设置如下样式，并未显示300px宽度，可能的原因是？（20分）
+    .test{
+        width: calc(200px+100px);
+        height: 200px;
+        background-color: #ff0;
+    }
+	
+四、请问给一个DIV设置如下样式，看到的页面效果(20分）
+    .box{
+        width: 200px;
+        height: 100px
+        background: linear-gradient(to left, red, blue);
+    }
+
+五、box-sizing 属性在布局中，可以帮程序员解决哪些布局问题？（20分）
+
+
+ 

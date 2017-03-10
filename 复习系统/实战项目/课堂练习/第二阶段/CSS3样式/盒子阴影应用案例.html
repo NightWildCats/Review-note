@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒子阴影应用</title>
+    <style type="text/css">
+        body {
+            background-color: #aaaaaa;
+        }
+        .box {
+            width:800px;
+            height:200px;
+            background-color: white;
+            margin: 10px auto;
+            position: relative;
+        }
+        .box:before , .box:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height:0px;
+            background: red;
+            margin-top: 10px;
+            box-shadow: 0 0 45px 3px #880000;
+            top:118px;
+            z-index: -1;
+        }
+        .box:before {
+            transform: rotate(15deg);
+        }.box:after {
+            transform: rotate(-15deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Accordion - Default functionality</title>
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <script src="jquery-1.12.4.js"></script>
+    <script src="jqueryui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jqueryui/demos.css">
+    <script>
+        $(function() {
+            $( "#sortable" ).sortable();
+            $( "#sortable" ).disableSelection();
+
+            $( "#accordion" ).accordion();
+
+            $( "#tabs" ).tabs();
+            $( ".tabs-bottom .ui-tabs-nav, .tabs-bottom .ui-tabs-nav > *" )
+                    .removeClass( "ui-corner-all ui-corner-top" )
+                    .addClass( "ui-corner-bottom" );
+            $( ".tabs-bottom .ui-tabs-nav" ).appendTo( ".tabs-bottom" );
+        });
+    </script>
+    <style type="text/css">
+        #accordion {
+            width:50%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        #accordion h3 {
+            border: 1px solid red;
+            color: blue;
+        }
+        #sortable { list-style-type: none; margin: 0 auto; padding: 0; width: 350px; }
+        #sortable li {
+            margin: 3px 3px 3px 0;
+            padding: 1px;
+            float: left;
+            width: 100px;
+            height: 90px;
+            font-size: 4em;
+            text-align: center;
+            line-height: 90px;
+        }
+        #tabs .tabs-spacer { float: left;  }
+        .tabs-bottom { clear: left; padding: 0 auto; }
+        .tabs-bottom .ui-tabs-nav li { top: auto; bottom: 0; margin: 0 .2em 1px 0; border-bottom: auto; border-top: 0; }
+        .tabs-bottom .ui-tabs-nav li { margin-top: -1px; padding-top: 1px; }
+    </style>
+</head>
+<body>
+
+<div id="accordion">
+    <h3>Section 1</h3>
+    <div>
+        <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+        </p>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+        <div id="tabs" class="tabs-bottom">
+            <ul>
+                <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                <li><a href="#tabs-2">Proin dolor</a></li>
+                <li><a href="#tabs-3">Aenean lacinia</a></li>
+            </ul>
+            <div class="tabs-spacer"></div>
+            <div id="tabs-1">
+                <p>这是测试</p>
+            </div>
+            <div id="tabs-2">
+                <p>这也是一个测试</p>
+            </div>
+            <div id="tabs-3">
+                <p>这又是一个测试</p>
+            </div>
+        </div>
+    </div>
+    <h3>Section 3</h3>
+    <div>
+        <p>
+            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+        </p>
+        <ul>
+            <li>List item one</li>
+            <li>List item two</li>
+            <li>List item three</li>
+        </ul>
+    </div>
+    <h3>Section 4</h3>
+    <div>
+        <ul id="sortable">
+            <li class="ui-state-default">1</li>
+            <li class="ui-state-default">2</li>
+            <li class="ui-state-default">3</li>
+            <li class="ui-state-default">4</li>
+            <li class="ui-state-default">5</li>
+            <li class="ui-state-default">6</li>
+            <li class="ui-state-default">7</li>
+            <li class="ui-state-default">8</li>
+            <li class="ui-state-default">9</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+  background-color: #f9f9f9;
+}
+header {
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  font-family: Arial, "Microsoft YaHei UI";
+  font-size: 18px;
+  margin: 5px;
+  background-color: #0000ff;
+  display: block;
+}
+button[type='submit'] {
+  width: 400px;
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  font-family: Arial, "Microsoft YaHei UI";
+  font-size: 18px;
+  margin: 5px;
+  background-color: #0000ff;
+  display: block;
+}
+button[type='reset'] {
+  width: 220px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  font-family: Arial, "Microsoft YaHei UI";
+  font-size: 18px;
+  margin: 5px;
+  background-color: #0000ff;
+  display: block;
+}
+header nav {
+  background-color: blue;
+}
+header footer {
+  background-color: red;
+}

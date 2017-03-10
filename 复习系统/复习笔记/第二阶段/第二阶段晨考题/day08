@@ -1,0 +1,33 @@
+一、说说以下属性的相同点，与区别？（20分）
+		align-content: flex-start;  
+        align-items: flex-start;
+        align-self: flex-start;
+二、.box1 ~ .box5 排列顺序（20分）
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #f0f0f0;
+		width: 400px ; 
+        height: 300px;
+        display: flex;
+    }
+    <ul>
+         <li class="box box1">1</li>
+         <li class="box box2">2</li>
+		 <li class="box box3">3</li>
+		 <li class="box box4">4</li>
+		 <li class="box box5">5</li>
+     </ul>
+    .box1{ background-color: #f00;}
+    .box2{ background-color: #00f; order: 5;}
+    .box3{ background-color: #f0f;}
+    .box4{ background-color: #ff0; order: 1;}
+    .box5{ background-color: #f88;}
+	
+三、flex-basis 和 width 的区别？（20分）
+
+四、当设置 flex-direction: column; 主轴与侧轴的变化？（20分）
+
+五、当设置  flex-wrap: wrap-reverse; 主轴与侧轴的变化？（20分）
+

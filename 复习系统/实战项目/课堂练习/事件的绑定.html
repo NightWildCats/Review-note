@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			window.onload = function(){
+				
+				var btn01 = document.getElementById("btn01");
+				
+				//为按钮绑定一个单击响应函数
+				/*btn01.onclick = function(){
+					alert(1);
+				};
+				
+				//再为按钮绑定一个单击响应函数
+				btn01.onclick = function(){
+					alert(2);
+				};*/
+				
+				/*
+				 * 使用 对象.事件 的形式不能同时为一个元素的同一个事件绑定多个处理函数，
+				 * 	如果绑定了多个，则后边的会将前边的覆盖掉
+				 * 
+				 * 如果需要同时为一个事件绑定多个响应函数，则可以使用
+				 * 	addEventListener()这个方法来绑定响应函数
+				 * 		参数：
+				 * 			1.要绑定的事件（字符串   不要on）
+				 * 			2.回调函数（事件触发时，该函数将会执行）
+				 * 			3.是否在捕获阶段触发事件（都传false）
+				 * 
+				 * 	使用这种方式可以同时为一个事件绑定多个响应函数，
+				 * 		响应函数按照绑定的顺序执行
+				 * 
+				 *  该方法不支持IE8及以下的浏览器
+				 * 		在这些浏览器中需要使用 attachEvent()方法来实现相同的功能
+				 */
+				
+				/*btn01.addEventListener("click",function(){
+					alert(1);
+				},false);
+				
+				btn01.addEventListener("click",function(){
+					alert(2);
+				},false);
+				
+				btn01.addEventListener("click",function(){
+					alert(3);
+				},false);*/
+				
+				/*
+				 * attachEvent()
+				 * 	- 参数：
+				 * 		1.事件的类型（字符串  要on）
+				 * 		2.回调函数
+				 * 
+				 * attachEvent()
+				 * 	- 可以同时为一个事件绑定多个响应函数，但是它的执行顺序不一定
+				 * 		ie9 ie10 先绑定先执行
+				 * 		ie8 后绑定先执行
+				 * 
+				 * 这个方法只支持IE10及以下的浏览器
+				 */
+				/*btn01.attachEvent("onclick" , function(){
+					alert(1);
+				});*/
+				
+				/*btn01.attachEvent("onclick" , function(){
+					alert(2);
+				});
+				
+				btn01.attachEvent("onclick" , function(){
+					alert(3);
+				});*/
+				
+				/*
+				 * 在正常浏览器中使用addEventListener()来绑定
+				 * 		它的响应函数中的this就是绑定事件的对象
+				 * 而在IE中，使用的是attachEvent()来绑定的事件
+				 * 		而它的响应函数中的this是window
+				 */
+				bind(btn01 , "click" , function(){
+					alert(this);
+				});
+				
+			};
+			
+			/*
+			 * 自定义一个函数，来兼容所有的浏览器
+			 * 参数：
+			 * 		obj  要绑定事件的对象
+			 * 		eventStr 事件的字符串,不要on
+			 * 		callback 回调函数，事件触发时调用的函数
+			 */
+			function bind(obj , eventStr , callback){
+				
+				if(obj.addEventListener){
+					//如果是正常浏览器
+					obj.addEventListener(eventStr , callback , false);
+				}else{
+					//IE8
+					/*
+					 * attachEvent()中的回调函数的this是window，需要修改为obj
+					 * this是谁由函数的调用方式决定
+					 * 	1.以函数的形式调用，this是window
+					 * 	2.以方法的形式调用，this是调用方法的对象
+					 * 	3.以构造函数的形式调用，this是新创建的对象
+					 * 	4.使用call和apply调用时，this是第一个参数
+					 */
+					obj.attachEvent("on"+eventStr , function(){
+						//在attchEvent()中不传递callback而是传递一个匿名函数
+						//这样在事件触发时，浏览器不会调用callback而是调用匿名函数
+						//在匿名函数中来调用回调函数
+						callback.call(obj);
+						
+					});
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		
+		<button id="btn01">点我一下</button>
+		
+	</body>
+</html>

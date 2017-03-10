@@ -1,0 +1,53 @@
+html, body{
+    height: 100%;
+}
+body{
+    margin: 0;
+    font-family: "Microsoft YaHei UI", tahoma, Hiragino Sans GB, sans-serif;
+}
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+.menu{
+    list-style: none;
+    padding: 8px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #969eff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+.menu li{
+    display: block;
+    text-decoration: none;
+    width: 100px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    text-align: center;
+    padding: 8px;
+    color: #fff;
+    margin-left: 8px;
+
+    cursor: pointer;
+
+    font-family: "Microsoft YaHei UI", tahoma, Hiragino Sans GB, sans-serif;
+
+}
+.menu li:hover{
+    color: #969eff;
+    background: #fff;
+}
+
+#page{
+    padding: 80px 20px;
+    text-indent: 2em;
+    line-height: 2.2;
+    font-family: "Microsoft YaHei UI", tahoma, Hiragino Sans GB, sans-serif;
+
+}
+

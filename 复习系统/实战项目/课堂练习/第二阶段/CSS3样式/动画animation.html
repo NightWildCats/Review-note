@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画 Anmimation</title>
+    <style type="text/css">
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /*动画*/
+            animation-name:ainm ;
+
+            /*延迟时间*/
+            animation-delay: 2s;
+
+            /*动画执行时间*/
+            animation-duration: 2s;
+            /*保存第一帧*/
+            animation-fill-mode: backwards;
+            /*保存最后一帧*/
+            animation-fill-mode: forwards;
+            /*保留第一帧和最后一帧*/
+            animation-fill-mode: both;
+            /*定义播放的次数  infinite 无限循环*/
+            animation-iteration-count: infinite;
+            /*定义播放顺序*/
+            animation-direction: alternate;
+
+            /*鼠标移入时 动画暂停 paused*/
+            animation-play-state: paused;
+
+
+            /*简写 animation: 动画名 执行时间 延迟时间 执行方式 执行次数 播放顺序 */
+            animation:ainm 2s 1s linear 3 alternate;
+
+
+        }
+
+
+        /*定义动画*/
+        @keyframes ainm {
+            from {
+                background-color: green;
+            }
+            0% {
+                background-color: green;
+            }
+            50% {
+                background-color: pink;
+            }
+            89% {
+                transform: scale(2);
+            }
+            to {
+                background-color: blue;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

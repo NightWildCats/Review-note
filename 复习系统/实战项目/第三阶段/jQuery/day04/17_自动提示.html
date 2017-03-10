@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>24_自动提示</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script src="jqueryui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+</head>
+<body>
+<div class="ui-widget">
+    <label for="tags">Tags: </label>
+    <input id="tags" type="text">
+    <!--value="1"-->
+</div>
+<script>
+     $(function () {
+         var str;
+         var availableTags =[];
+         setInterval(function () {
+             str = $('#tags').val();
+             if (/^[0-9]+$/.test(str) ) {
+                 availableTags = [
+                     "1",
+                     "2",
+                     "33",
+                     "34",
+                     "45",
+                     "55",
+                     "55",
+                     "55",
+                     "66",
+                     "78",
+                     "76",
+                     "35",
+                     "12",
+                     "11",
+                     "01"
+                 ];
+
+             }
+             if(/^[A-z]+$/.test(str)){
+                 availableTags = [
+                     "ActionScript",
+                     "AppleScript",
+                     "Asp",
+                     "BASIC",
+                     "C",
+                     "C++",
+                     "Clojure",
+                     "COBOL",
+                     "ColdFusion",
+                     "Erlang",
+                     "Fortran",
+                     "Groovy",
+                     "Haskell",
+                     "Java",
+                     "JavaScript",
+                     "Lisp",
+                     "Perl",
+                     "PHP",
+                     "Python",
+                     "Ruby",
+                     "Scala",
+                     "Scheme"
+                 ];
+
+             }
+             $( "#tags" ).autocomplete({
+                 source: availableTags
+             });
+         },1000);
+     });
+
+</script>
+</body>
+</html>

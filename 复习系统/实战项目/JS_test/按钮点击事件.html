@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>图片跳转</title>
+		<style type="text/css">
+		.box {
+			width: 200px;
+			height: 200px;
+			background: red;
+			border: 1px solid #CCC;
+			list-style: none;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//获取li标签
+			$("li").click(function(e){
+				//this获取当前的属性
+				$(this).attr("class","box");
+				//attr() 获取样式
+			});
+
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+</head>
+<body>
+		<div class="top1">
+				<span class="top_span">章节目录</span><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回首页</a> <br />
+	</div>
+	<div id="bot1">
+  	<input id="bot" type="button" value="按钮" />
+	<ul>
+		<li>这是一个Li</li>
+		<li>这是一个Li</li>
+		<li>这是一个Li</li>
+		<li>这是一个Li</li>
+		<li>这是一个Li</li>
+		<li>这是一个Li</li>
+		<li>这是一个Li</li>
+	</ul>
+	</div>
+</body>
+</html>

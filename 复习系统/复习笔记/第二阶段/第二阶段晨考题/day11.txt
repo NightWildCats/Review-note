@@ -1,0 +1,22 @@
+1、请问以下JS代码是否有优化的必要？如果能够优化，请用所学知识给出优化方案？（20分）
+    var divDom = document.querySelector("#box");
+    divDom.style.height = "200px";
+    divDom.style.width = "100px";
+    divDom.style.backgroundColor = "rgba(255, 0, 0, .3)";
+    divDom.style.borderRadius = "50%";
+
+2、img标签上title与alt属性的区别是什么?（10分）
+
+3、3D中设置景深的作用是？（10分）
+
+4、使用CSS3的scale()放大一个块元素与设置元素宽，高放大一个块元素的区别？（20分）
+
+5、以下HTML代码在页面显示中，存在在哪些问题？如何解决？（10分）
+    <div class="box">
+        <img src="img/icon_list.png">
+        <img src="img/icon_list.png">
+    </div>
+
+6、所有商业网站会把许多小图标合成一张图，为什么？（10分）
+
+7、设置一个元素(宽200px, 高度200px)的 transform-origin: bottom right，如果使用百分比表示，应该是多少？（20分）

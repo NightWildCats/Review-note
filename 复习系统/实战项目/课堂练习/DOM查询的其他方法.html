@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>你好</title>
+		<script type="text/javascript">
+			
+			window.onload = function () {
+				
+				//查询文档根元素
+				var root = document.documentElement;
+				
+				//输出body标签
+				var root = document.body;
+				root = document.head;
+				root = document.title;
+				
+				//输出全部的标签元素
+				root =  document.all;
+				
+				//获取指定类名，不建议使用(兼容IE9以上)
+				root = document.getElementsByClassName("box");
+				
+				//获取指定的选择器(第一个)
+				root = document.querySelector(".box .box1")
+				
+				//获取指定的选择器（全部）
+				root = document.querySelectorAll(".box");
+				
+				
+				//控制台输出
+				console.log(root);
+				
+				
+			};
+			
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1"></div>
+		</div>
+		
+		<div class="box2"></div>
+	</body>
+</html>

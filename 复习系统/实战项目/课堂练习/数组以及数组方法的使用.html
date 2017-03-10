@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组及数组方法</title>
+		<script type="text/javascript">
+			//数组
+			//通过new关键字创建数组
+			//如果Array(10);代表数组的长度是10
+			var arra1 = new Array();
+			
+			 //创建一个数组字面量
+			 var arr =[];
+			 //在数组的开头添加值
+			 arr.unshift("你好","我是","一个","数组");
+			 
+			 //在数组的末尾添加值
+			 
+			 arr.push("哈哈哈","真的是一个","数组");
+			 
+			 //删除数组中第一个索引的值
+			 arr.shift();
+			 
+			 //删除数组中最后一个索引的值
+			 
+			 arr.pop();
+			 
+			 //进行数组的排序
+			 arr.sort();
+			 
+			 //讲数组进行反转，一般与sort()方法连用
+			 arr.sort().reverse();
+			 
+			 //把数组装换成一个字符串，并按照某一个格式输出
+
+			 arr.join("-");
+
+			 console.log(arr.join("------"));
+ 			 console.log(arr);
+			//向指定额位置之后先删除指定的几个元素，然后添加新的元素
+			 arr.splice(2,1,"6666");
+			 
+			//返回数组中指定的元素
+			
+			arr.slice(2,5);
+			 
+			 console.log(arr.slice(2,5));
+			 console.log(arr);
+			 
+			 
+			 
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

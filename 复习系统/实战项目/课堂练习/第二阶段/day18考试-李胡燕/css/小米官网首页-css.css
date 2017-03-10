@@ -1,0 +1,136 @@
+body{
+    background-color: aquamarine;
+
+}
+#header{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+}
+.header-wrapper{
+    margin: 0 auto;
+    max-width: 640px;
+    min-width: 320px;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.header-wrapper>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid transparent;
+}
+.header-wrapper img{
+    width:24.22px;
+    height:14.22px;
+    /*background-size: 100%;*/
+}
+.header-wrapper>div:nth-child(2){
+    flex-grow: 1;
+
+}
+#headerSearch{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-indent: 3em;
+}
+#linkLogin{
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+}
+#imgc {
+    width:50%;
+    border: none;
+    height: 30px;
+
+    background-image: url("../img/search_bfba941.png"), linear-gradient(to right, transparent 50%, #fff 50%);
+    background-repeat: no-repeat;
+    background-size: auto 30px;
+    border-radius: 4px;
+}
+#footer{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    background-color: #ffffff;
+}
+#footer ul{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+
+}
+#footer li{
+    list-style: none;
+}
+
+.ispr{
+    background-image: url("../img/spr1_5b2e09c.png");
+    width:60px;
+    height:60px;
+    background-position:60px 60px  ;
+}
+.ispr2{
+    background-image: url("../img/spr1_5b2e09c.png");
+    width:60px;
+    height:60px;
+    background-position:60px 420px  ;
+}
+.ispr3{
+    background-image: url("../img/spr1_5b2e09c.png");
+    width:60px;
+    height:60px;
+    background-position:60px 300px  ;
+}
+.ispr4{
+    background-image: url("../img/spr1_5b2e09c.png");
+    width:60px;
+    height:60px;
+    background-position:60px 180px  ;
+}
+#footer a{
+   text-decoration: none;
+}
+
+#footer .nav p {
+     font-size: 12px;
+     line-height:5px;
+    color: #999;
+ }
+.animation1{
+    background-image: url("../img/spr1_5b2e09c.png");
+    background-position:  0px 120px;;
+    width:60px;
+    height:60px;
+}
+.animation2{
+    background-image: url("../img/spr1_5b2e09c.png");
+    background-position:  0px 480px;;
+    width:60px;
+    height:60px;
+}
+.animation3{
+    background-image: url("../img/spr1_5b2e09c.png");
+    background-position:  0px 360px;;
+    width:60px;
+    height:60px;
+}
+.animation4{
+    background-image: url("../img/spr1_5b2e09c.png");
+    background-position:  0px 240px;;
+    width:60px;
+    height:60px;
+}
+

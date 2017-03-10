@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="800" height="500">
+    你的浏览器不支持 Canvas
+</canvas>
+
+<script type="text/javascript">
+    var myCanvasDom = document.querySelector("#myCanvas");
+    //    获取画笔：canvas  2d 上下文
+    var painting = myCanvasDom.getContext("2d");
+
+
+    /*
+     E点的坐标（x, y）
+
+     var R = 100;
+
+     x = sin(18)*R
+
+     y = sin(18/180*Math.PI)*R;
+     x= cos(18/180*Math.PI)*R;
+
+     y = Math.sin(18/180*Math.PI)*R;
+     x = Math.cos(18/180*Math.PI)*R;
+
+     */
+
+
+    //    移动(0, 0)点，绘制得基准点
+
+    painting.translate(300, 200);
+
+
+    painting.fillStyle = "yellow";
+    painting.strokeStyle = "red";
+
+    var R = 100;
+    var r = 60;
+
+    for (var i = 0; i < 6; i++) {
+
+        painting.lineTo(Math.cos((30 + i*60)/180*Math.PI)*R,
+
+                -Math.sin((30 + i*60)/180*Math.PI)*R ) ;
+
+
+//        内五点
+        painting.lineTo(Math.cos((60 + i*60)/180*Math.PI)*r,
+
+                -Math.sin((60 + i*60)/180*Math.PI)*r ) ;
+
+
+    }
+
+    painting.closePath();
+
+    painting.stroke();
+    //    为图像填充颜色
+    painting.fill();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+
+         body{
+
+         }
+
+        .input-wrapper{
+            border: 1px solid transparent;
+            position: relative;
+            font-size: 14px;
+        }
+
+        .input-wrapper label{
+            /*display: inline-block;*/
+            width: 50px;
+            height: 30px;
+            line-height:30px;
+            text-align: center;
+            border: 1px solid transparent;
+
+            vertical-align: middle;
+
+            float: left;
+
+            color: #666;
+        }
+        #cityName{
+            width: 200px;
+            height: 28px;
+            border: 1px solid #999;
+
+            font-size: 15px;
+            text-indent: 1em;
+
+            /*position: relative;*/
+        }
+
+        #cityList{
+            position: absolute;
+            background-color: #fff;
+            width: 300px;
+            height: 50px;
+            border: 1px solid #999;
+
+            top: 31px;
+            left: 52px;
+            padding: 8px 15px;
+
+            display: none;
+        }
+
+        .input-wrapper a{
+            text-decoration: none;
+            font-size: 14px;
+            color: #666;
+        }
+
+
+    </style>
+</head>
+<body>
+<form>
+    <div class="input-wrapper">
+
+        <!--城市列表选单-->
+        <div id="cityList">
+            <!--禁止点击a 跳转页面 javascript:; -->
+            <a href="javascript:;" citycode="010" cityname="北京">北京</a>
+            <a href="javascript:;" citycode="020" cityname="上海">上海</a>
+            <a href="javascript:;" citycode="023" cityname="深圳">深圳</a>
+        </div>
+
+
+        <label>城市</label><!--
+        --><input type="text" id="cityName">   <!--呈现给用户显示的信息-->
+        <input type="hidden" name="cityCode" id="cityCode">
+        <input type="submit">
+    </div>
+</form>
+<script type="text/javascript">
+
+
+    var  cityCodeDom = document.querySelector("#cityCode");
+
+
+    var  cityNameDom = document.querySelector("#cityName");
+    var  cityListDom = document.querySelector("#cityList");
+    cityNameDom.onclick = function () {
+        cityListDom.style.display = "block";
+    }
+
+/*
+    点击城市列表
+        1.获取元素的城市中文名 cityname=北京
+        2.获取元素的城市代号
+        3.隐藏城市列表
+
+*/
+
+    cityListDom.onclick = function (ev) {
+        var dom = ev.target;
+
+        if(dom.href){
+            var cityCode = dom.getAttribute("citycode");
+            var cityName = dom.getAttribute("cityname");
+
+            cityCodeDom.value = cityCode;
+            cityNameDom.value = cityName;
+
+//            console.log(cityCode);
+//            console.log(cityName);
+
+            cityListDom.style.display = "none";
+        }
+
+    }
+
+</script>
+</body>
+</html>

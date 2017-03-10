@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				/*开启绝对定位*/
+				position: absolute;
+				
+				left: 0;
+			}
+			
+		</style>
+		
+		<script type="text/javascript">		
+			//定义一个变量来保存定时器的标识
+			var timer;			
+			window.onload = function(){				
+				/*
+				 * 点击按钮以后，使box1向右移动
+				 */				
+				//获取box1
+				var box1 = document.getElementById("box1");				
+				//获取btn01
+				var btn01 = document.getElementById("btn01");
+				//获取btn02
+				var btn02 = document.getElementById("btn02");
+				//为btn01绑定一个单击响应函数
+				btn01.onclick = function(){
+					move(box1 , 800 , 10,"top");					
+				};				
+				//为btn02绑定一个单击响应函数
+				btn02.onclick = function(){
+					move(box1 , 15 , 10,"top" ,function () {
+						move(box1 ,200 ,10 ,"width" )
+					});
+				};		
+			};						
+			/*
+			 * 定义一个move()函数来执行一些简单的动画效果
+			 * 参数：
+			 * 	obj 要执行动画的对象
+			 * 	target 执行动画的目标位置
+			 * 	speed 动画执行的速度
+			 *  onmove 执行的样式属性
+			 * 	callbox 自定义函数，当定时结束时进行
+			 */
+			function move(obj , target , speed , onmove , callbok){
+				//关闭之前的定时器
+				clearInterval(obj.timer);				
+				//判断向左移还是向右移
+				//0 --> 800 向右移
+				//起始位置 < 目标位置 则向右移动，速度为正
+				//800 --> 0 向左移
+				//起始位置 > 目标位置 则向左移动，速度为负				
+				//获取元素的起始位置				
+				var current = parseInt(getStyle(obj,onmove));
+				if(current > target){
+					//起始位置 > 目标位置 则向左移动，速度为负
+					speed = -speed;
+				}				
+				//开启一个定时器，控制box1移动
+				obj.timer = setInterval(function(){					
+					//获取box1的当前的left值
+					var oldValue = parseInt(getStyle(obj, onmove));
+					//通过旧值来计算新值
+					var newValue = oldValue + speed;					
+					//判断newValue是否大于800
+					/*
+					 * 如果从0 向 800，执行动画，则值越来越大
+					 * 如果从800向0执行动画，则值越来小
+					 */
+					if((speed > 0 && newValue > target) || (speed < 0 && newValue < target)){
+						newValue = target;
+					}										
+					//将box1的left值修改为新值
+					obj.style[onmove] = newValue + "px";				
+					//当box1移动到800px的位置时，停止移动
+					if(newValue == target){						
+						clearInterval(obj.timer);
+						//自定义函数
+						callbok && callbok();
+					}					
+				},30);				
+			}
+			/*
+			 * 用来获取任意元素的当前样式
+			 * 	参数：
+			 * 		obj 要获取样式的元素
+			 * 		name 要获取的样式的名字
+			 * 
+			 * 在读取元素的样式时，如果元素没有设置样式，
+			 * 	则火狐、Chrome等浏览器会自动计算元素的样式值
+			 * 	而IE浏览器，有时用不会自动计算，而是返回默认值，比如宽度会返回auto
+			 * 		
+			 */
+			function getStyle(obj , name){			
+				//判断浏览器中是否含有getComputedStyle这个方法
+				if(window.getComputedStyle){
+					//支持正常的浏览器
+					return getComputedStyle(obj,null)[name];
+				}else{
+					//只支持IE
+					return obj.currentStyle[name];
+				}		
+			}	
+		</script>		
+	</head>
+	<body>		
+		<button id="btn01">使box1向右移动</button>
+		<button id="btn02">使box1向左移动</button>	
+		<br /><br />		
+		<div id="box1"></div>
+		<div style="width: 0px; height: 1000px; border-left:1px solid black ; position: absolute; left: 800px; top:0;"></div>		
+	</body>
+</html>

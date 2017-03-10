@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义封装DOM事件</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){}
+
+        // TODO 定义一个用于封装onclick事件的函数
+        function click(elem){
+            //var btn = document.getElementById('btn');
+            elem.onclick = function(){}
+        }
+    </script>
+</body>
+</html>

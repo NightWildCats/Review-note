@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16_鼠标移动元素的选项</title>
+    <script src="jquery-1.11.3.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <style>
+        body {
+            font-size: 62.5%;
+            font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+        }
+
+        .draggable {
+            width: 90px;
+            height: 90px;
+            padding: 0.5em;
+            float: left;
+            margin: 0 10px 10px 0;
+        }
+
+        #draggable1, #draggable2 {
+            margin-bottom: 20px;
+        }
+
+        #draggable1 {
+            cursor: n-resize;
+        }
+
+        #draggable2 {
+            cursor: e-resize;
+        }
+
+        #containment-wrapper {
+            width: 95%;
+            height: 150px;
+            border: 2px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="draggable1" class="draggable ui-widget-content">
+    <p>I can be dragged only vertically</p>
+</div>
+
+<div id="draggable2" class="draggable ui-widget-content">
+    <p>I can be dragged only horizontally</p>
+</div>
+
+<div id="draggable4" class="draggable ui-widget-content">
+    <p>I will always stick to the center (relative to the mouse)</p>
+</div>
+
+<div id="draggable5" class="draggable ui-widget-content">
+    <p class="ui-widget-header">I can be dragged only by this handle</p>
+</div>
+
+<div id="draggable6" class="draggable ui-widget-content">
+    <p>You can drag me around&hellip;</p>
+    <p class="ui-widget-header">&hellip;but you can't drag me by this handle.</p>
+</div>
+
+<div id="draggable7" class="draggable ui-widget-content">
+    <p>Revert the original</p>
+</div>
+
+<div id="draggable8" class="draggable ui-widget-content">
+    <p>Default (snap: true), snaps to all other draggable elements</p>
+</div>
+
+<div id="draggable9" class="draggable ui-widget-content">
+    <p>I only snap to the outer edges of the big box</p>
+</div>
+
+<div id="containment-wrapper" class="draggable">
+    <div id="draggable3" class="draggable ui-widget-content">
+        <p>I'm contained within the box</p>
+    </div>
+</div>
+
+<script>
+
+</script>
+</body>
+</html>

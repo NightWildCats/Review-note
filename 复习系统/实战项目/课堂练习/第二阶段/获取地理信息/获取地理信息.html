@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hello, World</title>
+    <style type="text/css">
+        html{height:100%}
+        body{height:100%;margin:0px;padding:0px}
+        #container{height:100%}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=W7icKaykdzPjU6SAypM3TowF9ZYxIkIN">
+        //v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+        //v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
+    </script>
+</head>
+
+<body>
+<div id="container"></div>
+<script type="text/javascript">
+
+    /**
+     *
+     * @type {BMap.Map} 需要传入的座位经纬度
+     *
+     * 谷歌无法访问地理信息，IE可以访问
+     *
+     *  通过 var geo =  window.navigator.geolocation 提供获取地理信息的API
+     *  通过 geo.getCurrentPosition( function1(position){}, function2(err){},  optionObj）;
+     *      其中第一函数是获取了地理信息，第二个函数是没有获取地理信息，
+     *      ① 第一个函数会通过 ev.coords.longitude， 获取经度坐标
+     *                  通过 ev.coords.latitude，获取纬度坐标
+     *      ② 第二个函数提供了没有获取到地理位置的错误提示
+     *                  通过 err.message 提示错误信息
+     *                  通过 err.code 显示错误状态码
+     *                       0 未知错误
+     *                       1 用户拒绝共享地位位置信息。
+     *                       2 位置无效
+     *                       3 访问超时
+     *
+     */
+
+
+    var map = new BMap.Map("container");          // 创建地图实例
+
+    var geo = window.navigator.geolocation;
+
+    geo.getCurrentPosition(
+            function (ev) {
+                // 创建点坐标
+                var point = new BMap.Point(ev.coords.longitude , ev.coords.latitude);
+                // 初始化地图，设置中心点坐标和地图级别
+                map.centerAndZoom(point, 15);
+//            添加控件
+                map.addControl(new BMap.NavigationControl());
+                map.addControl(new BMap.NavigationControl());
+                map.addControl(new BMap.ScaleControl());
+                map.addControl(new BMap.OverviewMapControl());
+                map.addControl(new BMap.MapTypeControl());
+                map.setCurrentCity("北京"); // 仅当设置城市信息时，MapTypeControl的切换功能才能可用
+
+//            覆盖物：坐标点
+                var marker = new BMap.Marker(point);        // 创建标注
+                map.addOverlay(marker);                     // 将标注添加到地图中
+            },
+            function (err) {
+                console.log(err.message);
+                console.log(err.code);
+            },
+            null
+    )
+</script>
+</body>
+</html>

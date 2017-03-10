@@ -1,0 +1,55 @@
+<!-- 尚硅谷 HTML5 2016年-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="Java培训、Android培训、HTML5培训"/>
+    <meta name="description" content="尚硅谷-老学员一致推荐，有口皆碑的Java培训、Android培训、HTML5培训"/>
+    <link href="/H50623/img/logo.png" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="/H50623/css/reset.css">
+    <title>尚硅谷HTML5: 元素选择器优先级</title>
+    <style type="text/css">
+        /* a,b,c,c =         */
+        #top #hright #gnavi{
+            color: blue;
+        }
+        /* a,b,c,c =         */
+        #wrapper header div nav #gnavi{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div id="wrapper">
+    <header id="top">
+        <h1>W3C cafe</h1>
+        <div id="hright">
+            <nav>
+                <ul id="gnavi">
+                    <li>menu</li>
+                    <li>location</li>
+                    <li>about us</li>
+                    <li>recruit</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</div>
+
+<a href="https://www.w3.org/wiki/CSS/Training/Priority_level_of_selector">W3C 元素优先级定义规则</a>
+<script type="text/javascript">
+    //添加脚本
+</script>
+</body>
+</html>

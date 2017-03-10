@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul {
+				margin: 100px 0 0 200px;
+				list-style: none;
+				padding: 0;
+			}
+			li {
+				
+				height: 8px;
+				width: 4px;
+				background: #000000;
+				position: absolute;
+				transform-origin: 2px 200px;
+			}
+			li:nth-child(5n+1) {
+				height: 15px;
+				width: 8px;
+			}
+			.week {
+				margin: 100px auto;
+				width: 400px;
+				height: 400px;
+				background-color: yellow;
+				position: relative;
+			}
+			.hs {
+				width: 6px;
+				height: 60px;
+				background-color: #000000;
+				transform-origin: 3px 100%;
+				position: absolute;
+				top: 140px;
+				margin-left: 200px;
+			}
+			.ms {
+				transform-origin: 2px 100%;
+				position: absolute;
+				width: 4px;
+				height: 100px;
+				background-color: blue;
+				top: 100px;
+				margin-left: 200px;
+			}
+			.se {
+				transform-origin: 1px 100%;
+				position: absolute;
+				width: 2px;
+				height: 140px;
+				background-color: red;
+				top: 60px;
+				margin-left: 200px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+	</head>
+		<div class="top1">
+			<span class="top_span">章节目录</span><br />
+			<a class="top_span" href="../../学习笔记入口.html">返回主页</a><br />
+		</div>
+	<body>
+	
+		<div class="week">
+			<ul id="click"></ul>
+			<div class="hs"></div>
+			<div class="ms"></div>
+			<div class="se"></div>
+		</div>
+	
+	
+		
+	</body>
+	<script type="text/javascript">
+		var click =document.querySelector("#click");
+		for (var i = 0;i< 60; i++) {
+			var li = document.createElement("li");
+			li.style.transform ="rotate("+i*6+"deg)";
+			click.appendChild(li);
+		}
+		
+		var se = document.querySelector(".se");
+		var ms = document.querySelector(".ms");
+		var hs = document.querySelector(".hs");
+		
+		window.setInterval(function () {
+			var d = new Date();
+			var s =d.getSeconds();
+			var m =d.getMinutes()+s/60;
+			var h =d.getHours()+m/60;
+			se.style.transform = "rotate("+s*6+"deg)";
+			ms.style.transform = "rotate("+m*6+"deg)";
+			hs.style.transform = "rotate("+h*30+"deg)";
+		},1000);
+		
+	</script>
+</html>

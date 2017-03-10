@@ -1,0 +1,11 @@
+﻿vertical-align 使用场景1： 一行内的垂直方向对齐
+
+                设置在行内元素中。如果设置 vertical-align : middle ，该行内元素在同一行中文本小写字母的1/2。
+                注意：不实同一行中元素内容的小写字母。
+
+                 vertical-align: 只用设置行内元素（inline inline-block）
+
+
+vertical-align 使用场景2： 一行内的垂直方向对齐
+                设置其父元素 display: table-cell,设置固定的高度，然设置 vertical-align
+                当元素设置为 display: table-cell 宽度清零，需要为其指定父元素，父元素（display: table）为其指定宽度

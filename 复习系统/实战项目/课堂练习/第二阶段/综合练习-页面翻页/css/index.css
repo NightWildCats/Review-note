@@ -1,0 +1,164 @@
+body{
+    /*取消垂直滚动条*/
+    overflow-y: hidden;
+    min-width: 1024px;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+.header-content{
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8px 15px;
+
+    min-width: 1024px;
+    max-width: 1366px;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+#menu{
+    display: flex;
+}
+
+#menu li{
+    margin-left: 8px;
+}
+#menu a{
+    color: #fff;
+    border: 1px solid transparent;
+    display: block;
+    /* padding: 8px 15px; */
+    width: 100px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 3px;;
+}
+/*菜单活动样式*/
+.a-active{
+    border: 1px solid #fff !important;
+}
+
+#page1{ background: url("../img/bg1.jpg") no-repeat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    color: #fff;
+    font-weight: bold;
+
+    overflow: hidden;
+}
+h1{
+    font-size: 36px;
+}
+h3{
+    font-size: 22px;
+}
+
+#page1Img{
+    transform: translateX(-700px);
+}
+#page1Title{
+    transform: translateX(700px);
+}
+
+/*#page1:hover #page1Img, #page1:hover #page1Title{*/
+.page1Amin{
+    transition: .3s cubic-bezier(.24,1.13,.94,1.16) !important;
+    transform: translateX(0) !important;
+}
+
+#page2{ background: url("../img/bg2.jpg") no-repeat;
+
+
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    /*background-color: #f00;*/
+
+    width: 1000px;
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+.box{
+    width: 154px;
+    height: 210px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box p{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+.box1{ background-color: #595CA8;}
+.box2{ background-color: #FF9D2E;}
+.box3{ background-color: #01A6DE;}
+.box4{ background-color: #015E91;}
+.box5{ background-color: #1DC128;}
+.box6{ background-color: #01A6DE;}
+
+/*默认奇数位的盒子不出现在屏幕*/
+.box:nth-child(odd){
+    transform: translateY(700px);
+}
+.box:nth-child(even){
+    transform: translateY(-700px);
+}
+
+/*#page2:hover .box:nth-child(odd), #page2:hover .box:nth-child(even){*/
+.page2Amin{
+    transition: .3s cubic-bezier(.24,1.13,.94,1.16) !important;
+    transform: translateY(0) !important;
+}
+
+#page3{ background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /*设置3D空间*/
+    transform-style: preserve-3d ;
+    perspective: 800px;
+}
+.page2-show{
+    transform-origin: left;
+}
+
+.page2-show-ative{
+    transition: .3s !important;
+    transform: rotateY(45deg) !important;
+}
+
+#page3 pre{
+    margin-left: -30px;
+    opacity: .2;
+    line-height: 2;
+}
+.pre-active{
+    transition: .5s !important;
+    opacity: 1 !important;
+}
+
+
+

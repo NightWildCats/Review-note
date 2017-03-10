@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			table {
+					width: 870px;
+					margin-left: 33px;
+			      }
+		</style>
+		<link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+	</head>
+	<body>
+			<div class="top1">
+				<span class="top_span">章节目录</span><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回主页</a><br />
+				<a class="top_span" href="#1">CSS3过渡效果</a><br />
+				<a class="top_span" href="#2">:target属性</a><br />
+				<a class="top_span" href="#3">classlist属性</a><br />
+				<a class="top_span" href="#4">addEventListener()</a><br />
+				<a class="top_span" href="#5">transform缩放</a><br />
+				<a class="top_span" href="#6">返回主页</a><br />
+			</div>
+			<div id="bot1">
+				<!--CSS3过渡知识点整理开始-->
+				<fieldset id="1">
+					<legend>CSS3过渡效果</legend>
+					<table>
+						<tr><th>CSS3过渡效果(transition)</th></tr>
+						<tr><td>(1).transition-property:表示需要使用过渡效果的属性</td></tr>
+						<tr><td>(2).transition-duration:表示需要过渡需要花费的时间 </td></tr>
+						<tr><td>(3).transition-timing-function:表示需要过渡的运动方式</td></tr>
+						<tr><td>(4).transition-delay:表示过渡效果开始执行的时间</td></tr>
+						<tr><td>transition属性:简写属性，用于简写四个过渡属性</td></tr>
+						<tr><td>&nbsp;&nbsp;用法：transition:需要过渡的属性  需要过渡的时间  过渡执行的方式(加速，减速，匀速)  开始执行的时间(延迟执行时间)</td></tr>
+						<tr><td></td></tr>
+					</table>
+				</fieldset>
+				<!--CSS3过渡知识点整理结束-->
+				<!--:target属性开始-->
+				<fieldset id="2">
+					<legend>:target属性</legend>
+					<table>
+						<tr><th>:target属性</th></tr>
+						<tr><td>用于选定目标元素的ID后，执行设置的样式</td></tr>
+						<tr><td>&nbsp;&nbsp;用法：任何元素:target { 属性样式  }</td></tr>
+						<tr><td></td></tr>
+					</table>
+				</fieldset>
+				<!--:target属性结束-->
+				<!--DOM classlist属性结束-->
+				<fieldset id="3">
+					<legend>DOM classlist属性</legend>
+					<table>
+						<tr><th>DOM classlist属性</th></tr>
+						<tr><td>该属性用于在元素中添加，移除及切换 CSS 类</td></tr>
+						<tr><td>(1).为元素添加多个类:</td></tr>
+						<tr><td>&nbsp;&nbsp;用法：document.getElementById("myDIV").classList.add("mystyle","anotherClass", "thirdClass");</td></tr>
+						<tr><td>(2).为元素移除一个或多个类:</td></tr>
+						<tr><td>&nbsp;&nbsp;用法：document.getElementById("myDIV").classList.remove("mystyle","anotherClass", "thirdClass");</td></tr>
+						<tr><td>(3).为元素切换到不同的类</td></tr>
+						<tr><td>&nbsp;&nbsp;用法：document.getElementById("myDIV").classList.toggle("newClassName");</td></tr>
+						<tr><td></td></tr>
+					</table>
+				</fieldset>
+				<!--DOM classlist属性结束-->
+				<!--HTML DOM addEventListener() 结束-->
+				<fieldset id="4">
+					<legend>DOM addEventListener() </legend>
+					<table>
+						<tr><th>DOM addEventListener() </th></tr>
+						<tr><td>addEventListener()：用于向指定元素添加事件句柄</td></tr>
+						<tr><td>示例：为 <button> 元素添加点击事件。当用户点击按钮时，在 id="demo" 的 <p> 元素上输出 "Hello World" </td></tr>
+						<tr><td>用法:</td></tr>
+						<tr><td>&nbsp;&nbsp;document.getElementById("myBtn").addEventListener("click", function(){</td></tr>
+						<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").innerHTML = "Hello World";</td></tr>
+						<tr><td>&nbsp;&nbsp;});</td></tr>
+						<tr><td>示例：修改 <button> 元素的背景：</td></tr>
+						<tr><td>&nbsp;&nbsp;document.getElementById("myBtn").addEventListener("click", function(){</td></tr>
+						<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;this.style.backgroundColor = "red";</td></tr>
+						<tr><td>&nbsp;&nbsp;});</td></tr>
+						<tr><td></td></tr>
+					</table>
+				</fieldset>
+				<!--HTML DOM addEventListener() 结束-->
+				<!--transform缩放开始-->
+				<fieldset id="5">
+					<legend>transform缩放</legend>
+					<table>
+						<tr><th>transform缩放</th></tr>
+						<tr><td>(1).transform-origin:变形的中心点(使用缩放必须要使用的属性)。可以是百分比或者是像素(px)</td></tr>
+						<tr><td>缩放：</td></tr>
+						<tr><td>(1).transform:scale(缩放的倍数)——定义 2D 缩放转换。</td></tr>
+						<tr><td>(1).transform:scale(x，y)——定义 2D 缩放转换。</td></tr>
+						<tr><td>(2).transform:scale3d(x，y，z)——定义3D缩放转换。</td></tr>
+						<tr><td>旋转</td></tr>
+						<tr><td>(1).transform:rotate(角度)——定义 2D 旋转</td></tr>
+						<tr><td>(2).transform:rotate3d(x,y,z，角度)——定义3D 旋转</td></tr>
+						<tr><td>倾斜</td></tr>
+						<tr><td>(1).transform:skew(x倾斜角度,y倾斜角度)，角度的单位是deg</td></tr>
+						<tr><td>位移</td></tr>
+						<tr><td>(1).transform:translate(x,y)——定义位移</td></tr>
+						<tr><td>(1).transform:translateX(位移量-像素)——定义x轴位移</td></tr>
+						<tr><td>(1).transform:translateY(位移量-像素)——定义y轴位移</td></tr>
+						<tr><td>&nbsp;&nbsp;可以应用其做垂直对齐</td></tr>
+						<tr><td>transform总结：所有的变形都不会导致页面重新布局。还有GPU加速，手机使用会导致发热和费电</td></tr>
+						<tr><td></td></tr>
+					</table>
+				</fieldset>
+				<!--transform缩放结束-->
+			</div>
+	</body>
+</html>

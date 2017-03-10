@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证</title>
+    <script src="myQuery-3.0.0.js"></script>
+</head>
+<body>
+<input type="text" value="this is username" id="username">
+<button id="btn" value="this is button">按钮</button>
+<script>
+    var $username = $('#username');
+//    console.log($username.get(0));
+//    console.log($username.text());
+    console.log($username.makeArray());
+
+    var btn = document.getElementById('btn');
+    var textElem = btn.firstChild;
+    var arrElem = btn.getAttributeNode;
+//    console.log(arrElem.nodeType)
+
+</script>
+</body>
+</html>

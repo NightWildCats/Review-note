@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>25_解决冲突方式五</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script src="prototype-1.7.3.js"></script>
+</head>
+<body>
+    <p id="pp">test---prototype</p>
+    <p >test---jQuery</p>
+
+    <script type="text/javascript">
+        // TODO 关于 jQuery 引入与其他类库的冲突的问题
+        /**
+         * 解决方式有：
+         *
+         *  注意： jQuery.noConflict() 表示将 “$” 的使用权放弃
+         *        在多个类库的引入中，当jQuery的类库文件在最下面的时候是会被调用的
+         *
+         *  ①  放弃使用 “$” 的使用权
+         *
+         *      通过 jQuery.noConflict()的返回值（jQuery对象）作为标识符来进行使用
+         *  ②  var $j = jQuery.noConflict();
+         *      console.log($j('#pp').text())
+         *
+         *      通过回调函数的作用域 来防止 “$” 标识符的冲突
+         *  ③  jQuery.noConflict();
+         *      jQuery(function($){
+         *          console.log($('#pp').text())
+         *      });
+         *
+         *      通过 (回调函数)(参数) 的方式 来进行 函数局部作用的 “$” 标识符的使用
+         *  ④  jQuery.noConflict();
+         *       (function($){
+         *          console.log($('#pp').text());
+         *      })(jQuery);
+         *
+         *      通过 window.jQuery 来进行标识
+         *  ⑤  jQuery.noConflict();
+         *      console.log(jQuery('#pp').text());
+         *
+         */
+
+    </script>
+</body>
+</html>

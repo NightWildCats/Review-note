@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16_替换DOM节点</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+    <ul>
+        <li title='苹果'>苹果</li>
+        <li title='橘子'>橘子</li>
+        <li title='菠萝'>菠萝</li>
+    </ul>
+
+    <script>
+        // TODO 替换DOM节点
+        /**
+         * 替换节点
+         *
+         * ① 通过 replaceWith() 实现将 匹配的元素换成指定的HTML或者DOM节点
+         * ② 通过 replaceAll() 实现将 指定的HTML或DOM替换掉匹配的所有元素
+         *
+         */
+        // TODO 通过 replaceWith() 实现 替换
+        $('ul>li:eq(0)').replaceWith('<li>设置替换的</li>');
+
+        // TODO 通过 replaceAll() 实现 替换
+       $('<li>这也是替换的</li>').replaceAll($('ul>li:eq(2)'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08_遍历节点</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+    <ul>
+        <li title='苹果'>苹果</li>
+        <li title='橘子'>橘子</li>
+        <li title='菠萝'>菠萝</li>
+    </ul>
+
+    <script>
+        // TODO 遍历节点通过一个节点可以找到在DOM树结构中的任何节点
+
+        // TODO 测试 设置节点为 ul->li 遍历到head->meta 下的charset属性值
+        $(function () {
+            $('ul>li').click(function () {
+               var str = $(this).parents('body').prev('head').children('meta').attr('charset');
+                console.log(str);
+            });
+        });
+
+
+
+    </script>
+</body>
+</html>

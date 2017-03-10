@@ -1,0 +1,34 @@
+        离线存储重要知识点总结
+        一、Cookie存储的特点
+            1.cookie由服务器创建，第一次响应后，记录在浏览器
+            2.每次请求，cookie都会发动到服务器
+            3.每次响应，cookie都会推送到浏览器
+            4.在浏览器读取cookie比较繁琐
+            5.cookie容量小，只有4kb
+
+        二、Storage存储 : sessionStorage / localStorage
+            2.1、数据生命周期：
+                sessionStorage  数据创建到浏览器页签关闭
+                localStorage    数据创建到用户手动清除，或者使用clear(), removeItem(key)删除
+            2.2、数据共享：
+                sessionStorage 条件：同一个浏览器页签
+                localStorage   条件：相同域名（协议，域名，端口）的不同网址
+            2.3、数据使用场景：
+                频繁操作且安全性不高的数据
+            2.4、可存储的数据格式：
+                1.数字
+                2.字符串
+                3.如果实JSON对象，需要使用 JSON.stringify(JSON对象)把其转换成字符串再存储。
+                  获取后再调用JSON.parse(JSON的字符串)转成JSON对象再使用。
+        三、Storage存储常用方法及属性
+            setItem(key, value)  增加一条数据
+            getItem(key)         根据key值获取一条数据
+            removeItem(key)      根据指定的key删除一条数据
+            clear()              清除所有数据
+            key(num)             获取指定索引位的key值
+            length               数据项个数
+
+
+
+
+

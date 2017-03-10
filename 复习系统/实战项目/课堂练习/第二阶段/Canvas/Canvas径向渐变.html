@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钟表画布</title>
+    <style type="text/css">
+
+        canvas {
+            display: block;
+            border: 1px solid red;
+            margin: 0 auto;
+            /*color: white;*/
+        }
+        body {
+            cursor: url("img/12.bmp"),auto;
+        }
+    </style>
+</head>
+<body>
+
+<canvas width="800" height="500">
+    您的浏览器不支持
+</canvas>
+
+</body>
+<script type="text/javascript">
+
+    /**
+     * 创建径向渐变Canvas的过程
+     *
+     * ① 创建一个Canvas 画布标签 设置宽高属性 width / height (不需带单位。默认是像素)
+     * ② 通过js获取Canvas对象 设置画布 “2d” 上下文对象
+     * ③ 设置一个渐变区域（设置开始坐标。开始半径；结束坐标，结束半径）
+     * ④ 为渐变的区域设置渐变颜色
+     * ⑤ 创建一个承载渐变的画布区域（例如矩形）来承载渐变的区域
+     * ⑥ 实现渐变效果
+     *
+     */
+
+    var  canvas = document.querySelector("canvas");
+    var  cxt = canvas.getContext("2d");
+
+
+//    cxt.translate(100,100);
+    //创建一个圆形径向渐变
+    var radia = cxt.createRadialGradient(400,250,0,400,250,200);
+
+    for (var i = 0; i < 10; i++) {
+        if (i%2 == 0) {
+            radia.addColorStop(i/10,"red");
+        } else {
+            radia.addColorStop(i/10,"white");
+        }
+    }
+
+    cxt.fillStyle = radia;
+    cxt.fillRect(0,0,800,500);
+
+
+</script>
+
+</html>

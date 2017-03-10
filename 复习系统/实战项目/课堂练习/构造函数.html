@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>构造函数</title>
+		<script type="text/javascript">
+			//创建构造函数
+			function Persom (name , age , gender) {
+				this.name = name;
+				this.age = age;
+				this.gender = gender;
+				this.sayHello =sayHello;	//这是调用一个函数
+				//在构造函数内部创建方法
+				this.sayYou = function () {
+					console.log("这是一个构造函数内的方法："+this.name);
+				};
+			}
+			
+			//创建对象方法
+			function sayHello() {
+				console.log("大家好！我是-"+this.name);
+			}
+			
+			//在构造函数的原型上创建方法。只创建一个比较省空间
+			Persom.prototype.sayName = function() {
+				console.log(this.name);
+			}
+			
+			//创建对象实例
+			var p1 = new Persom("孙", 18 ,"男");
+			var p2 = new Persom("会", 18 ,"男");
+			
+			//调用外部函数创建的方法sayHello
+			p1.sayHello();
+			p2.sayHello();
+			//调用原型上的方法sayName
+			p1.sayName();
+			p2.sayName();
+			//调用构造函数内部的方法
+			p1.sayYou();
+			p2.sayYou();
+			
+		</script>
+		<link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+	</head>
+	<body>
+		<div class="top1">
+				<a class="top_span">章节目录</a><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回首页</a> <br />
+				<a class="top_span" href="javascript:">构造函数</a> <br />
+				
+	    </div>
+	</body>
+</html>

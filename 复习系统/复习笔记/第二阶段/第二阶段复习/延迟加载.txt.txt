@@ -1,0 +1,19 @@
+1、为什么延迟加载？
+
+
+2、如何实现延迟加载？
+    页面延迟加载，即分屏显示，用户滚动页面，切换页面时显示当前屏幕的图片
+
+3、原理
+    将img的地址暂时存在一个属性（自定义属性）中，如data-item-img，
+    而让src为空（或者指向一个默认的图片），等到图片“即将出现”在视口范围时，把data-item-img中的地址取出来，放入src
+
+
+4、需要的技术的点
+    自定义属性 data-
+    document.documentElement.clientHeight; 视口高度
+
+    ev.onscroll 事件 - 滚动条滚动时触发
+    ev.onresize 事件 - 视口大小调整时
+    getBoundingClient()  - 获取DOM对应元素宽度，高度，以及各边（TRBL）距离视口左边及上边的距离。
+

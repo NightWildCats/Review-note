@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+
+        .box{
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255, 0, 0, .5);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+     <div class="box">
+
+     </div>
+     <a href="http://www.baidu.com">baidu</a>
+
+<script type="text/javascript">
+
+    /**
+     * 移动端事件：
+     * ① touchstart 鼠标开始（手指开始进入）
+     * ② touchmove 鼠标移动（手指在屏幕中移动）
+     * ③ touchend 鼠标结束（手指松开）
+     *
+     *
+     *  移动端点透事件
+     *
+     *  ① 移动端在使用 touchstart 时，会300毫秒触发一个 onclick事件 。
+     *
+     *        点透事件案例：在一个遮罩元素下面还有一个“链接” ，在点击“链接”  ->
+     *     上方处的遮罩层使之清除，会触发点透事件（会点中链接）。
+     *
+     *  ② 通过 ev.preventDefault() 来组织默认这种点透的默认行为
+     *
+     * 老师总结部分（点透）：
+     *
+     *  一、点透产生的条件：
+     *       1.浮层
+     *       2.点击浮层，让浮层 display: none;
+     *       3.点击处的下方有 a 连接
+     *       4.移动端
+     *   二、原因
+     *       1.touchstart 和 click (PC端的事件) 会依次执行，click 会在touchstart执行后 300ms 执行。
+     *       2.如果当touchstart 调用了  display: none; 后续的 click 就会点击到 a 链接元素，造成页面跳转
+     *   三、解决办法
+     *      touchstart 添加  ev.preventDefault(); 阻止后续 click 执行。
+     *
+     *
+     * clientX 获取 元素到浏览器左侧的距离
+     *
+     * pageX 获取 元素到HTML文档结构左侧的距离
+     *
+     * screenX 获取 元素到屏幕左侧的距离
+     *
+     * 移动端事件位置获取的方式：
+     *      通过 ev.touches  获取触屏坐标信息对象
+     *           ev.touches[0] 第一个索引中存储着 触屏的坐标信息
+     *           例：ev.touches[0].clientX;
+     * */
+
+    var boxDom = document.querySelector(".box");
+    var startClintX;
+    var endClintX;
+    //    触屏
+    boxDom.addEventListener("touchstart", function (ev) {
+        console.log(ev);
+        //        获取触屏坐标信息对象
+        var touches = ev.touches;
+        //        console.log("clientX = %o, clientY= %o", touches[0].clientX, touches[0].clientY)
+        console.log("pageX = %o, pageY= %o", touches[0].pageX, touches[0].pageY);
+        //        console.log("screenX = %o, screenY= %o", touches[0].screenX, touches[0].screenY)
+
+        startClintX = touches[0].clientX;
+    });
+    //    手指在屏幕上滑动的时候触发
+    boxDom.addEventListener("touchmove", function (ev) {
+        //        获取触屏坐标信息对象
+        var touches = ev.touches;
+        console.log("pageX = %o, pageY= %o", touches[0].pageX, touches[0].pageY);
+        endClintX = touches[0].clientX;
+    });
+
+    //    手指抬起
+    boxDom.addEventListener("touchend", function () {
+        //        编写业务逻辑： 判断手指滑动的方向
+        if((endClintX - startClintX) > 0){
+            console.log("右滑.....")
+        }else{
+            console.log("左滑.....")
+        }
+    });
+
+</script>
+</body>
+</html>

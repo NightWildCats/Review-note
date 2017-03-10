@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			var flag=true;
+//  		var zs=parseInt(prompt("请输入一个数字："));
+//			for (var j=1; j<=100; j++) {
+//				for (var i = 2; i < j ; i++) {
+//					if(zs % i !== 0) {
+//						document.write(j);
+//					}	
+//				}
+//				 if(flag){
+//						document.write("这个数是质数："+ zs);
+//				 } else {
+//						document.write("这个数不是质数："+ zs);
+//				 }
+//			 }
+
+			//乘法口诀表
+			for (var i = 1; i < 10 ;i++ ) {
+				for (var j = 1; j < i+1 ;j++ ){
+					document.write(j +"*"+ i +"=" + i*j +" &nbsp;&nbsp;" );
+				}
+				document.write("<br />");
+			}
+
+			
+			//alert(num);
+			//假设输入的是10
+			
+			/*
+			 求1到100所有的质数，并输出
+			 * */
+			console.time("1");
+			//定时器
+			var count=0;
+			//提供素数的范围1=-100		   
+			for(var i =2;i <100;i++){
+				//控制是否为素数的状态
+				flag=true;
+				//遍历循环是否为素数
+				//Math.aqrt()---求一个数的开平方
+				for (var j = 2; j <= Math.sqrt(i) ; j++) {
+					//不是素数
+					if (i % j == 0) {
+						flag=false;
+						break;
+					}	
+				}
+				//是素数
+				if (flag) {
+					count++;
+					//输出所有的素数
+					document.write(i+"<br />");
+				}
+		    }
+		    //输出计数
+		    console.log(count);
+		    console.timeEnd("1");
+		    
+	
+			
+	</script> 
+	<link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+	</head>
+	<body>
+		<div class="top1">
+				<a class="top_span">章节目录</a><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回首页</a> <br />
+				<a class="top_span" href="javascript:">for循环</a> <br />
+	    </div>
+	</body>
+</html>

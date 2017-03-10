@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="800" height="500">
+    你的浏览器不支持 Canvas
+</canvas>
+
+<script type="text/javascript">
+    var myCanvasDom = document.querySelector("#myCanvas");
+    //    获取画笔：canvas  2d 上下文
+    var painting = myCanvasDom.getContext("2d");
+
+
+
+    //    setInterval(function () {
+    //
+    //        painting.clearRect(0, 0, 800, 500);
+    //
+    //        painting.arc(300, 300, 200, 0, Math.PI*(deg/180));
+    //        painting.stroke();
+    //
+    //        deg++;
+    //    }, 200);
+
+
+
+    var R = 100;
+    var deg = 0;
+
+    painting.translate(200, 200);
+
+    var handler = setInterval(function () {
+
+//        painting.clearRect(0, 0, 800, 500);
+
+        painting.beginPath();
+        painting.arc(Math.cos(deg/180*Math.PI)*R, Math.sin(deg/180*Math.PI)*R, 2, 0, Math.PI*2);
+
+        painting.fill();
+//        painting.stroke();
+
+        deg++;
+
+        if(deg == 360){
+            clearInterval(handler);
+        }
+
+    }, 20)
+
+
+</script>
+</body>
+</html>

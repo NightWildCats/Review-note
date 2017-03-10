@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>对象的枚举</title>
+		<script type="text/javascript">
+			
+			var obj = {
+				name : "唐僧",
+				age : 24,
+				gender : "男",
+				test : {
+					name : "孙悟空",
+					age : 18,
+					gender : "男"	
+				}
+			};
+			//for--in--遍历
+			document.write("<div>")
+			for (var key in obj ) {
+				var flag = true;
+				document.write(+key +" : "+ obj[key] +"<br />");
+//				document.write(key +" : "+ obj.test[key] +"<br />");
+//				if (obj[key] ==obj["test"]) {
+//					for (var key in obj.test) {
+//					document.write(obj.test[key]+"<br />");
+//					}
+//				}
+				if (key == "test") {
+					for (var key in obj.test) {
+						flag = false;
+						continue;
+//					document.write(obj.test[key]+"<br />");
+					}
+				}
+				if (flag) {
+				for (var key in obj.test) {
+				document .write(key+" : "+obj.test[key]+"<br />");
+				}
+			}
+			}
+//			document.write("<hr />")
+			
+			
+				
+				document.write("</div>");
+
+
+//			function studen(name , age , gender) {
+//			var	name = name || 0;
+//			var	age = age || 0;
+//			var	gender gender ||0;
+				
+//				console.log(name);
+//				console.log(age);
+//				console.log(gender);
+//				if(name*age >= gender) {
+//					console.log(name +"*"+ age +">="+ gender);
+//				}else {
+//				 	console.log(name +"*"+ age +"<="+ gender);
+//				}
+//				return studen();
+//			}
+			
+			
+//			studen(2,3,5);
+			
+		</script>
+		<style type="text/css">
+			div {
+				margin: 20px auto;
+				width: 500pc;
+				height: 500px;
+				border: 1px solid red;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+	</head>
+	<body>
+		<div class="top1">
+				<a class="top_span">章节目录</a><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回首页</a> <br />
+				<a class="top_span" href="javascript:">对象的嵌套</a> <br />
+	    </div>
+	</body>
+</html>

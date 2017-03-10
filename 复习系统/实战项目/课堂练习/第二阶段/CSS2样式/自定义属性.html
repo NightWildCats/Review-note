@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义属性</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+        <!--
+           自定义属性：给程序使用的数据，存储在自定义属性中
+
+            语法规则：
+                1.必须以 data-
+                2.多个英文单词使用 - 分割
+        -->
+
+    <div class="box" data-test=" ">
+            hello world
+    </div>
+
+</body>
+<script type="text/javascript">
+    var box = document.querySelector(".box");
+
+    //设置一个JSON对象
+    var jsonObj = {
+        "name": "张晓",
+        "age": 29,
+        "gender": "非人"
+    };
+
+    //将JSON对象转换成字符串
+    var jsonStr = JSON.stringify(jsonObj);
+    var str = box.dataset.Test = jsonStr;
+
+    //
+    var strGet = box.dataType;
+    console.log(strGet);
+
+    //将自定义字符串转换成JSON对象
+
+    var objStr = JSON.parse(str);
+
+    console.log(str);
+    console.log(objStr.name);
+    console.log(objStr.gender);
+
+</script>
+</html>

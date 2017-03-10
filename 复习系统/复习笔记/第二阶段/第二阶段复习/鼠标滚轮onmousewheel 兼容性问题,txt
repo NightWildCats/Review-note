@@ -1,0 +1,42 @@
+﻿滚轮事件：onmousewheel 判断上下滚轮
+
+一、Firefox使用DOMMouseScroll，
+    -- 使用detail属性捕捉滚轮信息
+    -- -3 上滚轮
+    --  3 下滚轮
+    -- Firefox可以使用addEventListener方法绑定DomMouseScroll事件。
+
+    document.body.addEventListener("DOMMouseScroll", function (ev) {
+       alert(ev.detail);
+    }, false)
+
+
+二、其他的浏览器使用mousewheel
+    -- 使用wheelDelta。
+    -- 120   上滚轮
+    -- -120  下滚轮
+    -- Safari 鼠标滚轮向上滚动是360，向下滚动是-360
+
+三、IE低版本绑定事件方式（我们及其不推荐该种方式，这是IE自己的游戏规则）
+
+    /*IE注册事件*/
+    if(document.attachEvent){
+      document.attachEvent('onmousewheel',scrollFunc);
+    }
+
+
+
+
+
+JS部分
+
+一、能够删选出“有效的”滚轮事件
+    -- 实现 上翻页，下翻页 控制
+
+二、能够通过滚轮事件对象，区别 上翻页 和 下翻页
+
+三、能够实现菜单的联动
+
+四、动态控制每页的动画效果
+
+五、理解火狐浏览器的差异性！

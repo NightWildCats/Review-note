@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM事件</title>
+		<script type="text/javascript">
+		
+		 //等页面加载完之后执行函数体
+		window.onload = function() {
+			var but = document.getElementById("but");
+		//鼠标进入事件
+		but.onmouseover = function () {
+			but.innerText ="你已经被修改了";
+		};
+		//鼠标移除事件
+		but.onmouseout = function () {
+			but.innerText ="我是一个按钮";
+		};
+		//鼠标点击事件
+		but.onclick = function () {
+			but.innerHTML ="你已经被点击了"
+		};
+		//鼠标双击事件
+		but.ondblclick = function () {
+			but.innerHTML = "你已经被双击了";
+		};
+		};
+	</script>
+	</head>
+	<body>
+		<button id="but">我是一个按钮</button>
+	</body>
+	
+</html>

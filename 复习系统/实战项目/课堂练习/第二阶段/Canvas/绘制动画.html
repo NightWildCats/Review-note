@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+        body{
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+
+<canvas id="myCanvas" width="800" height="500">
+    你的浏览器不支持 Canvas
+</canvas>
+
+<script type="text/javascript">
+
+    //    绘制的基线
+    var baseline = 400;
+    //    间隙
+    var rectGap = 40;
+    //    矩形数量
+    var rectNum = 19;
+
+    var myCanvasDom = document.querySelector("#myCanvas");
+    var painting = myCanvasDom.getContext("2d");
+
+
+    setInterval(function () {
+
+        painting.clearRect(0, 0, 800, 500);
+
+
+
+        for (var i = 1; i < rectNum; i++) {
+
+            //        设置随机颜色：
+//            painting.fillStyle = getRandomColor();
+            //获取颜色的随机值
+            var coler1 = Math.round(Math.random()*255);
+            var coler2 = Math.round(Math.random()*255);
+            var coler3 = Math.round(Math.random()*255);
+            //获取颜色透明度
+            var pa = Math.round(Math.random());
+//            设置颜色
+            painting.fillStyle = "rgba("+coler1+","+coler2+","+coler3+","+pa+")";
+            var rectHeight = Math.round(Math.random()*255);
+
+            painting.fillRect(i*rectGap, 400, 20, -rectHeight);
+        }
+
+    }, 200)
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

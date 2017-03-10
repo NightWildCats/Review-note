@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10_创建DOM节点</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+    <ul>
+        <li title='苹果'>苹果</li>
+        <li title='橘子'>橘子</li>
+        <li title='菠萝'>菠萝</li>
+    </ul>
+
+    <script>
+        // TODO 创建DOM节点
+        /**
+         * 原生态创建的步骤：
+         *  ① 通过 var li = document.createElement（）;来进行创建
+         *  ② 通过 li.属性 来定义 标签节点的属性
+         *  ③ 通过 li.innerHTML 或者 li.innerText 来添加文本内容
+         *  ④ 通过 插入的目标元素.appendChild(li) 来完成DOM节点的创建
+         *
+         */
+         // TODO 通过jQuery的方式来创建DOM节点
+        /**
+         * jQuery创建DOM的步骤
+         *  ① 直接通过 $('DOM的原生态结构') 来创建一个节点
+         *  ② 通过要插入的目标元素的append() 方法实现 DOM节点的插入
+         *      例：$('目标对象').append($('DOM的原生态结构'));
+         */
+         $('ul').append($('<li title="西瓜">西瓜</li>'));
+
+         // TODO 创建一个DOM，将节点插入到目标元素下的指定位置
+         // TODO 插入到ul下的第2个li
+         $('body').click(function () {
+             $('ul').children('li:eq(1)').before($('<li title="西瓜">西瓜</li>'));
+         });
+
+
+    </script>
+</body>
+</html>

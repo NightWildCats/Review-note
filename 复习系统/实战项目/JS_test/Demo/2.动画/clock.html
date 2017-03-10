@@ -1,0 +1,112 @@
+<!-- 尚硅谷 HTML5 2016年-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link href="/H50623/img/logo.png" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="/H50623/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/biji.css"/>
+    <title>尚硅谷HTML5</title>
+    <style type="text/css">
+        .wrapper{
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+
+            position: relative;
+        }
+        .clock{
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            margin: 0 0 0 100px;
+            padding: 0;
+            position: absolute;
+
+        }
+        .clock>li {
+            width: 2px; height: 6px; background-color: #000;
+            position: absolute;
+            transform-origin: 1px 100px;
+        }
+        .clock>li:nth-child(5n+1){
+            height: 10px;
+            width: 4px;
+            transform-origin: 2px 100px;
+        }
+        .sec, .min, .hour{
+            position: absolute;
+        }
+        .sec{
+            height: 80px;
+            width: 2px;
+            background-color: red;
+            left: 100px;
+            top: 20px;
+            transform-origin: bottom;
+        }
+        .min{
+            height: 60px;
+            width: 4px;
+            left: 100px;
+            background-color: black;
+            top: 40px;
+            transform-origin: bottom;
+        }
+
+        .hour{
+            height: 40px;
+            width: 4px;
+            left: 100px;
+            background-color: black;
+            top: 60px;
+            transform-origin: bottom;
+        }
+
+    </style>
+</head>
+<body>
+		<div class="top1">
+				<span class="top_span">章节目录</span><br />
+				<a class="top_span" href="../../../../学习笔记入口.html">返回首页</a> <br />
+			</div>
+<div class="wrapper">
+    <ul class="clock"></ul>
+    <div class="hour"></div>
+    <div class="min"></div>
+    <div class="sec"></div>
+</div>
+
+
+<script type="text/javascript">
+    //添加脚本
+     var clock = document.querySelector(".clock");
+     for(var i=0; i<60; i++){
+         var li = document.createElement("li");
+         li.style.transform = "rotate("+i*6+"deg)";
+         clock.appendChild(li);
+     }
+
+    var sec = document.querySelector(".sec");
+    var min = document.querySelector(".min");
+    var hour = document.querySelector(".hour");
+     setInterval(function(){
+
+         var date = new Date();
+
+         var seconds = date.getSeconds();
+         var minutes = date.getMinutes();
+         var hours = date.getHours();
+
+         sec.style.transform = "rotate(" + seconds*6 + "deg)";
+         min.style.transform = "rotate(" + minutes*6 + "deg)";
+         hour.style.transform = "rotate(" + hours*(5*6) + "deg)";
+
+     }, 1000);
+
+
+
+</script>
+</body>
+</html>

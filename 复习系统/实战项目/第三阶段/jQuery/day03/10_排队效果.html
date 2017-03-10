@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10_排队效果</title>
+    <script src="jquery-1.12.4.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 60px
+        }
+
+        #panel {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #0050D0;
+            background: #96E555;
+            cursor: pointer
+        }
+    </style>
+</head>
+<body>
+    <div id="panel"></div>
+
+    <script>
+        // TODO 自定义动画
+        // TODO 通过 animate({改变的css样式}，过渡时间（速度）);
+
+        // TODO 并发效果动画
+        /*$('#panel').click(function () {
+         $('#panel').animate({'width':200,'height':200},1000);
+         });*/
+
+
+        // TODO 排队效果动画
+        /*$('#panel').click(function () {
+         $('#panel').animate({'width':200},1000).animate({'height':200},1000);
+         });*/
+
+        // TODO 通过排队效果 实现 并发效果的动画
+        $('#panel').click(function () {
+            $('#panel').animate(
+                    {'width':200},1000).animate(
+                    {'height':200},{'queue': false,'duration':1000});
+        });
+    </script>
+</body>
+</html>

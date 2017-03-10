@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伸缩盒模型案例</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /*让视口合一*/
+        html ， body {
+            height: 100%;
+        }
+        .warp {
+            border: 1px solid blue;
+            /*设置一个百分比的宽度*/
+            width: 80%;
+            /*height: 200px;*/
+            /*设置元素水平居中*/
+            margin: 20px auto;
+            /*设置元素的伸缩样式*/
+                 /*当dispiay属性是inline-flex时，子元素不会独占一行 ，当为flex是子元素会独占一行*/
+            display: flex;
+
+            /*
+            设置子元素的排列方式 :
+                当属性值为flex-end 是靠近主轴的结尾处开始排列
+                当属性值为flex-center 是以主轴中心处开始向两边排列
+                默认值是向主轴开始处排列 flec-start
+                当属性值为space-between 是沿着主轴均匀分布
+                当属性值为space-around 是沿着主轴均匀分布,但是剩下的控件会包裹住每一个子元素
+            */
+            justify-content: space-between;
+
+            /*
+            伸缩在侧轴的排列:
+                当属性值为stretch时 子元素会沿着侧轴被拉伸
+                当属性值为flex-start时 子元素会沿着侧轴顶部排列
+                当属性值为flex-end时 子元素会沿着侧轴顶部排列
+                当属性值为center时 子元素会沿着侧轴中间排列
+                当属性值为baseline(伸缩容器的空间足够大)时 主轴中伸缩项目基线最大的那个伸缩项目的基线作为所有伸缩项目的对齐基线
+            */
+            align-items: center;
+
+            /*伸缩容器的空间不足时：
+                使用 flex-wrap ：onwrap 来进行自动适应。分配每一个的子元素的大小
+                使用 flex-wrap ：wrap-reverse 让伸缩项目自动换行，保持原来的大小。但此时伸缩项目在主轴flex-start和侧轴flex-end处开始排列。
+            */
+            flex-wrap: wrap-reverse;
+
+            /*设置主轴的方向:
+                row 主轴向右开始排列
+                row-reverse 主轴向左开始排列
+                column 主轴从上向下排列
+                column-reverse 主轴从下向上排列
+
+            */
+            flex-direction: row;
+
+            /*伸缩项目的简写：
+                flex-flow : 主轴方向 flex-wrap
+            */
+            /*flex-flow: column wrap;*/
+
+            /*当主轴位置不足以容下子元素的时候换行:
+            注意：使用此样式的时候是必须在使用 flex-wrap 属性之后才能生效
+                stretch : 默认均匀分配到侧轴空间
+                center ：
+            */
+            align-content: stretch;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+            text-align: center;
+            /*line-height: 100px;*/
+        }
+        .box1 {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+        <div class="warp">
+            <div class="box box1">1</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box4">4</div>
+            <div class="box box5">5</div>
+            <!--<div class="box box5">5</div>-->
+        </div>
+        <!--<span>这是一行测试span</span>-->
+</body>
+    <script type="text/javascript">
+        var warp = document.querySelector(".warp");
+        var box = document.querySelectorAll(".box");
+        for (var i = 0;i < box.length ; i++) {
+            //实现行高与父元素的高相同
+            //box[i].style.lineHeight = getComputedStyle(warp ,null).height;
+            //实现行高与元素的高相同
+            box[i].style.lineHeight = getComputedStyle(box[i] ,null).height;
+        }
+//        alert(box.length);
+    </script>
+</html>

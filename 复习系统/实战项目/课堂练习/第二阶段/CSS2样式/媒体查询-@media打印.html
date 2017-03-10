@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>媒体查询-@media 打印的多媒体查询</title>
+    <style type="text/css">
+        /*可以通过判断条件来引入外部的CSS样式 */
+
+
+    /*下面的代码是通过media的判断条件来选择是否调用其样式 ， 但是此样式建议放在正常的CSS样式之后*/
+    /*<link rel="stylesheet" href="style.css" media="screen and (max-width: 700px)">*/
+
+    /*打印属性*/
+
+    @media print {
+        /*attr() 获取元素的属性*/
+        a:after {
+            content: "--" attr(href);
+            color: blue;
+         }
+    }
+        a {
+            display: block;
+            width: 350px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            margin: 50px auto;
+            border: 1px solid blue;
+            text-align: center;
+            line-height: 200px;
+            margin: 50px auto;
+        }
+        /*判断手机横竖屏*/
+        @media screen and (orientation: landscape) {
+            a {
+                background-color: #428bca;
+                width: 500px;
+                height: 200px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com">百度</a>
+</body>
+</html>

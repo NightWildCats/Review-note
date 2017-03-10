@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_validation基本示例</title>
+    <link rel="stylesheet" href="validation/css/screen.css">
+    <!-- 1. 引入JQUERY -->
+    <script src="jquery-1.12.4.js"></script>
+    <!-- 2. 引入插件文件 -->
+    <script src="validation/jquery.validate.js"></script>
+    <!-- 3. 引入国际化文件 -->
+    <script src="validation/messages_zh.js"></script>
+    <style>
+        form {
+            width: 500px;
+        }
+        form label {
+            width: 250px;
+        }
+        form label.error, form input.submit {
+            margin-left: 253px;
+        }
+    </style>
+</head>
+<body>
+<h1 id="banner"><a href="http://jqueryvalidation.org/">jQuery Validation Plugin</a> Demo</h1>
+<div id="main">
+    <p>Take a look at the source to see how messages can be customized with metadata.</p>
+    <!--
+        TODO 定义表单form
+        TODO * method - 定义表单的请求类型(GET|POST)
+        TODO * action - 定义表单的提交地址
+     -->
+    <form class="cmxform" id="commentForm" method="post" action="">
+        <fieldset>
+            <legend>Please enter your email address</legend>
+            <p>
+                <label for="cemail">E-Mail *</label>
+                <input type="email" required id="cemail" name="email">
+            </p>
+            <p>
+                <input class="submit" type="submit" value="Submit">
+            </p>
+        </fieldset>
+    </form>
+</div>
+<script>
+    // TODO validition插件的基本使用 $().validate()
+    $('#commentForm').validate();
+    /*
+        TODO validate表单验证插件的基本使用
+        TODO * 引入必要的JS文件
+        TODO   * 引入JQUERY的库文件
+        TODO   * 引入validate的JS文件
+        TODO   * 引入国际化文件
+        TODO * 在HTML页面定义表单
+        TODO   * 表单的元素使用HTML5提供的新表单验证功能
+        TODO * 在JavaScript逻辑
+        TODO   * 通过表单调用validate()核心方法
+
+        TODO 面临的问题
+        TODO * 如何修改表单验证的错误提示信息
+        TODO * 研究其他表单元素如何实现验证
+        TODO * 研究特定场景下表单元素的验证
+     */
+</script>
+</body>
+</html>

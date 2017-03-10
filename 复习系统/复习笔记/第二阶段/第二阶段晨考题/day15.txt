@@ -1,0 +1,33 @@
+﻿备注：所有的 painting 均已初始化，画布大小 800*500
+
+一、执行以下语句，在画布中看不到任何图形，为什么？如何解决？（10分）
+     painting.rect(0, 0, 50, 50)
+
+	填充或描边
+
+二、当在Canvas显示一张外部图片是，需要注意什么？（20分）
+
+	图片的加载 img.onload
+
+
+三、画出你看到的图象（20分）
+    painting.arc(200, 200, 100, .5*Math.PI, Math.PI, true);
+    painting.stroke();
+
+四、该填充矩形位于画布左上角的距离？以及自身的大小？（20分）
+    painting.scale(.5, .5);
+    painting.translate(100, 100);
+    painting.fillRect(0, 0, 100, 100);
+
+五、你看到的渐变效果？（20分）
+    var linearGradient = painting.createLinearGradient(50, 50, 100, 100);
+    linearGradient.addColorStop(0, "red")
+    linearGradient.addColorStop(.5, "yellow")
+    linearGradient.addColorStop(1, "blue")
+    painting.fillStyle = linearGradient;
+    painting.fillRect(0, 0, 200, 200);
+
+六、在画布中绘制一各200*200填充矩形，并未对其进行缩放变形，但实际看到的效果却是长方形，
+   可能的原因？ （10分）
+
+	设置了CSS样式的宽高

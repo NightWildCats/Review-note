@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css"></style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <ul class="nav nav-pills nav-stacked nav-justified">
+                <li><a href="#tab1" data-toggle="tab" >item1</a></li>
+                <li><a href="#tab2" data-toggle="tab">item2</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单
+                        <span class="glyphicon glyphicon-user" ></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#tab3" data-toggle="tab">下拉菜单1</a></li>
+                        <li><a href="">下拉菜单2</a></li>
+                        <li><a href="">下拉菜单3</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">test1</div>
+                <div class="tab-pane" id="tab2">test2</div>
+                <div class="tab-pane" id="tab3">test3</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target="nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">Project name</a>
+                    <div class="nav-collapse">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.js"></script>
+</html>

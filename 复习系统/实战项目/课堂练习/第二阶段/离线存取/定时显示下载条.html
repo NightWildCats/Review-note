@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+        .wrapper-fixed-top{
+            height: 50px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+        }
+        .app-download{
+            max-width: 640px;
+            min-width: 320px;
+            margin: 0 auto;
+            height: 50px;
+            background: url("img/5796df21N0c6edd4e.png") no-repeat;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+        }
+        .app-download{
+            display: flex;
+        }
+        .item{
+            height: 50px;
+            /*border-left: 5px solid red;*/
+        }
+        img[src*="top-jdlogo"]{
+            width: 35px;
+            margin: 8px 15px 0;
+
+        }
+        img[src*="icon-close"]{
+            width: 16px;
+            margin: 16px 25px 0;
+        }
+        img{
+            vertical-align: middle;
+        }
+        .item>p{
+            margin: 0;
+            color: #fff;
+            font-size: 13px;
+            margin: 5px 0;
+            font-family: "Microsoft YaHei", Arial, '\5b8b\4f53', sans-serif;
+
+        }
+        .item>p:last-child{
+            color: #999999;
+            font-family: "Microsoft YaHei", Arial, '\5b8b\4f53', sans-serif;
+        }
+
+        .item:last-child{
+            padding-right: 10%;
+            flex-grow: 1;
+            text-align: right;
+            color: #fff;
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .carousel{
+            max-width: 640px;
+            min-width: 320px;
+            margin: 50px auto 0;
+            background-color: #f0f0f0;
+            height: 900px;
+        }
+        .carousel img{
+            width: 100%;
+        }
+        body{
+            margin: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="wrapper-fixed-top" id="downLoadBar">
+    <div class="app-download">
+        <div class="item">
+            <img src="img/icon-close-banner.png" alt="" id="btnClose">
+        </div>
+        <div class="item"><img src="img/top-jdlogo.png" alt=""></div>
+        <div class="item">
+            <p>打开京东App购物</p>
+            <p>新人领188元红包</p>
+        </div>
+        <div class="item">
+            <a href="#">立即打开</a>
+        </div>
+    </div>
+</div>
+<div class="carousel">
+    <img src="img/bg1.jpg" alt="">
+</div>
+
+<script type="text/javascript">
+
+    //关闭按钮
+    var btnCloseDom = document.querySelector("#btnClose");
+    //下载条
+    var downLoadBarDom = document.querySelector("#downLoadBar");
+    var carouselDom = document.querySelector(".carousel");
+    btnCloseDom.onclick = function () {
+        //1.记录关闭的时间
+        localStorage.setItem("timeClose", Btimes());
+        hiddenDownloadBar(downLoadBarDom, carouselDom);
+    };
+    //获取存储的关闭时间
+    var timeClose = localStorage.getItem("timeClose");
+    //计算时间间隔：如果大于10s 再次显示下载条
+    var timeCurrent = Btimes();
+    console.log((timeCurrent - timeClose));
+//    if((timeCurrent - timeClose) > 10000){
+//        showDownloadBar(downLoadBarDom, carouselDom);
+//
+//    }else{
+//        hiddenDownloadBar(downLoadBarDom, carouselDom);
+//    }
+    timeCurrent - timeClose > 10000 ? showDownloadBar(downLoadBarDom, carouselDom) : hiddenDownloadBar(downLoadBarDom, carouselDom);
+    /**
+     * 隐藏下载工具条
+     * @param downLoadBarDom    下载工具条的Dom
+     * @param carouselDom        轮播图的Dom
+     */
+    function hiddenDownloadBar(downLoadBarDom, carouselDom) {
+        // 隐藏 downLoadBarDom
+        downLoadBarDom.style.display = "none";
+        // 修改 downLoadBarDom 的 上外边距
+        carouselDom.style.marginTop = "0";
+    }
+    /**
+     * 隐藏
+     * @param downLoadBarDom
+     * @param carouselDom
+     */
+    function showDownloadBar(downLoadBarDom, carouselDom) {
+            //显示 downLoadBarDom
+            downLoadBarDom.style.display = "block";
+            //修改 downLoadBarDom 的 上外边距
+            carouselDom.style.marginTop = "50px";
+    }
+    /**
+     * 获取时间 毫秒
+     * @returns {number}
+     * @constructor
+     */
+    function  Btimes() {
+            var date = new Date();
+            var Time = date.getTime();
+            return Time;
+    }
+
+
+</script>
+</body>
+</html>

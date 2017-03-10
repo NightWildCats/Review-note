@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简易轮播图</title>
+    <script type="text/javascript">
+
+    </script>
+    <style type="text/css">
+    	#dic {
+    		width: 280px;
+    		height: 350px;
+    		margin: 100px auto;
+    		border: 1px solid blue;
+    	}
+        ul {
+            list-style:none;
+            /*overflow: hidden;*/
+            height:220px;
+        }
+        .bg_img>li {
+
+            position: absolute;
+            width:200px;
+            height:auto;
+            opacity:0;
+        }
+        .bg_img>li:target {
+            opacity:1;
+            transition: 1s linear;
+            transform: scale(1.1);
+        }
+        .bg_img>li img {
+            width:100%;
+            /*border: 1px solid red;*/
+
+        }
+        .sm_img>li {
+            float: left;
+            width:50px;
+            margin:0 8px;
+
+        }.sm_img>li img {
+            width:100%;
+            /*border: 1px solid red;*/
+
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+</head>
+<body>
+			<div class="top1">
+				<span class="top_span">章节目录</span><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回主页</a><br />
+			</div>
+	<div id="dic">
+			<ul class="bg_img">
+	        <li id="img001"><img src="img/d1.png" alt=""></li>
+	        <li id="img002"><img src="img/d2.png" alt=""></li>
+	        <li id="img003"><img src="img/d3.png" alt=""></li>
+	    </ul>
+	    <ul class="sm_img">
+	        <li><a href="#img001"><img src="img/x1.png" alt=""></a></li>
+	        <li><a href="#img002"><img src="img/x1.png" alt=""></a></li>
+	        <li><a href="#img003"><img src="img/x1.png" alt=""></a></li>
+	    </ul>
+	</div>
+    
+</body>
+</html>

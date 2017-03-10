@@ -1,0 +1,550 @@
+@charset "utf-8";
+/*设置index文件的默认初始字体大小和样式*/
+html {
+	font: 12px "宋体";
+}
+/*S=top*/
+/*设置index页面的顶部样式*/
+.top {
+	background-color: #F7F7F7;
+	height: 26px;
+	border-bottom: 1px solid #D8D8D8
+}
+/*设置顶端的版心*/
+.top-page {
+	width: 970px;
+	height: 26px;
+	margin: 0 auto;
+	/*background-color: red;  /*要注释掉*/
+}
+/*设置顶端文字的浮动*/
+.top-page-l {
+	float: left;
+	line-height: 26px;
+}
+.top-page-r {
+	float: right;
+	text-decoration: none;
+	height: 26px;
+}
+a {
+	color: #000;
+}
+.top-page-r ul li {
+	list-style: none;
+	word-spacing: none;
+	float: left;
+	line-height: 26px;
+	margin-left: 10px;  /*设置li标签文字之间的距离*/
+	/*padding-right: 10px;*/
+}
+.zicaidan{
+	float: none;
+}
+/*设置top顶端超链接小图标的样式，可以使用精灵图进行制作，建议使用*/
+/*精灵图建议使用标签是<s></s>标签*/
+.top-img {
+	display: inline-block;
+	float:right;
+	/*background: url(image/top_jl.jpg);*/
+	width: 13px;
+	height:15px;
+	line-height: 26px;
+	margin-top: 3px;
+	/*vertical-align: middle;*/
+}
+/*E=top*/
+/*S=logo*/
+/*logo部分的CSS样式设置*/
+.logo {
+	width: 970px;
+	height: 98px;
+	/*background: blue;*/  /*做测试用途的背景色*/
+	margin: 0 auto;
+	/*border: 1px solid red;*/  /*边框设置 测试用途*/
+}
+.logo-l {
+	width: 200px;
+	height: 55px;
+	background: url(../image/logo.png) no-repeat;  /*做测试用途的背景色*/
+	margin: 24px 0 19px 9px;
+	text-indent: -1500px;
+
+}
+.logo-r {
+	width: 530px;
+	height: 42px; 
+	border: 1px solid #C9C9C9;
+	margin-top: 29px;
+	/*background: pink;*/  /*做测试用途的背景色*/
+}
+
+.logo_r_searche {
+	width: 418px;
+	height: 28px;
+	border: 1px solid #C9C9C9;
+	color: #999999;
+	font-size: 18px;
+	/*margin-top: 29px;*/
+
+}
+.logo_r_btn {
+	width: 99px;
+	height: 30px;
+	background-color: #2F70D0;
+	font-weight: 700;
+	font-size: 20px;
+	color: white;
+}
+
+.logo-r-content {
+	margin: 5px 5px 5px 4px;
+}
+/*E=logo*/
+/*S=nav导航栏样式*/
+.nav {
+	width: 970px;
+    height: 25px;
+	margin: 0 auto;
+	border-bottom: 2px solid #0266A3;
+}
+
+.nav ul li {
+	float: left;
+	padding:0 15px 0 15px;
+	line-height: 25px;
+	font-size: 14px;
+	font-weight: 700;
+}
+.nav li a {
+	color: #0266A3;
+}
+.nav li:hover {
+	background-color: #0266A3;
+	/*color: white;*/
+}
+.nav li:hover a {
+	color: white;
+}
+/*E=nav导航栏样式*/
+
+/*S=版心广告样式设置*/
+.banner {
+	width:970px;
+	height: 210px;
+	/*background-color: pink;*/  /*测试用途*/
+	margin:0 auto;
+	margin-top: 10px;
+}
+
+	.subnav {
+		float: left;
+		width: 200px;
+		height: 210px;
+	/*background-color: red; */ /*测试用途*/
+	}
+	.sd {
+		float: left;
+		height: 210px;
+		width: 520px;
+		background-color: pink; /*测试用途*/
+		margin-left: 11px;
+       border: 1px solid red; 
+		position: relative;
+		overflow: hidden;
+	}
+	/*S=logo中间图片*/
+.sd img {
+	width: 520px;
+	height: 210px;
+    line-height: 210px;
+    text-align: center;
+    /*border: 1px solid blue;*/
+}
+.sd ul {
+			position: relative;
+			z-index: 1;
+		}
+		.sd ul li {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.sd ol {
+			position: absolute;
+			z-index: 2;
+			right: 10px;
+			bottom: 10px;
+		}
+		.sd ol li {
+			width: 20px;
+			height: 20px;
+			background: #333;
+			border: 1px solid #ccc;
+			font-weight: 700;
+			text-align: center;
+			line-height: 20px;
+			float: left;
+			margin-left: 10px;
+			color: white;
+			margin-top: 10px;
+		}
+		/*img {border: 1px solid #ccc;}*/
+
+		.sd ol li:hover {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			border: 1px solid #F60;
+			margin-top: 0;
+			cursor: pointer; /*鼠标移动到上面会变成小手*/
+			color: red;
+		}
+/*E=logo中间图片*/
+	.message {
+		float: right;
+		height: 210px;
+		width: 230px;
+		/*background-color: yellow;*/ /*测试用途*/
+
+	}
+.subnav h2 {
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	font-weight: 700;
+	color: white;
+	background-color: #0266A3;
+	padding-left: 20px;
+}
+.subnav ul {
+	background:#EBF0F6;
+	height: 180px;
+}
+
+.subnav ul li {
+	font-size: 14px;
+	padding: 3px;
+	/*height: 28px;*/
+	margin-left: 3px;
+}
+/*	.subnav ul li a:hover {
+		font-weight: 700;
+	}*/
+.subnav ul li a img {
+	display: inline-block;
+	width: 20px;
+	height: 21px;
+	/*margin-top: 3px;*/
+	vertical-align: middle;
+	margin-bottom: 3px;
+	margin-left: 5px;
+	margin-right: 10px;
+}
+
+.message_top {
+	height: 95px;
+	border: 1px solid #DDDDDD;
+	background:#F7FAFF;
+	margin-bottom: 21px;
+
+}
+.message_botton {
+	height: 92px;
+	background:#F7F7F7;
+
+}
+.message_top h2 {
+	margin-top: 3px;
+	float: 20px;
+	font-weight: 700;
+	color: blue;
+}
+.message_top p {
+	font-weight: 700;
+	padding: 20px 0 0 18px;
+
+}
+.message_top p a:hover {
+	color: blue;
+}
+.message_top img {
+	margin-top: 15px;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+}
+
+.message_botton p {
+   font-size: 13px;
+   font-weight: 700;
+   padding-top: 20px;
+   margin-left: 15px;
+   text-align: center;
+}
+.message_botton p img {
+	display: inline-block;
+	float: left;
+	height: 18px;
+	padding-left: 25px;
+	/*margin-bottom: 10px;*/
+}
+.dh {
+	display: inline-block;
+	font-size: 14px;
+	float: left;
+	text-align: center;
+
+
+}
+/*E=版心广告样式设置*/
+/*S=建筑材料部分开始*/
+.material {
+	width: 950px;
+	margin: 0 auto;
+	height: 34px;
+	border: 2px solid #C3D7E4;
+	background:;
+	margin-top: 14px;
+	line-height: 34px;
+	font-size: 15px;
+	font-weight: 700;
+	background: #ECF1F7;
+	padding-left: 20px;
+}
+.product {
+	width: 970px;
+	height: 345px;
+	/*background: #000;*/
+	margin: 0 auto;
+	margin-top: 12px;
+}
+.product_l{
+	float: left;
+	width: 730px;
+	height: 345px;
+	/*background: pink;*/
+	border: 1px solid #D8D8D8;
+
+}
+ .product_l_top {
+ 	width: 710px;
+ 	height: 167px;
+ 	padding: 10px 0 0 20px;
+ 	/*background:yellow;*/
+
+ }
+.p_l_t_product1 {
+	float: left;
+	width: 330px;
+	height: 145px;
+	/*background: pink;*/
+
+}
+.buy {
+	float: left;
+	width: 100px;
+	height: 145px;
+	/*background: red;*/
+}
+.imgbyuy {
+	border: 1px solid #CACACA;
+	height: 100px;
+}
+.imgbyuy img {
+	height: 110px;
+	width: 98px;
+	border: 1px solid #CACACA;
+}
+.buy .buybottom {
+	display: inline-block;
+	background: blue;
+	font-weight: 700;
+	width: 100px;
+	height:25px;
+	color: white;
+	text-align: center;
+	margin-top:18px;
+}
+.explain {
+	float: right;
+	width: 220px;
+	height: 145px;
+	/*background: blue;*/
+
+}
+.goodwife {
+	font-size: 12px;
+	font-weight: 700;
+	display: inline-block;
+	padding: 10px 0 0 0px;
+}
+.auto {
+	color: #863E01;
+	font-size: 14px;
+	padding: 13px 0 0 15px;
+}
+
+.money{
+	display: inline-block;
+	color: red;
+	font-weight: 700;
+	padding: 23px 0 0 11px;
+}
+.money1 {
+	display: inline-block;
+	text-decoration: line-through;
+	padding: 23px 0 0 11px;
+
+}
+.buyed {
+	display: inline-block;
+	padding: 25px 0 0 11px;
+}
+.colorred {
+	font-weight: 700;
+	color: red;
+}
+.p_l_t_product2 {
+	float: left;
+	width: 330px;
+	height: 145px;
+	/*background: pink;*/
+	margin-left: 25px;
+
+}
+.product_l_line {
+	width: 729px;
+	border: 1px solid blue;
+}
+.product_l_botton {
+ 	width: 710px;
+ 	height: 155px;
+ 	padding: 10px 0 0 20px;
+ 	/*background:yellow;*/
+
+ }
+.p_l_b_product1 {
+	float: left;
+	width: 330px;
+	height: 145px;
+	/*background: pink;*/
+
+}
+.p_l_b_product2 {
+	float: left;
+	width: 330px;
+	height: 145px;
+	/*background: pink;*/
+	margin-left: 25px;
+
+}
+.product_r {
+	float: left;
+	width: 230px;
+	height: 345px;
+	/*background: red;*/
+}
+.product_r h2 {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 15px;
+	border-bottom: 1px solid #E0E6F0;
+}
+.product_r ul {
+	padding-top: 10px;
+	list-style: inside;
+
+}
+.product_r li {
+	line-height: 25px;
+	padding-left: 25px;
+    border-bottom: 1px solid #E0E6F0;
+}
+/*E=建筑材料部分结束*/
+
+/*S=座椅部分*/
+.zy {
+	width: 970px;
+	height: 400px;
+	/*background-color:pink;*/
+	margin: 0 auto;
+	margin-top: 12px;
+	border: 1px solid #C3D7E4;
+}
+.zy1 {
+	height: 400px;
+	width: 230px;
+	margin-left: 10px;
+	background: #FFFFFF;
+}
+.zy1-1 {
+	width: 228px;
+	height: 350px;
+	border: 1px solid blue;
+}
+.zy1-1 img {
+  width: 228px;
+  height: 350px;
+  text-align: center;
+  line-height: 350px;
+}
+.zy1-2-bottom {
+	width: 228px;
+	height: 45px;
+	border: 1px solid red;
+	text-align: center;
+	background: blue;
+	color: white;
+	font-weight: 700;
+	font-size: 18px;
+}
+/*E=座椅部分*/
+/*S=友情链接*/
+.link {
+	width: 970px;
+	height: 80px;
+	margin: 0 auto;
+	margin-top: 5px;
+	border-top:2px solid #E0E6F0;
+	color: #666666;
+	font-size: 14px;
+	border-bottom: 3px solid #0A7EC3;
+}
+.link-p1 {
+	margin-top:20px;
+}
+.link-p2 {
+	margin-top: 15px;
+	margin-left: 75px;
+}
+
+.link1 {
+	width: 970px;
+	height: 50px;
+	margin: 0 auto;
+	border-top: 2px solid #E0E6F0;
+	border-bottom: 3px solid #0A7EC3;
+}
+.link1 ul li {
+	float: left;
+	padding:15px 0 0 15px;
+	line-height: 25px;
+	font-size: 14px;
+	/*font-weight: 700;*/
+}
+/*E=友情链接*/
+
+/*s=关于我们*/
+.bottomMe {
+	width: 970px;
+	height: 100px;
+	margin:0 auto;
+	text-align: center;
+	padding-top: 15px;
+	line-height: 25px;
+	font:14px "微软雅黑";
+	/*background: #E0E6F0;*/
+}
+
+/*e=关于我们*/

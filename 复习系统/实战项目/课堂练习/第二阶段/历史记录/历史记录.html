@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>历史记录</title>
+    <style type="text/css">
+        .box1 {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid red;
+            text-align: center;
+            line-height: 200px;
+        }
+        #btn {
+            display: block;
+            margin: 15px auto;
+        }
+    </style>
+    <link rel="stylesheet" href="css/history.css">
+</head>
+<body>
+
+
+<ul class="menu" id="menu">
+    <li id="page1">首页</li>
+    <li id="page2">产品介绍</li>
+    <li id="page3">服务说明</li>
+    <li id="page4">关于我们</li>
+</ul>
+<div id="page">
+
+</div>
+    <div class="box1">这是一个测试历史记录的页面</div>
+    <button type="button" id="btn">在这里产生历史记录</button>
+</body>
+<script type="text/javascript">
+
+    /**
+         加载前一个url history.back();
+         加载后一个url history.forward();
+         历史记录的个数 history.length
+         修改历史记录 history.replaceState(1, null, "test.html")
+         增加一条历史记录 history.pushState(1, null, "test.html");
+            参数一:可以是数字，字符串，变量，以及JSON
+            参数二: 为空就好了
+            参数三：增加的地址
+                说明：同源地址为 协议、域名、端口一致才是同源
+         window.onpopstate 用于获取存储的历史数据信息
+
+         离线存储 ：
+             //在浏览器端存储
+             sessionStorage.setItem("myname","xx");
+             //setItem 存储
+             //getItem 读取
+             //removeItme 删除
+             //sessionStorage.clear(); 清空
+
+             //本地存储  C:\Windows\System32\drivers\etc\hosts文件存储着本机域名信息
+             //同源 Origin
+             localStorage.setItem("xxx","123");
+             获取key值: var keyVal = sessionStorage.key(2);
+             遍历历史记录信息记录表
+             2.使用for循环 sessionStorage.length (数据的个数)
+                 var len = sessionStorage.length;
+                 for (var i = 0; i < len; i++) {
+                    // 根据key获取key对应的值
+                    var val = sessionStorage.getItem(sessionStorage.key(i));
+                    console.log(val);
+                 }
+
+     */
+
+    var  boxDom = document.querySelector(".box1");
+    var btnDom = document.querySelector("#btn");
+
+    btnDom.onclick = function (ev) {
+        var str = history.pushState(1, null ,"test.html");
+        boxDom.innerHTML=ev.target;
+        console.log(str);
+        return;
+
+
+    };
+    var json = {
+        'home': '百度（纳斯达克：BIDU），全球最大的中文搜索引擎、最大的中文网站。1999年底,身在美国硅谷的李彦宏看到了中国互联网及中文搜索引擎服务的巨大发展潜力，抱着技术改变世界的梦想，他毅然辞掉硅谷的高薪工作，携搜索引擎专利技术，于 2000年1月1日在中关村创建了百度公司。',
+        'product': '作为全球最大的中文搜索引擎公司，百度一直致力于让网民更平等的获取信息，找到所求。百度是用户获取信息的最主要入口，随着移动互联网的发展，百度网页搜索完成了由PC向移动的转型，由连接人与信息扩展到连接人与服务，用户可以在PC、Pad、手机上访问百度主页，通过文字、语音、图像多种交互方式瞬间找到所需要的信息和服务。',
+        'service': '百度拥有数万名研发工程师，这是中国乃至全球最为优秀的技术团队。这支队伍掌握着世界上最为先进的搜索引擎技术，使百度成为中国掌握世界尖端科学核心技术的中国高科技企业，也使中国成为美国、俄罗斯、和韩国之外，全球仅有的4个拥有搜索引擎核心技术的国家之一。',
+        'about': '百度大厦建设用地3.68公顷，东西约115-124米，南北约312米。建筑物东西宽约 65-72米，南北长约240米。百度大厦项目总建筑面积为91500㎡，其中地上59000㎡、地下32500㎡，建筑高度30m；为百度公司未来综合研发及办公总部，定位为“外资企业总部大楼”。'
+    };
+//    获取对应按钮
+    var menuDom = document.querySelector("#menu");
+    var pageDom = document.querySelector("#page");
+
+    menuDom.onclick = function (ev) {
+       var valDom = ev.target;
+       console.log(valDom.id);
+       if (valDom.id == "page1") {
+           history.pushState(json.home,null,"home.html");
+           pageDom.innerHTML = json.home;
+           return;
+       }
+       if (valDom.id == "page2") {
+           history.pushState(json.product,null,"product.html");
+           pageDom.innerHTML = json.product;
+           return;
+       }
+       if (valDom.id == "page3") {
+           history.pushState(json.service,null,"service.html");
+           pageDom.innerHTML = json.service;
+           return;
+       }
+       if (valDom.id == "page4") {
+           history.pushState(json.about,null,"about.html");
+           pageDom.innerHTML = json.about;
+           return;
+       }
+    };
+    window.onpopstate = function (ev) {
+        console.log(ev.state);
+
+    }
+
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建对象的工厂模式</title>
+		<script type="text/javascript">
+			//工厂模式创建对象
+			function caretaPer(name , age , gender) {
+				
+				//创建一个空对象
+				var obj = new Object();
+				
+				//创建对象属性
+				obj.name = name;
+				obj.age = age;
+				obj.gender = gender;
+				obj.sayName = function () {
+					console.log(this.name +":来呀，快活呀！"+ "性别："+this.gender +",年龄："+this.age);
+				};
+				//返回对象
+				return obj;	
+			}
+			//创建对象实例
+			var p1 = caretaPer("悟空" , 12 , "男");
+			var p2 = caretaPer("悟能" , 13 , "男");
+			var p3 = caretaPer("沙雕" , 14 , "女");
+//			p1.sayName();
+//			p2.sayName();
+//			p3.sayName();
+			
+			p2 = p1;
+			p1.name = "hahah";
+			p2 = p3;
+			p2.sayName();
+			
+			
+		</script>
+		<link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+	</head>
+	<body>
+		<div class="top1">
+				<a class="top_span">章节目录</a><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回首页</a> <br />
+				<a class="top_span" href="javascript:">创建对象的工厂模式</a> <br />
+	    </div>
+	</body>
+</html>

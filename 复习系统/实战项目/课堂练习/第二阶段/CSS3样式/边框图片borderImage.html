@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框Image</title>
+    <style type="text/css">
+        .box {
+            /* .box 默认样式 */
+            margin: 200px 0 0 200px;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+
+            /*使用图片边框，必须为元素设置边框宽度和样式*/
+            border: 20px solid;
+
+            /*引入一张图片*/
+            border-image-source: url("img/border.png");
+            /*默认对四个角填充这个图片*/
+            border-image-slice:fill;
+            border-image-slice: 26;
+            /*切割图片的顺序 上，右，下，左，数字表示基于图片边框的切割位置*/
+            border-image-slice: 52 26 26 26;
+            border-image-slice: 52 52 26 26;
+
+            border-image-slice: 13 26 13;
+
+            /*图片边框 平铺*/
+            border-image-repeat: repeat;
+            /*会进行取整*/
+            border-image-repeat: round;
+            /*图片边框 不会影响相邻兄弟元素*/
+            /*border-image-width: 100px;*/
+            /*图片边框向外扩张 不会影响相邻元素*/
+            /*border-image-outset: 100px;*/
+
+        }
+
+        .box:hover {
+            /* 鼠标悬浮时样式 */
+
+        }
+        </style>
+</head>
+<body>
+
+<div class="box">
+    <!--<img src="img/border.png"/>-->
+</div>
+<span>hello</span>
+
+<script type="text/javascript">
+</script>
+</body>
+</html>

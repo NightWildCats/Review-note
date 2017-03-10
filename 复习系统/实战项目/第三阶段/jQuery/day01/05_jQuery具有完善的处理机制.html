@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05_jQuery具有完善的处理机制</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <input type="text" value="请输入你的用户名" id="username">
+    <script>
+        /*
+            TODO 利用DOM获取页面元素
+            TODO * 声明变量
+            TODO   * 1.定义变量 - 存在但没值
+            TODO       没定义变量 - 不存在
+          */
+        /*var elem;
+        console.log(elem1);*/
+        /*var username = document.getElementById('username111');
+        // TODO 判断username - 1.有值输出value;2.没值输出提示
+        if(username){// TODO 非布尔值放在布尔表达式
+            console.log(username.value);
+        }else{
+            console.log('输入有误.');
+        }*/
+
+        /*
+            TODO JQUERY
+            TODO * 与DOM不同的地方
+            TODO   * JQUERY代码并没有报错
+            TODO   * 输出 undefind
+            TODO * 相对于DOM具有比较完善的事件处理机制（处理错误机制）
+            TODO   * JQUERY代码从不报错
+          */
+        var $username = $('#username111');
+        console.log($username.val());
+    </script>
+</body>
+</html>

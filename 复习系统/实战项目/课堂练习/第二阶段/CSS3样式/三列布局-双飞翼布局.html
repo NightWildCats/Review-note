@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>三列布局-双飞翼布局</title>
+        <style type="text/css">
+            body {
+                min-width: 600px;
+                margin: 0;
+                padding: 0;
+            }
+            .wrap {
+                overflow: hidden;
+            }
+            .left , .center , .right {
+                float: left;
+                margin-bottom: -10000px;
+                padding-bottom: 10000px;
+            }
+            .left {
+                background-color: #99ff99;
+                width:200px;
+                margin-left: -100%;
+            }
+            .center {
+                background-color: #00CCFF;
+                /*margin-left: 200px;*/
+                /*padding-left: 200px;*/
+                width:100%;
+
+
+            }
+            .center-inner {
+                background-color: red;
+                margin: 0 200px;
+                margin-bottom: -10000px;
+                padding-bottom: 10000px;
+            }
+            .right {
+                background-color: #30B30A;
+                width: 200px;
+                margin-left: -200px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+
+            <div class="center">
+                <div class="center-inner">
+                    2 <br>
+                    2 <br>
+                </div>
+            </div>
+            <div class="left">
+                1 <br>
+            </div>
+            <div class="right">
+                3 <br>
+
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+
+    </script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>17_复制DOM节点</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+    <ul>
+        <li title='苹果'>苹果</li>
+        <li title='橘子'>橘子</li>
+        <li title='菠萝'>菠萝</li>
+    </ul>
+
+    <script>
+        // TODO 节点复制
+        /**
+         * 节点复制
+         *  ① 通过 clone() 方法实现 节点复制
+         *      注意：clone(true/false)
+         *          参数为 true 时, 如果复制的节点带有 "事件处理函数" 也会一同被复制
+         *          参数为 false 时，如果复制的节点带有 "事件处理函数" 则不会被复制过来 - 默认值
+         *
+         */
+        // TODO 复制 索引为0项 然后在最后面插入
+        $('ul>li:last').after($('ul>li:eq(0)').clone()) ;
+        
+    </script>
+</body>
+</html>

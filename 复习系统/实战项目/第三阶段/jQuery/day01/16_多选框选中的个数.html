@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16_多选框选中的个数</title>
+    <script src="../jquery-1.12.4.js"></script>
+</head>
+<body>
+    <input type="checkbox" value="1" name="check" checked/>
+    <input type="checkbox" value="2" name="check" />
+    <input type="checkbox" value="3" name="check" checked/>
+    <input type="button" value="测试选中的个数" id="btn"/>
+
+    <script>
+        //获取id为btn的元素,给它添加onclick事件
+        $('#btn').click(function(){
+            var items =  $("input[name='check']:checked");
+            //获取name为check的一组元素,然后选取它们中选中(checked)的。
+            alert( "选中的个数为："+items.length  )
+        })
+    </script>
+</body>
+</html>

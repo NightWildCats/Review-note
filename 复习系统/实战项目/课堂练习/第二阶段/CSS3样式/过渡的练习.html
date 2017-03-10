@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过渡的练习</title>
+    <style type="text/css">
+        /*html {*/
+            /*height: 50%;*/
+        /*}*/
+        .wrap {
+            width: 500px;
+            height: 300px;
+            background-color: darkkhaki;
+            position: relative;
+            margin: 100px auto;
+        }
+        /*注意样式的书写规范*/
+        .inner {
+            background-color: blue;
+            position: absolute;
+        }
+        .inner1 {
+            height: 10px;
+            width: 0;
+        }
+        .inner2 {
+            width: 10px;
+            height: 0;
+            right: 0;
+        }
+        .inner3 {
+            height: 10px;
+            width: 0;
+            bottom:0;
+            right:0;
+        }
+        .inner4 {
+            width: 10px;
+            height: 0;
+            bottom: 0;
+            left: 0;
+        }
+        body:hover .inner1 {
+            transition-duration: 1s;
+            width: 100%;
+        }
+        .wrap:hover .inner2 {
+            transition-duration: 1s;
+            transition-delay: 1s;
+            height:100%;
+        }
+        .wrap:hover .inner3 {
+            width: 100%;
+            transition-duration: 1s;
+            transition-delay: 2s;
+
+        }
+        .wrap:hover .inner4 {
+            transition-duration: 1s;
+            transition-delay: 3s;
+            height:100%;
+            /*背面是否可见*/
+            /*backface-visibility: hidden;*/
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="inner inner1"></div>
+        <div class="inner inner2"></div>
+        <div class="inner inner3"></div>
+        <div class="inner inner4"></div>
+    </div>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

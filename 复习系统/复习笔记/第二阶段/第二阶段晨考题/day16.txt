@@ -1,0 +1,21 @@
+1、谈谈你对移动端点透的理解？（20分）
+
+	触发条件：
+	问题原因：
+	解决办法：
+
+2、Canvas可以“编辑”一个视频文件，其本质是什么？（20分）
+
+
+3、websocket相对于http的优势？适合那些场景？（20分）
+
+
+4、控制台输出的信息？（20分）
+	var scope = "global";
+    function myFunc(){
+        console.log(scope);
+        var scope = "local";
+    }
+	myFunc();
+	
+5、backface-visibility: hidden 样式的作用？（20分）

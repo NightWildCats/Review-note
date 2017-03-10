@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>33_模拟点击按钮获取焦点</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+<button id="btn">trigger</button>
+<input type="text" id="text" />
+<script>
+
+    // TODO 通过模拟点击body 事件 获取到button 按钮的文本值
+    $('#btn').click(function (event,str1,str2) {
+        $('#text').val(str1+str2);
+    }).trigger('click',['你好','按钮']);
+
+
+</script>
+</body>
+</html>

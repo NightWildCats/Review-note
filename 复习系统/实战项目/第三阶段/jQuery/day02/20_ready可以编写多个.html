@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20_ready可以编写多个</title>
+</head>
+<script type="text/javascript">
+
+    // TODO  onload  与 ready 的区别
+    /**
+     *
+     * 区别：
+     *  ① onload 只能加载一次 （如果出现多次，会被覆盖执行最后一次的）
+     *  ② ready 可以有多个 可以实现多次加载的事件，不会被覆盖
+     *  ③ 使用 onload 加载完成之后进行加载（页面加载的内容有 DOM节点，图片，音频等）
+     *  ④ 使用 ready 加载的（页面只会加载DOM树 -> 相对于onload来说，当页面的图片没有完全加载完，页面是不能操作的
+     *      而ready 不存在）
+     *  ⑤ onload 的写法不能简化，而ready的写法可以简化
+     *  ⑥ ready的写法有：
+     *      一、$(function() {});
+     *      二、$().ready(function() {});
+     *      三、$(document).ready(function() {});
+     *      注意：建议使用第一种写法
+     *
+     *  ⑦ ready的加载时间要比 onload 的少
+     *
+     */
+</script>
+<body>
+
+</body>
+</html>

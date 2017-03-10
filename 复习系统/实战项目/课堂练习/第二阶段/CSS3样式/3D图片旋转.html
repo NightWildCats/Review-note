@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>3D图片旋转</title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .wrap {
+                height:300px;
+                width:200px;
+                /*background-color: #cccccc;*/
+                position: relative;
+                margin: 200px auto;
+                transform-style: preserve-3d;
+                perspective: 1200px;
+                /*设置在z轴方向的偏移量*/
+                /*transform: translateZ(-800px);*/
+                /*设置景深的中心点*/
+                /*perspective-origin: center;*/
+            }
+            .wrap img {
+                height: 300px;
+                width:200px;
+                position: absolute;
+                /*transform: translateZ(-800px);*/
+                /*transition: 2s;*/
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <img src="img/hj.jpg" alt="">
+            <img src="img/hj.jpg" alt="">
+            <img src="img/hj.jpg" alt="">
+            <img src="img/hj.jpg" alt="">
+            <img src="img/hj.jpg" alt="">
+            <img src="img/hj.jpg" alt="">
+            <img src="img/hj.jpg" alt="">
+            <img src="img/hj.jpg" alt="">
+        </div>
+    </body>
+    <script type="text/javascript">
+        //获取对象
+        var wrapImg = document.querySelectorAll(".wrap img");
+        //计算平均的旋转度
+        var conut = 360/wrapImg.length;
+        var lastDeg = 0;
+        //初始化旋转的布局
+        for (var i = 0; i < wrapImg.length; i++) {
+            wrapImg[i].style.transform = "rotateY(" + parseInt(conut*i) + "deg) translateZ(-480px)";
+           //通过自定义属性来存储初始旋转的角度
+            wrapImg[i].dataset.lastDeg = parseInt(conut*i);
+
+        }
+            //点击页面时候触发
+            document.body.onclick = function () {
+                for (var i = 0; i < wrapImg.length; i++) {
+                    lastDeg = wrapImg[i].dataset.lastDeg;
+                    wrapImg[i].style.transform = "rotateY(" + (conut + parseInt(lastDeg)) + "deg) translateZ(-480px)";
+                    wrapImg[i].style.transition = "2s";
+                    wrapImg[i].dataset.lastDeg = conut + parseInt(lastDeg);
+
+                }
+                //页面刷新
+//                window.location.reload();
+            };
+
+    </script>
+</html>

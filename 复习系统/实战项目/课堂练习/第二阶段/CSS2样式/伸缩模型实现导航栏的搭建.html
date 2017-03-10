@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伸缩模型实现导航栏的搭建</title>
+    <style type="text/css" id="css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html , body {
+            height:100%;
+        }
+        .wrap {
+            background-color: #F2C200;
+            display: flex;
+            width: 1000px;
+            height: 50px;
+            margin: 0 auto;
+            /*justify-content: flex-start;*/
+            border: 1px solid red;
+        }
+        .inner {
+            /*height: 50px;*/
+            margin-left:2em ;
+            border: 1px solid transparent;
+            width: 80px;
+            text-align: center;
+        }
+        .inner a {
+            text-decoration: none;
+            /*display: inline-block;*/
+            /*vertical-align: middle;*/
+        }
+        .innerA {
+            width: 80px;
+        }
+        /*.inner a:hover {*/
+            /*background-color: blue;*/
+            /*color: white;*/
+        /*}*/
+        /*.inner a:hover { background-color: blue;color: white;}*/
+        /*
+        实现自适应导航栏案例：
+        通过外层元素的高度来填充子元素
+        */
+        
+        /*当视口的宽度小于768px时进行布局*/
+        @media screen and (max-width: 768px) {
+            .wrap {
+                flex-wrap: wrap;
+            }
+            .inner a {
+                width: 33.33%;
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="wrap">
+            <div class="inner box1"><a href="#">导航栏</a></div>
+            <div class="inner box2"><a href="#">导航栏</a></div>
+            <div class="inner box3"><a href="#">导航栏</a></div>
+            <div class="inner box4"><a href="#">导航栏</a></div>
+            <div class="inner box5"><a href="#">导航栏</a></div>
+            <div class="inner box6"><a href="#">导航栏</a></div>
+            <div class="inner box7"><a href="#">导航栏</a></div>
+        </div>
+        <div draggable="true" class="wrap"></div>
+</body>
+    <script type="text/javascript">
+        var warp = document.querySelector(".warp");
+        var inner = document.querySelectorAll(".inner");
+        var innerA = document.querySelectorAll(".inner a")
+//        alert(innerA.length);
+        for (var i = 0;i < innerA.length ; i++) {
+            //实现行高与父元素的高相同
+            //box[i].style.lineHeight = getComputedStyle(warp ,null).height;
+            //实现行高与元素的高相同
+            innerA[i].style.lineHeight = getComputedStyle(inner[i] ,null).height;
+            //实现宽与父元素的宽相同
+            //innerA[i].style.width = getComputedStyle(inner[i] ,null).width;
+            //通过获取css类样式来实现样式赋予
+            innerA[i].classList.add("innerA");
+        }
+        //函数调用
+        clearE("#css");
+        //通过js动态创建CSS样式和元素
+        function  clearE(obj) {
+            var styleCss = document.querySelector(obj);
+//        alert(styleCss);
+            styleCss.innerHTML +='.bo { background-color: red;width: 200px; height: 200px }';
+            styleCss.innerHTML +=".inner a:hover { background-color: blue; display: inline-block; color: white;vertical-align: middle; }";
+            //var eBody = document.querySelector("body");
+//            eBody.innerHTML += '<div class="bo"></div>';
+            //document.body.innerHTML += '<div draggable="true" class="bo"></div>';
+        }
+    </script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>BOM对象navigator</title>
+		<script type="text/javascript">
+			
+			//获取正常浏览器的版本信息 userAgent
+			console.log(window.navigator.userAgent);
+			//获取IE
+			console.log(window.ActiveXObject)
+			
+			//通过正则判断浏览器的版本
+			if (/Firefox/i.test(window.navigator.userAgent)) {
+				console.log("是火狐");
+			}else if (/Chrome/i.test(window.navigator.userAgent)) {
+				console.log("是谷歌");
+			}else if (/msie/i.test(window.navigator.userAgent)) {
+				console.log("是IE");
+			}else if ('ActiveXObject' in window) {
+				console.log("是IE11");
+			}
+			//获取IE的特有window对象
+			console.log(window.ActiveXObject)
+			//注意：ActiveXObject在IE11的！！ActiveXObject为false。
+		</script>
+	</head>
+	<body>
+		火狐版本：<br />
+		Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0
+		<br />
+		chrom版本：<br />
+		Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+		<br />
+		IE版本：<br />
+		IE7：Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)
+		<br />
+		IE8： Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Win64; x64; Trident/4.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E) 		
+		<br />
+		IE9： Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0) 
+		<br />
+	</body>
+</html>

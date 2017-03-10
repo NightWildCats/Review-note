@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小鸟飞动画</title>
+    <style type="text/css">
+        canvas {
+            display: block;
+            border: 1px solid red;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800" height="500">
+        您的浏览器不支持 Canvas
+    </canvas>
+</body>
+
+<script type="text/javascript">
+
+    //获取Canvas对象
+    var canvas = document.querySelector("canvas");
+    //创建 2d 画布上下文对象
+    var ctx = canvas.getContext("2d");
+
+    //定义一个图片索引
+    var index = 1;
+    //设置图片初始显示的位置
+    var speed = 0;
+
+    //实现图片的自动播放 需要用到定时器
+    setInterval(function () {
+        //创建一个图片对象
+        var img = new Image();
+        img.src = "img/q_r"+index+".jpg";
+        img.onload = function () {
+            //每次在加载图片之前清除上一个图片的
+            ctx.clearRect(0,0,800,500);
+            //实现引入图片
+            ctx.drawImage(img,speed,200);
+        };
+        //判断图片的索引
+        index++;
+        index > 8 ? index = 0 : index = index;
+        //判断位移量
+        speed += 10;
+        speed > 800 ? speed = 0 : speed = speed;
+    },120);
+
+
+</script>
+
+</html>

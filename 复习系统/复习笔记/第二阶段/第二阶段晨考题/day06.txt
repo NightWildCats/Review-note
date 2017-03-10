@@ -1,0 +1,32 @@
+一、请完善CSS代码，让.box的右下角显示的圆角半径为（X=20px, Y= 30px）（20分）
+	<div class="box"></div>
+	.box { height: 100px; width: 100px; 
+		--- 请补全此处代码
+		
+	}
+
+
+二、一个DIV元素，设置如下样式，请问你所 “看到” 的盒子大小是？（注意：不是盒子的实际大小！！！）？（20分）
+	.box{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		box-shadow: 0 0 0 10px red;
+	}
+
+三、请为一个块元素设置CSS样式，让其显示为一个红色的三角形。（20分）
+	.box{
+		
+	}
+
+四、 元素设置 background-origin: border-box; 同时为元素设置   background-position: 50px 50px; 请为 50px 是如何计算的？（20分）
+
+
+五、如果一个DIV设置如下样式，其需要的页面空间大小？（20分）
+  .box {
+	margin: 20px;
+	padding: 10px;
+	border: 2px;
+	width: 100px;
+  }
+ 

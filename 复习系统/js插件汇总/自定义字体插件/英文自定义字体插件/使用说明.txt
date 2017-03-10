@@ -1,0 +1,16 @@
+引入css文件
+	<link rel="stylesheet" href="css/fonts.css">
+
+在要使用字体的css样式下 设置字体族属性
+	h1{
+            //'breeze_personal_useregular'是引入的字体族名
+            font-family: 'breeze_personal_useregular';
+	/*背景需要设置在文本切割的上部，否则存在样式覆盖*/
+
+	/设置背景颜色可以穿透文本进行显示
+            background: linear-gradient(to right, red, yellow, blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 100px;
+
+        }

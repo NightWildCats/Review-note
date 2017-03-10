@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>两列布局-右侧固定左侧自适应</title>
+        <style type="text/css">
+            /*
+                需求：
+                左侧自适应（随着浏览器窗口宽度的变化而变化）
+                右侧固定宽度
+                1.两列都需要设置浮动
+                2.第一列设置 100%　宽度，同时设置右侧外边距为负，绝对值 ＝ 第二列的宽度
+                3.第一列的内容需要一个正常文档流的块元素承载，设置右侧外边距 = 第二列的宽度
+            */
+            .wrap {
+                overflow: hidden;
+            }
+            .left , .right {
+                margin-bottom: -10000px;
+                padding-bottom: 10000px;
+            }
+            .left {
+                background-color: #00CCFF;
+                margin-right: 200px;
+            }
+            .right{
+                width: 200px;
+                background-color: yellowgreen;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="wrap">
+            <div class="right">
+                Hello Hello Hello
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+            </div>
+            <div class="left">
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+                Hello Hello Hello Hello Hello Hello Hello Hello <br>
+            </div>
+        </div>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

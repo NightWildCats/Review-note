@@ -1,0 +1,20 @@
+一、以下代码在本地执行时会报错，为什么？（20分）
+
+    history.pushState(1, null, "http://www.atguigu.com");
+
+二、window.onpopstate 何时触发？通过 history.pushState 增加的数据如何获取？（20分）
+
+
+三、离线存储技术 sessionStorage 和 localStorage 比较 Cookie 存储有哪些优势？（20分）
+
+
+四、完善代码，模拟用户在浏览器用鼠标单击一张图片？（20分）
+
+    var imgDom = document.querySelector("#img01"); // #img01 是一张图片
+
+
+五、下面代码的输出？（20分）
+
+    console.log('0' == 0)
+    console.log(false == '0')
+    console.log(false === '0')

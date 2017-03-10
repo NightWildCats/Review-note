@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>栅格系统</title>
+    <!--bootstrap的样式-->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--语义化标签-->
+    <script src="js/html5shiv.min.js"></script>
+    <!--兼容IE8以下的圆角,盒子阴影,文本阴影,transform,transition-->
+    <script src="js/respond.min.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <!--布局-->
+    <!--<div class="container">1</div>-->
+    <!--流失布局-->
+    <div class="container-fluid">
+        <!--row 设置一行-->
+        <div class="row">
+            <!--col-sm-3 设置列数 最大为12列-->
+            <!--col-sm-offset-1 设置偏移量 偏移量与所有的列加起来不能超过12栅格-->
+            <div class="col-sm-3 col-sm-offset-1">222</div>
+            <!--列排序 push向右推，pull向左拉 -->
+            <div class="col-sm-3 col-sm-push-1">222</div>
+            <div class="col-sm-3 col-sm-pull-1">222</div>
+        </div>
+
+        <div class="table-responsive">
+            <!--
+                table-responsive 设置当屏幕为小屏时候出现滚动条（做响应式表格）
+                table 设置表格默认样式 宽度为100%
+                table-bordered 设置表格边框
+                table-striped 设置表格间隔不同颜色显示
+                table-condensed 设置表格变成紧凑模式
+                table-hover 设置鼠标移入某一项时候的状态
+
+                    设置表格行的状态
+                    .active	鼠标悬停在行或单元格上时所设置的颜色
+                    .success	标识成功或积极的动作
+                    .warning	标识警告或需要用户注意
+                    .danger	标识危险或潜在的带来负面影响的动作
+            -->
+            <table class="table table-bordered  table-striped table-condensed table-hover">
+                <tr>
+                    <td>itme01</td>
+                    <td>itme02</td>
+                    <td>itme03</td>
+                    <td>itme04</td>
+                </tr>
+                <tr>
+                    <td>itme01</td>
+                    <td>itme02</td>
+                    <td>itme03</td>
+                    <td>itme04</td>
+                </tr>
+                <tr>
+                    <td>itme01</td>
+                    <td>itme02</td>
+                    <td>itme03</td>
+                    <td>itme04</td>
+                </tr>
+                <tr>
+                    <td>itme01</td>
+                    <td>itme02</td>
+                    <td>itme03</td>
+                    <td>itme04</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div>
+            <!--
+                按钮
+                设置按钮的样式 btn
+                btn-lg / btn-default / btn-sm / btn-xs 设置按钮的大小
+                btn-primary 设置按钮为“主要” （使用在提交上）
+                btn-success 设置那妞为“成功” （使用提交成功之后）
+                btn-warning 设置为“警告”
+                btn-danger 设置为“危险”
+                btn-info 设置为“信息”提示
+                btn-link 设置为“链接”
+            -->
+        <button type="button" class="btn btn-lg btn-primary">大号按钮</button>
+        <button type="button" class="btn btn-default btn-success">默认按钮</button>
+        <button type="button" class="btn btn-sm btn-warning">小号按钮</button>
+        <button type="button" class="btn btn-xs btn-danger">超号按钮</button>
+
+    </div>
+    <div>
+        <!--
+            表单
+                form-control 设置为一行显示
+                sr-only 设置为 lable 标签文本不显示
+                form-inline 设置为内容一行，左对齐并且表现为inline-block级别的控件
+                form-group == row（类似等于） 设置表单分组，要与 form-horizontal 一起使用
+                checkbox 设置为多选框
+                .form-horizontal 设置表单组水平排列
+
+                input-group
+
+
+        -->
+
+        <form action="" class="form-inline">
+            <label for="userNo" class="sr-only">用户名</label>
+            <input type="text" class="form-control" id="userNo">
+
+        </form>
+
+    </div>
+    <form action="" class="form-horizontal row">
+        <div class="form-group">
+            <label for="focusedInput" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="focusedInput" type="text" value="This is focused...">
+                <span class="help-block">这是一段帮会组文本</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="focusedInput" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="focusedInput" type="text" value="This is focused...">
+            </div>
+        </div>
+        <!--图标测试-->
+        <button type="button" class="btn btn-default btn-lg col-lg-5  ">
+            <span class="glyphicon glyphicon-star"></span> Star
+        </button>
+        <button type="button" class="btn btn-default btn-lg col-lg-2  ">
+            <span class="glyphicon glyphicon-star text-center " style=" color: #00CCFF"></span> 中国
+        </button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--下拉菜单-->
+
+    <div class="dropdown col-lg-offset-3">
+        <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">
+            下拉菜单演示<span class="glyphicon glyphicon-star"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="">test1</a></li>
+            <li class="disabled"><a href="">test2</a></li>
+            <li class="divider"></li>
+            <li class=""><a href="">test3</a></li>
+            <li class=""><a href="">test4</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+
+    <!--<div class="form-inline">-->
+    <div class="form-horizontal">
+        <div class="input-group input-group-lg col-xs-2 col-lg-offset-2">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-user "></span>
+            </div>
+            <input type="text" class="form-control">
+        </div>
+        <br>
+
+        <div class="input-group input-group-sm col-xs-4 col-xs-offset-2">
+            <input type="text" class="form-control">
+            <span class="input-group-addon btn btn-default">Go!</span>
+        </div>
+
+        <br>
+        <div class=" input-group input-group-sx col-xs-4 col-xs-offset-2">
+            <div class="input-group-addon">
+                <span class=" glyphicon glyphicon-user"></span>
+            </div>
+            <input type="text" class="form-control">
+            <span class="input-group-addon btn btn-default">Go!</span>
+        </div>
+    </div>
+    <br>
+
+
+    <div class="col-lg-6">
+        <div class="input-group">
+ 	<span class="input-group-addon">
+		<input type="checkbox">
+	</span>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <br>
+    <div class="col-lg-6">
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <input type="text" class="form-control">
+        </div><!-- /input-group -->
+    </div>
+
+
+
+
+    <br>
+    <br>
+
+    <br>
+    <br>
+
+
+
+    <div class="row">
+        <div class="col-sm-3 col-xs-push-1">
+            <!--设置图片圆角-->
+            <img src="img/air.png" alt="..." class="img-rounded">
+        </div>
+        <div class="col-sm-6">
+            <!--设置图片椭圆-->
+            <img src="img/biology.jpg" alt="..." class="img-circle img-responsive">
+        </div>
+        <div class="col-sm-3 ">
+            <!--正常 -->
+            <img src="img/geography.png" alt="..." class="img-thumbnail">
+        </div>
+    </div>
+
+    <h1 class="text-hide">Custom heading</h1>
+
+
+
+</body>
+<script type="text/javascript"></script>
+<!--jquery的js-->
+<script src="js/jquery.min.js"></script>
+<!--bootstrap的js-->
+<script src="bootstrap/js/bootstrap.js"></script>
+</html>

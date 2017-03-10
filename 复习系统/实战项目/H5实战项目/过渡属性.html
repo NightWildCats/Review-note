@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3过渡transtion</title>
+    <link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+    <style type="text/css">
+        .box1 {
+        	margin: 200px 500px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            transition:width 2s linear 0s,background-color 2s linear 0s;
+        }
+        .box1:hover {
+            background-color: red;
+            width: 200px;
+            /*需要过渡的样式属性*/
+            /*-webkit-transition-property: width,background-color;*/
+            /*需要过渡的时间*/
+            /*transition-duration: 5s;*/
+            /*过渡的方式  linear(匀速) ease-in(加速)  ease-uot(减速) ease-in-out(先加速再减速) */
+            /*transition-timing-function: ease-in-out;*/
+            /*过渡效果延迟执行*/
+            /*transition-delay: 0s,5s;*/
+
+            /*过渡效果的简写  transition：过渡的属性 过渡的时间 过渡的方式 开始执行的时间,下一个需要过渡的效果也是这样讴歌顺序 */
+
+            /*transition:width 2s linear 0s,background-color 2s linear 0s;*/
+
+        }
+    </style>
+</head>
+<body>
+	<div class="top1">
+				<span class="top_span">章节目录</span><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回主页</a><br />
+				<a class="top_span" href="javascript:">过渡属性</a> <br />
+			</div>
+<div class="box1">
+
+</div>
+</body>
+</html>

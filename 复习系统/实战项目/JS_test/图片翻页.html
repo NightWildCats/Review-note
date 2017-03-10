@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>图片切换</title>
+	<style type="text/css">
+		* {padding: 0; margin: 0; list-style: none; border: 0;}
+		.all {
+			width: 652px; 
+			height: 252px; 
+			margin: 100px auto; 
+			border: 1px solid red; 
+			position: relative;
+			overflow: hidden;
+		}
+		.all ul {
+			position: relative;
+			z-index: 1;
+		}
+		.all ul li {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.all ol {
+			position: absolute;
+			z-index: 2;
+			right: 10px;
+			bottom: 10px;
+		}
+		.all ol li {
+			width: 20px;
+			height: 20px;
+			background: #333;
+			border: 1px solid #ccc;
+			font-weight: 700;
+			text-align: center;
+			line-height: 20px;
+			float: left;
+			margin-left: 10px;
+			color: white;
+			margin-top: 10px;
+		}
+		/*img {border: 1px solid #ccc;}*/
+
+		.all ol li:hover {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			border: 1px solid #F60;
+			margin-top: 0;
+			cursor: pointer; /*鼠标移动到上面会变成小手*/
+			color: red;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+    	$(function() {
+    		var z=6;
+    		//鼠标进入事件
+    		$(".all ol li").mouseover(function() {
+    			//$(this).attr("class","all ol li:hover ");
+    			//alert($(this).index());
+    			$(this).siblings().attr("class"," ");
+    			
+    			//获取对应的索引值
+    			var num = $(this).index();
+    			$(".all ul li").eq(num).css("left","650px");
+    			//提升z-index的值
+    			z++;
+    			$(".all ul li").eq(num).css("z-index",z);
+
+    			$(".all ul li").eq(num).animate({left:'0'},500);
+
+    		});
+    	});
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+</head>
+<body>
+			<div class="top1">
+				<span class="top_span">章节目录</span><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回首页</a> <br />
+			</div>
+	<div class="all">
+		<ul>
+			<li><img src="img/1.jpg" alt="1" /></li>
+			<li><img src="img/2.jpg" alt="2" /></li>
+			<li><img src="img/3.jpg" alt="3" /></li>
+			<li><img src="img/4.jpg" alt="4" /></li>
+			<li><img src="img/5.jpg" alt="5" /></li>
+		</ul>
+		<ol>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li class="current">5</li>
+		</ol>
+	</div>
+</body>
+</html>

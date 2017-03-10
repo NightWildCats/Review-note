@@ -1,0 +1,83 @@
+/*设置背景颜色*/
+body{
+    background-color: #f0f0f0;
+}
+/*头部样式*/
+header{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 2.4;
+}
+/*设置表单的外边距*/
+#form1{
+    margin-top: 12px;
+
+}
+/*设置表单中大div的样式*/
+.form-group{
+    padding: 18px 25px;
+    margin-top: 1px;
+    background-color: #fff;
+    position: relative;
+}
+/*设置表单中 input标签的样式*/
+.form-group input{
+    text-indent: 1em;
+    border: none;
+    width: 40%;
+    outline: none;
+}
+
+/*错误信息提示*/
+#errMsg{
+    color: #f00;
+    font-size: .8em;
+    /*float: right;*/
+    position: absolute;
+    left: 55%;
+
+    visibility: hidden;
+}
+/*设置left:55% 作用于把提示信息 和 验证码在同一垂直线上*/
+#identCode{
+    font-size: 12px;
+    border: 1px solid;
+    border-radius: 3px;
+    /*line-height: 2.2;*/
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px;
+
+    position: absolute;
+    top: 12px;
+    left: 55%;
+
+}
+/*设置最后提交的内边距*/
+.btn-warpper{
+    padding: 0 25px;
+}
+#btnSubmit{
+    width: 94%;
+    background-color: #f00;
+    border: none;
+    outline: none;
+    margin: 0 3%;
+    font-size: 16px;
+    margin-top: 12px;
+    line-height: 2.2;
+    /*margin-left: 3%;*/
+    /*margin-right: 3%;*/
+    /*清除苹果手机默认样式*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+
+}
+
+#btnSubmit:active{
+    background-color: #f30;
+    color: #fff;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11_内部插入节点</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <ul id="city">
+        <li>北京</li>
+        <li id="tj">天津</li>
+        <li>南京</li>
+    </ul>
+    <ul id="game">
+        <li>反恐</li>
+        <li id="ms">魔兽</li>
+        <li>星际</li>
+    </ul>
+
+    <script>
+        //TODO 内部插入
+        /**
+         * 内部插入 通过 append() 或 appendTo() 实现
+         *
+         */
+        //TODO 通过 append 插入
+         $('#ms').append($('#tj'));
+
+        // TODO 通过 appendTo 插入  -> 注意：与 append() 反向
+        $('#city>li:nth-child(1)').appendTo($('#ms'));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+1、景深设置为 200px , 200px的含义 ？（20分）
+
+
+2、backface-visibility: hidden 样式的作用？（20分）
+
+
+3、如果一个块元素设置了，rotateY(45deg), 你的视角位于电脑屏幕上方，该元素如何旋转？（20分）
+
+
+4、如果一个块元素设置了，rotateY(180deg) translateZ(-100px), 你的视角位于电脑屏幕上方，该元素的位置？（20分）
+
+
+5、阅读以下代码
+
+	<div id="box"></div>
+	
+	
+	JS代码
+	
+	 var boxDOM = document.querySelector("#box");
+	 boxDOM.dataset.userBirsthday = "1995-02-02";
+	 
+	 
+	执行以上JS代码后，div标签被动态添加的属性及其值？ （10分）
+	
+	
+6、你知道隐式过渡吗？请说明发生的原因以及浏览器（10分）

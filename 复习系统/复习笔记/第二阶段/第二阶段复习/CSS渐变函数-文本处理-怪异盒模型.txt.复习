@@ -1,0 +1,34 @@
+CSS3的渐变函数
+    线性渐变函数
+    重复线性渐变函数
+    径向渐变函数
+    重复径向渐变函数
+
+
+    本质：绘制一背景图
+    我们可以对其进行位置，大小，多背景图设置。
+
+
+
+文本
+    省略号显示
+
+        text-overflow: ellipsis
+
+        配合
+            overflow: hidden;
+            white-space: nowrap
+
+    文本阴影
+
+        text-shadow: x y blur color;
+
+
+盒模型
+    标准盒模型
+
+    怪异盒模型
+
+    box-sizing 属性
+
+

@@ -1,0 +1,142 @@
+一、历史记录
+    -- 应用场景：离线的单页应用
+    -- 方法
+        -- 添加历史记录条目 pushState(参数一，参数二， 参数三)
+        -- 修改历史记录条目 replaceState(参数一，参数二， 参数三)
+
+        参数一：状态对象（state object） — 一个JavaScript对象，与用pushState()方法创建的新历史记录条目关联
+        参数二：标题（title） — FireFox浏览器目前会忽略该参数，虽然以后可能会用上。
+               考虑到未来可能会对该方法进行修改，传一个空字符串会比较安全或者，你也可以传入一个简短的标题，标明将要进入的状态。
+        参数三：地址（URL） — 新的历史记录条目的地址。传入的URL与当前URL应该是同源的，否则，pushState()会抛出异常。
+
+
+    -- 事件
+        -- onpopstate
+
+        点击浏览器的后退或前进按钮会触发该事件。状态对象（state object）的副本，存储在 ev.state 中
+
+
+
+
+二、离线存储
+
+        离线存储重要知识点总结
+        一、Cookie存储的特点
+            1.cookie由服务器创建，第一次响应后，记录在浏览器
+            2.每次请求，cookie都会发动到服务器
+            3.每次相应，cookie都会推送到浏览器
+            4.在浏览器读取cookie比较繁琐
+            5.cookie容量小，只有4kb
+
+        二、Storage存储 : sessionStorage / localStorage
+            2.1、数据生命周期：
+                sessionStorage  数据创建到页签关闭
+                localStorage    数据创建到用户手动清除
+            2.2、数据共享：
+                sessionStorage 条件：同一个页签，相同域名（协议，域名，端口）的不同网址
+                localStorage   条件：相同域名（协议，域名，端口）的不同网址
+            2.3、数据使用场景：
+                频繁操作且安全性不高的数据
+            2.4、可存储的数据格式：
+                1.数字
+                2.字符串
+                3.如果实JSON对象，需要使用 JSON.stringify(JSON对象)把其转换成字符串再存储。
+                  获取后再调用JSON.parse(JSON的字符串)转成JSON对象再使用。
+
+        三、Storage存储常用方法及属性
+            setItem(key, value)  增加一条数据
+            getItem(key)         根据key值获取一条数据
+            removeItem(key)      根据指定的key删除一条数据
+            clear()              清除所有数据
+            key(num)             获取指定索引位的key值
+            length               数据项个数
+
+
+        扩展：
+            application cache 特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，
+            但也许会在未来的某个时间停止支持，请尽量不要使用该特性。
+
+
+三、文件读取
+
+    简介：FileReader 对象允许Web应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容。
+
+    文件来源：
+        1、<input type="file">元素上选择文件后，
+         fileDom.onchange = function(ev){
+            //选中的所有文件对象
+            ev.target.files;
+         }
+         选取多个文件：<input type="file" multiple="multiple">
+
+
+        2、通过拖放操作文件存储
+         dom.ondrop = function(ev){
+            ev.preventDefault();
+           //选中的所有文件对象
+            ev.dataTransfer.files;
+         }
+
+    常用方法：
+        1.读取文本内容
+            fileReader.readAsText(fileObj, "字符编码");
+        2.读取图片信息
+            fileReader.readAsDataURL(fileObj;
+    读取后的内容
+         fileReader.result;
+
+四、拖拽
+
+    1.配合 input type=file 使用时，
+        被拖拽元素监听 ondragstart , 设置鼠标样式，或者记录被拖拽元素信息。
+        释放区元素监听 ondragover , 阻止浏览器默认行为，让一个元素可以显示在另一个元素上方。
+        释放区元素监听 ondrop , 编写相关业务逻辑。
+
+    2.从外部拖拽一个文件
+        释放区元素监听 ondragover , 阻止浏览器默认行为，让一个元素可以显示在另一个元素上方。
+        释放区元素监听 ondrop , 阻止浏览器默认行为，编写相关业务逻辑。
+
+
+    3.图片元素，连接元素默认开启可拖拽。
+
+五、画布
+
+    使用场景：报表、视频编辑、游戏等
+
+    注意事项：
+        1.千万不要为<canvas>指定CSS的宽，高。
+        2.调用原始的绘图方法（例如，arc, lineTo等），必须要描边或者填充，否则无法显示图形
+        3.第一个变形函数会影响第二个变形函数的计算（类似CSS3 2D变化）
+        4.绘制一个新图像，一定要调用beginPath，明确告知Canvas重新绘制图形
+        5.编辑视频的本质是把视频中的每一帧，加载到画布中。
+
+
+六、socket
+
+    socket的特点（优势）
+
+        1.实现长连接
+        2.减少无用信息传递，节省带宽。
+        3.全双工（Full Duplex）： 请求与响应可以同步进行。
+        4.减少延迟：一旦建立Websocket连接，只要服务器有可用消息就会推送到客户端。 它与轮询由本质区别，只有一个连且实时“推送”信息。
+        5.可以跨源（origin）请求第三方服务
+        6.简单易用
+
+    了解API的使用。
+
+
+七、地理定位
+    了解，关注
+
+八、视频&音频
+    preload： 预加载
+        -- auto : 建议浏览器载视频文件。 仅仅是建议，当浏览器检测到当前是移动设备或者连接较慢时，浏览器可能不要预加载。
+            以及节省流量或者带宽。
+        -- metadata： 提示浏览器不要预加载视频文件。可以预加载时长(duration)和音轨（tracks）这样的元数据。
+        -- none：不预先加载视频
+
+    能够使用基本API操作视频及音频
+
+九、触屏
+
+    一定要注意：移动端 ontouchstart 与 click 同时出发，但是不是同时执行。

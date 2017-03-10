@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2D图片墙</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("img/bg.jpg");
+        }
+        .img_lg img {
+            width:200px;
+            background: white;
+            padding: 8px 8px 15px 8px;
+            margin: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="img_lg">
+    </div>
+    <input type="button" value="刷新网页" >
+</body>
+<script type="text/javascript">
+    var imgLgDom;
+
+//    var imgB = ['<img src="img/img01.jpg" alt="">','<img src="img/img02.jpg" alt="">',' <img src="img/img03.jpg" alt="">',' <img src="img/img04.jpg" alt="">',' <img src="img/img05.jpg" alt="">',' <img src="img/img06.jpg" alt="">',' <img src="img/img07.jpg" alt="">',' <img src="img/img08.jpg" alt="">'];
+    var imgB = ["img/img01.jpg","img/hj.jpg","img/img02.jpg","img/hj.png","img/img03.jpg","img/img04.jpg","img/img05.jpg","img/img06.jpg" ,"img/img07.jpg" ,"img/img08.jpg"];
+    //遍历插入新元素
+    for (var i = 0; i < imgB.length; i++) {
+//        产生随机数
+        var imgRadin = Math.round(Math.random()*(imgB.length-1));
+        //获取 div 对象
+        imgLgDom = document.querySelector(".img_lg");
+//        imgLgDom.innerHTML += imgB[imgRadin];
+        imgLgDom.innerHTML +='<img src='+ imgB[imgRadin] +' alt="">';
+    }
+    //遍历 新增的元素
+    var imgDomList = document.querySelectorAll(".img_lg img");
+    for (var m = 0, len=imgDomList.length; m < len; m++) {
+        //产生随机旋转
+        var imgRadin1 = Math.round(Math.random()*(imgB.length-1));
+        if (m % 2 == 0) {
+            imgDomList[m].style.transitionDuration = imgRadin1 + "s";
+            imgDomList[m].style.transform = "rotate("+imgRadin1*10 +"deg)";
+        } else {
+            imgDomList[m].style.transition = "transform"+imgRadin1+"s";
+            imgDomList[m].style.transform = "rotate("+ (-imgRadin1*8) +"deg)";
+        }
+
+    }
+
+    //页面刷新
+    var btnDom = document.querySelector("[type='button']");
+    btnDom.onclick = function () {
+        window.location.reload();
+    }
+</script>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5拖放（Drag 和 Drop）</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            width: 500px;
+            height: 332px;
+            border: 1px solid red;
+            margin: 10px auto;
+            /*margin-top: 10px;*/
+        }
+        .textS {
+            display: block;
+            text-align: center;
+        }
+        .inner {
+            margin: 10px auto;
+            width: 500px;
+            height: 332px;
+            border: 1px solid red;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!--拖放：
+            拖放是一种常见的特性，即抓取对象以后拖到另一个位置。
+            任何元素都能够拖放
+
+            拖放的步骤:
+                （1）拖动什么元素 -> ondragstart 事件 ev.dataTransfer.setData方法
+                （2）元素拖放到什么地方 -> ondragover 事件
+                （3）进行放置 -> ondrop 事件 ev.dataTransfer.getData()方法
+                    注意：其中步骤2和步骤3作用在需要容纳的对象上
+
+            当元素设置属性 draggable=“true” 时 元素为可拖放的元素 。为false时取消拖放
+    -->
+        <span class="textS">将图片在两个框中互相拖拽</span>
+        <!--被移入框-->
+        <div class="wrap"></div>
+
+        <div class="inner">
+            <!--开启拖放的元素-->
+            <img id="drag" src="img/1.jpg" alt="这是一个可爱的图片" draggable="true">
+        </div>
+</body>
+    <script type="text/javascript">
+
+        //进行相互拖拽 函数调用
+        setDrag("#drag",".wrap");
+        setDrag("#drag",".inner");
+
+        //将拖放动作，封装一个函数
+        /*
+        * objdrag 需要拖拽的对象
+        * objdrop 容纳拖拽的元素
+        */
+        function setDrag(objdrag , objdrop) {
+            var wrap = document.querySelector(objdrop);
+            var drag = document.querySelectorAll(objdrag)[0];
+            //alert(imgs);
+            //设置拖放元素
+            drag.ondragstart = function (ev) {
+                ev = ev || event;
+                //数据类型是 "Text"，值是可拖动元素的 id ("drag1"
+                ev.dataTransfer.setData("Text",event.target.id);
+            };
+            //设置拖放什么地方
+            wrap.ondragover = function (ev) {
+                ev = ev || event;
+                //清除浏览器默认属性 默认情况情况下 拖放元素是打开其链接 要取消这种默认行为
+                ev.preventDefault();
+            };
+            //如何放置
+            wrap.ondrop = function (ev) {
+                ev = ev || event;
+                ev.preventDefault();
+                var dt = ev.dataTransfer.getData("Text");
+                ev.target.appendChild(document.getElementById(dt));
+            };
+        }
+
+    </script>
+</html>

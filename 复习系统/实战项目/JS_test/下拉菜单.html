@@ -1,0 +1,103 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.div1 {
+			height: 200px;
+			margin: 50px auto;
+			width: 500px;
+			overflow: hidden;
+		}
+		.ul1 {
+			width: 100px;
+			/*height: 250px;*/
+			float: left;
+			margin-left: 10px;
+			background-color: red;
+			padding-top: 5px;
+			text-align: center;
+		}
+		.ul1-1{
+			background-color: blue;
+			padding-top: 5px;
+		}
+		.ul1 ul {
+			display: none;
+		}
+		/*.ul1>li:hover{
+			background-color: blue;
+		}*/
+	</style>
+	<script type="text/javascript">
+	$(function(){
+		//鼠标移动上显示子菜单
+		$(".ul1 > li").mouseover(function(e) {
+			// $(this).children().show();
+			//slideDown() 向下展开
+			$(this).children().stop().slideDown();
+			//stop() 进行插队，清空排队
+		});
+	});
+	//鼠标移走之后隐藏子菜单
+	$(function(){
+		$(".ul1 > li").mouseout(function(e) {
+			// $(this).children().hide();
+			//slideUp()  向上收回
+			$(this).children().stop().slideUp();
+		});
+	});
+	</script>
+<link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+</head>
+<body>
+			<div class="top1">
+				<span class="top_span">章节目录</span><br />
+				<a class="top_span" href="../../学习笔记入口.html">返回首页</a> <br />
+			</div>
+	<div class="div1">
+	<ul id="ul1" class="ul1">
+		<li>一级菜单
+			<ul class="ul1-1">
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+			</ul>
+		</li>
+	</ul>
+	<ul id="ul2" class="ul1">
+		<li>一级菜单
+			<ul class="ul1-1">
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+			</ul>
+		</li>
+	</ul>
+	<ul id="ul3" class="ul1">
+		<li>一级菜单
+			<ul class="ul1-1">
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+			</ul>
+		</li>
+	</ul>
+	</div>
+</body>
+</html>

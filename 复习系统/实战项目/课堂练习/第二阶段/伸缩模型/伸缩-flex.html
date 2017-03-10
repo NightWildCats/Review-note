@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伸缩-flex</title>
+    <style type="text/css">
+        /*
+        一般布局的缺点：
+            使用浮动布局，无法实现等高
+            不能很快的调整DOM的顺序
+            不能很好控制子元素的位置
+        */
+        /*
+        声明一个元素为伸缩盒模型：flex/inline-flex
+    --------------------------------------------------------------------------------------
+        伸缩容器 ---
+        display:flex;
+                1.伸缩项目 沿主轴排列（start -> end）
+                2.所有的伸缩项目（子元素）与父元素等高。
+                3.伸缩项目自动升级为块元素。
+        inline-flex 行内对齐特点
+                1.伸缩容器中第一个元素中有文本内容，基于第一个文本的基线对齐
+                2.伸缩容器中没有有文本内容，也没有子元素，伸缩容器底边位于一行的基线处。
+                3.伸缩容器中没有有文本内容，第一个子元素没有中也没有文本内容，第一个元素底边位于一行的基线处。
+        */
+        /*
+         设置主轴的方向 flex-direction
+            flex-direction: row; 默认值 从左到右排列 左为 start。 右为 end
+            flex-direction: row-reverse; 反向 行排列 左为end ，右为 start
+            flex-direction: column;  从上到下排列 上为start ，下为 end
+            flex-direction: column-reverse; 反向 从下往上排列 上为end ，下为 start
+         设置伸缩项目的布局模式：
+            justify-content
+                flex-start 从主轴开始处排列
+                flex-end 从主轴结束处开始排列
+                center 从主轴的中间排列
+                space-around 沿主轴均匀包裹
+                space-between 沿主轴均匀排列
+    ------------------------------------------------------------------------------------
+         设置沿侧轴对齐排列的方式
+            当出现多行时，align-items 是基于行的 start -> end 对齐
+                align-items: stretch ；默认值，沿侧轴拉伸伸缩项目与伸缩容器一致
+                align-items：flex-start 侧轴开始处排列
+                align-items：flex-end 侧轴结束处来时排列
+                align-items：center  侧轴中间开始排列
+                align-items: baseline; 基线对齐，伸缩项目沿着一行中，伸缩项目基线最大（行高或者字体最大的）的基线作为其对齐依据。
+    ----------------------------------------------------------------------------------------------
+         设置当伸缩空间不足时
+                flex-wrap: nowrap 不换行显示 伸缩项目会被压缩
+                flex-wrap: wrap 换行显示
+                flex-wrap: wrap-reverse 反向换行显示
+           flex-wrap 当出现多行时，配合 align-content 属性一起使用，实现在伸缩容器侧轴方向对齐
+                align-content:flex-start / flex-end / center / space-around /space-between
+
+          设置在伸缩项目上：
+           flex-basis 优先生效，当我们不设置 flex-basis  默认使用 width. 伴随着主轴才生效
+           flex-grow  分配主轴的剩余空间，默认值是0，可以是整数也可是小数
+
+
+          压缩率的计算规则
+          flex-shrink 设置压缩率  默认是1  ，0表示不压缩
+
+          设置压缩率 flex-shrink:1;
+                一、需要压缩的宽度
+                    200 + 200 + 200 – 400 = 200
+                二、“总压缩基数”
+                    200*1 + 200* 1 + 200*1 = 600
+                三、每个伸缩项目实际压缩率
+                    200*1/ 600 =  0.3333
+                    200*1/ 600 = 0.3333
+                    200*1/ 600 = 0.3333
+                四、每个伸缩项目实际需要压缩空间
+                    200 * 0.3333 =  66.6
+                    200 * 0.3333 =  66.6
+                    200 * 0.3333 =  66.6
+                五、每个伸缩项目实际的宽度
+                    200 – 66.6 = 133.4
+                    200 – 66.6 = 133.4
+                    200 – 66.6 = 133.4
+
+            伸缩项目的排序
+                order：0 默认值
+                    根据提供的数值来进行排序，数值大的排序在数值小的后面（数值越小越在前，越大越在后）。
+
+            伸缩容器的嵌套 只影响它的子元素，不会影响到孙辈元素
+                伸缩项目也可以继续设置成伸缩容器，不会影响其兄弟元素。
+        */
+
+
+        .wrap {
+            margin-top: 100px;
+            width: 600px;
+            height: 200px;
+            background-color: #00CCFF;
+
+            /*设置伸缩模型*/
+            display: flex;
+            /*overflow: hidden;*/
+            /*flex-direction: column;*/
+            /*justify-content: center;*/
+            align-items: center;
+            /*flex-wrap:wrap-reverse ;*/
+
+
+        }
+        .inner1,.inner2,.inner3 {
+            align-self: baseline;
+        }
+        .inner1 {
+            background-color: red;
+        }
+        .inner2 {
+            background-color: burlywood;
+                     height: 300px;
+        }
+        .inner3 {
+            background-color: #60dda5;
+        }
+        .span1,.span2,.span3 {
+            align-self: baseline;
+        }
+        .span1 {
+            background-color: #87CEEB;
+        }
+        .span2 {
+            background-color: #999999;
+                     height: 100px;
+        }
+        .span3 {
+            background-color: #F2C200;
+        }
+
+
+    </style>
+</head>
+    <body>
+        <div class="wrap">
+            <div class="inner1">1</div>
+            <div class="inner2">2</div>
+            <div class="inner3">3</div>
+            <div class="span1">span1</div>
+            <div class="span2">span2</div>
+            <div class="span3">span3</div>
+        </div>
+    </body>
+    <script type="text/javascript">
+
+    </script>
+</html>

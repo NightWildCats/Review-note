@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3遮罩层效果</title>
+    <style type="text/css">
+        /*进行 html，body与视口合一*/
+        html , body {
+            height:100%;
+        }
+        .wrap {
+            padding: 0;
+            margin: 0 auto;
+            background-color: #99ff99;
+            width: 500px;
+            height: 100%;
+            position: relative;
+        }
+        .inner {
+            width:100%;
+            background-color: orange;
+        }
+        .inner img {
+            vertical-align: middle;
+            margin: 8px;
+        }
+        .mask {
+            background-color: rgba(0, 0, 0, .5);
+            width: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            /*将过渡时间放在初始CSS中 会使开始和结束都具有过渡的效果*/
+            transition-duration: 1s;
+        }
+        /*
+            过渡需要变化的样式
+        */
+        .mask-show {
+            width: 100%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="inner">
+            <img src="img/icon_list.png" alt="">
+        </div>
+        <div class="mask"></div>
+    </div>
+</body>
+    <script type="text/javascript">
+        //获取对象
+        var imgs = document.querySelector("img");
+        var mask = document.querySelector(".mask");
+        //进行事件响应
+        imgs.onclick = function () {
+            mask.classList.add("mask-show");
+        }
+        mask.onclick = function () {
+            mask.classList.toggle("mask-show");
+        }
+    </script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚硅谷HTML5 初级阶段</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <style type="text/css">
+
+        .drop-div {
+            background-color: rgba(255, 0, 0, .5);
+            /*width: 100px;*/
+            height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .drag-box{
+            margin-top: 20px;
+            background-color: rgba(0, 0, 255, .5);
+            height: 150px;
+        }
+        .item{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .item1{ background-color: #f00;}
+        .item2{ background-color: #ff0;}
+        .item3{ background-color: #00f;}
+
+        body {
+            cursor: url("img/Memo_72px_1142174_easyicon.net.png") , auto;
+        }
+    </style>
+</head>
+<body>
+<!--drop & drag-->
+<!--释放区元素-->
+<div class="drop-div"></div>
+<!--被拖拽元素元素-->
+<!--开启被拖拽属性-->
+<h5>被拖拽元素</h5>
+<div class="drag-box" >
+    <div class="item item1" draggable="true" id="item1">1</div>
+    <div class="item item2" draggable="true" id="item2">2</div>
+    <div class="item item3" draggable="true" id="item3">3</div>
+</div>
+
+
+<script type="text/javascript">
+
+    var dropDivDom = document.querySelector(".drop-div");
+    var dragBoxDom = document.querySelector(".drag-box");
+     //定义一个存取拖拽元素的变量
+    var tuoDom ;
+    dragBoxDom.ondragstart = function (ev) {
+        //获取拖拽元素的
+        if (ev.target.id.indexOf("item")>-1) {
+            tuoDom= ev.target;
+        } else {
+            tuoDom = null;
+        }
+    };
+    dropDivDom.ondragover= function (ev) {
+        ev.preventDefault();
+    };
+    dropDivDom.ondrop = function (ev) {
+        if (tuoDom != null) {
+            var cooklDom = tuoDom.cloneNode(true);
+            dropDivDom.appendChild(cooklDom);
+        }
+    };
+</script>
+</body>
+</html>

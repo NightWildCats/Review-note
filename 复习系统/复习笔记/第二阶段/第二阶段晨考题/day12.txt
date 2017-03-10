@@ -1,0 +1,19 @@
+1、Bootstrap栅格系统的实现原理？（20分）
+
+2、LESS的优点与缺点？（20分）
+
+3、执行以下代码，i 和 j 的值？（20分）
+    for (var i = 0; i < 5; i++) {
+        var j = i
+    }
+    console.log(i);
+    console.log(j);
+
+4、如何从字符串'page01'中，截取 '01' 子字符串？（20分）
+    var str = 'page01';
+
+5、执行以下代码，输出的值？（20分）
+    var a = '' + 3;
+    console.log(typeof a);
+    var b = 4
+    console.log(b - a);

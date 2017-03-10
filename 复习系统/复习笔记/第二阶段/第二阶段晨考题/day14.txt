@@ -1,0 +1,17 @@
+一、sessionStorage与localStorage的区别？（20分）
+
+
+二、离线存储技术适合存储什么类型的数据？（20分）
+
+
+三、当拖拽一个外部文件至网页内显示，需要哪几个关键的拖拽事件配合？被拖拽的文件存在在哪里？（20分）
+
+
+四、当我们为元素设置 draggable="false" 属性，是禁止了拖拽的行为？还是禁止了拖拽的效果？（20分）
+
+
+五、以下代码执行到  fileReader.readAsDataURL(fileObj); 主程序会产生线程单独读取一文件，
+	当文件读取完毕后是如何通知主程序的？（20分）
+	
+	var fileReader = new FileReader();
+    fileReader.readAsDataURL(fileObj);

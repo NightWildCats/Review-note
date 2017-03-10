@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex-wrap</title>
+    <style type="text/css">
+            .wrap {
+                width: 600px;
+                height: 300px;
+                border: 1px solid red;
+                margin: 0 auto;
+                display: flex;
+                /*flex-direction: column;*/
+                flex-wrap: wrap-reverse;
+                /*flex-wrap: wrap;*/
+                align-items: flex-start;
+            }
+            .inner {
+                width: 200px;
+                border: 1px solid blue;
+            }
+    </style>
+</head>
+    <body>
+        <div class="wrap">
+            <div class="inner inner1">1</div>
+            <div class="inner inner2">2</div>
+            <div class="inner inner3">3</div>
+            <div class="inner inner4">4</div>
+            <div class="inner inner5">5</div>
+        </div>
+
+    </body>
+    <script type="text/javascript">
+
+    </script>
+</html>

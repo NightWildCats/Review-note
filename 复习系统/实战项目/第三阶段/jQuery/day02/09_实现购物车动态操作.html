@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09_实现购物车动态操作</title>
+    <script src="jquery-1.12.4.js"></script>
+    <style>
+        table{width:600px; text-align:center;
+            border-collapse:collapse;
+        }
+        td,th{border:1px solid black}
+        td[colspan="3"]{text-align:right;}
+    </style>
+</head>
+<body>
+    <table id="data">
+        <thead>
+        <tr>
+            <th>商品名称</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>小计</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>iPhone6</td>
+            <td>&yen;<span>4488</span></td>
+            <td>
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </td>
+            <td>&yen;<span>4488</span></td>
+        </tr>
+        <tr>
+            <td>iPhone6 plus</td>
+            <td>&yen;<span>5288</span></td>
+            <td>
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </td>
+            <td>&yen;<span>5288</span></td>
+        </tr>
+        <tr>
+            <td>iPad Air 2</td>
+            <td>&yen;<span>4288</span></td>
+            <td>
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </td>
+            <td>&yen;<span>4288</span></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3">Total:</td>
+            <td>&yen;<span>14064</span></td>
+        </tr>
+        </tfoot>
+    </table>
+
+    <script>
+
+        // TODO 可以通过ID 或者自定义属性 等更为简便的方式来处理
+        // TODO 主要的难点是定位到具体的节点，然后实现对具体的jQuery的操作
+        // TODO     注意点：在使用jQuery操作时候先分析清除 DOM操作的流程
+        /**
+         *  TODO  DOM 操作流程：
+         *          ① 获取需要点击的事件源
+         *          ② 分析判断 事件源是要进行数量"+"或者"-"操作
+         *          ③ 然后获取 存取数量信息 -> 根据事件源是“+”或“-”来进行数量 ++操作 或者 --操作
+         *          ④ 获取到 对应商品的单价信息，与数量进行乘法运算，得出单个商品的合计
+         *          ⑤ 最后进行 合计。
+         *
+         *          注意点： 在获取初始数量注意 字符串转换成数字，防止出现字符串拼接出现
+         *
+         */
+
+        $("button").click(function(){
+            var $td = $(this).parent();
+            var $span = $td.find("span");
+            if($(this).text() == "+"){
+                $span.text(parseInt($span.text())+1);
+            }else{
+                $span.text(parseInt($span.text())-1);
+                if($span.text() == 0){
+                    $span.text("1");
+                }
+            }
+            // 小计
+            var $tr = $td.parent();
+            var $price = $tr.find("td:eq(1)").find("span").text();
+            $tr.find("td:eq(3)").find("span").text($price*$span.text());
+            // 共计
+            var total = 0;
+            $("#data>tbody>tr>td:last-child>span").each(function(index,domEle){
+                total += parseInt($(domEle).text());
+            });
+            $("#data>tfoot>tr>td:last-child>span").text(total);
+        });
+    </script>
+</body>
+</html>

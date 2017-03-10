@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12_外部插入节点</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <ul id="city">
+        <li>北京</li>
+        <li id="tj">天津</li>
+        <li>南京</li>
+    </ul>
+    <ul id="game">
+        <li>反恐</li>
+        <li id="ms">魔兽</li>
+        <li>星际</li>
+    </ul>
+
+    <script>
+        // TODO 节点外部插入
+        /**
+         * 通过 before() 或 after() 实现 节点外部插入
+         *
+         */
+        //TODO 通过 before()插入
+        $('#ms').before($('#tj'));
+
+        //TODO 通过 after()插入
+        $('#ms').after($('#city>li:nth-child(1)'));
+    </script>
+</body>
+</html>

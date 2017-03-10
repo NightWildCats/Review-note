@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_html操作</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <input type="button" value="获取<p>元素的HTML代码"/>
+    <input type="button" value="设置<p>元素的HTML代码"/>
+
+    <p title="选择你最喜欢的水果." ><strong>你最喜欢的水果是?</strong></p>
+    <ul>
+        <li title='苹果'>苹果</li>
+        <li title='橘子'>橘子</li>
+        <li title='菠萝'>菠萝</li>
+    </ul>
+
+    <script>
+        // TODO 利用DOM完成
+        /*// 1. 获取p元素
+        var pElem = document.getElementsByTagName('p')[0];
+        // 2. 获取p元素的html代码
+        console.log(pElem.innerHTML);*/
+
+        // TODO 利用JQUERY完成
+        console.log($('p').html());
+        // TODO 传递的是一个hTML结构（包括标签，属性和文本）
+        $('p').html('<i>你最喜欢的水果是?</i>');
+    </script>
+</body>
+</html>

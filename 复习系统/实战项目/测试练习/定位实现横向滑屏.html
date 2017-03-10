@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no;"/>
+		<title>定位实现横向滑屏</title>
+		<style type="text/css" id="css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			html , body {
+				height: 100%;
+				overflow: hidden;
+			}
+			#list {
+				
+				list-style: none;
+				/*开启BFC防止高度塌陷*/
+				overflow: hidden;
+				position: absolute;
+			}
+			#list li {
+				float: left;				
+			}
+			#list li img {
+				/*解决图片与a标签之间有几个像素的空隙*/
+				display: block;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="warp">
+			<ul id="list">
+				<li><a href="JavaScript:;"><img src="img/1.jpg"/></a></li>
+				<li><a href="JavaScript:;"><img src="img/2.jpg"/></a></li>
+				<li><a href="JavaScript:;"><img src="img/3.jpg"/></a></li>
+				<li><a href="JavaScript:;"><img src="img/4.jpg"/></a></li>
+				<li><a href="JavaScript:;"><img src="img/5.jpg"/></a></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//清除默认样式
+		document.addEventListener("touchstart",function (event) {
+			event.preventDefault();
+		});
+		//获取style标签对象
+		var styleNode = document.querySelector("#css");
+		//获取#list下的li对象
+		var liNode = document.querySelectorAll("#list li");
+		//向style标签中插入计算出来的宽度
+		var cssText = "#list {width:"+liNode.length+"00%}";
+		    cssText +="#list li {width: "+(1/liNode.length)*100+"%;}" ;
+		    cssText += "#warp {height:"+liNode[0].offsetHeight+"px}";
+		styleNode.innerHTML += cssText;
+	</script>
+</html>

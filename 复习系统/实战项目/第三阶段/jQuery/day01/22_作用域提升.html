@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域提升</title>
+</head>
+<body>
+<script>
+    function fn(){
+        // TODO 定义了一个局部变量jQuery
+        var jQuery = 'this is jquery';
+        // TODO 将局部变量jQuery的作用域提升全局域
+        window.jQuery = window.$ = jQuery;
+    }
+    fn();
+    console.log($);
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+html {
+    background-color: #c0c0c0;
+}
+body {
+    padding: 15px 8px;
+    width:100%;
+    background-color: #c0c0c0;
+    box-sizing: border-box;
+}
+
+/*头部完成订单信息*/
+.order-state-dec {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 25px;
+    background-color: #fff;
+}
+.order-state-dec-left {
+    margin-right: 8px;
+}
+.order-state-dec-right span:nth-child(1) {
+    font-size: 24px;
+}
+.order-state-dec-right span:nth-of-type(2) {
+    color: red;
+}
+/*订单状态部分*/
+.order-state {
+    margin-top: 1px;
+    width: 100%;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+.progress-title , .progress-state {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.progress-title {
+    align-items: flex-end;
+}
+.progress-state {
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+/*中间一条线*/
+.progress-state:after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    position: absolute;
+    background-color: #ddd;
+    left: 8px;
+    bottom: 20px;
+    z-index: -1;
+    padding:0 10px;
+    margin: 0 auto;
+
+}
+.progress-state-finish {
+    /*background-color: red;*/
+    width: 20px;
+    height:20px;
+    border-radius:50%;
+    border: 1px solid red;
+    background-image:repeating-radial-gradient(
+            circle 3px at center,
+            red 0,
+            red 5px,
+            white 5px,
+            white 20px
+    );
+}
+/*订单详情*/
+.order-detail-title {
+    width: 6em;
+    color: white;
+    background-color: red;
+    margin:20px 8px 0;
+    padding: .5em;
+    text-align: center;
+}
