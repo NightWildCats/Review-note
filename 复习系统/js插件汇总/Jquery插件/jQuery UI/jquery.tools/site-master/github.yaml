@@ -1,0 +1,9 @@
+extends: site.yaml
+mode: production
+site_root: jquerytools.github.com
+publisher:
+    github:
+        type: hyde.ext.publishers.dvcs.Git
+        path: ../jquerytools.github.com
+        url: git@github.com:jquerytools/jquerytools.github.com.git
+        branch: master

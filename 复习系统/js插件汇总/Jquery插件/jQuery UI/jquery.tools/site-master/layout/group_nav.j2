@@ -1,0 +1,44 @@
+{% macro render_resources(group, n) %}
+    {% for res in group.walk_resources_in_node(n) -%}
+    <li>
+    <a {% if resource.url == res.url %}class="active"{% endif %}
+        title="{{ res.meta.description|default('') }}"
+        href="{{ content_url(res.relative_deploy_path) }}">
+        {{ res.meta.title|typogrify }}</a>
+    </li>
+    {%- endfor %}
+{% endmacro %}
+
+{% for section in site.grouper.group.groups if resource.node.module.name == 'documentation' or not section.name == 'user guide' -%}
+{% set active = (section in resource.walk_group_groups()) %}
+<div class="sect {{ loop.cycle('one', 'two', 'three') }}" id="sect{{ loop.index0 }}">
+    <header {% if active %} class="open" {% endif %}>
+        <div class="icon"></div>
+        <h2{%if loop.first %} class="first"{%- endif %}>{{ section.name|title|typogrify }}</h2>
+    </header>
+    <ol class="cat{% if active %} active{% endif %}">
+    {% if resource.node.module.name == 'documentation' and section.flatten == True %}
+    <li>
+        <ol class="links">
+        {{ render_resources(section, resource.node.module) }}
+        {% for group in section.groups -%}
+        {{ render_resources(group, resource.node.module) }}
+        {% endfor %}
+        </ol>
+    </li>
+    {% else %}
+    {% for group in section.groups -%}
+        {% set links = render_resources(group, resource.node.module) %}
+        {% if links|trim|count > 0 %}
+        <li>
+            <ol class="links">
+                <h3 title="{{ group.description }}">{{ group.name|title|typogrify }}</h3>
+                {{ links  }}
+            </ol>
+        </li>
+        {% endif %}
+    {%- endfor %}
+    {% endif %}
+    </ol>
+</div>
+{%- endfor %}

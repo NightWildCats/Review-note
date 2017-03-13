@@ -1,0 +1,22 @@
+{% extends 'standalone.j2' %}
+
+{% block head %}{% mark css %}
+<style>
+#clock {
+	width: 250px;
+	height: 250px;
+    margin: 0 auto;
+}
+</style>
+{% endmark %}{% endblock %}
+
+{% block body %}{% mark body %}
+<div id="clock"></div>
+
+<script>
+flashembed("clock", "{{ media_url('swf/global/clock.swf') }}");
+</script>
+{% endmark %}{% endblock %}
+
+
+

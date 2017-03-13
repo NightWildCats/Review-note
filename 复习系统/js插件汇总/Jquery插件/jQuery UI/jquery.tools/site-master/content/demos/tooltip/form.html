@@ -1,0 +1,74 @@
+===
+index: 4
+title: Using tooltips in form fields
+===
+{% extends 'demo.j2' %}
+{% refer to 'demos/tooltip/form.htm' as standalone %}
+
+{% block extra_css %}
+{{ standalone.css }}
+<style>
+#myform textarea {
+  height:50px;
+}
+</style>
+{% endblock %}
+
+{% block demo %}
+<div class="blurb">
+
+<h1 class="teaser title">{{ resource.meta.title }}</h1>
+<p>
+  Here you can see a tooltip when you put your focus on any of the
+  following form fields. You can move between fields with your
+  keyboard (using the TAB key) or with your mouse.
+</p>
+
+{{ demo(standalone, full=False) }}
+
+</div>
+
+<h3>HTML coding</h3>
+
+<p>
+  Here is our HTML structure. Each tooltip is specified in
+  the <samp>title</samp> attribute of each form element:
+</p>
+
+{% filter syntax('html') %}
+{{ standalone.html_excerpt }}
+{% endfilter %}
+
+<p>
+  This form has minimal CSS styling and you can see it by looking at
+  the <a href="form.htm">standalone page</a>'s source code.
+</p>
+
+<h3>CSS coding</h3>
+
+<p>
+  Here is our tooltip "skin". Everything is pure CSS without any
+  images or background images:
+</p>
+
+{% filter syntax('css') %}
+{% include "media/css/tooltip-generic.css" %}
+{% endfilter %}
+
+<h3>JavaScript coding</h3>
+
+<p>
+  All tooltips are enabled with the following configuration. If you
+  want to customize the events when the tooltip is shown, then you
+  should read
+  about <a href="{{content_base}}/tools/tooltip/index.html#events">event
+  management</a> from the tooltip documentation.
+</p>
+
+{% filter syntax('js') %}
+{{ standalone.js }}
+{% endfilter %}
+
+
+{% endblock %}
+

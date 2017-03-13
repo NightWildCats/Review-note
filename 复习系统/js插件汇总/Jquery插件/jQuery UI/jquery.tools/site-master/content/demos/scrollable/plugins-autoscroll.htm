@@ -1,0 +1,49 @@
+{% extends 'standalone.j2' %}
+
+{% block head %}{% mark css %}
+<style>
+#actionButtons {
+	text-align:center;
+	margin-top:30px;
+}
+</style>
+<link rel="stylesheet" type="text/css"
+      href="{{ media_url('css/scrollable-horizontal.css') }}" />
+<link rel="stylesheet" type="text/css"
+      href="{{ media_url('css/scrollable-buttons.css') }}" />
+{% endmark %}{% endblock %}
+
+{% block body %}{% mark body %}
+{% with scrollable_id = "autoscroll" %}
+
+{% include "demos/scrollable/scrollable.fragment.html" %}
+
+<br clear="all" />
+
+{% mark html_excerpt %}
+<div id="actionButtons">
+	<button type="button" onClick="api.play()">Play</button>
+	<button type="button" onClick="api.pause()">Pause</button>
+	<button type="button" onClick="api.stop()">Stop</button>
+</div>
+{% endmark %}
+
+<br clear="all" />
+
+<!-- javascript coding -->
+<script>
+$(document).ready(function() {
+{% mark js %}
+// initialize scrollable together with the autoscroll plugin
+var root = $("#{{scrollable_id}}").scrollable({circular: true}).autoscroll({ autoplay: false });
+
+// provide scrollable API for the action buttons
+window.api = root.data("scrollable");
+{% endmark %}
+});
+</script>
+
+{% endwith %}
+{% endmark %}{% endblock %}
+
+

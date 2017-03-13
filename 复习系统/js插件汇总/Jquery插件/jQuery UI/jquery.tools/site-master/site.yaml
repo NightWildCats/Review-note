@@ -1,0 +1,97 @@
+mode: development
+site_root: localhost:8080
+media_root: media # Relative path from content folder.
+media_url: /media
+base_url: /
+template: hyde.ext.jinja2
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.blockdown.BlockdownPlugin
+    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.sorter.SorterPlugin
+    - hyde.ext.plugins.syntext.SyntextPlugin
+    - hyde.ext.plugins.grouper.GrouperPlugin
+    - hyde.ext.plugins.textlinks.TextlinksPlugin
+    - hyde.ext.plugins.stylus.StylusPlugin
+context:
+    data:
+        jqt:
+            cdn: http://cdn.jquerytools.org
+            js: http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js
+            v: 1.2.7
+            size: 4.45
+            formSize: 5.98
+            dev:
+                v: 1.2.8-dev
+        flowplayer:
+            swf: /media/swf/flowplayer/flowplayer-3.2.9.swf
+            js: /media/js/flowplayer/flowplayer-3.2.9.min.js
+            zip: http://releases.flowplayer.org/flowplayer/flowplayer-3.2.9.zip
+            date: 2012-03-29
+            v: 3.2.9
+    providers:
+        tools: tools.yaml
+meta:
+    nodemeta: meta.yaml
+    index: -1
+    title: jQuery TOOLS - The missing UI library for the Web
+    description: >
+                A collection of the most important user-interface components
+                for todays websites. This single JavaScript file weighs only
+                5.8 Kb
+    keywords: >
+                javascript ui library, javascript library, jquery ui library,
+                user interface library, web 2.0 ui library
+    author: Tero Piirainen
+stylus:
+    app: /usr/local/bin/stylus
+sorter:
+    index:
+        attr:
+            - meta.index
+        filters:
+            is_processable: true
+            source.kind: html
+grouper:
+    group:
+        sorter: index
+        groups:
+            -
+                name: user guide
+                description: jQuery Tools user guide
+                flatten: True
+            -
+                name: UI Tools
+                groups:
+                    -
+                        name: tabs
+                    -
+                        name: tooltips
+                    -
+                        name: overlay
+                    -
+                        name: scrollable
+            -
+                name: Form Tools
+                flatten: True
+                groups:
+                    -
+                        name: validator
+                    -
+                        name: rangeinput
+                    -
+                        name: dateinput
+            -
+                name: Toolbox
+                flatten: True
+                groups:
+                    -
+                        name: expose
+                    -
+                        name: flashembed
+                    -
+                        name: combinations
+                    -
+                        name: history
+                    -
+                        name: mousewheel

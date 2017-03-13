@@ -1,0 +1,22 @@
+{% extends 'root.j2' %}
+
+{% block stylesheets %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ media_url('css/syntax.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ media_url('css/demos.css') }}"/>
+{% endblock %}
+
+{% block main %}
+<img id="hero" src="{{ media_url('img/hero/' ~ resource.meta.group ~ '.jpg') }}">
+
+<div id="demo_content">
+{% block demo %}
+{% endblock demo %}
+</div>
+{% endblock main %}
+
+{% block right_navigation %}
+<nav class="sidebar">
+{% include "group_nav.j2" %}
+</nav>
+{% endblock %}

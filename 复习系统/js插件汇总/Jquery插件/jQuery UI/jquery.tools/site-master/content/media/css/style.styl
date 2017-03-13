@@ -1,0 +1,75 @@
+@import "include/reset.css"
+@import "include/fix"
+@import "include/vars"
+@import "include/mixins"
+@import "include/gradients"
+@import "include/topnav"
+@import "include/footer"
+@import "include/sidebar"
+@import "include/content"
+@import "include/tables"
+
+html
+    background-color #fafafa
+
+body
+    margin 0
+    padding 0
+    defaultBackground()
+    defaultSansSerif()
+    font-size 14px
+    line-height 20px
+    color black
+
+a
+    color petrol
+    text-decoration none
+
+    &hover
+        color lighten(petrol, 10)
+
+p
+    line-height 20px
+    margin-bottom 8px
+
+
+.overlay
+    padding 40px
+    width 576px
+    display none
+    background #fff
+    raised()
+
+.overlay_scroll
+    font-size 11px
+    height 423px
+    margin 30px 20px 10px 0
+    overflow auto
+
+
+
+#content
+    float left
+    width 72%
+
+#right
+    float right
+    width 24%
+
+#wrap, #top-wrap, #bottom-wrap
+    clearfix()
+
+.more_info
+    margin 12px 0 0
+
+    li
+        margin 6px 0
+        padding 0
+        list-style-type none
+        a
+            color textgray
+            text-decoration none
+            padding 1px 6px 2px
+
+            &:hover
+                color darkPetrol

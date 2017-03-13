@@ -1,0 +1,51 @@
+===
+index: 5
+title: Validator events in action
+===
+{% extends 'demo.j2' %}
+{% refer to 'demos/validator/events.htm' as standalone %}
+
+{% block extra_css %}
+{{ standalone.css }}
+{% endblock %}
+
+{% block demo %}
+<div class="blurb">
+
+<h1 class="teaser title">{{ resource.meta.title }}</h1>
+<p>
+  In addition to the effect framework you can extend the validator
+  with your own functions that are called when validation related
+  events occur.
+</p>
+
+{{ demo(standalone) }}
+
+</div>
+
+<h2>The red border effect</h2>
+
+<p>
+  Here is an example callback function that does the red border
+  effect.
+</p>
+
+{% filter syntax('js') %}
+{{ standalone.js }}
+{% endfilter %}
+
+
+<h2>Displaying errors on the "wall"</h2>
+
+<p>
+  Here we show the various ways to assigning callback functions for
+  validator. It is not meant to be simple. It's meant to show you the
+  different possibilities. All these callback functions print messages
+  to a DIV with id "info".
+</p>
+
+{% filter syntax('js') %}
+{{ standalone.js2 }}
+{% endfilter %}
+
+{% endblock %}
