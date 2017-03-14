@@ -8,6 +8,10 @@
             margin: 0;
             padding: 0;
         }
+        html,body {
+            height:100%;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -17,14 +21,26 @@
 </body>
 
 <script type="text/javascript">
-    var innerHtml;
+    var innerHtml=0;
     for (var i = 0; i < 300; i++) {
-        var innerHtml=i;
+        innerHtml +=i+'<br />';
     }
 
     var wrapDom = document.querySelector('.wrap');
 
-    wrapDom.innerHTML = innerHtml +'<br />';
+    wrapDom.innerHTML = innerHtml;
+
+
+    document.addEventListener('touchstart', function(event) {
+        // 判断默认行为是否可以被禁用
+        if (event.cancelable) {
+            // 判断默认行为是否已经被禁用
+            if (!event.defaultPrevented) {
+                event.preventDefault();
+            }
+        }
+    }, false);
+
 
 </script>
 </html>
