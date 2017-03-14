@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>禁止系统滚动条</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+    </div>
+</body>
+
+<script type="text/javascript">
+    var innerHtml;
+    for (var i = 0; i < 300; i++) {
+        var innerHtml=i;
+    }
+
+    var wrapDom = document.querySelector('.wrap');
+
+    wrapDom.innerHTML = innerHtml +'<br />';
+
+</script>
+</html>
