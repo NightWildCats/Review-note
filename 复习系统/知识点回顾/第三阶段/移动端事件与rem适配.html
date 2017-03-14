@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>移动端知识点回顾</title>
+    <link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/biaoti.gif" />
+    <style type="text/css">
+        table {
+            width: 870px;
+            margin-left: 33px;
+        }
+    </style>
+</head>
+<body>
+<div class="top1">
+    <span class="top_span">章节目录</span><br />
+    <a class="top_span" href="../../学习笔记入口.html">返回主页</a><br />
+    <a class="top_span" href="#1">移动端事件</a> <br />
+    <a class="top_span" href="#2">em与rem适配</a> <br />
+    <a class="top_span" href="#3">viewport适配</a> <br />
+    <a class="top_span" href="#3">meta标签</a> <br />
+</div>
+<div id="bot1">
+    <!--移动端事件开始-->
+    <fieldset id="1">
+        <legend>移动端事件</legend>
+        <table>
+            <tr><th>移动端事件</th></tr>
+            <tr style="white-space: pre;"><td>
+                移动触发事件：
+                    touchstart 手指触摸屏幕事件
+                    touchmove 手指在屏幕移动事件
+                    touchend 手指离开事件
+
+                targetTouches  当前元素上手指列表集合(一个元素可以绑定多个事件)
+                changedTouches 当前事件上手指列表集合
+                touches 屏幕上手指列表集合
+
+                通过 event事件中可以获取到以上的属性，在这些属性中包含一个类数组;
+                    touches[0].clientX 可以获取到一些关于元素的位置信息
+
+                禁止系统滚动条：使用html和body的高度为100%，overflow:hidden;来禁止系统滚动条
+                示例：
+                    html,body {
+                        height:100%;
+                        overflow:hidden;
+                    }
+
+                禁止系统默认事件：
+                    ev.preventDefault();
+            </td></tr>
+        </table>
+    </fieldset>
+    <!--移动端事件结束-->
+    <!--em与rem适配开始-->
+    <fieldset id="2">
+        <legend>em与rem适配</legend>
+        <table>
+            <tr><th>em与rem适配</th></tr>
+            <tr style="white-space: pre;"><td>
+                em适配是相对于自身文本大小进行设置的(默认为16px)
+                    在对应的元素设置font-size，然后元素相应的宽高根据设置的文字大小来进行设置。
+
+                rem适配是相对于HTML文档的文字大小进行适配的
+                    在HTML文档结构中设置文字大小，然后根据设置文字来进行适配
+                rem适配的特点：
+                    ① 操作HTML字体的大小
+                    ② 使用 meta标签
+                    ③ 等比（缩小）效果
+                    ④ 图片失真不明显
+
+                使用示例:
+                    var width = document.documentElement.clientWidth;
+                    var html = document.querySelector('html');
+                    //通过设置html的字体等于视口的宽; 在获取width时，width = device-width;
+                    html.style.fontSize = width;
+            </td></tr>
+        </table>
+    </fieldset>
+    <!--em与rem适配结束-->
+    <!--viewport适配开始-->
+    <fieldset id="3">
+        <legend>viewport适配</legend>
+        <table>
+            <tr><th>viewport适配</th></tr>
+            <tr style="white-space: pre;"><td>
+                viewport适配:
+                    通过改变initial-scale的值进行适配, 通过布局视口与实际的图片高宽的比例进行适配
+                示例：
+                    var target =320; //获取适配图片以及指定的适配
+                    var width = document.documentElement.clientWidth; //获取布局视口的宽高
+                    var scale = width/target; //缩放比例
+                    var metaNode = document.createElement("meta"); //创建标签
+                    metaNode.setAttribute('name','viewport'); //通过setAttribute属性来插入属性以及属性值
+                    metaNode.setAttribute('content','initial-scale= ' + scale);
+                    document.head.appendChild(metaNode); //插入节点
+
+                本质：改变initial-scale的值
+                    优点：没有meta标签
+                    等比效果
+                    没有复杂的计算
+                缺点：
+                    图片失真明显
+            </td></tr>
+        </table>
+    </fieldset>
+    <!--viewport适配结束-->
+    <!--mate标签开始-->
+    <fieldset id="4">
+        <legend>mate标签</legend>
+        <table>
+            <tr><th>mate标签</th></tr>
+            <tr style="white-space: pre;"><td>
+                meta name="viewport"
+                content="width=device-width, //设置CSS像素 = 设备独立像素
+                        height=device-height,
+                        user-scalable=no, //禁止缩放（no）,允许缩放（yes）
+	                    initial-scale=1.0, //缩放比例，大于1放大，小于1缩小；
+                        minimum-scale=1.0, //最小缩放
+                        maximum-scale=1.0, //最大缩放
+                        target-densitydpi=device-dpi" //了解即可
+
+                在 width 与 inital-scale 谁大，最后适配的谁大取谁作为设备独立像素进行匹配
+            </td></tr>
+        </table>
+    </fieldset>
+    <!--mate标签结束-->
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0;">
+    <title>em与rem适配</title>
+    <style type="text/css">
+        .box {
+            width: 10em;
+            height: 10em;
+            background-color: pink;
+        }
+        .box1 {
+            width: 1rem;
+            height: 1rem;
+            background-color: greenyellow;
+        }
+
+        html,body {
+            height:100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+        TODO em适配是相对于自身文本大小进行设置的(默认为16px)
+        TODO rem适配是相对于HTML文档的文字大小进行适配的
+
+    -->
+    <!--<div class="box">-->
+        <!--em适配-->
+    <!--</div>-->
+    <div class="box1">
+        rem适配
+    </div>
+</body>
+    <script type="text/javascript">
+        document.addEventListener('touchstart',function (ev) {
+            ev.preventDefault();
+        });
+        // TODO IIFE 回调函数
+        (function () {
+
+            var width = document.documentElement.clientWidth;
+            var html = document.querySelector('html');
+            html.style.fontSize=width + "px";
+            console.log(1);
+        })();
+    </script>
+</html>

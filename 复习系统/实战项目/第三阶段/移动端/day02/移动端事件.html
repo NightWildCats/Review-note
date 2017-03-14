@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>移动端手指事件</title>
-    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="width=device-width,inital-scale=1"/>
+    <!--
+        TODO 在 width 与 inital-scale 谁大，最后适配的谁大取谁作为设备独立像素进行匹配
+    -->
     <style type="text/css">
 
         * {
@@ -38,8 +41,6 @@
                 }
             }
         }, false);
-
-
 
         /**
          *

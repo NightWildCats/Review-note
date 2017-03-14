@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1"/>
+    <title>voewport适配</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 320px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+<script type="text/javascript">
+
+
+    /**
+     * TODO 进行 viewport 适配
+     *
+     *
+     */
+
+    (function (ev) {
+
+        var target =320;
+        var width = document.documentElement.clientWidth;
+        console.log(width);
+        var scale = width/target;
+        console.log(scale);
+
+        var metaNode = document.createElement("meta");
+        metaNode.setAttribute('name','viewport');
+        metaNode.setAttribute('content','initial-scale= ' + scale);
+        document.head.appendChild(metaNode);
+
+
+    })();
+
+</script>
+</html>
