@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动端手指事件</title>
+    <meta name="viewport" content="width=device-width"/>
+    <style type="text/css">
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            margin: 20px 20px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+
+    </div>
+
+</body>
+
+    <script type="text/javascript">
+
+        var box = document.querySelector('.box');
+        document.addEventListener('touchstart', function(event) {
+            // 判断默认行为是否可以被禁用
+            if (event.cancelable) {
+                // 判断默认行为是否已经被禁用
+                if (!event.defaultPrevented) {
+                    event.preventDefault();
+                }
+            }
+        }, false);
+
+
+
+        /**
+         *
+         * TODO targetTouches  当前元素上手指列表集合
+         * TODO changedTouches 当前事件上手指列表集合
+         * TODO touches 屏幕上手指列表集合
+         *
+         */
+
+
+
+        box.addEventListener('touchstart',function (ev) {
+            //获取手指在当前元素上的相对于元素左侧顶点的点击坐标
+
+            console.log(ev);
+            console.log(ev.touches[0].clientX);
+            console.log(ev.touches[0].clientY);
+        });
+    </script>
+
+</html>
