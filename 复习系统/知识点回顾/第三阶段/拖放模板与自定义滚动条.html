@@ -40,7 +40,7 @@
                         document.onmousemove = function(ev){ //鼠标移动事件
                             var ev = ev || event; //兼容性判断
                         }
-                        document.onmouseup = function(ev) { // 鼠标松开事件
+                        document.onmouseup = function(ev) { //鼠标松开事件
                             document.onmousemove = document.onmouseup = null; //取消事件绑定
                             document.releaseCapture && document.releaseCapture(); //取消捕获事件（兼容IE8以下版本）
                             ev.preventDefault(); //取消默认行为
