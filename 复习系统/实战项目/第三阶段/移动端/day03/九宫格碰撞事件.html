@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>九宫格碰撞事件</title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: pink;
+            }
+            .box1 {
+                position: fixed;
+                width: 200px;
+                height: 200px;
+                background-color: darkorange;
+                left: 30%;
+                top: 30%;
+             }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <div class="box1"></div>
+    </body>
+    <script type="text/javascript" src="flag.js"></script>
+    <script type="text/javascript">
+
+        var box = document.querySelector('.box');
+        var box1 = document.querySelector('.box1');
+        flag(box,box1);
+
+    </script>
+
+</html>
