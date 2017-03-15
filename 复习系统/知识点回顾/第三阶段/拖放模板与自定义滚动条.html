@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>第十七天知识点回顾</title>
+    <link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/biaoti.gif" />
+    <style type="text/css">
+        table {
+            width: 870px;
+            margin-left: 33px;
+        }
+    </style>
+</head>
+<body>
+<div class="top1">
+    <span class="top_span">章节目录</span><br />
+    <a class="top_span" href="../../学习笔记入口.html">返回主页</a><br />
+    <a class="top_span" href="#1">拖放模板</a> <br />
+    <a class="top_span" href="#2">自定义滚动条</a> <br />
+</div>
+<div id="bot1">
+    <!--拖放模板开始-->
+    <fieldset id="1">
+        <legend>拖放模板</legend>
+        <table>
+            <tr><th>拖放模板</th></tr>
+            <tr style="white-space: pre;"><td>
+                getBoundingClientRect()方法：
+                    返回值是一个 DOMRect 对象，这个对象是由该元素的 getClientRects() 方法返回的一组矩形的集合,
+                    即：是与该元素相关的CSS 边框集合 。
+                    DOMRect 对象包含了一组用于描述边框的只读属性——left、top、right和bottom，
+                    单位为像素。
+                    除了 width 和 height 外的属性都是相对于视口的'左上角'位置而言的。
+
+                鼠标事件拖放模板：
+                    Obj.onmousedown = funcment(ev) { //鼠标点击事件
+                        var ev = ev || event;
+                        Obj.setCaptrue && Obj.setCaptrue(); //开启全局捕获事件（兼容IE8以下版本）
+                        document.onmousemove = function(ev){ //鼠标移动事件
+                            var ev = ev || event; //兼容性判断
+                        }
+                        document.onmouseup = function(ev) { // 鼠标松开事件
+                            document.onmousemove = document.onmouseup = null; //取消事件绑定
+                            document.releaseCapture && document.releaseCapture(); //取消捕获事件（兼容IE8以下版本）
+                            ev.preventDefault(); //取消默认行为
+                        }
+                        return false; // 取消默认行为
+                    }
+            </td></tr>
+        </table>
+    </fieldset>
+    <!--拖放模板结束-->
+    <!--自定义滚动条开始-->
+    <fieldset id="2">
+        <legend>自定义滚动条</legend>
+        <table>
+            <tr><th>自定义滚动条</th></tr>
+            <tr style="white-space: pre;"><td>
+                自定义滚动条的要点：
+                    禁止系统滚动条,自定义一个包裹的框和区域小块;
+
+                scale1滚动条高度的系数
+                    滚动条高度/视口高度 = 视口高度/内容高度
+                scale1 = 视口高度/内容高度
+                scale2内容区与滚动条位移距离的系数
+                    滚动条的偏移量/(视口高度-滚动条高度) = 内容偏移量/(内容高度-视口高度)
+                        ==> 滚动条的偏移量 = 内容偏移量* ((视口高度-滚动条高度)/(内容高度-视口高度))
+                    内容偏移量 = 滚动条的偏移量 / ((视口高度-滚动条高度)/(内容高度-视口高度))
+            </td></tr>
+        </table>
+    </fieldset>
+    <!--自定义滚动条结束-->
+</div>
+</body>
+</html>

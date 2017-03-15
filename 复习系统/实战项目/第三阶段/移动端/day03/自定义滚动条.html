@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义滚动条</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            overflow: hidden;
+        }
+        #wrap{
+            width: 40px;
+            height: 100%;
+            background: gray;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        #inner{
+            width: 40px;
+            height: 40px;
+            background: deeppink;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #content{
+            /*height: 10px;*/
+            width: 100%;
+            /*background: red;*/
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+
+</div>
+<!--
+    滑槽
+-->
+<div id="wrap">
+    <!--
+        滑塞
+    -->
+    <div id="inner">
+
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var wrap = document.getElementById('wrap');
+    var inner = document.getElementById('inner');
+    var content = document.getElementById('content');
+    var test = 0;
+    for (var i = 0; i < 666; i++) {
+        test +=i+'<br />'
+    }
+    content.innerHTML = test;
+    //获取鼠标元素初始位置
+    var startY = 0;
+    var elementY = 0;
+
+    inner.onmousedown = function(ev){
+        var ev = ev || event;
+        startY = ev.clientY;
+        elementY = inner.offsetTop;
+
+        inner.setCapture && inner.setCapture();
+        document.onmousemove = function(ev){
+            var ev = ev || event;
+            var nowY = ev.clientY;
+            var disY = nowY - startY;
+            //范围的限定
+            var top = elementY + disY;
+            if(top<0){
+                top = 0;
+            }else if(top > document.documentElement.clientHeight-inner.offsetHeight){
+                top = document.documentElement.clientHeight-inner.offsetHeight;
+            }
+            //窗帘效果
+//            var scale = top / (document.documentElement.clientHeight-inner.offsetHeight);
+//            inner.style.top = top + 'px';
+//            content.style.height = scale * document.documentElement.clientHeight + 'px';
+            inner.style.top = top + 'px';
+            //与内容区域绑定
+            var scale = top/ (document.documentElement.clientHeight-inner.offsetHeight);
+            content.style.top = -(content.offsetHeight-document.documentElement.clientHeight)*scale+'px';
+
+            //实现滚动条根据内容进行变化
+//            content.style.top = -top/scale + 'px';
+
+        };
+        document.onmouseup = function(){
+            document.onmousemove = document.onmouseup = null;
+            document.releaseCapture && document.releaseCapture();
+        };
+        return false;
+    };
+
+
+</script>
+</html>
