@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background: brown;
+        }
+    </style>
+</head>
+<!--
+    需求：滚轮向上滚，box高度减小
+        滚轮向下滚，box高度增加
+-->
+<body style="height: 3000px;">
+<div id="box" >
+
+</div>
+</body>
+<!--
+    ie/chrome : onmousewheel(dom0)
+        event.wheelDelta
+            上：120
+            下：-120
+
+    firefox : DOMMouseScroll 必须用(dom2的标准模式)
+        event.detail
+            上：-3
+            下：3
+
+    return false阻止的是  dom0 所触发的默认行为
+    dom2 需要通过event下面的event.preventDefault();
+-->
+<script type="text/javascript">
+    var box = document.getElementById('box');
+
+    box.onmousewheel = fun;
+    if(box.addEventListener){
+        //DOMMouseScroll 只有火狐支持的鼠标滚轮事件（非标准）
+        box.addEventListener('DOMMouseScroll',fun);
+    }
+    function fun(ev){
+        var ev = ev || event;
+        // ev.wheelDelta 除火狐之外的滚轮事件
+        // ev.detail 火狐的滚轮事件
+        if(ev.wheelDelta || ev.detail){
+            console.log(1);
+            //ie/chrome
+            //console.log(ev.wheelDelta);
+            if(ev.wheelDelta >0 || ev.detail < 0 ){
+                //向上滚
+                box.style.height = box.offsetHeight - 10 + 'px';
+            }else{
+                //向下
+                box.style.height = box.offsetHeight + 10 + 'px';
+            }
+        }
+        //在IE8中不支持DOM2的绑定方式。使用ev.preventDefault()清除默认样式来进行
+        if (ev.preventDefault) {
+            ev.preventDefault();
+        }
+        // 禁止 由于滚轮滚动的默认行为会导致页面整体下移
+        return false;
+
+
+
+        //定义一个flag变量
+        //一下代码只做一种参考的方式，可以通过这种方式进行实现。
+        var flag;
+        switch (flag) {
+            case 'up' :
+                box.style.height = box.offsetHeight - 10 + 'px';
+                break;
+            case 'down' :
+                box.style.height = box.offsetHeight - 10 + 'px';
+                break;
+        }
+
+    }
+
+
+</script>
+</html>

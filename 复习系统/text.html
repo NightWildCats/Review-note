@@ -1,36 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
-	<title>02_laydate插件的高级使用</title>
-	<script src="../../第三阶段课件/第四十一天/演示文件/CODE/myQuery-2.0.0.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title></title>
+	<style type="text/css" id="css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			height: 100%;
+			overflow: hidden;
+		}
+		#list{
+			list-style: none;
+			overflow: hidden;
+			/*width: 500%;*/
+		}
+		#list li{
+			float: left;
+			/*width: 20%;*/
+		}
+
+		#list li img{
+			display: block;
+			width: 100%;
+		}
+
+	</style>
 </head>
 <body>
-<input id="mydate" placeholder="请输入日期" class="laydate-icon">
-<script>
-	var test = (function(a) {
-		this.a = a;
-		return function(b) {
-		    return this.a + b;
-		}} (function(a, b) {
-		    return a;}(1, 2))
-	);
-
-	console.log(test(4));
-
-	function fn(n) {
-		if (n==0) {
-			return 0;
-		}
-		return n<=1 ? 1 :n*fn(n-1);
-	}
-
-
-	console.log(fn(5));
-</script>
+<div id="wrap">
+	<ul id="list">
+		<li>
+			<a href="###">
+				<img src="img/1.jpg"/>
+			</a>
+		</li>
+		<li>
+			<a href="###">
+				<img src="img/2.jpg"/>
+			</a>
+		</li>
+		<li>
+			<a href="###">
+				<img src="img/3.jpg"/>
+			</a>
+		</li>
+		<li>
+			<a href="###">
+				<img src="img/4.jpg"/>
+			</a>
+		</li>
+		<li>
+			<a href="###">
+				<img src="img/5.jpg"/>
+			</a>
+		</li>
+	</ul>
+</div>
 </body>
+<script type="text/javascript">
+    //取消事件默认行为
+    document.addEventListener('touchstart',function(ev){
+        ev.preventDefault();
+    });
+
+
+    var wrap = document.getElementById('wrap');
+    var list = document.getElementById('list');
+    var lis = document.querySelectorAll('#list li');
+
+    var css = document.getElementById('css');
+    var cssText = '#list{width: '+ lis.length +'00%;}';
+    cssText += '#list li{width: '+ (100/lis.length) +'%;}'
+
+    css.innerHTML += cssText;
+
+
+</script>
 </html>
-
-
-
-

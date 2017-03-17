@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no;"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
 		<title>定位实现横向滑屏</title>
 		<style type="text/css" id="css">
 			* {
@@ -46,14 +46,76 @@
 		document.addEventListener("touchstart",function (event) {
 			event.preventDefault();
 		});
-		//获取style标签对象
-		var styleNode = document.querySelector("#css");
-		//获取#list下的li对象
-		var liNode = document.querySelectorAll("#list li");
-		//向style标签中插入计算出来的宽度
-		var cssText = "#list {width:"+liNode.length+"00%}";
-		    cssText +="#list li {width: "+(1/liNode.length)*100+"%;}" ;
-		    cssText += "#warp {height:"+liNode[0].offsetHeight+"px}";
-		styleNode.innerHTML += cssText;
+		window.onload = function () {
+            //获取style标签对象
+            var styleNode = document.querySelector("#css");
+            //获取 ul 对象
+            var list = document.getElementById('list');
+            //获取#list下的li对象
+            var liNode = document.querySelectorAll("#list li");
+            //获取 #wrap对象
+            var wrap = document.getElementById('warp');
+            //向style标签中插入计算出来的宽度
+            var cssText = "#list {width:"+liNode.length+"00%}";
+            cssText +="#list li {width: "+(1/liNode.length)*100+"%;}" ;
+            cssText += "#warp {height:"+liNode[0].offsetHeight+"px}";
+            styleNode.innerHTML += cssText;
+
+            // 横向划屏事件处理
+            //进入时
+            wrap.addEventListener('touchstart',function (ev) {
+                var touch = ev.changedTouches[0];
+                //初始的位置
+                var newsX = touch.clientX;
+                var elemX = list.offsetLeft;
+
+                //移动时
+				// 定义偏移量
+                var disX;
+                wrap.addEventListener('touchmove',function (ev) {
+                    var touchs = ev.changedTouches[0];
+                    //手指移动后的位置
+                    var usedX = touchs.clientX;
+                    disX = usedX - newsX + elemX;
+                    //ul的偏移量
+                    list.style.left = disX +'px';
+                });
+
+                //记录图片的位置
+                var now = 0;
+                //松开时
+                wrap.addEventListener('touchend',function (ev) {
+                    //最后图片的位置
+                    var touch = ev.changedTouches[0];
+                    var left = list.offsetLeft;
+                    //最后图片的位置
+
+                    /**
+					 * 原因分析：
+                     *  ① 通过 获取到初始的ul的left值。
+					 *  ② 实质上每次完成切换的位移为一个视口宽度。
+					 *  ③ 通过偏移量left的值与视口宽度相除得出现在图片出于第几张位置
+					 *  ④ 然后通过手指按住图片移动的位置是否大于视口宽度的一半来实现切换
+                     */
+
+                    now = Math.round(-left/document.documentElement.clientWidth);
+                    if (now <=0 ) {
+                        now = 0;
+					}
+                    if (now >= liNode.length) {
+                        now = liNode.length-1;
+                    }
+                    console.log(now);
+                    //ul的偏移量
+                    list.style.left = -now * document.documentElement.clientWidth + 'px';
+
+                });
+
+            })
+        };
+
+
+		
+		
 	</script>
 </html>
