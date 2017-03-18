@@ -47,9 +47,11 @@
 //				};
 
 				//调用 getStyle方法
-//				btn01.onclick = function () {
-//				alert(getStyle(box1,'width')) ;
-//				};
+				btn01.onclick = function () {
+				alert(getStyle(box1,'width')) ;
+				alert(getStyle(box1,'fontSize')) ;
+
+				};
 				
 				//此方法适用于IE8所有的浏览器
 				
@@ -73,6 +75,6 @@
 	</head>
 	<body>
 		<button id="btn01">读取样式</button>
-		<div id="box1"></div>
+		<div id="box1" style="font-size: 20px;"></div>
 	</body>
 </html>
