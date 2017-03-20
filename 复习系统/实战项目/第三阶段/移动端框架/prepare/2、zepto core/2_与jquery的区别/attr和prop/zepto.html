@@ -22,12 +22,12 @@
 			//坑！------zepto中removeProp()的方法。在1.2以上才支持。
 			$(function(){
 				$('option').each(function(index,item){
-					console.log(index,item.innerHTML)
-					console.log($(this).attr('selected'))//false false selected
-					console.log($(this).prop('selected'))//false false true
+					console.log(index,item.innerHTML);
+					console.log($(this).attr('selected'));//false false selected
+					console.log($(this).prop('selected'));//false false true
 					//查很多资料说不能通过标签属性（selected）获取元素，可通过验证是可以获取的。
 					console.log($('option[selected]').length);
-				})
+				});
 				$('#btn').on('touchstart',function(){
 					$(this).prop('disabled','true');
 					setTimeout(function(){

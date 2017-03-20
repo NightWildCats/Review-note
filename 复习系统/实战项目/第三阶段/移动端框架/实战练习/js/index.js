@@ -73,7 +73,7 @@ $(function(){
 	
 	// 进行函数的调用
 	//向上滑动
-		$(document).swipeUp(function(){	
+	$(document).swipeUp(function(){
 			if(isMoving) {
 				return;
 			}
