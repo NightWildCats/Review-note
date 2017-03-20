@@ -1,0 +1,133 @@
+
+/*向上滑动*/
+
+.pt-page-moveToTop {
+	animation:moveTotop .6s ease both ;
+}
+.pt-page-moveFormBottom {
+	animation: moveFormBottom .6s ease both;
+}
+
+@keyframes moveTotop  {
+	from{transform: translateY(0%);}
+	to{ }
+}
+@keyframes moveFormBottom  {
+	from{transform: translateY(100%);}
+	to{}
+}
+
+/*向下滑动*/
+
+.pt-page-moveToBottom {
+	animation: moveToBottom .6s ease both;
+}
+.pt-page-moveFormTop {
+	animation: moveFormTop .6s ease both;
+}
+
+@keyframes moveToBottom{
+	from{}
+	to{transform: translateY(100%);}
+}
+@keyframes moveFormTop{
+	from{}
+	to{transform: translateY(0%);}
+}
+
+
+
+/*向左滑动*/
+
+.pt-page-moveToLeft {
+	animation:moveToLeft .6s ease both ;
+}
+.pt-page-moveFormRight {
+	animation:moveFormRight .6s ease both ;
+}
+
+@keyframes moveToLeft{
+	from{transform: translateX(0%)}
+	to{}
+}
+@keyframes moveFormRight{
+	from{transform: translateX(100%);}
+	to{}
+}
+
+
+/*向右滑动*/
+.pt-page-moveToRight {
+	animation: moveToRight .6s ease both;
+}
+.pt-page-moveFormLeft {
+	animation: moveFormLeft .6s ease both;
+}
+
+@keyframes moveToRight{
+	from{}
+	to{transform: translateX(100%);}
+}
+@keyframes moveFormLeft{
+	from{transform: translateX(0%); }
+	to{}
+}
+
+/*定义最下面图标的动画*/
+
+.moveUp {
+	animation: moveUp 1.2s ease both infinite;
+}
+@keyframes moveUp{
+	0%{ transform: translateY(100%); opacity: 0;}
+	50%{transform: translateY(0%); opacity: 1;}
+	100%{transform: translateY(-100%); opacity: 0;}
+}
+
+/*定义圆的动画*/
+
+.circular {
+	animation: moveUpDown 1.2s ease both;
+}
+@keyframes moveUpDown{
+	0%{ transform: translateY(-60%); opacity: 0.4;}
+	20%{transform: translateY(-20%); opacity: 0.6;}
+	40%{transform: translateY(30%); opacity: 1;}
+	80%{transform: translateY(10%); opacity: 1;}
+	100%{transform: translateY(0%); opacity: 1;}
+}
+
+/*定义纸张的缩放动画*/
+
+.moveScale {
+	animation: moveScale .6s ease both;
+}
+@keyframes moveScale{
+	from{ transform: scale(.5);opacity: 0;}
+	to{}
+}
+
+/*定义旋转动画*/
+.moveRotate {
+	animation: moveRotate .6s ease both;
+}
+@keyframes moveRotate{
+	from{ transform: rotateY(-90deg);}
+	to{}
+}
+
+
+.fontanimation {
+	animation: fontanim .6s ease both;
+}
+@keyframes fontanim{
+	from{transform: translateY(-100%);}
+	to{transform: translateY(0%);}
+}
+.xiaoren {
+	animation: xiaoren .6s ease both;
+}
+@keyframes xiaoren{
+	from{transform: translateX(-100%);}
+	to{transform: translateX(0%);}
+}

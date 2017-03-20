@@ -1,0 +1,108 @@
+* zepto入门介绍：
+	* 什么是zepto.js
+		1、专门为移动端定制的，简化的不能再简化的框架。
+		2、语法及大部分API类似于jquery。
+	* zepto.js的特点
+		1、移动端框架。
+		2、轻量级，大小只有8kb。
+		3、相应，执行快。
+		4、学习难度低，上手快。
+	* zepto.js的学习地址
+		官        网：http://zeptojs.com/
+		下载地址：https://github.com/madrobby/zepto
+
+
+		
+* zepto与js的前世今生
+	* 相同点
+		1、都是优秀的js函数库
+		2、语法，API大部分都一样（zepto是按照jquery的思路来设计的）
+		3、zepto是jquery的子集
+	* 不同点
+		* jquery
+			1、针对的更多是移动端
+			2、体积较重
+			3、API更为完善
+		* zepto
+			1、针对的更多的是移动端
+			2、体积较轻
+			3、API没有jquery功能完善
+
+
+* zepto core
+	* $()
+		* 核心函数
+		--参数
+			1、函数（document.ready）	
+			2、选择器字符串
+			3、html标签字符串
+			4、DOM code
+		* 核心对象
+			* ajax请求
+				1、$.ajax()
+				2、$.get()
+				3、$.post()
+			* 其他API
+				1、$.each()
+				2、$.isArray()
+				3、$.trim()
+	* 与jquery相同的API
+		1、add()
+		2、addClass()
+		3、css()
+	* 与jquery不同的API
+		1、DOM操作
+		2、each方法
+		3、offset()
+		4、width()height()
+		5、事件委托
+		6、隐藏元素
+		7、selected
+
+
+* 事件机制
+	* touch Event
+		1、tap()  点击事件
+		2、singleTap()   单击事件
+		3、doubleTap()	 双击事件
+		4、longTap()     长按事件
+		5、swipe()       滑动事件
+		
+* form
+	1、serialize()	在Ajax post请求中将用作提交的表单元素的值编译成 URL-encoded 字符串。
+	2、serializeArray()		将用作提交的表单元素的值编译成拥有name和value对象组成的数组
+	3、submit()		为 "submit" 事件绑定一个处理函数，或者触发元素上的 "submit" 事件。
+		
+		
+* ajax案例
+	* 注意细节
+		1、使用abort()处理请求。
+		2、注意何时使用
+		3、注意用户体验及应用逻辑
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

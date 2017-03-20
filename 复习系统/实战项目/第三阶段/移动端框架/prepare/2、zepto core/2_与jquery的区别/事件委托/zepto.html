@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>zepto_事件委托</title>
+		<style type="text/css">
+			#box{
+				width: 400px;
+				background: green;
+			}
+			.a{
+				width: 200px;
+				height: 200px;
+				background: #FF0000;
+			}
+			.b{
+				width: 100px;
+				height: 100px;
+				background: #F0f;
+			}
+			.box3 {
+				width: 100px;
+				height: 100px;
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="a">a 的事件委托</div>
+			<br />
+			<br />
+			<br />
+			<div class="b">b的事件委托</div>
+			<br />
+			<br />
+			<br />
+			<div id="a">#a的事件委托</div>
+			<div id="box3">box3</div>
+			<p>Click me!</p>
+		</div>
+		<script src="../../../js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/touch.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//在zepto的官网表示已经废除了live，delegate等。
+//				$('.a').live('click',function(){
+//					alert('a')
+//				})
+				//* 坑！！！！
+				//在zepto中委托的事件先被依次放入数组队列里，然后由自身开始往后查找，期间符合条件的回调函数都会触发，符合条件的元素委托的事件都会执行。
+				/*
+				 1、委托在同一个父元素身上
+				 2、委托的是同一个事件 （click域touchastart 就属于不同事件）
+				 3、委托关联 操作与其关联的元素
+				 4、执行的顺序（委托关联 操作与其关联的元素）
+				*
+				*
+				* */
+				$('#box').on("click",'.b',function(){
+					$('#box3').addClass('box3');
+					alert('b事件');
+					$(this).removeClass('b').addClass('a');
+				});
+
+				$('#box').on("click",'.a',function(){
+//					alert('a事件');
+					$(this).removeClass('a').addClass('b');
+//					console.log(this);
+					alert('a事件');
+				});
+
+				
+
+				$('#box').append($('<p>我是新添加的p标签</p>',{class:'a'}));
+
+
+			})
+		</script>
+	</body>
+</html>
