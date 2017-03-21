@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05_原型模式</title>
+</head>
+<body>
+<!--
+方式五: 原型模式
+问题: 在创建对象不能动态设置属性
+-->
+<script type="text/javascript">
+  function Person() {
+
+  }
+  Person.prototype.name = 'Tom'
+  Person.prototype.age = 12
+  Person.prototype.setName = function (name) {
+    this.name = name
+  }
+
+  var p1 = new Person()
+  p1.name = 'JACK'
+  p1.age = 23
+  console.log(p1)
+  var p2 = new Person()
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_对象</title>
+</head>
+<body>
+<!--
+1. 什么是对象?
+  * 多个数据的集合
+  * 用来保存多个数据的容器
+2. 对象中的数据又是什么?
+  * 属性: 属性名(字符串)和属性值(任意类型)
+  * 方法: 是一个特别的属性(属性值是function)
+3. 如何访问对象内部的数据?
+  * .属性名: 易用, 但有时不能用
+  * ['属性名']: 难写, 但更通用
+
+扩展问题:
+1. 为什么要设计[propertyName]方式访问对象属性的语法?
+2. 什么时候需要用[propertyName]方式访问对象属性?
+-->
+<script type="text/javascript">
+  var p = {
+    name: 'Tom',
+    age: 12,
+    setName: function (name) {
+      this.name = name
+    },
+    setAge: function (age) {
+      this.age = age
+    }
+  }
+  console.log(p.name, p['age'])
+  p.setName('Jack')
+  p['setAge'](24)
+  console.log(p.name, p['age'])
+
+  //添加包含特殊字符的属性: content-type: text/json
+  p['content-type'] = 'text/json'
+  //添加不确定名称的属性
+  var propName = 'xxx'
+  p[propName] = 123
+  console.log(p['content-type'], p[propName])
+
+</script>
+</body>
+</html>

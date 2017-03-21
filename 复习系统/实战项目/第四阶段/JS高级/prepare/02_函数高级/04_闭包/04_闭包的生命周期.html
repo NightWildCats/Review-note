@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>04_闭包的生命周期</title>
+
+</head>
+<body>
+<!--
+1. 产生: 在嵌套内部函数定义执行完时就产生了(不是在调用)
+2. 死亡: 在嵌套的内部函数成为垃圾对象时
+-->
+<script type="text/javascript">
+  function fun1() {
+    //问题2: 此时闭包产生了吗? 产生了
+    var a = 3;
+
+    function fun2() {
+      a++;
+      console.log(a);
+    }
+
+    return fun2;
+  }
+  //问题1: 此时闭包产生了吗?   没有
+  var f = fun1();
+  //问题3: 此时闭包释放了吗?  没有
+  f();
+  f();
+  //问题4: 此时闭包释放回收了吗?   滑有
+  //问题5: 如何让闭包释放回收呢?
+  f = null  //释放了
+</script>
+</body>
+</html>

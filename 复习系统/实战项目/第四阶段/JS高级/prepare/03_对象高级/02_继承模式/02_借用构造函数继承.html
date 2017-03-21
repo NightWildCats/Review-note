@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_借用构造函数继承</title>
+</head>
+<body>
+<!--
+方式二: 借用构造函数继承
+关键: 在子类型构造函数中通用super()调用父类型构建函数
+-->
+<script type="text/javascript">
+  function Person(name, age) {
+    this.name = name
+    this.age = age
+  }
+
+  function Student(name, age, price) {
+    Person.call(this, name, age)   // this.Person(name, age)
+    this.price = price
+  }
+
+  var s = new Student('Tom', 20, 12000)
+  console.log(s.name, s.age, s.price)
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05_上下文环境栈</title>
+</head>
+<body>
+<!--
+上下文环境栈:
+  在js代码执行过程中, JS引擎会用一个栈结构容器来管理所有创建的上下文环境对象
+问题:
+  前后创建了几个上下文环境对象? n + 1
+-->
+<script type="text/javascript">
+
+  var a = 10,
+      fn,
+      bar = function (x) {
+        var b = 5;
+        fn(x + b);
+      };
+  fn = function (y) {
+    var c = 5;
+    console.log(y + c);
+  };
+
+  bar(10);
+  bar(11);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_数据类型</title>
+</head>
+<body>
+<!--
+1. 数据类型的分类
+  * 基本(值)类型 :
+    * Number: 任意数值
+    * String: 任意字符串
+    * Boolean: true/false
+    * undefined: undefined
+    * null: null
+  * 对象(引用)类型 :
+    * Object: 一般的对象类型
+    * Function: 特别的Object类型(可以执行)
+    * Array: 特别的Object类型(通过下标索引来引用内部数据)
+2. 数据类型的判断
+  * typeof : 数值/字符串/布尔值/undefined/function
+  * instanceof : array/object
+  * === : null/undefined
+
+扩展问题:
+1. undefined与null的区别?
+  * undefined代表没有赋值
+  * null代表赋值了, 只是值为null
+2. 什么时候给变量赋值为null呢?
+  * var a = null //a将指向一个对象, 但对象此时还没有确定
+  * a = null //让a指向的对象成为垃圾对象
+-->
+
+<script type="text/javascript">
+
+  //1. 基本(值)类型
+  var a
+  console.log(a, typeof a, a === undefined)
+  console.log(a === typeof a)
+  a = 3
+  console.log(a, typeof a === 'number')
+  a = 'abc'
+  console.log(a, typeof a === 'string')
+  a = true
+  console.log(a, typeof a === 'boolean')
+  a = null
+  console.log(a, typeof a === 'object', a === null)
+
+  //2. 对象(引用)类型
+  var a1 = {
+    a2: [3, 'abc', console.log],
+    a3: function () {
+      console.log('a3()')
+    }
+  }
+  console.log(typeof a1, a1 instanceof Object)
+  console.log(typeof a1.a2, a1.a2 instanceof Array)
+  console.log(typeof a1.a3 === 'function')
+
+  a1.a2[2]('aaaa')
+
+</script>
+
+</body>
+</html>

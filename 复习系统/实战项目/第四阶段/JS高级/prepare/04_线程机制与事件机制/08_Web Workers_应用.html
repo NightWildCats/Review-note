@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>08_Web Workers_应用</title>
+</head>
+<body>
+
+<input type="text" id="number" value="30">
+<button id="btn1">主线程计算fibonacci值</button>
+<button id="btn2">分线程计算fibonacci值</button>
+<!--
+计算得到fibonacci数列中第n个数的值
+在主线程计算: 当位数较大时, 会阻塞主线程, 导致界面卡死
+在分线程计算: 不会阻塞主线程
+-->
+<script type="text/javascript">
+  function fibonacci(n) { // fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)
+    return n<=2 ? 1 : fibonacci(n-1) + fibonacci(n-2) //递归调用
+  }
+  // console.log(fibonacci(5))
+  var input = document.getElementById('number')
+  document.getElementById('btn1').onclick = function () {
+    var number = input.value*1
+    console.log(fibonacci(number))
+  }
+
+  document.getElementById('btn2').onclick = function () {
+    var number = input.value*1
+    // console.log(fibonacci(number))
+    var worker = new Worker('worker2.js')
+    worker.onmessage = function (event) {
+      var result = event.data
+      console.log(result)
+    }
+    worker.postMessage(number)
+  }
+</script>
+</body>
+
+</html>

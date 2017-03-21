@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_原型链继承</title>
+</head>
+<body>
+<!--
+方式一: 原型链继承
+关键: 子类型的原型为父类型的一个实例对象
+-->
+<script type="text/javascript">
+  function Supper() { //父类型
+    this.superProp = 'The super prop'
+  }
+  //原型的数据所有的实例对象都可见
+  Supper.prototype.showSupperProp = function () {
+    console.log(this.superProp)
+  }
+
+  function Sub() { //子类型
+    this.subProp = 'The sub prop'
+  }
+
+  Sub.prototype = new Supper()
+  Sub.prototype.showSubProp = function () {
+    console.log(this.subProp)
+  }
+
+  var sub = new Sub()
+  sub.showSubProp()
+  sub.showSupperProp()
+
+</script>
+</body>
+</html>

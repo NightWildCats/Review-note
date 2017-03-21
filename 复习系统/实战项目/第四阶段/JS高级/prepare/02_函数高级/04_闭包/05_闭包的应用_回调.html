@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05_闭包的应用_回调</title>
+</head>
+<body>
+<button id="btn1">点我点我</button>
+<input type="text" name="username">
+
+<script src="//cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+<script type="text/javascript">
+  /*
+   闭包的应用1 : 回调函数
+   */
+
+  /*
+   需求: 点击按钮提示输入框的值
+   */
+  $(function () {
+    var $input = $('input')
+    $('#btn1').click(function () {
+      alert($input.val())
+    })
+  })
+
+  /*
+   需求: 每隔1s依次输出1到10
+   */
+  for (var i = 1; i <=10; i++) {
+    (function (i) { //立即调用
+      setTimeout(function () { //立即定义
+        console.log(i)
+      }, i*1000) //到达延迟时间对应的时刻才会被回调
+    })(i)
+  }
+
+</script>
+</body>
+</html>

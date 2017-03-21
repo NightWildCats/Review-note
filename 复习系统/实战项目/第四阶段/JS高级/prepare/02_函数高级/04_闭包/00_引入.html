@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>00_引入</title>
+</head>
+<body>
+
+<button>测试1</button>
+<button>测试2</button>
+<button>测试3</button>
+<!--
+需求: 点击某个按钮, 提示"点击的是第n个按钮"
+-->
+<script type="text/javascript">
+  var buttons = document.getElementsByTagName('button') // buttons是一个伪数组(对象)
+  // 循环遍历加监听
+  for (var i = 0,length=buttons.length; i < length; i++) {
+    /*
+    var button = buttons[i]
+    button.onclick = function () {
+      alert('点击的是第'+(i+1)+'个按钮')
+    }
+    */
+    /*
+    var button = buttons[i]
+    //保存对应的下标
+    button.index = i
+    button.onclick = function () {
+      alert('点击的是第'+(this.index+1)+'个按钮')
+    }
+    */
+
+    (function (i) {
+      var button = buttons[i]
+      button.onclick = function () {
+        alert('点击的是第'+(i+1)+'个按钮')
+      }
+    })(i)
+  }
+</script>
+</body>
+
+</html>

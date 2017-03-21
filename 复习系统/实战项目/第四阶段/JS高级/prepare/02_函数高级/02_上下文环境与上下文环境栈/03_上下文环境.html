@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_上下文环境</title>
+</head>
+<body>
+<!--
+上下文环境的理解
+1. 也称执行上下文环境
+2. 本质是一个js对象,由js引擎自动帮我们创建, 但它对我们是透明的, 我们只能直接使用其属性
+3. js引擎在执行全局代码段会先做些"准备工作"
+  * 将Global对象(window)作为全局上下文环境对象
+  * 将一些变量进行初始化赋值
+  * 将它们设置为上下文环境对象(window)的属性
+4. js引擎在执行函数体之前也会先做些"准备工作"
+  * 创建函数上下文环境对象
+  * 将一些变量进行初始化赋值
+  * 将它们设置为上下文环境对象的属性
+
+问题:
+1. 哪些变量会被初始化?
+2. 会被初始化为什么值?
+-->
+<script type="text/javascript">
+
+  console.log(window)
+
+  console.log(a)
+  var a = 2
+
+  function a2() {
+    console.log(b)
+    var b = 3
+  }
+
+  a2()
+
+
+
+</script>
+</body>
+</html>
