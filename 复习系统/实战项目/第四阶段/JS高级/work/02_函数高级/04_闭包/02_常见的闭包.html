@@ -11,6 +11,41 @@
 2. 将函数作为实参传递给另一个函数调用
 -->
 <script type="text/javascript">
+    //1. 将函数作为另一个函数的返回值
+    var a = 2
+    function fn1() {
+//        var a = 2
+
+        var b = 3
+        function fn3() {
+            b--
+            console.log('fn3 a '+a);
+            console.log('fn3 b '+b);
+        }
+        fn3()
+//        fn3()
+//        fn3()
+        function fn2() {
+            a++
+            console.log('fn2 a '+a);
+        }
+
+        console.log('fn1 a '+a);
+        return fn2;
+    }
+    var f = fn1()
+    f() // 3
+      f() // 4
+    //  f() // 5
+
+
+    //2. 将函数作为实参传递给另一个函数调用
+    function showMsgDelay(msg, time) {
+        setTimeout(function () {
+            console.log(msg);
+        }, time)
+    }
+    showMsgDelay('atguigu', 2000)
 </script>
 </body>
 </html>
