@@ -7,9 +7,38 @@
 <body>
 <!--
 方式二: 借用构造函数继承
-关键: 在子类型构造函数中通用super()调用父类型构建函数
+关键: 在子类型构造函数中通用call()/apply()调用父类型构建函数
 -->
 <script type="text/javascript">
+
+  //定义一个父构造
+  function Parent(name,age) {
+    this.name = name
+    this.age = age
+  }
+  //在父构造的原型上定义一个方法
+  Parent.prototype.setName = function (name,age) {
+    console.log(this.name,this.age)
+  }
+
+  //定义一个子构造
+  function Student(name,age,pivce) {
+    //通过call() 或 apply() 等硬绑定的方式进行制定 this
+    Parent.call(this,name,age)
+    this.picve = pivce
+  }
+  // 在子构造原型上定义一个方法
+  Student.prototype.getName = function (name,age,pivce) {
+    console.log(this.name,this.age,this.picve)
+  }
+  
+  //定义子构造的实例
+  var s = new Student('tom',12,15000)
+  s.getName()
+//  s.setName() 不能调用 父对象 Parent 原型上的方法，因为本没有什么关联
+
+  // 总结：通过 call()/apply() 只是通过硬绑定来指定 this ，间接的来实现 一般属性的继承\
+
 </script>
 </body>
 </html>

@@ -17,6 +17,27 @@
   * 不是每个浏览器都支持这个新特性
 -->
 <script type="text/javascript">
+
+  // 创建一个 Worker 的实例
+  var wk = new Worker("worker1.js")
+  //定义传输的数据
+  var str = 'xiaoxiong'
+  //通过 Worker原型上的 postMessage方法向分线程发送消息
+  wk.postMessage(str)
+  //通过 Worker原型上的 onmessage 方法来接受分线程返回的消息
+  wk.onmessage = function (event) {
+    //
+    var  data = event.data
+    console.log(data)
+  }
+
+  // 总结：使用 Worker 可以实现js分线程操作
+  // 但是有比较大的缺点 ；
+  //        不能操作DOM
+  //        不能跨域加载js
+  //         由于是H5最新提出的特性，不是所有的浏览器都支持
+
+
 </script>
 </body>
 </html>

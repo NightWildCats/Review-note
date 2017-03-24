@@ -10,6 +10,39 @@
 问题: 对象没有一个具体的类型, 只是Object
 -->
 <script type="text/javascript">
+//创建一个工厂函数
+//注意点：工厂模式创建一个对象之后，要返回这个对象
+// 创建的新对象 没有具体的类型 全是Object
+  function createParent(name,age) {
+    var obj = {
+      name: name,
+      age: age,
+      setName: function (name) {
+        this.name = name
+      }
+    }
+    return obj
+  }
+var p1 = createPerson('Tom', 12)
+var p2 = createPerson('JAck', 13)
+console.log(p1)
+console.log(p2)
+//执行顺序分析：
+/**
+ * ① 通过调用 IIFE这个函数，查找实参 （查找实参的值以及判断实参的类型）
+ * ② 对传入的实参进行使用
+ * ③ 调用执行
+ * @type {number}
+ */
+var a = 2;
+(function IIFE( f ) {
+  f( window );
+})(function ( global ) {
+  var a = 3;
+  console.log( a ); // 3
+  console.log( global.a ); // 2
+});
+  //执行顺序分析：
 
 </script>
 </body>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JS高级对象_进程线程</title>
+  <link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="../../img/biaoti.gif" />
+  <style type="text/css">
+    table {
+      width: 870px;
+      margin-left: 33px;
+    }
+  </style>
+</head>
+<body>
+<div class="top1">
+  <span class="top_span">章节目录</span><br />
+  <a class="top_span" href="../../学习笔记入口.html">返回主页</a><br />
+  <a class="top_span" href="#1">对象的创建模式</a> <br />
+  <a class="top_span" href="#2">对象的继承</a> <br />
+  <a class="top_span" href="#3">进程-线程</a> <br />
+  <a class="top_span" href="#4">定时器</a> <br />
+  <a class="top_span" href="#5">Worker分线程</a> <br />
+</div>
+<div id="bot1">
+  <!--事对象的创建模式开始-->
+  <fieldset id="1">
+    <legend>对象的创建模式</legend>
+    <table>
+      <tr><th>对象的创建模式</th></tr>
+      <tr style="white-space: pre;"><td>
+        对象的创建模式
+        * Object构造函数模式
+            ```
+            var obj = {};
+            obj.name = 'Tom'
+            obj.setName = function(name){this.name=name}
+            ```
+        * 对象字面量模式
+            ```
+            var obj = {
+            name : 'Tom',
+            setName : function(name){this.name = name}
+            }
+            ```
+        * 构造函数模式
+            ```
+            function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.setName = function(name){this.name=name;};
+            }
+            new Person('tom', 12);
+            ```
+        * 构造函数+原型的组合模式
+            ```
+            function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            }
+            Person.prototype.setName = function(name){this.name=name;};
+            new Person('tom', 12);
+      </td></tr>
+    </table>
+  </fieldset>
+  <!--对象的创建模式结束-->
+  <!--对象的继承开始-->
+  <fieldset id="2">
+    <legend>对象的继承</legend>
+    <table>
+      <tr><th>对象的继承</th></tr>
+      <tr style="white-space: pre;"><td>
+        继承模式
+        * 原型链继承 : 得到方法
+            ```
+            function Parent(){}
+            Parent.prototype.test = function(){};
+            function Child(){}
+            Child.prototype = new Parent();
+            var child = new Child(); //有test()
+            ```
+        * 借用构造函数 : 得到属性
+            ```
+            function Parent(xxx){this.xxx = xxx}
+            Parent.prototype.test = function(){};
+            function Child(xxx,yyy){
+            Parent.call(this, xxx);//借用构造函数   this.Parent(xxx)
+            }
+            var child = new Child('a', 'b');  //child.xxx为'a', 但child没有test()
+            ```
+        * 组合
+            ```
+            function Parent(xxx){this.xxx = xxx}
+            Parent.prototype.test = function(){};
+            function Child(xxx,yyy){
+            Parent.call(this, xxx);//借用构造函数   this.Parent(xxx)
+            }
+            Child.prototype = new Parent(); //得到test()
+            var child = new Child(); //child.xxx为'a', 也有test()
+            ```
+        * new一个对象背后做了些什么?
+        * 创建一个空对象
+        * 给对象设置__proto__, 值为构造函数对象的prototype属性值
+        * 执行构造函数体(给对象添加属性/方法)
+      </td></tr>
+    </table>
+  </fieldset>
+  <!--对象的继承结束-->
+  <!--进程-线程开始-->
+  <fieldset id="3">
+    <legend>进程-线程</legend>
+    <table>
+      <tr><th>进程-线程</th></tr>
+      <tr style="white-space: pre;"><td>
+        * 线程与进程
+        * 进程:
+            * 程序的一次执行, 它占有一片独有的内存空间
+            * 可以通过windows任务管理器查看进程
+        * 线程:
+            * 是进程内的一个独立执行单元
+            * 是程序执行的一个完整流程
+            * 是CPU的最小的调度单元
+        * 关系
+            * 一个进程至少有一个线程(主)
+            * 程序是在某个进程中的某个线程执行的
+        * js线程
+            * js是单线程执行的(回调函数也是在主线程)
+            * H5提出了实现多线程的方案: Web Workers   --->Worker
+            * 只能是主线程更新界面
+        * 事件处理机制(图)
+        * 所有代码分类
+            * 初始化执行代码: 包含绑定dom事件监听, 设置定时器, 发送ajax请求的代码
+            * 回调执行代码: 处理回调逻辑
+        * js引擎执行代码的基本流程: 初始化代码===>回调代码
+        * 模型的2个重要组成部分:
+            * 事件管理模块
+            * 回调队列
+        * 模型的运转流程
+            * 执行初始化代码, 将事件回调函数交给对应模块管理
+            * 当事件发生时, 管理模块会将回调函数及其数据添加到回调列队中
+            * 只有当初始化代码执行完后(可能要一定时间), 才会遍历读取回调队列中的回调函数执行
+      </td></tr>
+    </table>
+  </fieldset>
+  <!--进程-线程结束-->
+  <!--定时器开始-->
+  <fieldset id="4">
+    <legend>定时器</legend>
+    <table>
+      <tr><th>定时器</th></tr>
+      <tr style="white-space: pre;"><td>
+        * 定时器问题:
+            * 定时器并不真正完全定时
+            * 如果在主线程执行了一个长时间的操作, 可能导致延时才处理
+            * 区别setTimeout与setInterval
+                * setInterval的回调函数将尝试每隔100ms执行一次, 只要回调代码执行的时间不超过100ms就能定时
+                * setTimeout的方式: 如果回调代码执行需要xms, 下次回调的时间就会被延迟xms
+
+        //设置一个setInterval定时器
+        document.getElementById('btn1').onclick = function () {
+        console.log("定时器执行了0次"+ Date.now())
+          var count = 0
+          var interId = setInterval(function () {
+          count++
+          console.log("定时器执行了"+ count +"次"+ Date.now())
+          if(count == 10) {
+            clearInterval(interId)
+          }
+          //通过for循环来查看setInterval的运行机制
+          for (var i = 0; i < 100000000; i++) {
+            var j = i
+          }
+          },100)
+        }
+
+        //设置一个setTimeout定时器
+        document.getElementById('btn2').onclick = function () {
+          console.log("定时器执行了0次"+ Date.now())
+          var count = 0
+          var timeId = setTimeout(function fn() {
+          count++
+          console.log("定时器执行了"+ count +"次"+ Date.now())
+          if (count < 10){
+            setTimeout(fn ,100)
+          }
+          //通过for循环来查看setTimeout的运行机制
+          for (var i = 0; i < 100000000; i++) {
+            var j = i
+          }
+          },100)
+        }
+
+        总结:
+            (1)使用 setInterval 定时器的方式时
+                当阻塞的回调函数执行的时间不超过设置的调用的时间时。会以固定的调用的时间来进行下次的调用
+                当阻塞的回调函数执行的时间超过了设置的调用时间时，定时器就会不准
+            (2)使用 SetTimeout 定时器的方式时
+                当阻塞的回调函数延迟了多久，定时器下一次执行就需要多久才能执行
+      </td></tr>
+    </table>
+  </fieldset>
+  <!--定时器结束-->
+  <!--Worker分线程结束-->
+  <fieldset id="5">
+    <legend>Worker分线程</legend>
+    <table>
+      <tr><th>Worker分线程</th></tr>
+      <tr style="white-space: pre;"><td>
+        * H5 Web Workers
+        * 可以让js在分线程执行
+            * Worker
+            ```
+            var worker = new Worker('worker.js');
+            worker.onMessage = function(event){event.data} : 用来接收另一个线程发送过来的数据的回调
+            worker.postMessage(data1) : 向另一个线程发送数据
+            ```
+        * 不足:
+            * worker内代码不能操作DOM更新UI
+            * 不能跨域加载JS
+            * 不是每个浏览器都支持这个新特性
+        实例：
+        通过分线程进行计算 （主页代码）
+          document.getElementById('btn2').onclick = function () {
+            var number = document.getElementById('number').value*1
+            var wk = new Worker('worker2.js')
+            //将数据发送给分线程
+            wk.postMessage(number)
+            //接受分线程返回的数据
+            wk.onmessage = function (event) {
+              //返回的数据 存储在 event.data 中
+              var data = event.data
+              console.log(data)
+            }
+          }
+        JS文件中代码：
+        function fibonacci(count) {
+          return count <= 2 ?  1 :  fibonacci (count - 1) + fibonacci (count - 2)
+        }
+        var  onmessage = function (event) {
+          //接受数据
+          var data = event.data
+          //处理数据
+          var str = fibonacci(data)
+          //返回数据
+          postMessage(str)
+        }
+      </td></tr>
+    </table>
+  </fieldset>
+  <!--Worker分线程结束-->
+</div>
+</body>
+</html>

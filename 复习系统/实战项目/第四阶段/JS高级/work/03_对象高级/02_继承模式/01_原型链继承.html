@@ -11,6 +11,35 @@
 -->
 <script type="text/javascript">
 
+  // 主要步骤： 设置对象的原型为构造函数的实例
+  // 父对象
+  function Parent(name,age) {
+    this.name = name
+    this.age = age
+  }
+  // 父对象原型上的方法
+  Parent.prototype.showInfo = function (name) {
+    console.log('Parent ' + this.name)
+  }
+
+  // 通过创建 Student 的原型对象为 Parent 的实例
+  // 则 Student.prototype 会具有一个 __proto__ 的属性指向 Parent的原型（prototype）
+  Student.prototype = new Parent()
+
+  // 子对象
+  function Student(name, age , picve) {
+    this.picve = picve
+  }
+  Student.prototype.ShowSInfo = function (name) {
+    console.log('Student ' + this.name)
+  }
+
+  // 实例化 Student的实例
+  var s = new Student()
+  s.name = 'Tom'
+  s.showInfo()
+  s.ShowSInfo()
+
 </script>
 </body>
 </html>

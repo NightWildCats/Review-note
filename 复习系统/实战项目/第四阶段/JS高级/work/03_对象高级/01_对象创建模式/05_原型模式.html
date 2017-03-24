@@ -11,6 +11,30 @@
 -->
 <script type="text/javascript">
 
+  //在原型上设置属性和方法
+  //创建一个空构造
+  function Parent() {
+    
+  }
+  Parent.prototype.name = 'Tom'
+  Parent.prototype.age = 12
+  Parent.prototype.setName = function (name,age) {
+    this.name = name
+    this.age = age
+  }
+
+  //测试
+  var p = new Parent()
+  p.name = 'Tom'
+  p.age = "13"
+  console.log(p)
+  p.setName('Bob',21)
+  console.log(p)
+
+  //总结： 在构造的原型上设置方法和属性，但是不能灵活的设置其属性
+
+
+
 </script>
 </body>
 </html>

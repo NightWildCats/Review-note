@@ -17,21 +17,26 @@
   * 内部函数引用了外部函数的数据(变量/函数)
 -->
 <script type="text/javascript">
+
+
+
   function fn1() {
 
-    var a = 3
-    var b = 4
-    function fn3() {
-      console.log('f3 b '+ b)
-    }
-    function fn2() {
-      console.log('f2 a '+ a)
-      fn3()
-      b++
-      fn3()
-    }
-    fn2()
-    fn2()
+      var a = 3
+      var b = 4
+        function fn3() {
+          console.log('f3 b '+ b)
+
+        }
+
+
+        function fn2() {
+          console.log('f2 a '+ a)
+          fn3()
+          b++
+          fn3()
+        }
+      fn2()
   }
   fn1()
 </script>

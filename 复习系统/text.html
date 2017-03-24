@@ -31,53 +31,102 @@
 	</style>
 </head>
 <body>
-<div id="wrap">
-	<ul id="list">
-		<li>
-			<a href="###">
-				<img src="img/1.jpg"/>
-			</a>
-		</li>
-		<li>
-			<a href="###">
-				<img src="img/2.jpg"/>
-			</a>
-		</li>
-		<li>
-			<a href="###">
-				<img src="img/3.jpg"/>
-			</a>
-		</li>
-		<li>
-			<a href="###">
-				<img src="img/4.jpg"/>
-			</a>
-		</li>
-		<li>
-			<a href="###">
-				<img src="img/5.jpg"/>
-			</a>
-		</li>
-	</ul>
-</div>
 </body>
 <script type="text/javascript">
-    //取消事件默认行为
-    document.addEventListener('touchstart',function(ev){
-        ev.preventDefault();
-    });
+//    //取消事件默认行为
+//    document.addEventListener('touchstart',function(ev){
+//        ev.preventDefault();
+//    });
+//
+//
+//    var wrap = document.getElementById('wrap');
+//    var list = document.getElementById('list');
+//    var lis = document.querySelectorAll('#list li');
+//
+//    var css = document.getElementById('css');
+//    var cssText = '#list{width: '+ lis.length +'00%;}';
+//    cssText += '#list li{width: '+ (100/lis.length) +'%;}'
+//
+//    css.innerHTML += cssText;
+//    function foo() {
+//      function bar(a) {
+//        i = 3; // 修改for 循环所属作用域中的i
+//        console.log( a + i ); // 18
+//      }
+//      for (var i=0; i<10; i++) {
+//        bar( i * 2 ); // 糟糕，无限循环了！
+//      }
+//    }
+//    foo();
+//setTimeout( function timeoutHandler() { // <-- 快看，我有名字了！
+//  console.log( "I waited 1 second!" );
+//}, 1000 );
+//
+//
+//foo();
+//
+//var foo = function() {
+//  console.log( 2 );
+//};
+//function foo() {
+//  console.log( 1 );
+//}
+//foo(); // 3
+//function foo() {
+//  console.log( 1 );
+//}
+//var foo = function() {
+//  console.log( 2 );
+//};
+//function foo() {
+//  console.log( 3 );
+//}
+//foo();
+//console.log(foo);
+//var a = true;
+//if (a) {
+//  var b = 3;
+//  foo()
+//  function foo() { console.log("a"); }
+//}
+//else {
+//  foo()
+//  function foo() { console.log("b"); }
+//}
+//console.log(b);
 
+//	function test(i) {
+//	  return i < 1 ? i =1 : i * test(i-1);
+//  }
+//	var s=  test(3)
+//	console.log(s);
 
-    var wrap = document.getElementById('wrap');
-    var list = document.getElementById('list');
-    var lis = document.querySelectorAll('#list li');
+<!--function foo() {-->
+  <!--console.log( a ); // 2-->
+<!--}-->
+<!--function bar() {-->
+  <!--var a = 3;-->
+  <!--foo();-->
+<!--}-->
+<!--var a = 2;-->
+<!--bar();-->
 
-    var css = document.getElementById('css');
-    var cssText = '#list{width: '+ lis.length +'00%;}';
-    cssText += '#list li{width: '+ (100/lis.length) +'%;}'
+	function Parent() {
 
-    css.innerHTML += cssText;
+  }
+	Parent.prototype.age = 0
+	Parent.prototype.steage = function () {
+		console.log('前'+ ++this.age)
+		console.log('后'+ this.age++)
+  }
 
+	var s = new  Parent()
+	s.steage()
+	s.steage()
+	console.log(s)
+	var s1 = new  Parent()
+	console.log(s1)
+  console.log(s1.age)
 
 </script>
 </html>

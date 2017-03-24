@@ -10,6 +10,16 @@
 问题: 如果创建多个对象, 有重复代码
 -->
 <script type="text/javascript">
+  //字面量的方式
+  var p = {}
+  p.name = 'Tom'
+  p.age = 12
+  p.setName = function (name) {
+    this.name = name
+  }
+  console.log(p.name,p.age,p)
+
+  //总结： 可以动态的添加属性和方法，但是创建多个对象时，有重复的代码
 </script>
 </body>
 </html>

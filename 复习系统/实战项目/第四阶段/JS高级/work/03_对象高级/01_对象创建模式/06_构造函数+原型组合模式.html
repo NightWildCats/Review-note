@@ -10,6 +10,25 @@
 -->
 <script type="text/javascript">
 
+  //在构造函数上设置一般属性，在构造函数的原型上设置方法
+  function Parent(name, age) {
+    this.name = name
+    this.age = age
+  }
+  // 在构造函数的原型上创建方法
+  Parent.prototype.setName = function (name, age) {
+    this.name = name
+    this.age = age
+  }
+
+  //测试
+  var p = new Parent('tom',12)
+  console.log(p)
+  p.setName('bob',21)
+  console.log(p)
+
+  // 总结： 在构造函数上设置一般属性，在构造函数的原型上设置方法
+
 </script>
 </body>
 </html>

@@ -11,7 +11,26 @@
 问题: 数据没有复用
 -->
 <script type="text/javascript">
+  //自定义构造函数
+  function Parent(name,age) {
+    this.name = name
+    this.age = age
+    this.setName = function (name, age) {
+      this.name = name
+      this.age = age
+      this.setName = function (name,age) {
+        this.name = name
+        this.age = age
+      }
+    }
+  }
+  var p = new Parent('Tom',12)
+  p.name = 'Tom1'
+  console.log(p)
+  var p2 = new Parent("Bob",21)
+  console.log(p2)
 
+  //总结：虽然满足了‘属性’的复用，但是对于‘方法’会在没创建一个对象会但是方法被复制一份
 </script>
 </body>
 </html>
