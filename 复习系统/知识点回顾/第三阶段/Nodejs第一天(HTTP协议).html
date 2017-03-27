@@ -26,7 +26,7 @@
     <table>
       <tr><th>Nodejs基本知识</th></tr>
       <tr style="white-space: pre;"><td>
-
+        暂时略过
       </td></tr>
     </table>
   </fieldset>
@@ -37,7 +37,41 @@
     <table>
       <tr><th>HTTP协议</th></tr>
       <tr style="white-space: pre;"><td>
+        引入http包文件的方式：var http = requier('http');
+        设置一个自定义服务器：
+          http.createServer(function(req,res){
+            回调函数:回调函数表示有两个参数（请求信息。返回信息），当服务器创建之后触发
+              主要的逻辑体都在服务器回调函数中执行
+            req:表示请求的内容（方式）
+            res:表示返回的内容（方式）
 
+            req.url:表示请求的URL地址
+            res.write:表示返回的信息，但不断开
+            res。end:表示返回的信息,之后断开连接
+            输出方式：
+              console.log()/console.info():正常输出流
+              console.warn()/console.error():异常输出流
+
+            关闭服务器：
+              var 服务器名.close() 一般用于在软件维护更新时
+
+            设置请求的方式：
+              主要有get/post 方式
+              通过(一次性) res.writeHead('200','OK',{
+                    'Content-Type':'text/html;charset=utf-8'
+                  });
+              （可以更改的）res.statusCode = 404;单独设置
+              说明：这些端口只是一个示例，可以根据实际情况更改
+
+            通过req 请求的一些方法：
+              可以通过 var url = requier('url'); 来充分的解析获取的URL的信息
+              var objurl = url.parse('url地址',true); 返回一个 objurl对象（其实质是对象）
+              objurl.query对象中存储着get方式提交的查询字符串的属性信息
+
+          }).listen(3000,function(){
+            3000:表示申请的端口
+            回调函数:表示端口申请成功之后的回到，可以用于端口设置成功后信息的输出
+          });
       </td></tr>
     </table>
   </fieldset>

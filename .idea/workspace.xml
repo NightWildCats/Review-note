@@ -20,13 +20,27 @@
     <favorites_list name="note" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Nodejs第一天(HTTP协议).html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/复习系统/知识点回顾/第三阶段/Nodejs第一天(HTTP协议).html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="68" column="50" lean-forward="true" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
+              <folding>
+                <element signature="n#style#0;n#tr#1;n#table#0;n#fieldset#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#1;n#table#0;n#fieldset#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -42,18 +56,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/02_函数高级/02_上下文环境与上下文环境栈/01_上下文-this.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/02_函数高级/03_作用域与作用域链/02_作用域与上下文环境.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/02_函数高级/03_作用域与作用域链/03_作用域链.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/02_函数高级/03_作用域与作用域链/04_作用域_面试题.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/02_函数高级/03_作用域与作用域链/02_作用域与上下文环境.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/02_函数高级/04_闭包/01_理解闭包.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/02_函数高级/04_闭包/02_常见的闭包.html" />
-        <option value="F:/H5尚硅谷学习/第四阶段课件/第二天/演示文件/02_常见的闭包.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/02_函数高级/04_闭包/04_闭包的生命周期.html" />
-        <option value="F:/H5尚硅谷学习/课堂文件/课件/JS Advance高级/code/JSAdvance/笔记/02_函数高级.md" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/02_函数高级/02_上下文环境与上下文环境栈/01_上下文-this.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/02_函数高级/02_上下文环境与上下文环境栈/02_变量提升与函数提升.html" />
         <option value="$PROJECT_DIR$/复习系统/知识点回顾/第四阶段/JS高级上下文_作用链_闭包.html" />
         <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/02_函数高级/02_上下文环境与上下文环境栈/03_上下文环境.html" />
         <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/02_函数高级/02_上下文环境与上下文环境栈/04_上下文环境2.html" />
@@ -75,14 +77,11 @@
         <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/04_线程机制与事件机制/06_再看setTimeout与setInterval.html" />
         <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/04_线程机制与事件机制/worker1.js" />
         <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/03_对象高级/02_继承模式/02_借用构造函数继承.html" />
-        <option value="$PROJECT_DIR$/复习系统/text.html" />
         <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/04_线程机制与事件机制/07_Web Workers_测试.html" />
         <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/04_线程机制与事件机制/08_Web Workers_应用.html" />
         <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/04_线程机制与事件机制/worker2.js" />
-        <option value="$PROJECT_DIR$/复习系统/学习笔记入口.html" />
         <option value="$PROJECT_DIR$/复习系统/知识点回顾/第四阶段/JS高级对象_进程线程.html" />
         <option value="$PROJECT_DIR$/复习系统/测试.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/hello.html" />
         <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/1.helloworld.js" />
         <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/1.helloworld_web.js" />
         <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/2.tools/2.console.js" />
@@ -91,8 +90,23 @@
         <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/2.tools/3.timer.js" />
         <option value="$PROJECT_DIR$/复习系统/知识点回顾/第三阶段/Nodejs第一天（HTTP协议）.html" />
         <option value="$PROJECT_DIR$/复习系统/知识点回顾/笔记记录模板.html" />
-        <option value="$PROJECT_DIR$/复习系统/知识点回顾/第三阶段/Nodejs第一天(HTTP协议).html" />
         <option value="$PROJECT_DIR$/复习系统/知识点回顾/第三阶段/test.md" />
+        <option value="$PROJECT_DIR$/复习系统/text.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/hello.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/实现通过创建一个服务器访问一个网页的地址.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/2.server_input/server.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/3.server_output/1.server_write_end.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/3.server_output/2.server_headers.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/4.route/router.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/5.form/form.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/5.form/server_form.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/计算器.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/计算器二.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/sumNumber.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/计算器-肖雄.html" />
+        <option value="$PROJECT_DIR$/复习系统/学习笔记入口.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/5.form/计算器-肖雄.html" />
+        <option value="$PROJECT_DIR$/复习系统/知识点回顾/第三阶段/Nodejs第一天(HTTP协议).html" />
       </list>
     </option>
   </component>
@@ -178,6 +192,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -334,7 +350,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="2.tools" />
+              <option name="myItemId" value="3.httpServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="5.form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -364,37 +384,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1.prepared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="复习系统" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="实战项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="第三阶段" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1.prepared" />
+              <option name="myItemId" value="2.work" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -402,10 +392,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="复习系统" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第三阶段" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nodejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.prepared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -421,31 +439,31 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\测试练习\H5&amp;CSS3" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\3.httpServer\5.form" />
       <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs" />
       <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\测试练习\MeiMei-1\js" />
       <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\测试练习" />
       <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第四阶段\JS高级" />
-      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\移动端框架" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\测试练习\H5&amp;CSS3" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.3.timer.js">
-    <configuration default="false" name="1.helloworld_web.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="1.helloworld_web.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld">
+  <component name="RunManager" selected="Node.js.sumNumber.js (1)">
+    <configuration default="false" name="2.server_headers.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="2.server_headers.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/3.server_output">
       <method />
     </configuration>
-    <configuration default="false" name="2.console.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="2.console.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/2.tools">
+    <configuration default="false" name="router.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="router.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/4.route">
       <method />
     </configuration>
-    <configuration default="false" name="3.timer.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="3.timer.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/2.tools">
+    <configuration default="false" name="server_form.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="server_form.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/5.form">
       <method />
     </configuration>
-    <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/1.server_operation">
+    <configuration default="false" name="sumNumber.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="sumNumber.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form">
       <method />
     </configuration>
-    <configuration default="false" name="1.global.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="1.global.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/2.tools">
+    <configuration default="false" name="sumNumber.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="sumNumber.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/5.form">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -508,19 +526,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.1.helloworld_web.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.2.console.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.3.timer.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.server.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.1.global.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.2.server_headers.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.router.js (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.server_form.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.sumNumber.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.sumNumber.js (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.3.timer.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.1.global.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.server.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.2.console.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.1.helloworld_web.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.sumNumber.js (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.sumNumber.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.server_form.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.router.js (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.2.server_headers.js" />
       </list>
     </recent_temporary>
   </component>
@@ -548,12 +566,13 @@
       <workItem from="1490181334394" duration="6425000" />
       <workItem from="1490232588198" duration="12850000" />
       <workItem from="1490315064989" duration="26938000" />
-      <workItem from="1490401461212" duration="14461000" />
+      <workItem from="1490401461212" duration="19907000" />
+      <workItem from="1490574058132" duration="24599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177756000" />
+    <option name="totallyTimeSpent" value="207801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -566,17 +585,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2284041" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29652998" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25078863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -617,117 +636,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/04_线程机制与事件机制/worker2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/03_对象高级/02_继承模式/01_原型链继承.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/03_对象高级/02_继承模式/02_借用构造函数继承.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/03_对象高级/02_继承模式/03_组合继承.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/04_线程机制与事件机制/04_JS是单线程的.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/H5尚硅谷学习/第四阶段课件/第三天/演示文件/06_再看setTimeout与setInterval.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/04_线程机制与事件机制/06_再看setTimeout与setInterval.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/04_线程机制与事件机制/07_Web Workers_测试.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/prepare/04_线程机制与事件机制/worker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/text.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/03_对象高级/02_继承模式/02_借用构造函数继承.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/04_线程机制与事件机制/07_Web Workers_测试.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/04_线程机制与事件机制/worker1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/学习笔记入口.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="125" column="20" lean-forward="true" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/H5尚硅谷学习/课堂文件/课件/JS Advance高级/code/JSAdvance/笔记/03_对象高级.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1536">
-          <caret line="64" column="23" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="64" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/H5尚硅谷学习/课堂文件/课件/JS Advance高级/code/JSAdvance/笔记/04_线程机制与事件机制.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-648">
@@ -771,19 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/04_线程机制与事件机制/06_再看setTimeout与setInterval.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="48" column="30" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/5.fs/3.webSite/css/css.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,15 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="70" column="4" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/hello.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,14 +711,126 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
           <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/2.server_input/server.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="-30">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/server_form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/4.buffer/new_buffer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/1.helloWorld/2. webSite_helloworld_2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/2.tools/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/2.tools/console.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/1.helloworld.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/1.helloworld_web.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/2.tools/timer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/1.server_operation/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/课堂练习/第二阶段/WebSocket/聊天案例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4484">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/课堂练习/第二阶段/WebSocket/聊天案例-肖雄.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="186" column="35" lean-forward="true" selection-start-line="186" selection-start-column="35" selection-end-line="186" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/2.tools/1.global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/知识点回顾/笔记记录模板.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="62" column="22" lean-forward="false" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/2.tools/3.timer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/知识点回顾/第三阶段/test.md" />
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/work/04_线程机制与事件机制/06_再看setTimeout与setInterval.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1076">
+          <caret line="48" column="30" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/text.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -839,198 +839,190 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/2.server_input/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/实现通过创建一个服务器访问一个网页的地址.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/3.server_output/2.server_headers.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/hello.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="168">
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/3.server_output/1.server_write_end.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/2.server_input/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/4.route/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="56" column="3" lean-forward="true" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/4.route/router.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/5.form/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/计算器二.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-864">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/server_form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/4.buffer/new_buffer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="n#style#0;n#table#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#table#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#td#2;n#tr#0;n#table#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/1.helloWorld/2. webSite_helloworld_2.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/5.form/server_form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/2.tools/global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/2.tools/console.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/1.helloworld.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/3.server_output/2.server_headers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="300">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/1.helloWorld/1.helloworld_web.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/计算器.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/2.tools/timer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-264">
+          <caret line="112" column="29" lean-forward="true" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/1.server_operation/server.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/计算器-肖雄.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="-1017">
+          <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/课堂练习/第二阶段/WebSocket/聊天案例.html">
+    <entry file="file://$PROJECT_DIR$/复习系统/学习笔记入口.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4484">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/课堂练习/第二阶段/WebSocket/聊天案例-肖雄.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="186" column="35" lean-forward="true" selection-start-line="186" selection-start-column="35" selection-end-line="186" selection-end-column="35" />
+        <state relative-caret-position="362">
+          <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/2.tools/2.console.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
+        <state relative-caret-position="264">
           <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/2.tools/1.global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/知识点回顾/笔记记录模板.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="62" column="22" lean-forward="false" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#tr#1;n#table#0;n#fieldset#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#tr#1;n#table#0;n#fieldset#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#tr#1;n#table#0;n#fieldset#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#tr#1;n#table#0;n#fieldset#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#tr#1;n#table#0;n#fieldset#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/2.tools/3.timer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/1.server_operation/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="336">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/3.server_output/2.server_headers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/1.prepared/3.httpServer/5.form/sumNumber.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#0#53#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/5.form/计算器-肖雄.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-177">
+          <caret line="78" column="24" lean-forward="true" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/3.httpServer/5.form/sumNumber.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-274">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/复习系统/知识点回顾/第三阶段/Nodejs第一天(HTTP协议).html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        <state relative-caret-position="476">
+          <caret line="68" column="50" lean-forward="true" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#tr#1;n#table#0;n#fieldset#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#1;n#table#0;n#fieldset#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/知识点回顾/第三阶段/test.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
