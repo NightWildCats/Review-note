@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nodejs文件读写</title>
+  <link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="../../img/biaoti.gif" />
+  <style type="text/css">
+    table {
+      width: 870px;
+      margin-left: 33px;
+    }
+  </style>
+</head>
+<body>
+<div class="top1">
+  <span class="top_span">章节目录</span><br />
+  <a class="top_span" href="../../学习笔记入口.html">返回主页</a><br />
+  <a class="top_span" href="#1">文件读取</a> <br />
+  <a class="top_span" href="#2">文件写入</a> <br />
+  <a class="top_span" href="#3">模块(导出/引入)管理</a> <br />
+  <a class="top_span" href="#4">npm包管理</a> <br />
+</div>
+<div id="bot1">
+  <!--文件读取开始-->
+  <fieldset id="1">
+    <legend>文件读取</legend>
+    <table>
+      <tr><th>文件读取</th></tr>
+      <tr style="white-space: pre;"><td>
+        文件读取：
+          一.异步读文件
+            //创建一个fs文件包
+            var fs = require('fs');
+            //设置路径
+            var path = './content.txt';
+            // 异步读取文件 ，设置读取状态的回调函数
+            fs.readFile(path,function (err,data) {
+                //参数： ‘错误优先’ 原则
+                // err 表示错误信息提示
+                // data 表示返回的信息(在计算机中存储的是二进制的信息)
+                if (err){
+                    // err 错误信息提示
+                    console.error(err);
+                } else {
+                    // data.toString()将二进制的数据转化成 能够读懂的字符串形式
+                    console.log(data.toString());
+                }
+            });
+          二.同步读取文件
+            // 创建一个读取文件的对象
+            var fs = require('fs');
+            // 读取文件的路径
+            // var path = './content1.txt';
+            //使用 try{ } catch(err){ } 来进行错误处理
+            // 说明：预处理代码 在 try 中执行；当代码出现报错的时候，会跳入 catch 块中执行(一般用于输出错误的处理逻辑)
+            try {
+                //同步读取文件
+                //fs.readFileSync(文件路径) 这个会返回获取到的文件信息（在计算机中以buffer的形式存在）
+                var data = fs.readFileSync(path);
+                //通过 toString() 方法转换成字符串
+                console.log(data.toString());
+            } catch(err) {
+                //参数err 表示接收到的错误信息 但不会影响后面的代码执行
+                console.error(err);
+                //可以进行错误逻辑的处理
+                if (err) {
+                console.log('咦 你这个错误好牛逼！');
+                }
+            }
+        同步与异步的区别：
+            * 同步：在文件读取时，使用同步的方式，会使用主线程进行依次读取，
+            * 			当文件读取的这件事情执行完成之后再进行后续代码执行
+            * 异步：在文件读取时，使用异步的方式，会在开一个分线程进行文件的读取操作，主线程继续执行后续代码。
+            * 			当分线程读取完文件之后，会放入事件队列，等待主线程通过事件轮询，执行在等待队列中的事件
+            * 错误处理：
+            * 	异步：通过'错误优先'的原则，在读取回调中 对读取文件错误进行处理
+            * 	同步：通过 try{ 预处理代码 } catch(err) { 错误处理 } 来进行错误的处理
+      </td></tr>
+    </table>
+  </fieldset>
+  <!--文件读取结束-->
+  <!--文件写入开始-->
+  <fieldset id="2">
+    <legend>文件写入</legend>
+    <table>
+      <tr><th>文件写入</th></tr>
+      <tr style="white-space: pre;"><td>
+        文件写入
+          一. 异步文件写入
+            //引入一个fs的包文件
+            var fs = require('fs');
+            //设置创建文件的路径（地址）
+            var path = './login.txt';
+            //在文件中插入的信息（可以通过一个变量把信息传递进来）
+            var data = '悟空你好\n';
+            fs.writeFile(path,data,{flag:'a'},function (err) {
+                异步创建文件的参数：
+                 (1)path : 文件存放的路径
+                 (2)data : 插入文件的信息
+                 (3){flag:'a'} : 信息插入方式（状态）
+                      r ：以读取模式打开文件。
+                      r+ ：以读写模式打开文件。
+                      w ：以写入模式打开文件，如果文件不存在则创建。
+                      w+ ：以读写模式打开文件，如果文件不存在则创建。
+                      a ：以追加模式打开文件，如果文件不存在则创建。
+                      a+ ：以读取追加模式打开文件，如果文件不存在则创建。
+                      flag:w 默认
+                 (4)回调函数：遵循‘错误优先’原则
+              if (err) {
+                  // 错误信息处理
+                  console.error(err);
+              } else {
+                  // 写入信息成功处理
+                  console.log('OK');
+              }
+            });
+          二.同步读取文件
+            //引入一个fs包
+            var  fs = require('fs');
+            //设置创建文件的路径（位置）
+            var path = './login2.txt';
+            //设置插入的信息（可以通过变量动态插入信息）
+            var data = '石破天惊\n';
+            //需要使用 try {} catch(err) {} 来进行处理
+            try {
+            fs.writeFileSync(path,data,{flag:'a'});
+                //参数说明：
+                /*
+                * path : 创建文件的路径
+                * data ：插入文件的信息
+                * {flag:'a'} : 插入文件的方式（状态）
+                * 		具体方式参考上面的异步写入
+                */
+                //文件写入争取处理过程
+                console.log('OK');
+            } catch(err) {
+                //文件失败处理过程
+                console.log('ERROR');
+            }
+          总结：基本的区别与读文件相似，主要集中写入文件的错误处理和是否有事件队列机制
+      </td></tr>
+    </table>
+  </fieldset>
+  <!--文件写入结束-->
+  <!--模块(导出/引入)管理开始-->
+  <fieldset id="3">
+    <legend>模块(导出/引入)管理</legend>
+    <table>
+      <tr><th>模块(导出/引入)管理</th></tr>
+      <tr style="white-space: pre;"><td>
+        模块：一个js文件就是一个模块
+        包：广义上一个模块也可以看成一个包；狭义上，一个js文件夹可以看成一个包（包含js文件和JSON文件）
+
+        暴露模块属性和方法的方式：
+        (1).通过 exports 暴露出来的的是把需要暴露的属性和方法 全部封装在一个对象，然后暴露的属性和方法作为对象属性在
+                  调用的页面中显示对象的 ‘键值对’;
+
+        (2).通过 module.exports={}或[]或function 的方式 进行暴露，不会全部封装在一个对象中，
+            但是 以 module.exports.obj =obj 等方式进行暴露会变成 exports的方式
+
+        (3).引入暴露的模块 ：var module = require('./2.callModule.js');
+            说明：require('./2.callModule.js') 括号内的标示引入的模块文件
+
+        总结：通过对比发现，还是优先使用 module.exports 方式吧，被扯把么多么蛾子了
+             exports 与 module.exports 的区别
+             exports 必须使用名值对的方式向外暴露数据；但是书写方便
+             module.exports 可以使用名值对的形式，也可以直接暴露一个对象；书写繁琐
+      </td></tr>
+    </table>
+  </fieldset>
+  <!--模块(导出/引入)管理结束-->
+  <!--npm包管理开始-->
+  <fieldset id="4">
+    <legend>npm包管理</legend>
+    <table>
+      <tr><th>npm包管理</th></tr>
+      <tr style="white-space: pre;"><td>
+        npm包管理：通过使用require('包文件名')引入外部的包文件
+      </td></tr>
+    </table>
+  </fieldset>
+  <!--npm包管理结束-->
+
+</div>
+</body>
+</html>

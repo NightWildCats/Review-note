@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>计算器-肖雄</title>
+</head>
+<style type="text/css">
+  html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #868888;
+  }
+
+  .wrap {
+    background-color: #bcc0c4;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #000;
+    margin: 30px auto 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .inner {
+    width: 180px;
+    height: 180px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .warp-span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 3px;
+    border-radius: 5px;
+  }
+
+  .warp-span:hover {
+    background-color: #7ba1ff;
+    color: white;
+    border: 1px solid #7ba1ff;
+  }
+
+  .form_div {
+    padding: 0 10px 0;
+    width: 180px;
+    height: 180px;
+    float: left;
+    border: 1px solid transparent;
+  }
+
+  #stratNum, #endNum {
+    width: 130px;
+    height: 28px;
+    margin: 13px 0;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 5px;
+  }
+
+  #selceted {
+    width: 50px;
+    height: 28px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    outline: none;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    height: 28px;
+    border-radius: 6px;
+  }
+
+  #spanT {
+    display: inline-block;
+    width: 40px;
+  }
+  #span_div {
+    background-color: #bcc0c4;
+    width: 500px;
+    height: 60px;
+    border: 1px solid #000;
+    margin: 0px auto 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+</style>
+<body>
+<!--最外层区域-->
+<div class="wrap">
+  <!--按钮区域-->
+  <div class="inner">
+    <span class="warp-span">1</span>
+    <span class="warp-span">2</span>
+    <span class="warp-span">3</span>
+    <span class="warp-span">4</span>
+    <span class="warp-span">5</span>
+    <span class="warp-span">6</span>
+    <span class="warp-span">7</span>
+    <span class="warp-span">8</span>
+    <span class="warp-span">9</span>
+  </div>
+  <!--表单区域-->
+  <div class="form_div">
+    <form action="http://127.0.0.1:3001/" method="get"> <!--http://127.0.0.1:3000/-->
+      <label for="stratNum">One:</label>
+      <input type="text" id="stratNum" name="stratNum"><br>
+      <label for="selceted">运算符:</label>
+      <select id="selceted" name="selceted">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select><br>
+      <label for="endNum">Two:</label>
+      <input type="text" id="endNum" name="endNum"><br>
+      <input type="submit" value="提交">
+    </form>
+  </div>
+</div>
+<div id="span_div"><label for="">计算结果：</label><span id='spanT'></span></div>
+</body>
+<script type="text/javascript">
+  //自调函数
+  (function (w) {
+    var total = '';
+    var spans = document.getElementsByTagName('span');
+    var stratNum = document.getElementById('stratNum');
+    var endNum = document.getElementById('endNum');
+    var selceted = document.getElementById('selceted');
+    var spanT = document.getElementById('spanT');
+    //取值
+    for (var i = 0; i < spans.length; i++) {
+      (function (i) {
+        var span = spans[i];
+        span.addEventListener('click', function () {
+          total += span.innerHTML;
+        });
+      })(i);
+    }
+
+    //通过判断把值给定指定项
+    stratNum.onclick = function () {
+      stratNum.value = total;
+      if (!stratNum.onfocus) {
+        total = '';
+      }
+    };
+    endNum.onclick = function () {
+      endNum.value = total;
+      if (!endNum.onfocus) {
+        total = '';
+      }
+    };
+
+    var sum = '';
+    //定时调用计算
+    setInterval(function () {
+      switch (selceted.value) {
+        case '+' :
+          sum = (stratNum.value * 1) + (endNum.value * 1);
+          break;
+        case '-':
+          sum = (stratNum.value * 1) - (endNum.value * 1);
+          break;
+        case '*':
+          sum = (stratNum.value * 1) * (endNum.value * 1);
+          break;
+        case '/':
+          sum = (stratNum.value * 1) / (endNum.value * 1);
+          break;
+      }
+      //当sum = 0 是 sum就为空
+      if(sum ===0) {
+        sum = '';
+      }
+      //把计算的值 赋值给 spanT 元素
+      spanT.innerHTML = sum;
+    }, 500);
+
+  })(window);
+</script>
+</html>

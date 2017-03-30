@@ -31,6 +31,7 @@
 	</style>
 </head>
 <body>
+<button type="button" onclick="console.log(this.type,this.innerText)">测 试</button>
 </body>
 <script type="text/javascript">
 //    //取消事件默认行为
@@ -101,32 +102,32 @@
 //	var s=  test(3)
 //	console.log(s);
 
-<!--function foo() {-->
-  <!--console.log( a ); // 2-->
-<!--}-->
-<!--function bar() {-->
-  <!--var a = 3;-->
-  <!--foo();-->
-<!--}-->
-<!--var a = 2;-->
-<!--bar();-->
-
-	function Parent() {
-
-  }
-	Parent.prototype.age = 0
-	Parent.prototype.steage = function () {
-		console.log('前'+ ++this.age)
-		console.log('后'+ this.age++)
-  }
-
-	var s = new  Parent()
-	s.steage()
-	s.steage()
-	console.log(s)
-	var s1 = new  Parent()
-	console.log(s1)
-  console.log(s1.age)
+//<!--function foo() {-->
+//  <!--console.log( a ); // 2-->
+//<!--}-->
+//<!--function bar() {-->
+//  <!--var a = 3;-->
+//  <!--foo();-->
+//<!--}-->
+//<!--var a = 2;-->
+//<!--bar();-->
+//
+//	function Parent() {
+//
+//  }
+//	Parent.prototype.age = 0
+//	Parent.prototype.steage = function () {
+//		console.log('前'+ ++this.age)
+//		console.log('后'+ this.age++)
+//  }
+//
+//	var s = new  Parent()
+//	s.steage()
+//	s.steage()
+//	console.log(s)
+//	var s1 = new  Parent()
+//	console.log(s1)
+//  console.log(s1.age)
 
 </script>
 </html>

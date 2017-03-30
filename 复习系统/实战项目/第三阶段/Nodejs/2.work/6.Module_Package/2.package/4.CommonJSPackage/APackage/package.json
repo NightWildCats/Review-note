@@ -1,0 +1,39 @@
+{
+  "name": "myPackage",
+  "description": "Sample package for CommonJS. This package demonstrates the required elements of a CommonJS package.",
+  "version": "0.7.0",
+  "keywords": [
+    "package",
+    "example"
+  ],
+  "main":"interFace.js",
+  "maintainers": [
+    {
+      "name": "Bai",
+      "email": "bai@atguigu.com"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Bai",
+      "web": "http://www.atguigu.com/"
+    }
+  ],
+  "bugs": {
+    "mail": "dev@atguigu.com",
+    "web": "http://www.atguigu.com/bugs"
+  },
+  "licenses": [
+    {
+      "type": "GPLv2",
+      "url": "http://www.atguigu.org/licenses/gpl.html"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "http://github.com/bai/mypackage.git"
+    }
+  ],
+  "dependencies": {}
+}

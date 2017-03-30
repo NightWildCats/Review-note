@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nodejs模块管理与Mongod数据库</title>
+  <link rel="stylesheet" type="text/css" href="../../css/biji.css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="../../img/biaoti.gif" />
+  <style type="text/css">
+    table {
+      width: 870px;
+      margin-left: 33px;
+    }
+  </style>
+</head>
+<body>
+<div class="top1">
+  <span class="top_span">章节目录</span><br />
+  <a class="top_span" href="../../学习笔记入口.html">返回主页</a><br />
+  <a class="top_span" href="#1">模块管理</a> <br />
+  <a class="top_span" href="#2">Mongod数据库</a> <br />
+</div>
+<div id="bot1">
+  <!--模块管理开始-->
+  <fieldset id="1">
+    <legend>模块管理</legend>
+    <table>
+      <tr><th>模块管理</th></tr>
+      <tr style="white-space: pre;"><td>
+        模块管理：
+          一.暴露与引入
+            痛过 exports或者module.exports 进行暴露
+            在调用模块,痛过 requier() 进行引入
+
+          二.引入模块的类型
+            核心模块（原生模块）：系统自带，出厂就存在
+            文件模块：非官方出版；分为 :引入普通的自定义模块 与 包模块
+            加载规则：
+                    (1)核心模块会事先加载缓存区，在使用的时候直接通过 require('包名,如http\fs\net\url')等
+                    (2)文件模块，优先在缓存区去寻找对应的模块，如果没有则去磁盘中读取对应的模块，然后把模块放入
+                        缓存区,下次调用的时候也是优先去缓存区查找;
+          三.npm 管理
+            (1)本地管理
+                ① 在需要安装的目录下的地址栏，输入cmd 进行 DOS命令安装（也可以把相关的包拷贝到指定目录下）
+                DOS命令安装方式：npm install moment  (moment是需要下载的包名)
+                ② 卸载包： npm uninstall PACKAGE_NAME （PACKAGE_NAME是需要卸载的包名）
+
+            (2)全局管理
+                ① 在需要安装的位置，建立好文件目录（文件夹位置示例：E:\Program Files\nodejs\node_global）
+                ② 执行这条命令： npm config set prefix "这里是文件需要下载到的文件目录" 就可以把 npm下载到当前目录
+                ③ 配置环境变量（npm文件所在的目录的地址）
+                ④ 卸载包：npm uninstall -g PACKAGE_NAME （PACKAGE_NAME是需要卸载的包名）
+
+            (3)pm2是全局下载的一个包
+                ① pm2:PM2是node进程管理工具，可以完成：性能监控、自动重启、负载均衡等任务
+                ② 安装：npm install -g pm2 （记住要设置其下载的目录，不然就会搞到系统盘）
+                ③ 进程的启动：pm2 start app.js （app.js是需要启动的进程文件）
+                ④ 查看进程运行状态：pm2 list
+                ⑤ 重新启动：pm2 restart app.js （app.js是需要启动的进程文件）
+                ⑥ 停止进程：pm2 stop APP.js  （app.js是需要启动的进程文件,关键字all 表示关闭所有的进程）
+                ⑦ 删除进程：pm2 delete app.js （app.js是需要删除管理的进程文件,关键字all 表示关闭所有的进程）
+                ⑧ 自动重启：pm2 start app.js --watch （app.js是需要自动重启的进程文件）
+      </td></tr>
+    </table>
+  </fieldset>
+  <!--模块管理结束-->
+  <!--Mongod数据库开始-->
+  <fieldset id="2">
+    <legend>Mongodb数据库</legend>
+    <table>
+      <tr><th>Mongodb数据库</th></tr>
+      <tr style="white-space: pre;"><td>
+        Mongodb数据库：
+          一.Mongodb数据库简介
+            ① mongodb是一个非关系型数据库，通过js进行操作，数据存储的是JSON数据(BSON跟JSON类似,
+              只是对了系统内置的Object_id)
+            ② 数据库高并发读写的需求，数据库并发负载非常高，往往每秒数万次读写请求，磁盘IO瓶颈
+            ③ 海量数据的高效率访问的需求，对数亿甚至数十亿的记录高效查询
+            ④ 高可扩展性和高可用性的需求，7*24小时高可用，故障恢复，易扩展
+
+          二.Mongodb的特点：
+            ① 非关系型的、分布式的、开源的、水平可扩展的
+          总结：mongodb属于一种非关系型数据库，所以在表设计和数据的严谨性上有所欠缺，但是在数据的高并
+              发上要优于关系型数据库，其中非关系型数据库没有“事务”这个概念，所以导致只能存储一些数量大且低价值的信息
+
+          三.Mongodb数据的结构：
+              ① database(数据库)->colletion(集合/表)->document(BSON/JSON)
+
+          四.Mongodb服务的搭建
+            ① 通过命令创建一个mongodb 服务器： Mongod --dbpath "D:\MongoDB\storage\db"
+              (地址为mongodb的提供服务的目录)
+              说明: (1)可以把 Mongod --dbpath "D:\MongoDB\storage\db" 封装在一个.cmd文件中,可以快速的启动服务器
+                    (2)也可以一下命令，把启动mongodb服务器的命令设置为window的服务进行管理；
+                        需提前在指定目录建立文件 D:\MongoDB\storage\log\logs.txt
+                        然后执行命令如下:
+                        mongod --logpath "D:\MongoDB\storage\log\logs.txt" --logappend
+                        --dbpath "D:\MongoDB\storage\db" --directoryperdb --serviceName "MongoDB" --install
+
+            ② 再次打开一个 cmd 窗口，运行 mongo ，打开mongodb的客户端，可以进行一些DOS操作
+            ③ show dbs :查看存在的数据库
+            ④ use emp(emp指的是存在的数据库名) : 切换到指定的数据库中进行操作
+            ⑤ show collections ：查看数据库中存在的集合
+
+            对集合的增删改查：
+            ⑥ db.表名(集合名).find({查询条件},{投影字段，0为隐藏，1为显示}) : 查询集合中所有的数据
+            ⑦ db.表名(集合名).insert({以对象形式存下的键值对的JSON，示例：'age':'18','name':'XX'})
+            ⑧ db.表名(集合名).update({查询跳江},$set{需要修改的字段},multi:true)  multi:true 表示多个匹配也进行修改
+            ⑨ db.表名(集合名).remove({删除的条件})
+      </td></tr>
+    </table>
+  </fieldset>
+  <!--Mongod数据库结束-->
+</div>
+</body>
+</html>

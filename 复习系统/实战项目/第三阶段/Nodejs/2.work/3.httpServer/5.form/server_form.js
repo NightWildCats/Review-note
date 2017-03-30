@@ -24,6 +24,7 @@ var server = http.createServer(function serverHandler(req, res) {
 }).listen(3000, function () {
     console.log('server started');
 });
+console.log(global);
 
 
 
