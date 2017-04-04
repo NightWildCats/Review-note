@@ -1,0 +1,75 @@
+<!--欢迎你，<%= name %>回来-->
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>登录-失败</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/supersized.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body oncontextmenu="return false">
+
+<div class="page-container">
+    <h1>抱歉，您输入的用户名<%=name %><%=next %>>不存在，请去注册</h1>
+
+    <div class="connect">
+        <p>In the future, we will be grateful for our own</p>
+        <p style="margin-top:20px;">当时光流逝，我们是否还记得流过的汗水，以及那些刻苦铭心的分分秒秒</p>
+    </div>
+</div>
+<a id="insert" style="color: white;text-decoration: none;display:inline-block; margin-top: 10px" href="../rinsert/index.html">点击-新用户注册</a>
+
+<!-- Javascript -->
+<script src="./js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/supersized.3.2.7.min.js"></script>
+<script src="js/supersized-init.js"></script>
+<script>
+  $(".btn").click(function () {
+    is_hide();
+  })
+  var u = $("input[name=username]");
+  var p = $("input[name=password]");
+  $("#submit").live('click', function () {
+    if (u.val() == '' || p.val() == '') {
+      $("#ts").html("用户名或密码不能为空~");
+      is_show();
+      return false;
+    }
+    else {
+      var reg = /^[0-9A-Za-z]+$/;
+      if (!reg.exec(u.val())) {
+        $("#ts").html("用户名错误");
+        is_show();
+        return false;
+      }
+    }
+  });
+  window.onload = function () {
+    $(".connect p").eq(0).animate({"left": "0%"}, 600);
+    $(".connect p").eq(1).animate({"left": "0%"}, 400);
+  }
+  function is_hide() {
+    $(".alert").animate({"top": "-40%"}, 300)
+  }
+  function is_show() {
+    $(".alert").show().animate({"top": "45%"}, 300)
+  }
+</script>
+</body>
+
+</html>

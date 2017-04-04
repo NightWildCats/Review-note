@@ -1,0 +1,13 @@
+班级：<%=userName%>
+<br>
+编号：<%=Name%>
+
+人物介绍 :
+<br>
+<ul>
+<% for (var i = 0; i < jiNeng.length; i++) {
+    var obj = jiNeng[i];
+%>
+    <li><%= obj %></li>
+<%} %>
+</ul>

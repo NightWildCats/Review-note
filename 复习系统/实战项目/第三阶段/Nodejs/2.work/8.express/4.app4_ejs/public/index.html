@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>牛逼系统 v3.0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="user/css/reset.css">
+  <link rel="stylesheet" href="user/css/style.css">
+  <style type="text/css">
+    body {
+      background-color: #1b6d85;
+    }
+    .index-btn {
+      margin-top: 20px;
+    }
+    .insert-a {
+      display: inline-block;
+      width: 100px;
+      height: 40px;
+      background-color: red;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      line-height: 40px;
+      margin: 0 8px;
+      border-radius:5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="page-container">
+  <h1>大气简洁-首页展示</h1>
+  <div class="index-btn">
+    <a class="insert-a"  href="./user/index.html">-登录系统-</a>
+    <a class="insert-a"  href="./rinsert/index.html">-注册用户-</a>
+  </div>
+  <div class="connect">
+    <p>In the future, we will be grateful for now desperately</p>
+    <p style="margin-top:20px;">如果只是遇见，不能停留，不如不遇见.</p>
+    <p style="margin-top:20px;"></p>
+  </div>
+</div>
+
+<!-- Javascript -->
+<script src="user/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+  window.onload = function () {
+    $(".connect p").eq(0).animate({"left": "0%"}, 600);
+    $(".connect p").eq(1).animate({"left": "0%"}, 400);
+    $(".connect p").eq(2).animate({"left": "0%"}, 400);
+    $(".connect p").eq(2).html('客户端IP：'+ returnCitySN["cip"]+' -- '+returnCitySN["cname"]);
+  };
+</script>
+</body>
+
+</html>
+

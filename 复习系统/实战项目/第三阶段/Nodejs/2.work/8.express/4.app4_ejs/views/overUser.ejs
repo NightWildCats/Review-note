@@ -1,0 +1,61 @@
+<!--欢迎你，<%= name %>回来-->
+<!--用户登录失败 或者 用户名不存在时 的模板-->
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>登录-失败</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/supersized.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body oncontextmenu="return false">
+
+<div class="page-container">
+    <h1>抱歉，您输入的用户名<%=name %><%=next %></h1>
+
+    <div class="connect">
+        <p>In the future, we will be grateful for our own</p>
+        <p style="margin-top:20px;">当时光流逝，我们是否还记得流过的汗水，以及那些刻苦铭心的分分秒秒</p>
+        <p style="margin-top:20px;">客户端IP地址：<%=ip %></p>
+    </div>
+</div>
+<a id="insert" style="color: white;text-decoration: none;display:inline-block; margin-top: 10px" href="../user/index.html">点击-重新登录</a>
+<a id="insert" style="color: white;text-decoration: none;display:inline-block; margin-top: 10px" href="../index.html">-返回首页</a>
+
+<!-- Javascript -->
+<script src="./js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/supersized.3.2.7.min.js"></script>
+<script src="js/supersized-init.js"></script>
+<script>
+  window.onload = function () {
+    $(".connect p").eq(0).animate({"left": "0%"}, 600);
+    $(".connect p").eq(1).animate({"left": "0%"}, 400);
+    $(".connect p").eq(2).animate({"left": "0%"}, 400);
+  }
+  function is_hide() {
+    $(".alert").animate({"top": "-40%"}, 300)
+  }
+  function is_show() {
+    $(".alert").show().animate({"top": "45%"}, 300)
+  }
+</script>
+</body>
+
+</html>

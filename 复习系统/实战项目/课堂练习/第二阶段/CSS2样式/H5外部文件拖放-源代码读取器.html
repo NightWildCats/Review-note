@@ -88,14 +88,6 @@
                         wrap1.innerText = fileH.result;
                     },false);
                 }
-                //读取 office 文件 ---不成功
-                if(files[i].type.indexOf("application")>-1){
-                    let fileW = new  FileReader();
-                    fileW.readAsText(files[i]);
-                    fileW.addEventListener("load",function () {
-                        wrap1.innerText = fileW.result;
-                    },false);
-                }
             }
         },false);
     </script>

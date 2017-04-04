@@ -1,0 +1,138 @@
+<!DOCTYPE html >
+<html>
+<head>
+
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen, projection" /> <!-- main stylesheet -->
+<link rel="stylesheet" type="text/css" media="all" href="css/tipsy.css" /> <!-- Tipsy implementation -->
+
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie8.css" />
+<![endif]-->
+
+<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script> <!-- uiToTop implementation -->
+<script type="text/javascript" src="scripts/custom-scripts.js"></script>
+<script type="text/javascript" src="scripts/jquery.tipsy.js"></script> <!-- Tipsy -->
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+			
+	universalPreloader();
+						   
+});
+
+$(window).load(function(){
+
+	//remove Universal Preloader
+	universalPreloaderRemove();
+	
+	rotate();
+    dogRun();
+	dogTalk();
+	
+	//Tipsy implementation
+	$('.with-tooltip').tipsy({gravity: $.fn.tipsy.autoNS});
+						   
+});
+
+</script>
+
+
+<title>404 - Not found</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+<body>
+
+<!-- Universal preloader -->
+<div id="universal-preloader">
+    <div class="preloader">
+        <img src="images/universal-preloader.gif" alt="universal-preloader" class="universal-preloader-preloader" />
+    </div>
+</div>
+<!-- Universal preloader -->
+
+<div id="wrapper">
+<!-- 404 graphic -->
+	<div class="graphic"></div>
+<!-- 404 graphic -->
+<!-- Not found text -->
+	<div class="not-found-text">
+    	<h1 class="not-found-text">哎呀... sorry迷路了!</h1>
+    </div>
+<!-- Not found text -->
+
+<!-- search form -->
+<div class="search">
+	<form name="search" method="get" action="#" />
+        <input type="text" name="search" value="等待中 ..." />
+        <input class="with-tooltip" title="Search!" type="submit" name="submit" value="" />
+    </form>
+</div>
+<!-- search form -->
+
+<!-- top menu -->
+<div class="top-menu">
+	<a href="../user/index.html" class="with-tooltip" title="刷新重新登录">登陆</a> | <a href="../rinsert/index.html" class="with-tooltip" title="注册新用户">注册</a>
+</div>
+<!-- top menu -->
+
+<div class="dog-wrapper">
+<!-- dog running -->
+	<div class="dog"></div>
+<!-- dog running -->
+	
+<!-- dog bubble talking -->
+	<div class="dog-bubble">
+    	
+    </div>
+    
+    <!-- The dog bubble rotates these -->
+    <div class="bubble-options">
+    	<p class="dog-bubble">
+        你迷路了吗，朋友？不用担心，我是个优秀的导游！
+        </p>
+    	<p class="dog-bubble">
+	        <br />
+        	But！But！
+        </p>
+        <p class="dog-bubble">
+        	<br />
+        	我已经离你越来越远了...
+        </p>
+        <p class="dog-bubble">
+        	我是一匹来自西伯利亚孤独的狼，哦呜~~~哦呜~~~<br /><img style="margin-top:8px" src="images/cookie.png" alt="cookie" />
+        </p>
+        <p class="dog-bubble">
+        	<br />
+        	我去，你怎么还没有来，已经等你好久了...
+        </p>
+        <p class="dog-bubble">
+        	<br />
+        	我是已经距离你不远了么？
+        </p>
+        <p class="dog-bubble">
+          还是我只是兜圈子？
+        </p>
+        <p class="dog-bubble">
+        	<br />
+          好吧，我现在正式迷失了…
+        </p>
+        <p class="dog-bubble">
+          我想我看到了希望... <br /><img style="margin-top:8px" src="images/cat.png" alt="cat" />
+        </p>
+        <p class="dog-bubble">
+        	最后，我们应该做点什么呢？嘿嘿~~
+        </p>
+    </div>
+    <!-- The dog bubble rotates these -->
+<!-- dog bubble talking -->
+</div>
+
+<!-- planet at the bottom -->
+	<div class="planet"></div>
+<!-- planet at the bottom -->
+</div>
+
+
+</body>
+</html>

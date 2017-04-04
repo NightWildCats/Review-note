@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+    #xx {
+      width: 300px;
+      height: 300px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+<!--
+  inner部分需要有弹窗
+  其他部分都不需要弹窗
+-->
+<div id="wrap">
+  wrapwrapwrapwrapwrapwrapwrap
+  wrapwrapwrapwrapwrapwrapwrap
+  wrapwrapwrapwrapwrapwrapwrap
+  wrapwrapwrapwrapwrapwrapwrap
+  wrapwrapwrapwrapwrapwrapwrap
+  <div id="inner">
+    innerinnerinnerinnerinnerinner
+    innerinnerinnerinnerinnerinner
+    innerinnerinnerinnerinnerinner
+    innerinnerinnerinnerinnerinner
+    innerinnerinnerinnerinnerinner
+    innerinnerinnerinnerinnerinner
+
+  </div>
+  <div id="xx"> 111</div>
+</div>
+</body>
+<script type="text/javascript">
+  var wrap = document.getElementById('wrap');
+  var inner = document.getElementById('inner');
+  var xx = document.getElementById('#xx')
+
+  inner.addEventListener('touchstart', function (ev) {
+    //取消冒泡
+    ev.stopPropagation();
+    //ev.preventDefault();
+    //alert('hah');
+  });
+  wrap.addEventListener('touchstart', function (ev) {
+    //取消冒泡
+    //ev.stopPropagation();
+    //ev.preventDefault();
+    //alert('xxx');
+  })
+  document.addEventListener('touchstart',function(ev){
+    ev.preventDefault();
+  });
+  xx.addEventListener('touchstart', function (ev) {
+    //取消冒泡
+    ev.stopPropagation();
+    ev.preventDefault();
+    //alert('xxx');
+  })
+</script>
+</html>

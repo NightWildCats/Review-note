@@ -100,6 +100,9 @@
             ④ use emp(emp指的是存在的数据库名) : 切换到指定的数据库中进行操作
             ⑤ show collections ：查看数据库中存在的集合
 
+            命令行导入数据：
+              mongoimport --db 数据库名 --collection 集合名 --drop --file JOSN文件.json
+
             对集合的增删改查：
             ⑥ db.表名(集合名).find({查询条件},{投影字段，0为隐藏，1为显示}) : 查询集合中所有的数据
             ⑦ db.表名(集合名).insert({以对象形式存下的键值对的JSON，示例：'age':'18','name':'XX'})
