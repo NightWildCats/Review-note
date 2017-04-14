@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<style>
+		span{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h2>测试cros解决跨域</h2>
+
+	用户名：<input type="text" name="username" id="name"/>
+	<span id="resultSpan"></span>
+	<br>
+	密码: <input type='password' name='pwd'>
+
+	<span>aaa</span>
+
+	<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+
+		var url = 'http://127.0.0.1:3000/cors';
+		var data = {username: 'haha'};
+		$.post(url, data, function (responseData) {
+			alert(responseData);
+		}, 'text');
+
+
+	</script>
+</body>
+
+</html>

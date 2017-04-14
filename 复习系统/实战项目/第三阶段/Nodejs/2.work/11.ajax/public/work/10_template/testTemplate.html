@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>三级联动-前段模板</title>
+</head>
+
+<body>
+<select id="selProvince">
+  <option value="">--请选择省份--</option>
+</select>
+
+
+<select id="selCity">
+  <option value="">--请选择城市--</option>
+</select>
+
+
+<select id="selCounty">
+  <option value="">--请选择区/县--</option>
+</select>
+
+
+<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+<!--引入模板引擎-->
+<script src="template-native.js"></script>
+<!--创建模板-->
+<!--创建省级模板-->
+<script id="province" type="text/html">
+  <%
+      for(var i=0; i < list.length; i++){
+      var item = list[i];
+  %>
+      <option value="<%= item.id %>"><%= item.province %></option>
+  <%
+      }
+  %>
+</script>
+<!--创建市级模板-->
+<script id="city" type="text/html">
+  <%
+      for(var i=0;i < list.length;i++) {
+      var item = list[i];
+  %>
+      <option value="<%= item.id %>"><%= item.city %></option>
+  <%
+      }
+  %>
+</script>
+<!--创建县区级模板-->
+<script id="county" type="text/html">
+  <%
+      for(var i=0;i < list.length;i++) {
+      var item = list[i];
+  %>
+      <option value="<%= item.id %>"><%= item.county %></option>
+  <%
+      }
+  %>
+</script>
+
+<script type="text/javascript">
+
+  $(function () {
+    var $province = $('#selProvince');
+    var $city = $('#selCity');
+    var $county = $('#selCounty');
+
+    $county.click(function () {
+      console.log(this);
+    });
+
+    //页面加载数据
+    $.getJSON('/province', function (data) {
+//      console.log(data);
+      var obj = {
+        list: data.province
+      };
+      var html = template('province', obj);
+      $province.append(html);
+    });
+
+    //选择省 加载城市列表
+    $province.change(function () {
+      //换省
+      $city.empty();
+      $county.children().not(':first').remove();
+      $city.append('<option value="">--请选择城市--</option>');
+      //获得 provinceID
+      var provinceID = this.value;
+      if ('' === provinceID) {
+        return;
+      }
+      //请求数据
+      $.getJSON('/city', {provinceID: provinceID}, function (data) {
+        //城市列表  数组
+//        console.log(data);
+        var obj = {
+          list: data.ctiyArr
+        };
+        var html = template('city', obj);
+        $city.append(html);
+      });
+    });
+
+    //显示区县
+    $city.change(function () {
+      //换市
+      $county.empty();
+      $county.append('<option value="">--请选择区/县--</option>');
+      // 城市的id
+      var cityID = this.value;
+      if ('' === cityID) {
+        return;
+      }
+      $.getJSON('/county', {cityID: cityID}, function (data) {
+//        console.log(data);
+        var obj = {
+          list: data.countyArr
+        };
+        var html = template('county', obj);
+        $county.append(html);
+      })
+    });
+  });
+
+</script>
+</body>
+</html>

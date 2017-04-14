@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<input type="button" value="jQuery ajax() GET请求" id="ajaxGetBtn"/><br>
+	<input type="button" value="jQuery ajax() POST请求" id="ajaxPostBtn"/><br>
+	<input type="button" value="jQuery get()请求" id="getBtn"/><br>
+	<input type="button" value="jQuery post()请求" id="postBtn"/><br>
+	<input type="button" value="jQuery getJSON()请求" id="getJSONBtn"/><br>
+</body>
+
+<!--引入jQuery 和 编写 js-->
+<script src="/work/js/jquery-1.11.1.js"></script>
+<script>
+
+	$(function () {
+
+		var userInfo = {
+			username : 'Jack'
+		};
+		$('#ajaxGetBtn').click(function () {
+			$.ajax({
+				type: "Get",
+				url: "/node_ajax/test/get",
+//				data: "username=John",
+				data: {username: 'Rose'} ,
+				success: function(msg){
+					alert( "Data Saved: " + msg );
+				},
+				error: function (msg) {
+					alert( "ERROR: " + msg );
+				}
+			});
+		});
+
+		$('#ajaxPostBtn').click(function () {
+			$.ajax({
+				type: "Post",
+				url: "/node_ajax/test/post",
+				data: userInfo,
+				success: function(msg){
+					alert( "Data Saved: " + msg );
+				},
+				error: function (msg) {
+					alert( "ERROR: " + msg );
+				}
+			});
+		});
+
+		$('#getBtn').click(function () {
+			//url, [data], [callback], [type])
+			$.get("/node_ajax/test/get1", { username: "John"},
+					function(data){
+						console.log(typeof data);
+						console.log(data);
+//						alert(data);
+					},
+					'json');
+		});
+
+		$('#postBtn').click(function () {
+			//url, [data], [callback], [type])
+			$.post("/node_ajax/test/post", { username: "John"},
+				function(data){
+					alert("Data Loaded: " + data);
+				});
+		});
+
+		$('#getJSONBtn').click(function () {
+			$.getJSON('/node_ajax/test/get1', { username: "John"},
+				function (data) {
+					console.log(typeof data);
+					console.log(data);
+				});
+		});
+
+
+
+	});
+
+
+/*
+
+	var req = createReq();
+	req.onreadystatechange = function () {
+		///正常返回数据
+		if(4 === req.readyState && req.status === 200){
+			req.responseText;
+
+		}
+	};
+	req.open('GET', '/node_ajax/test/json', true); //第三个参数 默认 true 异步， false 同步
+	req.send();
+*/
+
+</script>
+
+</html>

@@ -1,0 +1,53 @@
+<%- include('header.ejs') -%>
+
+
+
+    <div id='notLoginHeader' class="header box">
+        <!-- 创建导航条 -->
+        <ul class="nav">
+            <li>
+                <div class="avatar">
+
+                    <a href="/upload_avatar"> <img src="/avatars/<%= avatar %>"> </a>
+
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                    <%= userName %>
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                    <a href="/logout">登出</a>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 设置logo -->
+        <h1 class="logo">
+            <a href="/">TODO List</a>
+        </h1>
+
+    </div>
+
+    <div class="main box">
+        <div class="box">
+            <div class="box register">
+
+                <h2 class="box">上传头像</h2>
+                <form action="/upload_avatar" method="post" id="avatarUP" enctype="multipart/form-data">
+                    <div>
+                        <label for="avatarFile">上传头像：</label>
+                        <input type="file" name="avatar" id="avatarFile" > <br>
+                    </div>
+                    <div>
+                        <label for="sumbit"></label>
+                        <input type="submit" id="sumbit" class="submit" value="上  传" >  <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<%- include('footer.ejs') -%>

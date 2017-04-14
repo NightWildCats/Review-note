@@ -23,13 +23,15 @@
     <script src="./js/html5shiv.min.js"></script>
     <![endif]-->
 
+
 </head>
 
 <body oncontextmenu="return false">
 
 <div class="page-container">
     <h1>欢迎你 <%=name %> 回来，祝你使用系统愉快！</h1>
-
+    <!--引入展示用户信息ejs模块-->
+    <%- include('fall') -%>
     <div class="connect">
         <p>In the future, we will be grateful for our own</p>
         <p style="margin-top:20px;">当时光流逝，我们是否还记得流过的汗水，以及那些刻苦铭心的分分秒秒</p>

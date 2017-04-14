@@ -1,0 +1,35 @@
+
+1.需求
+    1. 测试服务器端设置 cookie
+        路由： /setcookie
+        句柄： 设置 cookie
+            名： userName
+            值： wukong
+    2. 服务器端设置 cookie 过期时间
+        观察浏览器的效果
+        区分 "session 时间" 和 "绝对时间"
+    3. 测试服务器端删除 cookie
+        路由： /clearcookie
+        句柄： 删除 cookie
+            名： userName
+    4. 当用户登录成功的时候设置 cookie
+        名： userName
+        值： 用户的名字
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

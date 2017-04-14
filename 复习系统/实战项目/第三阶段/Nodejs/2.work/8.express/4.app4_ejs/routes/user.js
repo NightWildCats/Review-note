@@ -6,6 +6,12 @@ var db = require('../dao/db.js');
 var file = require('./logFile.js');
 var IP = require('./ipConfig.js');
 
+//获取所有的用户信息
+var fall;
+db.findAll(function (err,doc) {
+  fall = doc;
+});
+//获取所有的用户信息
 //登录验证
 router.post('/index', function (req, res, next) {
   var userName = req.body.username;
@@ -27,7 +33,8 @@ router.post('/index', function (req, res, next) {
           //进行模板的设置 render 渲染页面
           var loginOk = {
             name: userName,
-            ip:ip
+            ip:ip,
+            all:fall
           };
           res.render('user.ejs', loginOk);
         } else {

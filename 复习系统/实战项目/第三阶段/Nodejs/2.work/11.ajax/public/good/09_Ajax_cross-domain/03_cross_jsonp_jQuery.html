@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+	<!--<h2>测试jsonp解决跨域</h2>-->
+
+    用户名：<input type="text" name="username" id="name"/>
+    <span id="resultSpan"></span>
+    <br>
+    密码: <input type='password' name='pwd'>
+
+    <script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            //失去焦点
+            $('#name').blur(function () {
+
+                var userName = $('#name').val();
+
+                //发送 ajax
+                var url = 'http://127.0.0.1:3000/node_ajax/test/' + '?callback=?';
+                var data = {username: userName};
+                $.getJSON(url, data, function (data) {
+                    var result = data.result;
+                    var htmlStr = null;
+                    if(1===result){
+//            <font color="red">不可用</font>
+                        htmlStr = '<font color="green">可用</font>';
+                    }else {
+                        htmlStr = '<font color="red">不可用</font>';
+                    }
+                    $('#resultSpan').append(htmlStr);
+                });
+            })
+        });
+
+
+
+
+
+
+    </script>
+</body>
+</html>

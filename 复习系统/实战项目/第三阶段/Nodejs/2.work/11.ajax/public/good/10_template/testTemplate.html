@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<select id="selProvince">
+    <option value="">--请选择省份--</option>
+</select>
+
+
+<select id="selCity">
+  <option value="">--请选择城市--</option>
+</select>
+
+
+<select id="selCounty">
+  <option value="">--请选择区/县--</option>
+</select>
+
+
+<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+<script src="template-native.js"></script>
+<script id="provinceTemp" type="text/html">
+    <%
+        for(var i=0; i<list.length; i++){
+            var item = list[i];
+    %>
+            <option value="<%= item.id %>"><%= item.province %></option>
+    <%
+        }
+    %>
+</script>
+<script id="countyTemp" type="text/html">
+    <%
+    for(var i=0; i<list.length; i++){
+        var item = list[i];
+    %>
+        <option value="<%= item.id %>"><%= item.county %></option>
+    <%
+    }
+    %>
+</script>
+<script type="text/javascript">
+
+    $(function () {
+        var $province = $('#selProvince');
+        var $city = $('#selCity');
+        var $county = $('#selCounty');
+
+        //页面加载数据
+        $.getJSON('/provinces', function (data) {
+            var dataTemp = {
+                list: data
+            };
+            var html = template('provinceTemp', dataTemp);
+            $province.append(html);
+        });
+
+        //选择省 加载城市列表
+        $province.change(function () {
+            //换省
+            $city.empty();
+            $city.append('<option value="">--请选择城市--</option>');
+            //获得 provinceID
+            var provinceID = this.value;
+            if('' === provinceID){
+                return;
+            }
+
+
+            //请求数据
+            $.getJSON('/city', {provinceID: provinceID}, function (data) {
+                //城市列表  数组
+                data.forEach(function (ele, index) {
+                    var id = ele.id;
+                    var name = ele.city;
+                    var option = '<option value="' + id + '">' + name + '</option>';
+                    $(option).appendTo($city);
+                });
+            });
+        });
+
+        //显示区县
+        $city.change(function () {
+            //换市
+            $county.empty();
+            $county.append('<option value="">--请选择区/县--</option>');
+            // 城市的id
+            var cityID = this.value;
+            if('' === cityID){
+                return;
+            }
+
+            $.getJSON('/county', {cityID:cityID}, function (data) {
+                //区县列表  数组
+
+                var countyData = {
+                    list: data
+                };
+                var html = template('countyTemp', countyData);
+                $county.append(html);
+            })
+
+
+        });
+
+      /**
+       * 创建模板的思路
+       *
+       * 1.引入包（模板包）
+       * 2.创建模板 （与ejs的书写方式一样）---在这里使用的创建模板方式使用的是原生方式进行创建
+       * 3.创建数据 （数据为服务器(ajax请求)返回的数据）--返回的数据最好为数组，方便于遍历
+       * 4.生成html
+       * 5.把html显示到指定的位置
+       *
+       */
+
+
+
+    });
+
+</script>
+</body>
+</html>

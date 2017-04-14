@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>我的笔记</title>
+  <style type="text/css">
+    div{
+      margin: 0 auto;
+      /*border: 1px solid #000;*/
+      width:500px;
+    }
+    div h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div ng-app="next" ng-controller="nextCrl">
+    <h2>我的笔记</h2>
+    <textarea cols="68" rows="30" ng-model="content"></textarea>
+    <p>
+      <button type="button" ng-click="save()">保存</button>
+      <button type="button" ng-click="read()">读取</button>
+      <button type="button" ng-click="clear()">清除</button>
+    </p>
+    <p>剩余字数:{{getlength()}}</p>
+  </div>
+  //引入angular
+  <script type="text/javascript" src="../../angular/angular.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

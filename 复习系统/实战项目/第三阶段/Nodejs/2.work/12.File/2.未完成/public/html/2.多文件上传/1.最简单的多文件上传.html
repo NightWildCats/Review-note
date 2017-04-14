@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+</head>
+<body>
+
+<!--
+
+需求：
+    1. 使用 form 表单完成文件上传
+
+提示:
+    注意事项：
+        1. form 表单的属性
+            1. action       服务器路由
+            2. method       post
+            3. enctype      编码格式 "multipart/form-data"
+        2. 多个 input 标签
+            1. name         名称
+-->
+
+
+<form id="myForm">
+  <!--此处写多个 input 标签-->
+  <!--设置 multiple 属性 可以选择多个文件-->
+  <input type="file" multiple="multiple" name="ajaxsfiles">
+
+
+  <input id="submitButton" type="submit" value="提交"> <br>
+</form>
+<br>
+<progress id="progressId" value="" max=""></progress>
+<span id="spanOK"></span>
+<script type="text/javascript">
+
+  document.getElementById('submitButton').onclick = function () {
+
+    var myForm = document.getElementById('myForm');
+    var progressId = document.getElementById('progressId');
+    var spanOK = document.getElementById('spanOK');
+    //创建 xhr 对象
+    var xhr = new XMLHttpRequest();
+    //创建表单实例化
+    var data = new FormData(myForm);
+
+    //当服务器收到响应式
+    xhr.onload = function () {
+      document.getElementsByName('ajaxsfiles')[0].value = '';
+      spanOK.innerHTML = '文件上传成功';
+    };
+
+    //当文件上传完成
+    xhr.upload.onload = function () {
+      console.log('数据上传完成');
+    };
+    //上传文件的格式
+    xhr.responseType = 'multipart/form-data';
+
+    //文件在上传的过程中
+    xhr.upload.onprogress = function (event) {
+      if (event.lengthComputable) {
+        var loaded = event.loaded;
+        var total = event.total;
+//        var rate = Math.floor(loaded / total);      // 已经下载的百分比
+//        rate = rate + '%';
+//        spanOK.innerHTML = rate;
+        progressId.max = total;
+        progressId.value = loaded;
+      }
+
+    };
+
+    //发送请求
+    xhr.open('post', '/ajaxs/files');
+
+    //打包表单中的文件 发送
+    xhr.send(data);
+
+
+  };
+
+
+</script>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

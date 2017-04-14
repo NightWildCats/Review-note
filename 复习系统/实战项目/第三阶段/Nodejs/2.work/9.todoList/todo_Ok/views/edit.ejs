@@ -1,0 +1,45 @@
+<%- include('header.ejs') -%>
+
+    
+    
+<div id='notLoginHeader' class="header box">
+    <ul class="nav">
+        <li>
+            <div class="avatar">
+                
+                    <a href="/upload_avatar"> <img src="/avatars/default_avatar_2.png"> </a>
+                
+            </div>
+        </li>
+        <li>
+            <div class="text">
+                <%= userName %>
+            </div>
+        </li>
+        <li>
+            <div class="text">
+                <a href="/logout">登出</a>
+            </div>
+        </li>
+    </ul>
+
+    <h1 class="logo">
+        <a href="/">TODO List</a>
+    </h1>
+
+</div>    
+
+
+<div class="main box">
+    <div class="box post">
+        <h2>修改</h2>
+
+        <form action="/edit/<%= itemID %>" method="post">
+            <p><input type="text" name="title" class="long_txt" value="<%= title %>" /></p>
+            <p><input type="submit" class="submit" value="提交" /></p>
+        </form>
+
+    </div>
+</div>
+
+<%- include('footer.ejs') -%>

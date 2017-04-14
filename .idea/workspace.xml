@@ -20,22 +20,13 @@
     <favorites_list name="note" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package_json" />
+        <option value="tsconfig.json" />
         <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
@@ -64,57 +55,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/信息修改.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/node_modules/信息删除.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/信息删除.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/获取已存在表中的信息.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/webSite2/server_form2.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/app4/bin/www" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/app4/routes/index.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/登录注册/form.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/登录注册/register.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/webSite2/form.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/webSite2/register.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/登录注册/dao/db.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/登录注册/server_form.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/3.app4_login_register/app.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/app4/routes/user.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/app4/public/login/login.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/app4/app.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/3.app4_login_register-2/app.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/overr.ejs" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/test.ejs" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/ftpm_42/404.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/over/404.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/over/index.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/over.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/insert/css/style.css" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/app4/public/login/server_form.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/insert/index.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/bin/www" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/js/supersized.3.2.7.min.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/js/jquery-1.7.2.min.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/css/supersized.css" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/css/style.css" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/index.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/dao/logOVer.txt" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/logFile.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/app.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/insert.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/dao/db.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/datalog/dbOver.txt" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/datalog/dbOK.txt" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/js/ipconfig.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/index.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/ipconfig.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/user.js" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/index.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/rinsert/index.html" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/insert.ejs" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/overUser.ejs" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/user.ejs" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/userNull.ejs" />
-        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/overInsert.ejs" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第四阶段/JS高级/练习/4.购物车/购物车.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/04_checkname/good.json" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/good/04_checkname/check_name.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/04_checkname/check_name.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/china.json" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/09_Ajax_cross-domain/01_cross_jsonp.html" />
+        <option value="F:/H5尚硅谷学习/第三阶段课件/NOdejs/第十二天/演示文件/unfinished/ajax_test/public/work/09_Ajax_cross-domain/02_cross_jsonp_js.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/09_Ajax_cross-domain/03_cross_jsonp_jQuery.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/09_Ajax_cross-domain/04_cross_cors.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/09_Ajax_cross-domain/02_cross_jsonp_js.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/08_three_move(jQuery+Json)/three_move.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/good/10_template/testTemplate.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/11.advanced/1.basic_width_bug/multi.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/11.advanced/1.basic_width_bug/multi_apply.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/routes/router.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/10_template/template-native.js" />
+        <option value="F:/H5尚硅谷学习/第三阶段课件/NOdejs/第十三天/演示文件/router.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/routes/router.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/1.单文件上传/1.最简单的_form_上传文件.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/1.单文件上传/2.复杂的_iframe_form_上传文件.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/routes/loadfiles.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/1.单文件上传/1-1.可以修改存储文件的文件名.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/routes/ajaxfile.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/1.单文件上传/3.ajax_上传文件_简单上传.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/js/1.single_file_upload/2.ajax_simple.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/1.单文件上传/4.ajax_上传文件_进度条.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/js/1.single_file_upload/3.ajax_progress_bar.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/routes/ajaxfiles.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/js/2.multi_file_upload/1.ajax_multi_upload_simple.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/2.多文件上传/1.最简单的多文件上传.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/app.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/router.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/3.文件下载/1.最简单的文件下载.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/routes/download.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/1.已完成/public/html/3.文件下载/2.把内存中的数据下载到本地.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/3.文件下载/2.把内存中的数据下载到本地.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/3.文件下载/3.ajax_把服务器文件下载到内存.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/js/3.download/1.ajax_download.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/10_template/testTemplate.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/public/news.html" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/db.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/top.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/index_banner_imgs.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/index_about_imgs.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/product_types.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/server/db.json" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/products.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/jstores.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/news.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/messages.js" />
+        <option value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/routes/router_user.js" />
       </list>
     </option>
   </component>
@@ -131,12 +122,14 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/10.cookie/1. 服务器端操作 cookie/app4_login_register/node_modules" />
+    <handled-path value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/node_modules" />
+    <handled-path value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/1.已完成/node_modules" />
+    <handled-path value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/node_modules" />
     <handled-path value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/6.Module_Package/2.package/1.npm/2.local/node_modules" />
     <handled-path value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/node_modules" />
-    <handled-path value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/3.app4_login_register-2/node_modules" />
     <handled-path value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/node_modules" />
-    <handled-path value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/app4/node_modules" />
-    <handled-path value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/app4/public/node_modules" />
+    <handled-path value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -232,8 +225,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -274,7 +267,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="知识点回顾" />
+              <option name="myItemId" value="实战项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="课堂练习" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -293,6 +290,186 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="实战项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="课堂练习" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第二阶段" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="复习系统" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="课堂练习" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第二阶段" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="拖拽" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="复习系统" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="课堂练习" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第二阶段" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebSocket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="复习系统" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第四阶段" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JS高级" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="练习" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4.购物车" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="复习系统" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第四阶段" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JS高级" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="练习" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="复习系统" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第四阶段" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JS高级" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="复习系统" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第二阶段" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,204 +492,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="第三阶段" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="复习系统" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="实战项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="第三阶段" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2.work" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="8.express" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="复习系统" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="实战项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="第三阶段" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2.work" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="8.express" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="4.app4_ejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="复习系统" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="实战项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="第三阶段" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2.work" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="8.express" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="4.app4_ejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="复习系统" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="实战项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="第三阶段" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2.work" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="8.express" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="4.app4_ejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="复习系统" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="实战项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="第三阶段" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2.work" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="8.express" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="4.app4_ejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="datalog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -569,6 +548,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Nodejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="复习系统" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战项目" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -578,46 +575,48 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB" />
+    <property name="last_opened_file_path" value="D:/SVN/bin/svn.exe" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../NodeJs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="D:\H5开发工具\NodeJs\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB" />
+    <property name="javascript.nodejs.core.library.configured.version" value="7.7.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\12.File\2.未完成" />
+      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\12.File" />
+      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\11.ajax\public\work\js" />
+      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\11.ajax\public\work" />
+      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\11.ajax" />
       <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\8.express\4.app4_ejs\routes" />
       <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\7.MongoDB" />
       <recent name="D:\H5开发工具\GitHub\note\复习系统\知识点回顾" />
       <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\测试练习\H5&amp;CSS3" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\8.express\4.app4_ejs\public\user\js" />
-      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\8.express\4.app4_ejs\public\over" />
-      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\8.express\4.app4_ejs\public\insert" />
-      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\8.express\4.app4_ejs\public" />
-      <recent name="D:\H5开发工具\GitHub\note\复习系统\实战项目\第三阶段\Nodejs\2.work\8.express\4.app4_ejs\views" />
-    </key>
   </component>
-  <component name="RunManager" selected="Node.js.www (2)">
-    <configuration default="false" name="www (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="www" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/3.app4_login_register-2/bin">
+  <component name="RunManager" selected="Node.js.www">
+    <configuration default="false" name="products.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="products.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao">
       <method />
     </configuration>
-    <configuration default="false" name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="app.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs">
+    <configuration default="false" name="jstores.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="jstores.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao">
       <method />
     </configuration>
-    <configuration default="false" name="www (2)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="www" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/bin">
+    <configuration default="false" name="news.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="news.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao">
       <method />
     </configuration>
-    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8081/note/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/over/index.html">
+    <configuration default="false" name="messages.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="messages.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao">
       <method />
     </configuration>
-    <configuration default="false" name="db.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="db.js" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/dao">
+    <configuration default="false" name="www" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="www" working-dir="$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/bin">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -680,19 +679,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.www (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.app.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.www (2)" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.db.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.products.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.jstores.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.news.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.messages.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.www" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.www (2)" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.db.js" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.app.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.www (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.www" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.messages.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.news.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.jstores.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.products.js" />
       </list>
     </recent_temporary>
   </component>
@@ -733,12 +732,22 @@
       <workItem from="1491092649142" duration="4884000" />
       <workItem from="1491104680357" duration="8780000" />
       <workItem from="1491199430106" duration="21539000" />
-      <workItem from="1491271243819" duration="10725000" />
+      <workItem from="1491271243819" duration="22100000" />
+      <workItem from="1491438239984" duration="29137000" />
+      <workItem from="1491524554828" duration="15604000" />
+      <workItem from="1491610979344" duration="34575000" />
+      <workItem from="1491783393834" duration="17160000" />
+      <workItem from="1491870163058" duration="23885000" />
+      <workItem from="1491956512570" duration="23185000" />
+      <workItem from="1492046614728" duration="25730000" />
+      <workItem from="1492129372531" duration="3623000" />
+      <workItem from="1492135515532" duration="1108000" />
+      <workItem from="1492156212220" duration="3242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="362430000" />
+    <option name="totallyTimeSpent" value="551054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -750,14 +759,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2672035" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3338214" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22712934" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24921136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13722397" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -767,7 +776,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -802,145 +811,296 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/jQuery/day04/22_用户登录注册案例.html">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="240">
+          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/routes/download.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/1.已完成/public/html/3.文件下载/2.把内存中的数据下载到本地.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="53" column="62" lean-forward="false" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/3.文件下载/2.把内存中的数据下载到本地.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="56" column="37" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/数据库创建模板.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1640">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/rinsert/images/spirit.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/rinsert/images/check-icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/insert/images/Thumbs.db" />
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/rinsert/css/style.css">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/routes/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7170">
-          <caret line="410" column="13" lean-forward="false" selection-start-line="410" selection-start-column="13" selection-end-line="410" selection-end-column="13" />
+        <state relative-caret-position="1874">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/app4/public/login/server_form.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/信息查询.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="94" column="21" lean-forward="true" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+        <state relative-caret-position="336">
+          <caret line="74" column="10" lean-forward="true" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/bin/www">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/11.ajax/public/work/10_template/testTemplate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="89" column="30" lean-forward="false" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+        <state relative-caret-position="576">
+          <caret line="69" column="24" lean-forward="false" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/js/supersized-init.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/7.MongoDB/获取已存在表中的信息.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-338">
+        <state relative-caret-position="-2664">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/js/supersized.3.2.7.min.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/1.已完成/public/html/3.文件下载/3.ajax_把服务器文件下载到内存.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3384">
-          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/js/jquery-1.7.2.min.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/3.文件下载/3.ajax_把服务器文件下载到内存.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="3" column="86" lean-forward="true" selection-start-line="3" selection-start-column="86" selection-end-line="3" selection-end-column="86" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+        <state relative-caret-position="312">
+          <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://F:/H5学习资料/js插件特效/jquery-login-1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="57" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/test.ejs">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/js/3.download/1.ajax_download.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/img/3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/img/2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/img/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/core-scripting.rnc">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/1.已完成/public/js/3.download/1.ajax_download.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-859">
-          <caret line="210" column="18" lean-forward="false" selection-start-line="210" selection-start-column="18" selection-end-line="210" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="480">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/css/supersized.css">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/3.文件下载/4.ajax_显示进度.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
-          <caret line="99" column="35" lean-forward="false" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
+        <state relative-caret-position="-840">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/css/style.css">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/1.已完成/public/html/3.文件下载/4.ajax_显示进度.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="360">
+          <caret line="42" column="59" lean-forward="true" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/bin/logOVer.txt">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/1.已完成/public/js/3.download/2.ajax_download_progress_bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/1.已完成/public/html/3.文件下载/5.ajax_显示进度_真实下载.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="58" column="64" lean-forward="false" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/1.已完成/public/js/3.download/3.ajax_download_progress_bar_realDownLoad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-768">
+          <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/9.todoList/todo_project/public/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/9.todoList/todo_project/public/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/9.todoList/todo_project/public/item_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/9.todoList/todo_project/business_logic/logic_item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/9.todoList/todo_project/business_logic/logic_user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2400">
+          <caret line="100" column="20" lean-forward="true" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/9.todoList/todo_project/dao/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="76" column="29" lean-forward="false" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/top.js" />
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/index_banner_imgs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="33" column="7" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="33" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/product_types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/index_about_imgs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/server/db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="166" column="13" lean-forward="true" selection-start-line="162" selection-start-column="6" selection-end-line="166" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/dao/jstores.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="40" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/public/join.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1866">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/business_logic/logic_item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/business_logic/logic_news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/public/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/public/Assets/plugins/FlexSlider/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="1" column="43" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/5.fs/2.write_file/1.write_async.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/4.图片预览/1.ajax_预览图片_进度条_真实下载.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
+        <state relative-caret-position="-474">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/6.Module_Package/1.module/1.use/readme.txt">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/3.文件下载/1.最简单的文件下载.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/routes/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -948,15 +1108,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/6.Module_Package/1.module/1.use/4.distance_calculation.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/12.File/2.未完成/public/html/1.单文件上传/1.最简单的_form_上传文件.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
+        <state relative-caret-position="-144">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/SvnFile/git/easy-node/08-keywords-const/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/6.Module_Package/1.module/2.exports AND module.exports/3.module.exports/1.myModule.js">
+    <entry file="file://D:/SvnFile/git/Note-v2.0/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/SvnFile/git/easy-node/03-first-sample.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="396" column="5" lean-forward="true" selection-start-line="396" selection-start-column="5" selection-end-line="396" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/public/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+          <folding>
+            <element signature="n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#1;n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/BlackTea/routes/router_user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/9.todoList/todo_project/routes/router_user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-144">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -964,229 +1169,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/6.Module_Package/1.module/2.exports AND module.exports/3.module.exports/2.callModule.js">
+    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/9.todoList/todo_Ok/routes/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/6.Module_Package/1.module/2.exports AND module.exports/2.exports_wrong/1.myModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/6.Module_Package/1.module/2.exports AND module.exports/2.exports_wrong/2.callModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-201">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/bin/userOk.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/dao/logOVer.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="59" column="66" lean-forward="false" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/logFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/dao/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/datalog/dbOver.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/datalog/insertOK.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/学习笔记入口.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/datalog/userOver.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/ipConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/3.app4_login_register-2/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/3.app4_login_register-2/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/insert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-585">
-          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-321">
-          <caret line="35" column="43" lean-forward="false" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/user/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/public/rinsert/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/overUser.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/user.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/datalog/dbOK.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/datalog/userOk.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/userNull.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/overInsert.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/views/insert.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/复习系统/实战项目/第三阶段/Nodejs/2.work/8.express/4.app4_ejs/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        <state relative-caret-position="-792">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>

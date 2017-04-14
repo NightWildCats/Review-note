@@ -11,8 +11,16 @@ http.createServer(function (req, res) {
   });
   //获取请求的地址
   var strUrl = req.url;
+
+
+
   //获取三个表单变量的值
   var objUrl = url.parse(strUrl, true);
+  console.log(objUrl);
+  var objUrl = url.parse(strUrl);
+  console.log('-----'+ objUrl);
+
+
 
   // 通过请求的路径返回 具体的HTML 页面
   var loginUrl = objUrl.pathname;

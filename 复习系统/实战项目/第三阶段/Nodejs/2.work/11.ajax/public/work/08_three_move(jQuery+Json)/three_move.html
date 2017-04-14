@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<select id="selProvince">
+  <option value="">--请选择省份--</option>
+</select>
+<select id="selCity">
+  <option value="">--请选择城市--</option>
+</select>
+<select id="selCounty">
+  <option value="">--请选择区/县--</option>
+</select>
+
+<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+  $(function () {
+
+    //获取能用到的对象
+    var $selProvince = $('#selProvince');
+    var $selCity = $('#selCity');
+    var $selCounty = $('#selCounty');
+
+    //获取数据库传入的值(省级的)
+    $.getJSON('/province', function (data) {
+      //console.log(data);
+      data.province.forEach(function (province) {
+        //把获取到的数据拼串到 下拉框中
+        $selProvince.append('<option value="' + province.id + '">' + province.province + '</option>');
+      });
+    });
+
+    //处理市级的
+    $selProvince.change(function () {
+      //先清空市级城市信息 再加载
+      //$selCity.empty();
+      $selCity.children().not(':first').remove();
+      $selCounty.children().not(':first').remove();
+      //根据 省级的 value来获取 关联的市级城市
+      var City = this.value;
+      if(this.value ==='') {
+        return;
+      }
+      //向服务器发送请求--加载市级城市
+      $.getJSON('/city', {provinceID: City}, function (City) {
+        //console.log(City);
+        City.ctiyArr.forEach(function (ctiy) {
+          $selCity.append('<option value="' + ctiy.id + '">' + ctiy.city + '</option>');
+        });
+      })
+    });
+
+    //读取 区县 
+    $selCity.change(function () {
+      //$selCounty.empty();
+      //清空
+      $selCounty.children().not(':first').remove();
+      //获取 市级城市 的 Id
+      var selCitId = this.value;
+      if(this.value ==='') {
+        return;
+      }
+      // 发送ajax请求
+      $.getJSON('/county', {cityID: selCitId}, function (Coty) {
+        console.log(Coty);
+        Coty.countyArr.forEach(function (Coty) {
+          $selCounty.append('<option value="' + Coty.id + '">' + Coty.county + '</option>');
+        });
+      });
+    });
+
+  });
+
+
+</script>
+</body>
+</html>

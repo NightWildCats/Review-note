@@ -16,6 +16,8 @@ http.createServer(function (req, res) {
   var objUrl = url.parse(strUrl, true);
   // console.log(objUrl);
   var stratNum = objUrl.query.stratNum;
+
+
   var endNum = objUrl.query.endNum;
   var operator = objUrl.query.selceted;
   //定义返回结果变量

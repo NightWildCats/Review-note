@@ -1,0 +1,11 @@
+[
+  {
+    "status":"ok",
+    "data": 1
+  },
+  {
+    "status":"error",
+    "data": 0
+  }
+
+]

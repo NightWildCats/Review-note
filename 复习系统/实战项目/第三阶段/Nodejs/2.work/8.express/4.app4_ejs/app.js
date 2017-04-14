@@ -12,9 +12,11 @@ var user = require('./routes/user.js');
 //注册
 var insert = require('./routes/insert.js');
 //首页加载包
-var indexOver = require('./routes/index.js');
+var indexOK = require('./routes/index.js');
 //文件写入模块
 // var log = require('./routes/logFile.js');
+//用户展示模块
+var findAll = require('./routes/findAll.js');
 
 //生成实例
 var app = express();
@@ -28,16 +30,28 @@ app.use(logger('dev'));         //使用 一个函数
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
+//设置静态资源路由
 app.use(express.static(path.join(__dirname, 'public')));
 
 //路由自定义User (去指定的路由模块下查找资源) --{用户登录验证模块}
 app.use('/user', user);
 //注册
 app.use('/rinsert', insert);
+//用户查询界面
+app.use('/find',findAll);
 //首页
-app.use('/',indexOver);
+app.use('/',indexOK);
+
+//向外暴露
+module.exports = app;
 
 
+
+
+
+
+
+/*************************************************************/
 //设置首页
 // app.get('/',function (req,res,next) {
 //   res.redirect('./index.html');
@@ -49,7 +63,3 @@ app.use('/',indexOver);
 //   //通过 res。redirect 进行重定向  指定到 静态资源目录下的404 页面
 //   res.redirect('over/index.html');
 // });
-
-
-//向外暴露
-module.exports = app;
